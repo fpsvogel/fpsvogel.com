@@ -1,0 +1,37 @@
+// html: so that !important is not needed to override variables set by holiday.css,
+// and so that this can override any :root defaults set in imported stylesheets.
+html:root {
+  --max-body-width: 44rem;// !important;
+  --font-size: 1.07rem;
+  --nav-font-size: 110%;
+  --main-font-size: 100%;
+  --main-line-height: 1.65;
+  --main-and-nav-font: "Open Sans";
+  --mono-font: "Inconsolata";
+  --link-color: #ffc645;// !important; // was #ffc033
+  --link-visited-color: #ffc645;// !important;
+  --link-hover-color: #fff;// !important;
+  --text-color: #d4d4d4;// !important;  // was dbdbdb
+  --text-color-less-contrast: #999;
+  --text-color-more-contrast: #e3e3e3;
+  // --code-background-color: #292b2e;// !important;
+  --code-text-color: #63b9ff;// !important;
+  --bg-dark-color: #17171a;
+  --twitter-blue: #36a7eb;
+  --twitter-blue-bright: #68c4fc;
+}
+
+@media (prefers-color-scheme: light) {
+  html:root {
+    --link-color: #c94f4f;// !important;
+    --link-visited-color: #c94f4f;// !important;
+    --link-hover-color: #212121;// !important;
+    --text-color: #363636;// !important;
+    --text-color-less-contrast: #595959;
+    --text-color-more-contrast: #363636;
+    // --code-background-color: #;
+    --code-text-color: #29a0ff;// !important;
+    --code-background-color: #f0f0f0; // !important;
+    --bg-dark-color: #e6e6e6;
+  }
+}

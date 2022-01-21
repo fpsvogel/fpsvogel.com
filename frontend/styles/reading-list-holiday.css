@@ -115,7 +115,7 @@ rl-table {
   & > rl-item:nth-of-type(2n) {
     background-color: var(--highlighted-background-color);
   }
-  rl-item {
+  & rl-item {
     border-top: var(--border-width) solid var(--border-color);
     padding: .5rem .3rem .5rem .2vw;
     width: 100%;
@@ -147,47 +147,47 @@ rl-table {
       }
     }
   }
-  rl-rating {
+  & rl-rating {
     min-width: var(--rating-width);
     white-space: nowrap;
     font-size: var(--icon-font-size);
     padding-top: var(--icon-padding-top);
   }
-  rl-type {
+  & rl-type {
     min-width: var(--type-width);
     font-size: var(--icon-font-size);
     padding-top: var(--icon-padding-top);
   }
-  rl-name-and-tags {
+  & rl-name-and-tags {
     width: 100%;
     padding-left: var(--name-padding-left);
   }
-  rl-name {
+  & rl-name {
     // font-weight: bold;
     margin-right: .3vw;
   }
-  rl-date {
+  & rl-date {
     font-size: small;
     color: var(--text-color-less-contrast);
   }
-  rl-blurb {
+  & rl-blurb {
     font-style: italic;
     margin-left: calc(var(--rating-width) + var(--type-width) + var(--name-padding-left));
   }
-  rl-notes {
+  & rl-notes {
     padding-top: .3rem;
   }
-  rl-genre, rl-expand {
+  & rl-genre, & rl-expand {
     color: var(--background-color);
     font-size: 85%;
     border-radius: .5rem;
   }
-  rl-genre {
+  & rl-genre {
     background-color: var(--text-color);
     margin-left: .1rem;
     padding: .1rem .4rem;
   }
-  rl-expand {
+  & rl-expand {
     float: right;
     font-size: small;
     margin-top: .2rem;
