@@ -1,0 +1,13 @@
+<nav>
+  <ul>
+    <%= render "nav_links", links:
+        { "🏠 Home" => "/",
+          "✍️ Blog" => "/posts/",
+          "📚 Reading" => "/reading/",
+          "✨ Resume" => "/about/" } %>
+    <%= render "nav_social_links", links:
+      { "LinkedIn" => "https://linkedin.com/in/fpsvogel",
+        "Twitter" => "https://twitter.com/fpsvogel",
+        "GitHub" => "https://github.com/fpsvogel" } %>
+  </ul>
+</nav>

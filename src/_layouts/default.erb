@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%= render "head" %>
+  </head>
+  <body class="<%= resource.data.layout %> <%= resource.data.page_class %>">
+    <a id="top"></a>
+    <%= render "navbar", metadata: site.metadata, resource: resource %>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <%= render "page_selector" if resource.data.pagination %>
+
+    <%= render "footer", metadata: site.metadata %>
+    <a id="bottom"></a>
+  </body>
+</html>

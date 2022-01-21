@@ -1,0 +1,211 @@
+:root {
+  --rating-width: calc(1rem + .6vw);
+  --type-width: calc(1rem + .3vw);
+  --icon-font-size: calc(var(--font-size) - .3rem + .3vw);
+  --icon-padding-top: calc(.3rem - .5vw);
+  --name-padding-left: calc(.2rem + .4vw);
+}
+
+rl-container,
+rl-key,
+rl-sorts,
+rl-filters,
+rl-table,
+rl-item,
+rl-info-line,
+rl-blurb,
+rl-notes {
+  display: block;
+}
+
+rl-head-line {
+  display: flex;
+}
+
+rl-key-item,
+rl-sort,
+rl-filter,
+rl-genre,
+rl-expand,
+rl-date,
+rl-group-read {
+  display: inline-block;
+}
+
+rl-label,
+rl-rating,
+rl-type,
+rl-name-and-tags,
+rl-name {
+  display: inline;
+}
+
+rl-key {
+  margin: 2rem 0 .5rem 0;
+}
+
+rl-key-item, rl-sort {
+  margin-top: .2rem;
+  font-size: 85%;
+}
+
+rl-sorts {
+  margin: .3rem 0 0 0;
+  & label {
+    margin: 0 .5rem 0 0;
+  }
+}
+
+rl-filters {
+  margin: .3rem 0 1rem 0;
+  &.collapsed {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+  &.expanded {
+    overflow: initial;
+    text-overflow: initial;
+    white-space: initial;
+  }
+}
+
+rl-filter {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  padding: .2rem .4rem .2rem .4rem;
+  margin-top: .3rem;
+  font-size: 75%;
+  border-radius: .5rem;
+  & label {
+    margin-top: 0;
+  }
+}
+
+label[for^="toggle-all-filter-"] {
+  color: #c94040;
+}
+
+// fix checkbox alignment with label.
+[type="checkbox"] + label, [type="radio"] + label {
+  vertical-align: baseline !important;
+}
+
+rl-key, rl-filters, rl-name-and-tags {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+// restore to selectable for an item's name (author and title).
+rl-name {
+  -webkit-user-select: text; /* Safari */
+  -moz-user-select: text; /* Firefox */
+  -ms-user-select: text; /* IE10+/Edge */
+  user-select: text; /* Standard */
+}
+
+rl-label {
+  font-weight: bold;
+}
+
+rl-table {
+  & > rl-item:nth-of-type(2n) {
+    background-color: var(--highlighted-background-color);
+  }
+  rl-item {
+    border-top: var(--border-width) solid var(--border-color);
+    padding: .5rem .3rem .5rem .2vw;
+    width: 100%;
+    &.collapsed {
+      & rl-expand::after {
+        content: "👇 expand";
+      }
+      & rl-blurb.truncated {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      & rl-notes {
+        display: none;
+      }
+    }
+    &.expanded {
+      & rl-expand::after {
+        content: "☝️ collapse";
+        font-size: 94%;
+      }
+      & rl-blurb.truncated {
+        overflow: initial;
+        text-overflow: initial;
+        white-space: initial;
+      }
+      & rl-notes {
+        display: block;
+      }
+    }
+  }
+  rl-rating {
+    min-width: var(--rating-width);
+    white-space: nowrap;
+    font-size: var(--icon-font-size);
+    padding-top: var(--icon-padding-top);
+  }
+  rl-type {
+    min-width: var(--type-width);
+    font-size: var(--icon-font-size);
+    padding-top: var(--icon-padding-top);
+  }
+  rl-name-and-tags {
+    width: 100%;
+    padding-left: var(--name-padding-left);
+  }
+  rl-name {
+    // font-weight: bold;
+    margin-right: .3vw;
+  }
+  rl-date {
+    font-size: small;
+    color: var(--text-color-less-contrast);
+  }
+  rl-blurb {
+    font-style: italic;
+    margin-left: calc(var(--rating-width) + var(--type-width) + var(--name-padding-left));
+  }
+  rl-notes {
+    padding-top: .3rem;
+  }
+  rl-genre, rl-expand {
+    color: var(--background-color);
+    font-size: 85%;
+    border-radius: .5rem;
+  }
+  rl-genre {
+    background-color: var(--text-color);
+    margin-left: .1rem;
+    padding: .1rem .4rem;
+  }
+  rl-expand {
+    float: right;
+    font-size: small;
+    margin-top: .2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: .1rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  rl-genre, rl-filter {
+    color: var(--text-color) !important;
+    border: .05rem solid var(--text-color-less-contrast);
+  }
+  rl-genre {
+    background-color: var(--bg-dark-color) !important;
+  }
+  rl-filter {
+    background-color: initial !important;
+  }
+}

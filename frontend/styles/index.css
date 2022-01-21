@@ -1,0 +1,358 @@
+// CUSTOM ELEMENTS
+posts-li-date,
+posts-li-subtitle,
+posts-li-title,
+post-prev-next,
+post-top-tweet {
+  display: block;
+}
+
+nav-social-link {
+  display: inline;
+}
+
+tweet-button {
+  display: inline-block;
+}
+
+// html: so that !important is not needed to override variables set by holiday.css,
+// and so that this can override any :root defaults set in imported stylesheets.
+html:root {
+  --max-body-width: 44rem;// !important;
+  --font-size: 1.07rem;
+  --nav-font-size: 110%;
+  --main-font-size: 100%;
+  --main-line-height: 1.65;
+  --main-and-nav-font: "Open Sans";
+  --mono-font: "Inconsolata";
+  --link-color: #ffc645;// !important; // was #ffc033
+  --link-visited-color: #ffc645;// !important;
+  --link-hover-color: #fff;// !important;
+  --text-color: #d4d4d4;// !important;  // was dbdbdb
+  --text-color-less-contrast: #999;
+  --text-color-more-contrast: #e3e3e3;
+  // --code-background-color: #292b2e;// !important;
+  --code-text-color: #63b9ff;// !important;
+  --bg-dark-color: #17171a;
+  --twitter-blue: #36a7eb;
+  --twitter-blue-bright: #68c4fc;
+}
+
+@media (prefers-color-scheme: light) {
+  html:root {
+    --link-color: #c94f4f;// !important;
+    --link-visited-color: #c94f4f;// !important;
+    --link-hover-color: #212121;// !important;
+    --text-color: #363636;// !important;
+    --text-color-less-contrast: #595959;
+    --text-color-more-contrast: #363636;
+    // --code-background-color: #;
+    --code-text-color: #29a0ff;// !important;
+    --code-background-color: #f0f0f0; // !important;
+    --bg-dark-color: #e6e6e6;
+  }
+}
+
+@import "monokai.css";
+@import "monokai-fpsvogel-edits.css";
+@import "reading-list-holiday.css";
+@import "about.css";
+
+body {
+  font-size: var(--font-size);
+}
+
+small {
+	font-size: 85% !important;
+}
+
+main p, main ul {
+  line-height: var(--main-line-height);
+	font-size: var(--main-font-size);
+}
+
+nav, main p, main ul, main ol, rl-container {
+  font-family:
+    var(--main-and-nav-font),
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji' !important;
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+    var(--mono-font),
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace !important;
+}
+
+em kbd {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+}
+
+nav ul, .pagination-ul, footer, label[for=toc] {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+// "recents" lists on homepage
+h3[id^="what-ive-been"] {
+  margin-bottom: 0;
+  & + p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  & + p + ul {
+    margin-top: 0;
+  }
+}
+
+:not(a) > strong, h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color-more-contrast);
+}
+
+a:not([href]):not(.dynamic) {
+  color: var(--text-color);
+  &:hover {
+    color: var(--text-color);
+  }
+}
+
+.dynamic {
+  cursor: pointer;
+}
+
+.lowlighted {
+  color: var(--text-color-less-contrast) !important;
+}
+
+.depressed {
+  background-color: var(--bg-dark-color);
+}
+
+.highlighted {
+  // partial border, see https://stackoverflow.com/a/48103289/4158773
+  background: linear-gradient(to right, transparent 10%, var(--link-color) 10%, var(--link-color) 95%, transparent 95%) 0 100% / 100% 2px no-repeat, transparent;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  // margin-top to items only when they're wrapped, see https://stackoverflow.com/a/30891910/4158773
+  margin-top: -.5rem !important;
+  padding-top: .5rem !important;
+}
+
+nav li {
+  margin-top: .5rem !important;
+  padding: 0 !important;
+}
+
+nav a {
+  padding: .2rem .5rem;
+  font-size: var(--nav-font-size);
+  color: var(--link-color);
+  & svg { fill: var(--link-color) }
+  &:active {
+    color: var(--link-active-color);
+    & svg { fill: var(--link-active-color) }
+    &.highlighted {
+      background: linear-gradient(to right, transparent 10%, var(--link-active-color) 10%, var(--link-active-color) 95%, transparent 95%) 0 100% / 100% 2px no-repeat, transparent;
+    }
+  }
+}
+
+nav svg {
+  vertical-align: middle;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.nav-social-links {
+  margin-left: auto !important;
+}
+
+nav li > nav-social-link::after {
+  content: none !important;
+}
+
+@media not all and (hover: hover) {
+  nav > ul {
+    display: none;
+  }
+  nav:hover > ul {
+    list-style: none;
+    margin-left: -1.5rem;
+  }
+}
+
+.posts-ul a {
+  display: block;
+}
+
+.posts-ul li * {
+  margin-bottom: -0.2rem;
+}
+
+posts-li-date {
+  color: var(--text-color-less-contrast) !important;
+}
+posts-li-subtitle {
+  color: var(--text-color) !important;
+}
+
+.pagination-ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.pagination-ul li {
+  display: inline;
+  margin-top: 1rem;
+  & span {
+    padding: .2rem .25rem .2rem .5rem;
+  }
+}
+
+input[id=toc] + label[for=toc] + ul {
+  display: none;
+}
+
+input[id=toc]:checked + label[for=toc] + ul {
+  display: block;
+}
+
+input[id=toc] {
+  display: none;
+}
+
+input[id=toc] + label[for=toc]::before {
+  content: "👇";
+}
+
+input[id=toc]:checked + label[for=toc]::before {
+  content: "☝️";
+}
+
+label[for=toc] {
+  cursor: pointer;
+  margin-top: 0;
+  font-size: 85%;
+  color: var(--text-color-less-contrast);
+  border-radius: .5rem;
+  border: .05rem solid var(--text-color-less-contrast);
+  padding: 0 .45rem .05rem .3rem;
+}
+
+label[for=toc] + ul {
+  margin-top: .25rem;
+  list-style-type: "› ";
+}
+
+label[for=toc] + ul li {
+  margin: 0;
+}
+
+article p:first-of-type {
+  margin-top: 1.8rem;
+}
+
+post-prev-next {
+  margin-top: 2.5rem;
+  & a {
+    display: block;
+    padding: .25rem 0;
+  }
+}
+
+post-top-tweet {
+  display: flex;
+}
+
+tweet-button {
+  margin-left: auto;
+  & a {
+    padding: 0.1rem 0.6rem 0.4rem 0.6rem;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    background: var(--twitter-blue);
+  }
+  & svg {
+    fill: var(--background-color);
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+  }
+  & small {
+    color: var(--background-color);
+    font-weight: 700;
+  }
+}
+
+hover-images {
+  position: relative;
+  display: inline-block;
+  & .hover-icon {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 12%;
+  }
+  & .img-hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:hover .img-hover {display: inline;}
+}
+
+news-feed {
+  display: inline-block;
+  margin-left: .8rem;
+  & svg {
+    fill: var(--text-color-more-contrast);
+  }
+}
+
+@media only screen and (hover: hover) {
+  nav a {
+    &:hover {
+      color: var(--link-hover-color);
+      & svg { fill: var(--link-hover-color) }
+      &.highlighted {
+        background: linear-gradient(to right, transparent 10%, var(--link-hover-color) 10%, var(--link-hover-color) 95%, transparent 95%) 0 100% / 100% 2px no-repeat, transparent;
+      }
+    }
+  }
+  .posts-ul {
+    list-style-type: circle;
+    & li:hover {
+      list-style-type: disc;
+    }
+  }
+  tweet-button {
+    &:hover {
+      & a {background: var(--twitter-blue-bright) }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `bin/bridgetown start`. If you change this file, please restart the server process.
+
+url: "https://fpsvogel.com"
+
+permalink: /posts/:year/:slug.*
+template_engine: erb
+
+pagination:
+  enabled: true
+  per_page: 6
+
+pagination:
+  enabled: true
+  per_page: 6
+
+timezone: America/New_York
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/theme/social.jpg
+
+reading:
+  local_filepath: "/mnt/c/Users/Felipe/Dropbox/Apps/SimpleText/reading.csv"
+  dropbox_filepath: "/Apps/SimpleText/reading.csv"
+  types:
+    book: 📕
+    course: 🏫
+    piece: ✏️
+    video: 🎞️
+    audio: 🎤
+  show_sort: false
+  types_from_formats:
+    # convert reading.csv formats (right) into reading list types (left).
+    book: [print, ebook, audiobook, pdf]
+    course: [course, website]
+  maximum_rating: 5 # the highest possible rating. must be an integer.
+  star_for_rating_minimum: 5 # items rated this or above get a star.
+                             # to show number ratings instead, delete this.
+  minimum_rating: 4 # exclude ratings below this. must be an integer.
+
+  list_update_mode: rebuild_local
+  # options:
+  # refresh - add new items only.
+  # rebuild - re-parse all from scratch.
+  # rebuild_local - rebuild only from local file; instead refresh if Dropbox is accessible.
+  # use rebuild if you have modified any old items in your reading.csv
+  # (old items meaning items which are already in reading.yml).

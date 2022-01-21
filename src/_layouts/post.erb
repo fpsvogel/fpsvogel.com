@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article>
+  <h1 style="margin-bottom: .1rem">
+    <%= resource.data.title %>
+  </h1>
+  <h3 class="lowlighted" style="margin: .25rem 0 .15rem 0">
+    <%= resource.data.subtitle&.then do |subtitle|
+          # because #capitalize makes subsequent characters lowercase.
+          subtitle[0].upcase + subtitle[1..subtitle.length - 1]
+    end %>
+  </h3>
+  <small class="lowlighted">
+    <%= resource.date.strftime("%B %d, %Y") %> · <%= resource.data.author %> ·
+  </small>
+
+  <input type="checkbox" id="toc" />
+  <label for="toc">&nbsp;Table of Contents</label>
+
+  <%= yield %>
+</article>
+
+<post-prev-next>
+  <% if resource.previous_resource %>
+    <a href="<%= resource.previous_resource.relative_url %>#bottom">
+      👉 <strong>Next:</strong> <%= resource.previous_resource.data.title %>
+    </a>
+  <% end %>
+  <% if resource.next_resource %>
+    <a href="<%= resource.next_resource.relative_url %>#bottom">
+      👈 <strong>Previous:</strong> <%= resource.next_resource.data.title %>
+    </a>
+  <% end %>
+</post-post-prev-next>
+
+<post-top-tweet>
+  <a href="#top">🚀 Back to top</a>
+  <%= render "tweet_button", text: resource.data.title, url: resource.absolute_url %>
+</post-top-tweet>

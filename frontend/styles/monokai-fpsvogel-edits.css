@@ -1,0 +1,66 @@
+.highlight pre { background-color: var(--code-background-color) }
+
+/* Felipe's edits to the Pygments Monokai theme. */
+/* commented rules are the same as in Monokai. */
+
+/* RUBY */
+.highlight .n { color: var(--text-color-more-contrast) } /* normal - was #f8f8f2 */
+.highlight .c1 { color: #8c929c } /* comment - or green #68a865 */
+.highlight .k { color: #f75c6f } /* major syntax */
+.highlight .o { color: #f75c6f } /* nonalphanumeric syntax */
+.highlight .nb { color: #f1a0b0 } /* minor syntax */
+.highlight .kp { color: #f1a0b0 } /* more minor syntax */
+.highlight .mi { color: #f1a0b0 } /* number */
+.highlight .p { color: #8c929c } /* parentheses, braces, punctuation */
+.highlight .no { color: #96b384 } /* class */
+.highlight .nc { color: #63b9ff } /* class definition */
+.highlight .nn { color: #63b9ff } /* module definition - or dark blue #2c83d4 */
+.highlight .nf { color: #fab15c } /* method */
+.highlight .vi { color: #bdaf9f } /* @ variables - or brown #c28165 */
+.highlight .ss { color: #78e1f5 } /* keyword argument */
+
+.highlight .s1 { color: #f2e672 } /* string: single quotes */
+.highlight .s2 { color: #f2e672 } /* string: double quotes */
+.highlight .sx { color: #70dbb6 } /* %-delimited string/array/etc. */
+.highlight .si { color: #63b9ff } /* string interpolation */
+.highlight .sr { color: #70dbb6 } /* regex */
+.highlight .se { color: #70dbb6 } /* escaped characters */
+
+/* NON-RUBY */
+.highlight .nl { color: #78e1f5 } /* JSON key */
+/* JSON value */
+.language-json .highlight .s1, .language-json .highlight .s2 {
+  color: var(--text-color-more-contrast);
+}
+.highlight .na { color: #8c929c } /* XML version= */
+.highlight .nt { color: #96b384 } /* XML tag */
+/* XML value */
+.language-xml .highlight code { color: var(--text-color-more-contrast) }
+.highlight .cm { color: #8c929c } /* multi-line comment */
+.highlight .cp { color: #918c74 } /* c++ preprocessor directives (e.g. #indclude) */
+.highlight .mh { color: #f1a0b0 } /* hex number */
+/* .highlight .kt { color: #66d9ef } /* variable type */
+.highlight .gu { color: #63b9ff } /* markdown heading */
+.language-markdown .highlight code { color: var(--text-color-more-contrast) } /* markdown text */
+ /* because I use cpp for AutoHotkey code, which occasionally produces syntax errors */
+.language-cpp .highlight .err {
+  color: var(--text-color-more-contrast);
+  background-color: var(--code-background-color);
+}
+/* no language specified */
+[class="highlighter-rouge"] code { color: var(--text-color-more-contrast) }
+
+@media (prefers-color-scheme: light) {
+  .highlight .s1 { color: #c7bd5b } /* string: single quotes */
+  .highlight .s2 { color: #c7bd5b } /* string: double quotes */
+  .highlight .nc { color: #29a0ff } /* class definition */
+  .highlight .nn { color: #29a0ff } /* module definition */
+  .highlight .si { color: #29a0ff } /* string interpolation */
+  .highlight .gu { color: #29a0ff } /* markdown heading */
+  .highlight .ss { color: #65becf } /* keyword argument */
+  .highlight .nl { color: #65becf } /* JSON key */
+  .highlight .sx { color: #59b59e } /* %-delimited string/array/etc. */
+  .highlight .sr { color: #59b59e } /* regex */
+  .highlight .se { color: #59b59e } /* escaped characters */
+  .highlight .vi { color: #a6998b } /* @ variables - or brown #c28165 */
+}

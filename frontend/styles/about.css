@@ -1,0 +1,17 @@
+about-date {
+  display: inline-block;
+  font-size: 85%;
+  border-radius: .5rem;
+  border: .05rem solid var(--text-color-less-contrast);
+  margin-left: .3rem;
+  padding: .1rem .4rem;
+}
+
+about-position {
+  display: block;
+  margin: .3rem 0 .3rem 1.2rem;
+}
+
+p + about-position {
+  margin-top: -.7rem;
+}
