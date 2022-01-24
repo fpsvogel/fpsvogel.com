@@ -5,6 +5,7 @@
 [build.environment]
   NODE_ENV = "development"
   BRIDGETOWN_ENV = "production"
+  RUBY_VERSION = "3.1.0"
 
 [build.processing]
   skip_processing = false
