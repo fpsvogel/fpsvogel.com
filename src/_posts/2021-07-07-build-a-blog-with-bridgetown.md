@@ -77,4 +77,4 @@ This paved the way for an even cooler improvement: I followed [this guide](https
 
 Besides Bridgetown itself, I learned a number of new things in this project, such as how to use Stimulus to make a page dynamic with a bit of JavaScript.
 
-But what I really loved was using what I *already* knew (Ruby) in a completely new way. Bridgetown is doing a wonderful job of bringing the joy of Ruby into the world of modern static site generators.**
+But what I really loved was using what I *already* knew (Ruby) in a completely new way. Bridgetown is doing a wonderful job of bringing the joy of Ruby into the world of modern static site generators.

@@ -9,24 +9,11 @@
   date: in progress
   date_in_words: In progress
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'In methods that are called many times: append strings rather than creating new
     ones, use instance variables to store values from method calls.'
-- id: B08P1MF813
-  rating: 4
-  type: book
-  name: 'The Verge: Reformation, Renaissance, and Forty Years that Shook the World'
-  site: https://www.goodreads.com/book/isbn?isbn=B08P1MF813
-  genres:
-  - history
-  date: '2022-01-23'
-  date_in_words: January 23
-  reread?: false
-  groups: 
-  blurb: 
-  notes: 
 - id: B00AA36RZY
   rating: 4
   type: book
@@ -37,8 +24,8 @@
   date: '2022-01-13'
   date_in_words: January 13
   reread?: true
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'Ruby examples: https://github.com/davidgf/design-patterns-in-ruby'
   - Strategy (e.g. MergeSort, InsertionSort) vs. Command (e.g. Cut, Copy, Delete)
@@ -65,8 +52,8 @@
   date: '2022-01-03'
   date_in_words: January  3
   reread?: true
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - A revelation. It's like I've never known what programming means.
   - Single Responsibility Principle (Responsibility-Driven Design)
@@ -117,9 +104,9 @@
   date: '2022-01-02'
   date_in_words: January  2
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B00O2NDJ2M
   rating: 4
   type: book
@@ -130,9 +117,9 @@
   date: '2021-12-27'
   date_in_words: December 27
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: https://www.codewithjason.com/complete-guide-to-rails-testing
   rating: 4
   type: book
@@ -143,8 +130,8 @@
   date: '2021-12-19'
   date_in_words: December 19
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - It was a huge relief to learn that it's OK to write only system specs and model
     specs, it's OK if I'm not mocking and stubbing, and it's OK if I'm not always
@@ -163,8 +150,8 @@
   date: '2021-10-22'
   date_in_words: October 22
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - Honest and insightful into into the foibles, failings, and glories of humanity.
     It made me laugh and it made me cry.
@@ -190,8 +177,8 @@
   date: '2021-10-15'
   date_in_words: October 15
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'Favorites: Could There Be Design in Evolution? https://youtu.be/-sPBF1o4a4U,
     Can you be a Christian and Believe in Evolution? https://youtu.be/pwnerL8M1pE,
@@ -229,9 +216,9 @@
   date: '2021-10-08'
   date_in_words: October  8
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B003VM8QK0
   rating: 4
   type: book
@@ -244,8 +231,8 @@
   date: '2021-09-19'
   date_in_words: September 19
   reread?: true
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'UPDATE: Originally I gave this a 3, but I''m bumping it up to a 4 after re-reading
     the first several chapters, and after watching videos by Inspiring Philosophy
@@ -283,9 +270,9 @@
   date: '2021-08-27'
   date_in_words: August 27
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B082FRHKFX
   rating: 4
   type: book
@@ -296,8 +283,8 @@
   date: '2021-08-25'
   date_in_words: August 25
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'There are many more "intermediate forms" in the fossil record than I thought,
     and even some existing today such as walking fish. My other main doubt—how complex
@@ -327,7 +314,7 @@
   date: '2021-08-19'
   date_in_words: August 19
   reread?: false
-  groups: 
+  groups:
   blurb: 'Enjoyable and actually more useful than I''d expected. My reflections on
     it: https://fpsvogel.com/posts/2021/nand-to-tetris'
   notes:
@@ -369,8 +356,8 @@
   date: '2021-07-10'
   date_in_words: July 10
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'Favorites: How to Cross a River, How to Power Your House (On Earth), How to Win
     an Election, How to Get Somewhere Fast'
@@ -385,9 +372,9 @@
   date: '2021-07-08'
   date_in_words: July  8
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: https://www.escribacafe.com
   rating: 4
   type: audio
@@ -400,10 +387,10 @@
   date: '2021-06-16'
   date_in_words: June 16
   reread?: false
-  groups: 
+  groups:
   blurb: 'Most Portuguese podcasts are annoyingly chatty, but this one is the opposite:
     historical yarns intended to transport you into another time and place. Love it.'
-  notes: 
+  notes:
 - id: B00IYUYF4A
   rating: 5
   type: book
@@ -415,7 +402,7 @@
   date: '2021-06-15'
   date_in_words: June 15
   reread?: true
-  groups: 
+  groups:
   blurb: It's been a long time since I gave highest marks to a "just for fun" book,
     but wow, this was fun. So fun that after listening to the audiobook, I immediately
     proceeded to read the book, for its illustrations. If I'd read this as a kid,
@@ -434,8 +421,8 @@
   date: '2021-05-21'
   date_in_words: May 21
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - The Shadow Broker s (2016-17) leaked NSA tools.
   - NotPetya (2017) crippled Ukraine and international shipping connected with Ukranian
@@ -451,8 +438,8 @@
   date: '2021-05-16'
   date_in_words: May 16
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - The l0pht (Mudge et al.)
   - 'Good context to the Snowden leak: the Five Guys Report said the govt. had not
@@ -470,8 +457,8 @@
   reread?: false
   groups:
   - with Hannah
-  blurb: 
-  notes: 
+  blurb:
+  notes:
 - id: '9780135928523'
   rating: 4
   type: book
@@ -482,9 +469,9 @@
   date: '2021-05-10'
   date_in_words: May 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B00BX1DN9K
   rating: 5
   type: book
@@ -495,7 +482,7 @@
   date: '2021-04-08'
   date_in_words: April  8
   reread?: false
-  groups: 
+  groups:
   blurb: The story of math as it drove human discovery over the centuries. Epic and
     engrossing. If you struggled to connect with math in school (as I did), this might
     help you finally see the wonder of it.
@@ -513,9 +500,9 @@
   date: '2021-03-14'
   date_in_words: March 14
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B01M34LHBT
   rating: 4
   type: book
@@ -527,9 +514,9 @@
   date: '2021-03-08'
   date_in_words: March  8
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B003UYUORM
   rating: 4
   type: book
@@ -540,9 +527,9 @@
   date: '2021-03-04'
   date_in_words: March  4
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B072BLVM83
   rating: 4
   type: book
@@ -553,8 +540,8 @@
   date: '2021-02-06'
   date_in_words: February  6
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - About a quarter of the way in, it's already become a monotonous string of anecdotes
     of twisted men heaping abuse upon women and children.
@@ -585,9 +572,9 @@
   date: '2021-01-09'
   date_in_words: January  9
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: https://sandimetz.com/99bottles
   rating: 4
   type: book
@@ -598,8 +585,8 @@
   date: '2021-01-03'
   date_in_words: January  3
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - Annotated refactorings are in 99bottles_ruby/notes
   - Use spreadsheet columns to help name concepts (cf. Nothing Is Something).
@@ -617,8 +604,8 @@
   date: '2020-12-29'
   date_in_words: December 29
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'PART 1: prefer Null Object Pattern to nil.'
   - 'PART 2: No such thing as one specialization. When you see a variant: isolate
@@ -633,9 +620,9 @@
   date: '2020-12-06'
   date_in_words: December  6
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: https://en.wikipedia.org/wiki/List_of_Radiolab_episodes
   rating: 4
   type: audio
@@ -647,8 +634,8 @@
   date: '2020-11-29'
   date_in_words: November 29
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'Favorites: 23 Weeks 6 Days (I cried several times), A Head Full of Symphonies,
     Dark Side of the Earth'
@@ -664,9 +651,9 @@
   date: '2020-11-21'
   date_in_words: November 21
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B01FBZXSNO
   rating: 4
   type: book
@@ -677,8 +664,8 @@
   date: '2020-11-16'
   date_in_words: November 16
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - Opioids - stunning, horrifying.
   - Fritz Haber - what a dramatic and tragic life, like a modern Oedipus.
@@ -697,8 +684,8 @@
   date: '2020-10-29'
   date_in_words: October 29
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 98 exercises × 1.5 hours each on average.
 - id: B07STQPGH6
@@ -712,9 +699,9 @@
   date: '2020-10-27'
   date_in_words: October 27
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B008GUIEYU
   rating: 4
   type: book
@@ -725,8 +712,8 @@
   date: '2020-10-13'
   date_in_words: October 13
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'Durant is balanced and witty in all things. Must re-read his Story of Civilization.
     And I respect his willingness to say he was wrong when he was younger and hadn''t
@@ -748,8 +735,8 @@
   date: '2020-10-02'
   date_in_words: October  2
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - Love the dialogues!
   - I. VIRTUALIZATION - process forking, scheduling incl. MLFQ & proportional share
@@ -772,8 +759,8 @@
   date: '2020-09-30'
   date_in_words: September 30
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'Finally I understand real-world politics. Favorites: https://youtu.be/Jm1rdbbH3oU,
     https://youtu.be/3ve4c3UZSkI, https://youtu.be/wE2dRO4iKhs, https://youtu.be/aYHauMXZtJ0,
@@ -789,8 +776,8 @@
   date: '2020-09-29'
   date_in_words: September 29
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - The oil industry really has got America by the balls. They've kept the conversation
     focused on recycling (the consumers' responsibility!). Many "chasing arrows" symbols
@@ -810,8 +797,8 @@
   date: '2020-09-28'
   date_in_words: September 28
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'I finally understand why Obama''s presidency was a failed promise: because the
     GOP was hijacked by Breitbart et al.'
@@ -826,8 +813,8 @@
   date: '2020-07-18'
   date_in_words: July 18
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - 'Whatever his faults, and as much as I dislike the closed Apple ecosystem, he
     was an artisan among mercenaries. He strove for transcendance ("purity" as he
@@ -845,8 +832,8 @@
   date: '2020-05-19'
   date_in_words: May 19
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - Finally I understand circuits!
 - id: '0143034669'
@@ -860,9 +847,9 @@
   date: '2020-05-17'
   date_in_words: May 17
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: 147670869X
   rating: 5
   type: book
@@ -875,8 +862,8 @@
   date: '2020-04-20'
   date_in_words: April 20
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - This gave me the inspiration I needed to get out of teaching and into tech.
 - id: '1598034499'
@@ -889,9 +876,9 @@
   date: '2020-03-20'
   date_in_words: March 20
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0808577123'
   rating: 4
   type: book
@@ -903,9 +890,9 @@
   date: '2020-02-29'
   date_in_words: February 29
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0141439513'
   rating: 4
   type: book
@@ -916,9 +903,9 @@
   date: '2020-02-20'
   date_in_words: February 20
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0142437220'
   rating: 4
   type: book
@@ -929,9 +916,9 @@
   date: '2020-02-10'
   date_in_words: February 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: 159474713X
   rating: 4
   type: book
@@ -944,9 +931,9 @@
   date: '2020-02-10'
   date_in_words: February 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0307265439'
   rating: 5
   type: book
@@ -957,9 +944,9 @@
   date: '2019-12-31'
   date_in_words: December 31
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0199232989'
   rating: 4
   type: book
@@ -970,9 +957,9 @@
   date: '2019-11-20'
   date_in_words: November 20
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B002BD2V2Y
   rating: 4
   type: book
@@ -983,8 +970,8 @@
   date: '2019-09-30'
   date_in_words: September 30
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - The Focus on the Family radio drama is great.
 - id: B0042JSMDW
@@ -997,9 +984,9 @@
   date: '2019-09-30'
   date_in_words: September 30
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0062303910'
   rating: 4
   type: book
@@ -1010,9 +997,9 @@
   date: '2019-09-10'
   date_in_words: September 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: https://www.bbc.co.uk/programmes/b03hxjrl
   rating: 4
   type: audio
@@ -1024,9 +1011,9 @@
   date: '2019-09-10'
   date_in_words: September 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B01EFM8NMK
   rating: 4
   type: book
@@ -1037,9 +1024,9 @@
   date: '2019-08-31'
   date_in_words: August 31
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B004TZMCV2
   rating: 4
   type: book
@@ -1050,9 +1037,9 @@
   date: '2019-08-10'
   date_in_words: August 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0143039954'
   rating: 4
   type: book
@@ -1063,9 +1050,9 @@
   date: '2019-07-31'
   date_in_words: July 31
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '1592402488'
   rating: 5
   type: book
@@ -1077,8 +1064,8 @@
   date: '2019-07-20'
   date_in_words: July 20
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - Finally I understand poetic meter.
 - id: '1841192163'
@@ -1093,8 +1080,8 @@
   reread?: false
   groups:
   - with Hannah
-  blurb: 
-  notes: 
+  blurb:
+  notes:
 - id: '0801049687'
   rating: 5
   type: book
@@ -1106,10 +1093,10 @@
   date: '2019-06-30'
   date_in_words: June 30
   reread?: false
-  groups: 
+  groups:
   blurb: Shines a bright light on the variety of ways the Bible has been interpreted
     over the centuries. Astonishing.
-  notes: 
+  notes:
 - id: B00351DSA0
   rating: 4
   type: book
@@ -1122,7 +1109,7 @@
   reread?: false
   groups:
   - with Hannah
-  blurb: 
+  blurb:
   notes:
   - Best on audio. Same for the sequels.
 - id: '0312038380'
@@ -1135,9 +1122,9 @@
   date: '2019-05-10'
   date_in_words: May 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '038553020X'
   rating: 4
   type: book
@@ -1148,9 +1135,9 @@
   date: '2019-04-30'
   date_in_words: April 30
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0060517603'
   rating: 4
   type: book
@@ -1162,9 +1149,9 @@
   date: '2018-09-10'
   date_in_words: September 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0674058070'
   rating: 5
   type: book
@@ -1177,9 +1164,9 @@
   date: '2018-08-20'
   date_in_words: August 20
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B007978OY6
   rating: 5
   type: book
@@ -1190,9 +1177,9 @@
   date: '2018-08-10'
   date_in_words: August 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0670616710'
   rating: 4
   type: book
@@ -1203,9 +1190,9 @@
   date: '2018-07-10'
   date_in_words: July 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B00K0OI42W
   rating: 4
   type: book
@@ -1216,9 +1203,9 @@
   date: '2018-06-20'
   date_in_words: June 20
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B07935NYFD
   rating: 4
   type: book
@@ -1229,9 +1216,9 @@
   date: '2018-04-30'
   date_in_words: April 30
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0441627404'
   rating: 4
   type: book
@@ -1242,9 +1229,9 @@
   date: '2018-02-10'
   date_in_words: February 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B00G9HQ2RI
   rating: 5
   type: audio
@@ -1255,9 +1242,9 @@
   date: '2018-01-31'
   date_in_words: January 31
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '1594747156'
   rating: 4
   type: book
@@ -1270,9 +1257,9 @@
   date: '2017-10-20'
   date_in_words: October 20
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0618260307'
   rating: 4
   type: book
@@ -1283,9 +1270,9 @@
   date: '2017-10-10'
   date_in_words: October 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B00BE24WT8
   rating: 4
   type: book
@@ -1298,8 +1285,8 @@
   date: '2017-10-10'
   date_in_words: October 10
   reread?: false
-  groups: 
-  blurb: 
+  groups:
+  blurb:
   notes:
   - Best on audio.
 - id: '0465089984'
@@ -1312,9 +1299,9 @@
   date: '2017-09-10'
   date_in_words: September 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: B0192CTMYG
   rating: 4
   type: book
@@ -1325,9 +1312,9 @@
   date: '2017-08-20'
   date_in_words: August 20
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0670026166'
   rating: 4
   type: book
@@ -1339,9 +1326,9 @@
   date: '2017-07-10'
   date_in_words: July 10
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '1433272261'
   rating: 4
   type: book
@@ -1352,9 +1339,9 @@
   date: '2017-05-20'
   date_in_words: May 20
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '0521547814'
   rating: 4
   type: book
@@ -1365,9 +1352,9 @@
   date: '2017-04-30'
   date_in_words: April 30
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:
 - id: '1606352768'
   rating: 4
   type: book
@@ -1379,6 +1366,6 @@
   date: '2017-04-20'
   date_in_words: April 20
   reread?: false
-  groups: 
-  blurb: 
-  notes: 
+  groups:
+  blurb:
+  notes:

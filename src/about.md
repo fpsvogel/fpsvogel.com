@@ -37,6 +37,8 @@ I'm a self-taught Rubyist from a humanities teaching background. Since summer 20
 
 ## Open source contributions
 
+[**Bridgetown**](https://github.com/bridgetownrb/bridgetown/pulls?q=author:fpsvogel) \| *Ruby 3* <about-date>Jan. 2022</about-date>
+
 [**Circulate (Ruby for Good)**](https://github.com/rubyforgood/circulate/pulls?q=author:fpsvogel) \| *Rails 6*, *Factory Bot* <about-date>Dec. 2021</about-date>
 
 [**Lobsters**](https://github.com/lobsters/lobsters/pulls?q=author:fpsvogel) \| *Rails 6* <about-date>Dec. 2021</about-date>
