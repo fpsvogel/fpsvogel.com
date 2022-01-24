@@ -11,6 +11,21 @@
   reread?: false
   groups: 
   blurb: 
+  notes:
+  - 'In methods that are called many times: append strings rather than creating new
+    ones, use instance variables to store values from method calls.'
+- id: B08P1MF813
+  rating: 4
+  type: book
+  name: 'The Verge: Reformation, Renaissance, and Forty Years that Shook the World'
+  site: https://www.goodreads.com/book/isbn?isbn=B08P1MF813
+  genres:
+  - history
+  date: '2022-01-23'
+  date_in_words: January 23
+  reread?: false
+  groups: 
+  blurb: 
   notes: 
 - id: B00AA36RZY
   rating: 4

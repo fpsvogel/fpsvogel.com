@@ -126,22 +126,25 @@ class Builders::LoadReadingList < SiteBuilder
   def my_dropbox_file
     return nil unless dropbox_access?
     # environment variables come from Netlify settings.
-    token = {
+    token_hash = {
       token_type: "bearer",
       access_token: ENV["MY_DROPBOX_ACCESS_TOKEN"],
       refresh_token: ENV["MY_DROPBOX_REFRESH_TOKEN"]
     }
     authenticator = DropboxApi::Authenticator.new(ENV["MY_DROPBOX_APP_KEY"], ENV["MY_DROPBOX_APP_SECRET"])
-    authenticated_token = DropboxApi::Token.new(authenticator, token)
-    authenticated_token.refresh_token
-    client = DropboxApi::Client.new(authenticated_token)
+    authenticated_token = OAuth2::AccessToken.from_hash(authenticator, token_hash)
+    authenticated_token.refresh!
+    client = DropboxApi::Client.new(access_token: authenticated_token)
     uri = URI(client.get_temporary_link(config.reading.dropbox_filepath).link)
     Net::HTTP.get(uri)
   end
 
   def dropbox_access?
-    config.reading.dropbox_filepath && ENV["MY_DROPBOX_ACCESS_TOKEN"] &&
-      ENV["MY_DROPBOX_APP_KEY"] && ENV["MY_DROPBOX_APP_SECRET"]
+    config.reading.dropbox_filepath &&
+      ENV["MY_DROPBOX_ACCESS_TOKEN"] &&
+      ENV["MY_DROPBOX_REFRESH_TOKEN"] &&
+      ENV["MY_DROPBOX_APP_KEY"] &&
+      ENV["MY_DROPBOX_APP_SECRET"]
   end
 
   def select_by_rating(items)
