@@ -13,12 +13,8 @@ pagination:
 timezone: America/New_York
 
 defaults:
-  - scope:
-      path: ""
-    values:
+  - values:
       image: /images/theme/social.jpg
-
-defaults:
   - scope:
       collection: "posts"
     values:

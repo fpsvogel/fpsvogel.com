@@ -1,6 +1,7 @@
 ---
 title: How to find a Rails job
 subtitle: notes from my job hunt
+image: /images/theme/social.jpg
 ---
 
 - [On junior roles](#on-junior-roles)
