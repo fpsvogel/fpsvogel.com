@@ -41,7 +41,7 @@ As a self-taught developer, it's also important to *build stuff*. You have no de
 It's not been much longer than a year since I started learning Ruby part-time in the spare hours left over after work and family, but in that time I've already built a few projects that are useful to me:
 
 - First, [a CLI app](https://github.com/fpsvogel/readstat) that analyzes my CSV reading log and shows stats on my reading. (I'll eventually move its core functions into my Rails app.)
-- Next, [my blog built with Bridgetown](https://github.com/fpsvogel/blog-2021). It's what you're looking at right now. My favorite part is the [Reading](/reading) page, where the highest-rated items are automatically pulled in from my CSV reading log every week. ([Here's more](/posts/2021/build-a-blog-with-bridgetown#3-ruby-component-and-plugin) on how I built that, if you're curious.)
+- Next, [my blog built with Bridgetown](https://github.com/fpsvogel/blog-2021). It's what you're looking at right now. My favorite part is the [Reading](/reading) page, where the highest-rated items are automatically pulled in from my CSV reading log every week. ([Here's more](/posts/2021/build-a-blog-with-bridgetown#2-ruby-component-and-plugin) on how I built that, if you're curious.)
 - Most recently, [my first Rails app](/posts/2021/first-rails-app-plain-reading). I built the usable first version in just one month, and for the next few months I'll be expanding it.
 
 So Ruby is fun and very productive, two key advantages for the self-taught developer.

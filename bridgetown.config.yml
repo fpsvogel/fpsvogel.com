@@ -10,10 +10,6 @@ pagination:
   enabled: true
   per_page: 6
 
-pagination:
-  enabled: true
-  per_page: 6
-
 timezone: America/New_York
 
 defaults:
@@ -21,6 +17,13 @@ defaults:
       path: ""
     values:
       image: /images/theme/social.jpg
+
+defaults:
+  - scope:
+      collection: "posts"
+    values:
+      layout: "post"
+      author: "Felipe Vogel"
 
 reading:
   local_filepath: "/mnt/c/Users/Felipe/Dropbox/Apps/SimpleText/reading.csv"
