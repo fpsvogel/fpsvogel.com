@@ -1,10 +1,10 @@
 ---
 title: How to find a Rails job
 subtitle: notes from my job hunt
-image: /images/theme/social.jpg
 ---
 
-- [On junior roles](#on-junior-roles)
+- [Why Ruby?](#why-ruby)
+- [Why a junior role?](#why-a-junior-role)
 - [Where to look for Rails job postings](#where-to-look-for-rails-job-postings)
 - [My job search: a bird's-eye view](#my-job-search-a-birds-eye-view)
 - [Resume strategies](#resume-strategies)
@@ -12,9 +12,15 @@ image: /images/theme/social.jpg
 - [Technical exercises](#technical-exercises)
 - [Conclusion](#conclusion)
 
-I've just landed my first developer job, a fullstack Rails position, after two months looking for a junior role in the U.S. 🎉 Here are some reflections on the job hunt, along with tips on finding your first Rails job.
+I've just landed my first developer job, a fullstack Ruby on Rails position, after two months looking for a junior role in the U.S. 🎉 Here are some reflections on the job hunt, along with tips on finding your first Rails job.
 
-## On junior roles
+## Why Ruby?
+
+At this point you may feel sorry for me for going through the harrowing experience of looking for a junior Rails job. Why did I choose Ruby? Why not a JS stack where junior roles are more common?
+
+For me Ruby was worth the risk of a longer job search because (a) I enjoy it a lot and (b) it's great for building up a portfolio quickly. If you want to read more, [here's my post expanding on those two points](/posts/2021/why-learn-ruby).
+
+## Why a junior role?
 
 Junior roles are a funny thing. Most people appreciate why they exist, but I've also sensed an undercurrent of contempt for them. I'm not saying most developers bash on junior roles. Nine times out of ten, I've gotten helpful replies when I ask people for tips or leads about junior/entry-level jobs.
 
