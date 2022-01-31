@@ -18,7 +18,7 @@ I've just landed my first developer job, a fullstack Ruby on Rails position, aft
 
 At this point you may feel sorry for me for going through the harrowing experience of looking for a junior Rails job. Why did I choose Ruby? Why not a JS stack where junior roles are more common?
 
-For me Ruby was worth the risk of a longer job search because (a) I enjoy it a lot and (b) it's great for building up a portfolio quickly. If you want to read more, [here's my post expanding on those two points](/posts/2021/why-learn-ruby).
+For me Ruby was worth the risk of a longer job search because (a) I enjoy it a lot and (b) Rails is great for building up a portfolio quickly. If you're still skeptical, [here's my post expanding on these two points](/posts/2021/why-learn-ruby).
 
 ## Why a junior role?
 
@@ -102,7 +102,7 @@ There are [lots of other questions](https://www.google.com/search?q=questions+to
 
 ## Technical exercises
 
-Of the five technical exercises that I did, three were take-home, and two were live coding exercises, where an interviewer watched as I wrote code and as I explained what I was doing and why. For the take-home exercises, I explained my thinking in a follow-up interview after I'd finished an exercise. One time there was also a separate architecture interview, where I was asked how I would design various parts of a Trello clone.
+Of the five technical exercises that I did, three were take-home, and two were live coding exercises, where an interviewer watched as I wrote code and as I explained what I was doing and why. For the take-home exercises, I explained my thinking in a follow-up interview after I'd finished an exercise.
 
 Side note: If I could have a do-over of my job search, I would be more persistent about finding out the salary *before* doing a technical exercise, so as not to do so many of them. Remember what I said earlier about asking for the salary range in the first interview? I was a bit lax on that until the last weeks of my job search. At least now you get to learn more about technical exercises…
 
@@ -130,6 +130,6 @@ Going into the job search, I had grim expectations for what lay ahead. I hadn't 
 - I got an interview at every company that I applied to, except one.
 - My job search lasted only two months.
 
-On the other hand, I see how my job search could easily have taken longer, since most junior positions don't pay as much as I was looking for. But I happened upon a few well-paying positions, and in the end I was hired at one of them.
+On the other hand, I see how my job search could easily have taken longer, since most junior positions don't pay as much as I was looking for.
 
 The most difficult parts of the job search were how much was expected on my resume, how intentionally I had to ask questions in interviews, and how nerve-racking the technical exercises were. If you're a junior Rails job-seeker yourself, I hope you'll find some use in my notes above on each of these areas. Good luck on your job search!
