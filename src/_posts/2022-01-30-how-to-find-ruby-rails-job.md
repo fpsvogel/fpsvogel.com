@@ -20,6 +20,8 @@ There's a good chance that you pity me for going through the harrowing experienc
 
 For me Ruby was worth the risk of a longer job search because (a) I enjoy it a lot and (b) Rails is great for building up a portfolio quickly. If you're still skeptical, [here's my post expanding on these two points](/posts/2021/why-learn-ruby).
 
+Fortunately, my job search ended up taking only two months. But before that I spent a year and a half studying and practicing part-time, while working full-time in customer support to pay the bills. For details and recommended learning resources, see [my ongoing study guide](https://github.com/fpsvogel/learn-ruby-and-cs).
+
 I also looked for a junior role specifically. If you're wondering why, see [Appendix: Why a junior role?](#appendix-why-a-junior-role) below.
 
 ## Where to look for Rails job postings
@@ -98,7 +100,7 @@ Here are a few skills that I could tell the interviewers were looking for:
 - **Automated testing.** After the first two take-home exercises listed above, interviewers appreciated that I wrote tests even though it wasn't required, and in two of the other three exercises I had to interact with pre-written tests.
 - **Getting a lot done.** This is a catch-all for being fluent enough in Ruby and Rails to build something in a short amount of time. For take-home exercises where no time limit is given, the reality is that "getting a lot done" means spending a lot of time on the exercise. If possible, choose a weekend or a less-busy-than-average few days where you can dedicate large blocks of time to it. If you have time, write on your blog or in the GitHub README about how you did the project. [Here's my blog post](/posts/2022/doctor-lookup-health-provider-search-tool) about how I did the first take-home exercise listed above.
 
-If you're wondering how to build up these skills, take a look at [the Ruby and Rails review reading list](/posts/2021/review-ruby-and-rails-for-job-interview) which I've recently been working through. [My ongoing study guide](https://github.com/fpsvogel/learn-ruby-and-cs) has a fuller list of resources.
+If you're wondering how to build up these skills, take a look at [the Ruby and Rails review reading list](/posts/2021/review-ruby-and-rails-for-job-interview) which I've recently been working through. [My study guide](https://github.com/fpsvogel/learn-ruby-and-cs) has a fuller list of resources.
 
 ## Conclusion
 
