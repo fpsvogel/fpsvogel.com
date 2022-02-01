@@ -1,49 +1,26 @@
 ---
-title: How to find a Rails job
+title: How to find your first Rails job
 subtitle: notes from my job hunt
 ---
 
 - [Why Ruby?](#why-ruby)
-- [Why a junior role?](#why-a-junior-role)
 - [Where to look for Rails job postings](#where-to-look-for-rails-job-postings)
 - [My job search: a bird's-eye view](#my-job-search-a-birds-eye-view)
 - [Resume strategies](#resume-strategies)
 - [What to ask in the initial interview](#what-to-ask-in-the-initial-interview)
 - [Technical exercises](#technical-exercises)
 - [Conclusion](#conclusion)
+- [Appendix: Why a junior role?](#appendix-why-a-junior-role)
 
-I've just landed my first developer job, a fullstack Ruby on Rails position, after two months looking for a junior role in the U.S. 🎉 Here are some reflections on the job hunt, along with tips on finding your first Rails job.
+I've just landed my first developer job, a U.S.-based (but remote) junior position in fullstack Ruby on Rails 🎉 Here are some reflections on the job hunt, along with tips on finding your first Rails job.
 
 ## Why Ruby?
 
-At this point you may feel sorry for me for going through the harrowing experience of looking for a junior Rails job. Why did I choose Ruby? Why not a JS stack where junior roles are more common?
+There's a good chance that you pity me for going through the harrowing experience of looking for a junior Rails job. Why did I choose Ruby? Why not a JS stack where junior roles are more common?
 
 For me Ruby was worth the risk of a longer job search because (a) I enjoy it a lot and (b) Rails is great for building up a portfolio quickly. If you're still skeptical, [here's my post expanding on these two points](/posts/2021/why-learn-ruby).
 
-## Why a junior role?
-
-Junior roles are a funny thing. Most people appreciate why they exist, but I've also sensed an undercurrent of contempt for them. I'm not saying most developers bash on junior roles. Nine times out of ten, I got helpful replies when I asked people for tips or leads about junior/entry-level jobs.
-
-What I mean is that it's common to admire developers who skipped being a junior and figured everything out "in the real world." Some people take this admiration so far that they discount junior roles entirely. I've been told that I'm "projecting a position of weakness" by saying that I'm looking for a junior role, and that I should instead build a product and start my own company so that maybe in a year *I'll* be the boss hiring people.
-
-(￣(エ)￣)ゞ
-
-Let's set aside the facts that I don't want to start my own company, I do try to convey competence and not helplessness to potential employers, and I don't need *and am not looking for* extra hand-holding on every little thing—I am self-taught, after all.
-
-Those facts aside, here's why I applied to junior roles almost exclusively:
-
-- **Because that's how I think I'll grow the most.** I was a teacher in my previous career, so I appreciate the power of learning by example. As a new developer, I'll learn most quickly and most thoroughly if I'm working with experienced developers who exemplify best practices. I could probably (painfully) learn all the same things on my own over time, but it would take much longer. So I don't believe I'm holding myself back by going for a junior role—quite the opposite.
-- **Because I don't have time to apply to everything.** During the job hunt I was already working a full-time job in order to pay the bills. Also, I spent most of my free time filling in the gaps on my resume, which I felt was a better use of time than filling out dozens of long-shot applications for mid-level positions. Even the few applications that I did undergo were time-consuming in themeselves, due to their sometimes long process of multiple interviews plus a take-home programming exercise. So I wanted to maximize my chances of getting a job by applying to my top (and most realistic) choices while continually improving my resume. This approach was also a lot more enjoyable than making job applications my new default evening activity.
-
-But one time I did apply for a mid-level position with not-too-daunting qualifications. It didn't turn out well. I passed the recruiter interview and the technical exercise, only to be shut down a few minutes into an interview with the CEO and lead developer, when they realized I was looking for my first programming job. I'm sure this only happened because of poor preparation on their part, but still I couldn't help being discouraged from spending more of my limited free time on mid-level applications.
-
-Also, I didn't apply for just *any* junior position. I wanted to find a job where I could stay for a good long while, so I ended up *not* applying for most junior positions that I ran across.
-
-- I stayed away from internships, contracts, and other temporary or low-pay arrangements.
-- I stayed away from tiny startups where I would be the only developer—that's not a junior role.
-- I stayed away from positions that involved other backend frameworks besides Rails. I'd like to stick to Ruby, at least on the backend, because that's what I most enjoy.
-
-So yes, I looked for junior positions. But where to look?
+I also looked for a junior role specifically. If you're wondering why, see [Appendix: Why a junior role?](#appendix-why-a-junior-role) below.
 
 ## Where to look for Rails job postings
 
@@ -65,16 +42,16 @@ I'll describe the technical exercises in more detail, but first let's back up to
 
 ## Resume strategies
 
-To get an intial interview, having an impressive resume is key. To give you some ideas on how to polish your resume, here are things that interviewers said they liked about my resume. By the way, it's always worth asking in an interview, "What did you like about my resume? And how could it be better?"
+To get an initial interview, having an impressive resume is key. To give you some ideas on how to polish your resume, here are things that interviewers said they liked about my resume. By the way, it's always worth asking in an interview, "What did you like about my resume? And how could it be better?"
 
-- **Lots of projects.** In one of my early interviews, I got a helpful answer to the "how could it be better" question: "More projects." So I built [a series of small apps](https://fpsvogel.com/posts/2022/doctor-lookup-health-provider-search-tool) over the following weeks. These helped fill out my resume, and they were a great learning experience. I've also heard good arguments (though not from interviewers) on the other side: instead of building lots of small projects, buckle down and build one big and impressive project. That's actually the path I started on when I first learned Rails, and I do plan on returning to my "serious" hobby app, but in these early stages of my Rails journey I learned more when I was building lots of small projects.
-- **Write a blog.** One interviewer found me through [a podcast episode where I was featured](https://rubyrogues.com/bridgetown-rb-ft-felipe-vogel-ruby-526). I was invited to the podcast because of [a blog post](https://fpsvogel.com/posts/2021/build-a-blog-with-bridgetown) that I wrote (reposted [on DEV](https://dev.to/fpsvogel/build-a-static-site-in-ruby-with-bridgetown-45kg)so that more people would see it). Moral of the story: write a blog! But even if your blog doesn't lead to any special opportunities, it's still worthwhile. Not only will your communication skills get a boost, but you can even learn something more thoroughly just by writing about it.
+- **Lots of projects.** In one of my early interviews, I got a helpful answer to the "how could it be better" question: "More projects." So I built [a series of small apps](/posts/2022/doctor-lookup-health-provider-search-tool) over the following weeks. These helped fill out my resume, and they were a great learning experience. I've also heard good arguments (though not from interviewers) on the other side: instead of building lots of small projects, buckle down and build one big and impressive project. That's actually the path I started on when I first learned Rails, and I do plan on returning to my "serious" hobby app, but in these early stages of my Rails journey I learned more when I was building lots of small projects.
+- **Write a blog.** One interviewer found me through [a podcast episode where I was featured](https://rubyrogues.com/bridgetown-rb-ft-felipe-vogel-ruby-526). I was invited to the podcast because of [a blog post](/posts/2021/build-a-blog-with-bridgetown) that I wrote (reposted [on DEV](https://dev.to/fpsvogel/build-a-static-site-in-ruby-with-bridgetown-45kg)so that more people would see it). Moral of the story: write a blog! But even if your blog doesn't lead to any special opportunities, it's still worthwhile. Not only will your communication skills get a boost, but you can even learn something more thoroughly just by writing about it.
 - **Keep a study guide.** I got compliments on [my study guide](https://github.com/fpsvogel/learn-ruby-and-cs) in two interviews, but it's another one of those things that's useful to do even if no one notices.
 
 Here are efforts that I didn't get comments on, but I'm sure they didn't hurt:
 
 - **Polish your GitHub portfolio.** Here's mine: [github.com/fpsvogel](https://github.com/fpsvogel). Make sure each of your pinned projects has a nice README including a summary of why it's on portfolio. If you want to spend even more time perfecting your READMEs, [here's an awesome README list](https://github.com/matiassingers/awesome-readme) to give you ideas, and here are a few that are built specifically as part of a learner's portfolio of Rails apps: [lortza/tarot](https://github.com/lortza/tarot), [lortza/sorrygirl](https://github.com/lortza/sorrygirl), [lortza/therapy_tracker](https://github.com/lortza/therapy_tracker).
-- **Make a web version of your resume.** Here's mine: [fpsvogel.com/about](https://fpsvogel.com/about/). This is in addition to (not instead of) the PDF version that I submitted in applications. [Here's my resume in PDF](https://www.overleaf.com/read/mgxfqgqngjqf) as of January 2022. I made it with LaTeX, but a plain old word processor would work too. Remember, keep it under one page!
+- **Make a web version of your resume.** Here's mine: [fpsvogel.com/about](/about/). This is in addition to (not instead of) the PDF version that I submitted in applications. [Here's my resume in PDF](https://www.overleaf.com/read/mgxfqgqngjqf) as of January 2022. I made it with LaTeX, but a plain old word processor would work too. Remember, keep it under one page!
 
 ## What to ask in the initial interview
 
@@ -118,10 +95,10 @@ Here are a few skills that I could tell the interviewers were looking for:
 
 - **Code readability,** which involves naming things well, using object-oriented design, and avoiding [code smells](https://refactoring.guru/refactoring/smells).
 - **Refactoring** and **[short feedback loops](https://www.codewithjason.com/program-feedback-loops/)** were important in both live coding exercises.
-- **Automated testing.** After the first two take-home exercises listed above, interviewers appreciated that I wrote tests even though it wasn't required, and in two of the other three exersises I had to interact with pre-written tests.
+- **Automated testing.** After the first two take-home exercises listed above, interviewers appreciated that I wrote tests even though it wasn't required, and in two of the other three exercises I had to interact with pre-written tests.
 - **Getting a lot done.** This is a catch-all for being fluent enough in Ruby and Rails to build something in a short amount of time. For take-home exercises where no time limit is given, the reality is that "getting a lot done" means spending a lot of time on the exercise. If possible, choose a weekend or a less-busy-than-average few days where you can dedicate large blocks of time to it. If you have time, write on your blog or in the GitHub README about how you did the project. [Here's my blog post](/posts/2022/doctor-lookup-health-provider-search-tool) about how I did the first take-home exercise listed above.
 
-If you're wondering how to build up these skills, take a look at [the Ruby and Rails review reading list](https://fpsvogel.com/posts/2021/review-ruby-and-rails-for-job-interview) which I've recently been working through. [My ongoing study guide](https://github.com/fpsvogel/learn-ruby-and-cs) has a fuller list of resources.
+If you're wondering how to build up these skills, take a look at [the Ruby and Rails review reading list](/posts/2021/review-ruby-and-rails-for-job-interview) which I've recently been working through. [My ongoing study guide](https://github.com/fpsvogel/learn-ruby-and-cs) has a fuller list of resources.
 
 ## Conclusion
 
@@ -133,3 +110,28 @@ Going into the job search, I had grim expectations for what lay ahead. I hadn't 
 On the other hand, I see how my job search could easily have taken longer, since most junior positions don't pay as much as I was looking for.
 
 The most difficult parts of the job search were how much was expected on my resume, how intentionally I had to ask questions in interviews, and how nerve-racking the technical exercises were. If you're a junior Rails job-seeker yourself, I hope you'll find some use in my notes above on each of these areas. Good luck on your job search!
+
+## Appendix: Why a junior role?
+
+Junior roles are a funny thing. Most people appreciate why they exist, but I've also sensed an undercurrent of contempt for them. I'm not saying most developers bash on junior roles. Nine times out of ten, I got helpful replies when I asked people for tips or leads about junior/entry-level jobs.
+
+What I mean is that it's common to admire developers who skipped being a junior and figured everything out "in the real world." Some people take this admiration so far that they discount junior roles entirely. I've been told that I'm "projecting a position of weakness" by saying that I'm looking for a junior role, and that I should instead build a product and start my own company so that maybe in a year *I'll* be the boss hiring people.
+
+(￣(エ)￣)ゞ
+
+Let's set aside the facts that I don't want to start my own company, I do try to convey competence and not helplessness to potential employers, and I don't need *and am not looking for* extra hand-holding on every little thing—I am self-taught, after all.
+
+Those facts aside, here's why I applied to junior roles almost exclusively:
+
+- **Because that's how I think I'll grow the most.** I was a teacher in my previous career, so I appreciate the power of learning by example. As a new developer, I'll learn most quickly and most thoroughly if I'm working with experienced developers who exemplify best practices. I could probably (painfully) learn all the same things on my own over time, but it would take much longer. So I don't believe I'm holding myself back by going for a junior role—quite the opposite.
+- **Because I don't have time to apply to everything.** During the job hunt I was already working a full-time job in order to pay the bills. Also, I spent most of my free time filling in the gaps on my resume, which I felt was a better use of time than filling out dozens of long-shot applications for mid-level positions. Even the few applications that I did undergo were time-consuming in themselves, due to their sometimes long process of multiple interviews plus a take-home programming exercise. So I wanted to maximize my chances of getting a job by applying to my top (and most realistic) choices while continually improving my resume. This approach was also a lot more enjoyable than making job applications my new default evening activity.
+
+But one time I did apply for a mid-level position with not-too-daunting qualifications. It didn't turn out well. I passed the recruiter interview and the technical exercise, only to be shut down a few minutes into an interview with the CEO and lead developer, when they realized I was looking for my first programming job. I'm sure this only happened because of poor preparation on their part, but still I couldn't help being discouraged from spending more of my limited free time on mid-level applications.
+
+Also, I didn't apply for just *any* junior position. I wanted to find a job where I could stay for a good long while, so I ended up *not* applying for most junior positions that I ran across.
+
+- I stayed away from internships, contracts, and other temporary or low-pay arrangements.
+- I stayed away from tiny startups where I would be the only developer—that's not a junior role.
+- I stayed away from positions that involved other backend frameworks besides Rails. I'd like to stick to Ruby, at least on the backend, because that's what I most enjoy.
+
+So yes, I looked for a junior position and I'm proud of it!

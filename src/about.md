@@ -28,7 +28,7 @@ I'm a self-taught Rubyist diving deeper into maintainable Rails. In mid-2020 I q
 
 [**Plain Reading**](https://plainreading.herokuapp.com) \| <small>[GitHub](https://github.com/fpsvogel/plainreading)</small> \| *Rails 7* <about-date>Sept. – Nov. 2021</about-date>
 
-- Created an app that parses a user’s plain-text reading list from Dropbox, and shows it as a page to friends or publicly.
+- Created an app that parses a user's plain-text reading list from Dropbox, and shows it as a web page.
 
 [**This website**](https://fpsvogel.com) \| <small>[GitHub](https://github.com/fpsvogel/blog-2021)</small> \| *Bridgetown, Hotwire (Stimulus + Turbo Drive)* <about-date>June – July 2021</about-date>
 
