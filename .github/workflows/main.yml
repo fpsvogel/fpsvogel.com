@@ -1,0 +1,14 @@
+# /.github/worfklows/main.yml
+name: Trigger Weekly Netlify Build
+on:
+  schedule:
+    # every Monday at midnight.
+    # see https://crontab.guru
+    - cron: '0 0 * * MON'
+jobs:
+  build:
+    name: Netlify Weekly Cron
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl request
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/615f2e6433735d4c6fa9b4fb

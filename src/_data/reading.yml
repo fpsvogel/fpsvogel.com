@@ -1,19 +1,161 @@
 ---
-- id: https://www.packtpub.com/product/polished-ruby-programming/9781801072724
+- id: https://acoup.blog
   rating: 4
-  type: book
-  name: Jeremy Evans – Polished Ruby Programming
-  site: https://www.packtpub.com/product/polished-ruby-programming/9781801072724
+  type: piece
+  name: A Collection of Unmitigated Pedantry
+  site: https://acoup.blog
   genres:
-  - ruby
+  - history
   date: in progress
   date_in_words: In progress
   reread?: false
   groups: 
   blurb: 
   notes:
-  - 'In methods that are called many times: append strings rather than creating new
-    ones, use instance variables to store values from method calls.'
+  - 'Audio : https://www.youtube.com/c/AGreatDivorce/playlists'
+- id: B00CA6CMLW
+  rating: 4
+  type: book
+  name: 'Bible, Gender, Sexuality: Reframing the Church''s Debate on Same-Sex Relationships'
+  site: https://www.goodreads.com/book/isbn?isbn=B00CA6CMLW
+  genres:
+  - religion
+  - exvangelical
+  date: '2022-02-08'
+  date_in_words: February  8
+  reread?: false
+  groups: 
+  blurb: Rigorously shows that committed gay marriages are actually not prohibited
+    in the Bible. Also, the book's approach of discerning the "moral logic" around
+    an issue is invaluable for understanding the Bible as a whole, or any other ancient
+    text.
+  notes:
+  - 'Ch. 8: "In Romans 2:1, “Passing judgment on another” is the sin that is equated
+    with the licentiousness, greed, and lust portrayed in 1:18-32. The posture of
+    judgmentalism entails essentially the same sin described in the previous chapter.
+    But this only raises the further question: What does out-of-control lust have
+    in common with judgmentalism? In both cases, what Paul seems to have in mind is
+    the attempt to advance one’s own honor, status, and will at the expense of others.
+    This interpretation is confirmed by a second piece of evidence found a bit later
+    in the passage, in Romans 2:8, where Paul characterizes those who are subject
+    to divine judgment as “those who are self-seeking and who obey not the truth but
+    wickedness.” The Greek word translated here as “self-seeking” (eritheia) is an
+    uncommon word and somewhat difficult to translate. But most interpreters follow
+    the lexicon’s suggestion of “selfishness” — or, even better, “selfish ambition.”
+    What is at stake here is the thirst for honor, status, and prestige that is so
+    prevalent in the ancient world.3 Hence, as Paul sees it, what lustful pagans have
+    in common with self-righteous judgmental Christians is that both are driven by
+    the thirst for their own agenda — their own way, their own status, their own honor
+    — while ignoring the concerns of everyone around them, particularly those of the
+    living God. At the root of all sin is the will to power that resists the posture
+    of humble gratitude and trust that marks human life as God intends it. Indeed,
+    as Robert Jewett has argued in his recent magisterial commentary on Romans, this
+    is the discovery that marked Paul’s own conversion: the realization that his zeal
+    for the law was in reality selfishly driven by his own longing for status and
+    honor. In commenting on Romans 7:7 (“I would not have known what it is to covet
+    if the law had not said, ‘You shall not covet’”), Jewett defines the core problem
+    driving covetousness as “the sin of asserting oneself and one’s group at the expense
+    of others.”"'
+  - Lots of other memorable bits. Maybe I'll add them here when I re-read.
+- id: B07NSGG3MK
+  rating: 4
+  type: book
+  name: 'Greg Boyd – Inspired Imperfection: How the Bible''s Problems Enhance Its
+    Divine Authority'
+  site: https://www.goodreads.com/book/isbn?isbn=B07NSGG3MK
+  genres:
+  - religion
+  - exvangelical
+  date: '2022-02-08'
+  date_in_words: February  8
+  reread?: true
+  groups: 
+  blurb: 
+  notes:
+  - This is an amazing way of understanding why the Bible has warts. Essentially,
+    it's for the same reasons that God chose to be incarnated in Jesus, a carpenter's
+    son who was crucified as a criminal.
+  - I'm not sure the excursion into Barth was necessary, seeing as how a book like
+    this should be as accessible as possible to normal people who are not theology
+    nerds but who are turned off by the Bible's imperfections.
+  - 'Boyd suggests that the OT Israelites were led by demons at some points when they
+    thought they were hearing God: "The fact that Paul instructs us to reject any
+    Gospel other than the cross-centered Gospel he preached, even if it be delivered
+    by “an angel from heaven” (Gal 1:8). provides further reason for us to conclude
+    that Moses was mistaken when he thought he heard Yahweh instruct him to have the
+    Israelites mercilessly slaughter “anything that breathes” in certain regions of
+    Canaan (Deut 20:16)." and "Although Elijah is generally depicted as a hero of
+    the faith in Scripture, and although the fire that fell from the sky was clearly
+    supernatural, Jesus rebuked his disciples for wanting to follow Elijah’s example.
+    Some early manuscripts add that Jesus suggested that James and John were of a
+    “different spirit” than he. If this reading is accepted, as I’m inclined to think
+    it should be, Jesus was suggesting that Elijah’s destructive miracle had a demonic
+    quality to it."'
+  - 'Postscript "Beautiful Scars": putting together a broken vase with the Japanese
+    restorative art of Kintsugi: "Moreover, this lady came to see how her masterpiece
+    told a particular unique story of hope rising out of hopelessness and beauty rising
+    out of brokenness. In fact, she shared that these cracks greatly increased her
+    personal connection to her vase because they now had something in common: a story
+    of brokenness and restoration. In fact, for her, those beautiful cracks became
+    a symbol of her own brokenness and of her need to always trust that God is working
+    in her to “turn her ashes into beauty,” as one of her favorite worship songs put
+    it. But to appreciate this, my friend had to be willing to let go of her previous
+    dream of getting as much of her pre-broken vase back as possible."'
+- id: B08MJZQ7JN
+  rating: 4
+  type: book
+  name: Karen Keen – Scripture, Ethics, and the Possibility of Same-Sex Relationships
+  site: https://www.goodreads.com/book/isbn?isbn=B08MJZQ7JN
+  genres:
+  - religion
+  - exvangelical
+  date: '2022-02-05'
+  date_in_words: February  5
+  reread?: false
+  groups: 
+  blurb: The author is a sensitive communicator, so this is a good one to recommend
+    to on-the-fence conservatives. The book is also valuable beyond the main issue
+    because it demonstrates a deliberative process of interpreting the Bible's commands
+    that is rarely acknowledged but often practiced both today (with less controversial
+    issues) and in the Bible itself—and not just on the fringes, but in such a way
+    that it's at the heart of the gospel.
+  notes:
+  - 'Ch. 5 (What Is Ethical? Interpreting the Bible like Jesus): Two biblical examples
+    of reinterpreting biblical commands for the sake of ethics: (1) lighter rules
+    for slaves in Deut. 15:12-18 than in Ex. 21:2-11, (2) exceptions on divorce by
+    Paul (1 Cor. 7:12-15) and Matthew (19:9) not given by Jesus (Mark 10:11-12). In
+    the second example, Jesus'' command was reinterpreted despite being grounded in
+    a creation ordinance. Also, other examples of handling laws with discernment of
+    human need: David eating the tabernacle bread (Matt. 12:3-4), Jesus telling his
+    accusers that it''s OK to help people in need on the Sabbath (and Sabbath is another
+    creation ordinance!).'
+  - '"Even though Jesus honored the Sabbath, he was accused of violating it. In response
+    to his accusers, he took their objections at face value and taught *the fundamental
+    reason* for God’s law, namely, God’s law is made for humankind, not humankind
+    for God’s law (Mark 2:27). In other words, God’s ordinances are always *on behalf
+    of* people and not for the arbitrary appeasement of God’s sensibilities. For that
+    reason, even a creation ordinance requires discernment to be properly interpreted
+    and applied. Lest we think such interpretative work was only for the inspired
+    biblical authors, Jesus indicates otherwise. His instructions for interpreting
+    the Bible were given to ordinary religious leaders of his day (i.e., the faith
+    community). He confronted them for failing to adequately engage the deliberative
+    process. In other words, the interpretive practices we see Jesus and the biblical
+    authors employ are examples given for us to follow. Jesus wanted his accusers
+    to learn how to be better readers and appliers of Scripture."'
+  - 'Paul too advised discernment about applying Sabbath laws in Col. 2: "do not let
+    anyone judge you with respect to food or drink, or in the matter of a feast, new
+    moon, or Sabbath days—these are only the shadow of the things to come"—a point
+    reiterated in Heb. 10:1 "The law possesses a shadow of the good things to come."'
+  - 'Ch. 6: The PCA has engaged in casuistry (development of case law) to add another
+    exception to Jesus'' prohibition of divorce, in cases of domestic violence.'
+  - 'Ch. 7: Augustine believed intersex people were not a product of the fall: "For
+    God is the Creator of all things: He Himself knows where and when anything should
+    be, or should have been, created; and He knows how to weave the beauty of the
+    whole out of the similarity and diversity of its parts. The man who cannot view
+    the whole is offended by what he takes to be the deformity of a part; but this
+    is because he does not know how it is to be adapted or related to the whole. …
+    God forbid, however, that someone who does not know why the Creator has done what
+    He has done should be foolish enough to suppose that God has in such cases erred."'
 - id: B00AA36RZY
   rating: 4
   type: book
@@ -41,6 +183,23 @@
     one.'
   - 'Composite: a tree structure where invididual objects (leaves) and compositions
     (nodes) are treated uniformly. Example: a menu with items and submenus.'
+- id: B071CXGXM2
+  rating: 4
+  type: book
+  name: 'Aaron R. Yilmaz – Deliver Us From Evolution?: A Christian Biologist''s In-Depth
+    Look at the Evidence Reveals a Surprising Harmony Between Science and God'
+  site: https://www.goodreads.com/book/isbn?isbn=B071CXGXM2
+  genres:
+  - religion
+  - science
+  - exvangelical
+  date: '2022-01-04'
+  date_in_words: January  4
+  reread?: false
+  groups: 
+  blurb: Loved it, not because I needed it but because it's the most handy all-in-one
+    book on evolution to give to doubting Christians.
+  notes: 
 - id: B07F88LY9M
   rating: 4
   type: book
@@ -166,46 +325,34 @@
     buried embers in other souls like John Green does.
   - The only downside is that John's anxiety about disease is also contagious. Not
     that I wasn't already anxious about disease, these days…
-- id: https://www.youtube.com/c/InspiringPhilosophy/videos
+- id: https://books.google.com/books?id=gwpMAwAAQBAJ&pg=PA125
   rating: 4
-  type: video
-  name: Michael Jones – Inspiring Philosophy
-  site: https://www.youtube.com/c/InspiringPhilosophy/videos
+  type: book
+  name: 'Gregory Boyd – Evolution as Cosmic Warfare: A Biblical Perspective on Satan
+    and "Natural" Evil'
+  site: https://books.google.com/books?id=gwpMAwAAQBAJ&pg=PA125
   genres:
   - religion
   - science
+  - exvangelical
   date: '2021-10-15'
   date_in_words: October 15
   reread?: false
   groups: 
-  blurb: 
+  blurb: The most satisfying theodicy that I've come across.
   notes:
-  - 'Favorites: Could There Be Design in Evolution? https://youtu.be/-sPBF1o4a4U,
-    Can you be a Christian and Believe in Evolution? https://youtu.be/pwnerL8M1pE,
-    What Does it Mean to be the Image of God? https://youtu.be/Q49G4tihX3Y, Was Evolution
-    Inevitable? https://youtu.be/_H0yoBiBM5s, Genesis 1-11 series https://www.youtube.com/playlist?list=PL1mr9ZTZb3TUeQHe-lZZF2DTxDHA_LFxi'
-  - 'Top insights:'
-  - "#1 evolution is not random but DOES have a predictable trajectory based on physical
-    laws (a field called structuralism)"
-  - "#2 Genesis says that God did NOT create the world perfect because God told the
-    humans to subdue the earth (in a military sense)"
-  - '#3 the "creation" of humans as God''s election/appointing of already-existing
-    humans fits with God''s "creation" of Israel out of already-existing people and
-    "create in me a clean heart" etc.'
-  - "#4 physical death being built into nature from the beginning is not a new belief
-    (Basil, Aquinas, Calvin) and avoids young-earth creationist nonsense like the
-    denial that plants are alive, cf. https://biologos.org/common-questions/did-death-occur-before-the-fall/,
-    https://blog.drwile.com/was-there-animal-death-before-the-fall/, https://alastairadversaria.com/2014/04/08/death-before-the-fall/,
-    https://creation.com/images/pdfs/tj/j28_1/j28_1_77-83.pdf"
-  - 'But I still find it hard to accept that physical death and decay were intended
-    by God non-humans—animals, plants, and nonbiological bodies like stars. A better
-    approach is the one taken by Gregory Boyd, for example in his paper "Evolution
-    as Cosmic Warfare": https://books.google.com/books?id=gwpMAwAAQBAJ&pg=PA125. Here''s
-    a summary: https://books.google.com/books?id=G0e4DwAAQBAJ&pg=PA103. This is a
-    much more spiritually and poetically fulfilling theory for explaining the suffering
-    "built into" nature. I couldn''t help recalling Tolkien''s creation account in
-    The Silmarillion, because I think it is an amazingly vivid portrayal of the same
-    theodicy: https://archive.org/details/TheSilmarillionIllustratedJ.R.R.TolkienTedNasmith/page/n25/mode/2up'
+  - 'Here''s a summary: https://books.google.com/books?id=G0e4DwAAQBAJ&pg=PA103'
+  - I found this when I was pondering the significance of death in the Christian story
+    vs. the material history of the universe. Christians who accept science must admit
+    that death and decay are built into the universe and so were there from the beginning,
+    contra the traditional story of the fall. For most, this means God intended for
+    death to be a natural part of the world. But to me this is unsatisfying, both
+    on a gut level and also in how central to Christianity it is to view death as
+    a bad thing.
+  - 'Boyd''s is a much more spiritually and poetically fulfilling theory for explaining
+    the suffering "built into" nature. I couldn''t help recalling Tolkien''s creation
+    account in The Silmarillion, because I think it is an amazingly vivid portrayal
+    of the same theodicy: https://archive.org/details/TheSilmarillionIllustratedJ.R.R.TolkienTedNasmith/page/n25/mode/2up'
 - id: https://vocal.media/fiction/on-being-human-qxlbw20r1g
   rating: 4
   type: piece
@@ -228,6 +375,7 @@
   genres:
   - religion
   - science
+  - exvangelical
   date: '2021-09-19'
   date_in_words: September 19
   reread?: true
