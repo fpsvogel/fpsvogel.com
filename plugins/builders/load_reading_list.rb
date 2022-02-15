@@ -1,5 +1,6 @@
 require "reading/csv/parse"
 require "dropbox_api"
+require 'debug'
 
 class Builders::LoadReadingList < SiteBuilder
   CONFIG_DEFAULTS = {
@@ -294,11 +295,13 @@ class Builders::LoadReadingList < SiteBuilder
   def uniq_of_attribute(attribute, items, sort_by:, convert: nil)
     all = items.flat_map do |item|
       item.send(attribute).presence
-    end.uniq.compact
+    end.compact
     if sort_by == :frequency
       all = all.group_by(&:itself)
         .sort_by { |value, duplicates| duplicates.count }
         .reverse.to_h.keys
+    else
+      all = all.uniq
     end
     if convert
       all = all.map do |value|

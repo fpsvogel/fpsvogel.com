@@ -15,5 +15,6 @@ group :bridgetown_plugins do
   gem "reading-csv"
   gem "rinku"
   gem "dropbox_api"
+  gem "debug"
   # gem "bridgetown-routes", "~> 1.0.0.beta1"
 end
