@@ -40,7 +40,7 @@ reading:
                              # to show number ratings instead, delete this.
   minimum_rating: 4 # exclude ratings below this. must be an integer.
 
-  list_update_mode: rebuild_local
+  list_update_mode: refresh
   # options:
   # refresh - add new items only.
   # rebuild - re-parse all from scratch.

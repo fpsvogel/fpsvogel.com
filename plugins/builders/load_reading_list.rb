@@ -54,7 +54,11 @@ class Builders::LoadReadingList < SiteBuilder
                 .then { |items| select_public(items) }
                 .then { |items| select_done_or_in_progress(items) }
                 .then { |items| simplify(items) }
-    sort_by_date(new_items + old_items)
+                # TODO not necessary if I made sure the types were all strings
+                .then { |items| items.map { |item| item.update(type: item[:type].to_s) } }
+    # TODO not necessary if I made sure the types were all strings
+    all_items = (new_items + old_items).uniq
+    sort_by_date(all_items)
   end
 
   def old_items_refresh
