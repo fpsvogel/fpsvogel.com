@@ -55,7 +55,8 @@ class Builders::LoadReadingList < SiteBuilder
                 .then { |items| select_public(items) }
                 .then { |items| select_done_or_in_progress(items) }
                 .then { |items| simplify(items) }
-    sort_by_date(new_items + old_items)
+    all_items = (new_items + old_items).uniq
+    sort_by_date(all_items)
   end
 
   def old_items_refresh
