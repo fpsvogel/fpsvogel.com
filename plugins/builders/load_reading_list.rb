@@ -54,8 +54,7 @@ class Builders::LoadReadingList < SiteBuilder
                 .then { |items| select_public(items) }
                 .then { |items| select_done_or_in_progress(items) }
                 .then { |items| simplify(items) }
-    all_items = (new_items + old_items).uniq
-    sort_by_date(all_items)
+    sort_by_date(new_items + old_items)
   end
 
   def old_items_refresh
@@ -295,11 +294,13 @@ class Builders::LoadReadingList < SiteBuilder
   def uniq_of_attribute(attribute, items, sort_by:, convert: nil)
     all = items.flat_map do |item|
       item.send(attribute).presence
-    end.uniq.compact
+    end.compact
     if sort_by == :frequency
       all = all.group_by(&:itself)
         .sort_by { |value, duplicates| duplicates.count }
         .reverse.to_h.keys
+    else
+      all = all.uniq
     end
     if convert
       all = all.map do |value|

@@ -183,6 +183,33 @@
     one.'
   - 'Composite: a tree structure where invididual objects (leaves) and compositions
     (nodes) are treated uniformly. Example: a menu with items and submenus.'
+- id: B00AA36RZY
+  rating: 4
+  type: book
+  name: Head First Design Patterns 〜 2nd ed.
+  site: https://www.goodreads.com/book/isbn?isbn=B00AA36RZY
+  genres:
+  - cs
+  date: '2022-01-13'
+  date_in_words: January 13
+  reread?: true
+  groups: 
+  blurb: 
+  notes:
+  - 'Ruby examples: https://github.com/davidgf/design-patterns-in-ruby'
+  - Strategy (e.g. MergeSort, InsertionSort) vs. Command (e.g. Cut, Copy, Delete)
+  - 'State: similar to Strategy, but with a different intent. Example: the changing
+    states of a gumball machine.'
+  - Pub-Sub is similar to Observer, but it involves a middleman (the message broker
+    / event bus) between the publisher and the subscribers, and usually it is implemented
+    asynchronously with a message queue.
+  - Factory Method (inheritance) vs. Abstract Factory (composition).
+  - 'Decorator, Adapter, and Facade are all wrappers but with different purposes.
+    Decorator: adds responsibility (and behavior). Adapter: changes the interface.
+    Facade: makes an interface simpler, or joins several interfaces into a simpler
+    one.'
+  - 'Composite: a tree structure where invididual objects (leaves) and compositions
+    (nodes) are treated uniformly. Example: a menu with items and submenus.'
 - id: B071CXGXM2
   rating: 4
   type: book
