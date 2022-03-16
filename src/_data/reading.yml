@@ -1,4 +1,70 @@
 ---
+- id: https://rubystyle.guide
+  rating: 4
+  type: course
+  name: The Ruby Style Guide
+  site: https://rubystyle.guide
+  genres:
+  - ruby
+  date: '2022-03-06'
+  date_in_words: March  6
+  reread?: false
+  groups: 
+  blurb: 
+  notes:
+  - 'Other style guides: https://rails.rubystyle.guide, https://rspec.rubystyle.guide,
+    https://ruby-style-guide.shopify.dev, https://github.com/github/rubocop-github/blob/master/STYLEGUIDE.md'
+  - 'I NEED TO PAY MORE ATTENTION TO:'
+  - https://rubystyle.guide/#one-class-per-file
+  - https://rubystyle.guide/#safe-assignment-in-condition
+  - https://rubystyle.guide/#contingency-methods
+  - https://rubystyle.guide/#double-amper-preprocess
+  - https://rubystyle.guide/#identity-comparison
+  - https://rubystyle.guide/#block-forwarding; & instead of &block
+  - https://rubystyle.guide/#consistent-classes
+  - https://rubystyle.guide/#single-line-classes
+  - https://rubystyle.guide/#file-classes and https://rubystyle.guide/#namespace-definition
+  - https://rubystyle.guide/#module-function
+  - https://rubystyle.guide/#alias-method-lexically
+  - https://rubystyle.guide/#avoid-hash-constructor
+  - https://rubystyle.guide/#hash-key
+  - https://rubystyle.guide/#hash-each
+  - https://rubystyle.guide/#accessing-elements-directly and following
+  - https://rubystyle.guide/#count-vs-size
+  - https://rubystyle.guide/#reverse-each
+  - https://rubystyle.guide/#random-numbers
+  - https://rubystyle.guide/#concat-strings
+  - https://rubystyle.guide/#dont-abuse-gsub
+  - https://rubystyle.guide/#sprintf
+  - https://rubystyle.guide/#no-datetime
+  - https://rubystyle.guide/#regexp-string-index
+  - https://rubystyle.guide/#no-numbered-regexes
+  - https://rubystyle.guide/#multi-line-regexes
+  - https://rubystyle.guide/#comment-regexes
+  - https://rubystyle.guide/#gsub-blocks
+  - https://rubystyle.guide/#percent-literal-braces
+  - https://rubystyle.guide/#prefer-public-send
+  - https://rubystyle.guide/#always-warn
+  - 'DISAGREE WITH:'
+  - https://rubystyle.guide/#no-trailing-backslash; in some cases it can make a multi-line
+    expression more readable.
+  - https://rubystyle.guide/#ternary-operator; ternary expressions are hard to read
+    unless they're very short.
+  - https://rubystyle.guide/#heredoc-delimiters; the variable name should be descriptive
+    enough, and a standard delimiter such as "EOM" makes heredocs easier to spot.
+- id: B01DHWACVY
+  rating: 4
+  type: book
+  name: Trevor Noah – Born a Crime
+  site: https://www.goodreads.com/book/isbn?isbn=B01DHWACVY
+  genres:
+  - biography
+  date: '2022-02-27'
+  date_in_words: February 27
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
 - id: https://acoup.blog
   rating: 4
   type: piece
@@ -6,13 +72,15 @@
   site: https://acoup.blog
   genres:
   - history
-  date: in progress
-  date_in_words: In progress
+  date: '2022-02-20'
+  date_in_words: February 20
   reread?: false
   groups: 
   blurb: 
   notes:
-  - 'Audio : https://www.youtube.com/c/AGreatDivorce/playlists'
+  - 'Audio: https://www.youtube.com/c/AGreatDivorce/playlists'
+  - 'Recurring themes: opposing the cult of the badass, questioning whether the achievements
+    of the elite are worth their cost in the suffering of the ordinary people'
 - id: B00CA6CMLW
   rating: 4
   type: book
@@ -120,6 +188,7 @@
     issues) and in the Bible itself—and not just on the fringes, but in such a way
     that it's at the heart of the gospel.
   notes:
+  - A good follow-up is The Bible and Sexuality by the same author
   - 'Ch. 5 (What Is Ethical? Interpreting the Bible like Jesus): Two biblical examples
     of reinterpreting biblical commands for the sake of ethics: (1) lighter rules
     for slaves in Deut. 15:12-18 than in Ex. 21:2-11, (2) exceptions on divorce by
@@ -1014,11 +1083,11 @@
   blurb: 
   notes:
   - This gave me the inspiration I needed to get out of teaching and into tech.
-- id: '1598034499'
+- id: https://www.thegreatcourses.com/courses/building-great-sentences-exploring-the-writer-s-craft
   rating: 4
   type: audio
-  name: 'Building Great Sentences: Exploring the Writer''s Craft 〜 Great Courses'
-  site: https://www.goodreads.com/book/isbn?isbn=1598034499
+  name: 'Building Great Sentences: Exploring the Writer''s Craft 〜 The Great Courses'
+  site: https://www.thegreatcourses.com/courses/building-great-sentences-exploring-the-writer-s-craft
   genres:
   - language
   date: '2020-03-20'
