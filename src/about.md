@@ -6,6 +6,23 @@ permalink: /about/
 
 I'm a self-taught Rubyist diving deeper into maintainable Rails. In mid-2020 I quit my previous career in humanities teaching, got a new day job in tech support, and used my free time to work toward my first developer job.
 
+## Work
+
+[**Sana Benefits**](https://sanabenefits.com/) \| *Remote*
+<about-position>Software Engineer <about-date>Feb. 2022 – present</about-date></about-position>
+
+[**Booster Apps**](https://boosterapps.com/) and [**Rivo**](https://www.rivo.io/) \| *Remote*
+<about-position>Tech Support Manager <about-date>July 2021 – Feb. 2022</about-date></about-position>
+<about-position>Tech Support Engineer <about-date>June 2020 – June 2021</about-date></about-position>
+
+## Open source contributions
+
+[**Bridgetown**](https://github.com/bridgetownrb/bridgetown/pulls?q=author:fpsvogel) \| *Ruby 3* <about-date>Jan. 2022</about-date>
+
+[**Circulate (Ruby for Good)**](https://github.com/rubyforgood/circulate/pulls?q=author:fpsvogel) \| *Rails 6, RSpec, Factory Bot* <about-date>Dec. 2021</about-date>
+
+[**Lobsters**](https://github.com/lobsters/lobsters/pulls?q=author:fpsvogel) \| *Rails 6, RSpec* <about-date>Dec. 2021 – Jan. 2022</about-date>
+
 ## Projects
 
 [**My study plan**](https://github.com/fpsvogel/learn-ruby-and-cs) <about-date>June 2020 – present</about-date>
@@ -34,23 +51,6 @@ I'm a self-taught Rubyist diving deeper into maintainable Rails. In mid-2020 I q
 
 - [Featured on the Ruby Rogues podcast](https://rubyrogues.com/bridgetown-rb-ft-felipe-vogel-ruby-526) for the Bridgetown tutorial that I wrote alongside my site.
 - My Bridgetown tutorial was also [featured in Ruby Weekly](https://rubyweekly.com/issues/561#:~:text=Build%20a%20Static%20Site%20in%20Ruby%20with%20Bridgetown).
-
-## Open source contributions
-
-[**Bridgetown**](https://github.com/bridgetownrb/bridgetown/pulls?q=author:fpsvogel) \| *Ruby 3* <about-date>Jan. 2022</about-date>
-
-[**Circulate (Ruby for Good)**](https://github.com/rubyforgood/circulate/pulls?q=author:fpsvogel) \| *Rails 6, RSpec, Factory Bot* <about-date>Dec. 2021</about-date>
-
-[**Lobsters**](https://github.com/lobsters/lobsters/pulls?q=author:fpsvogel) \| *Rails 6, RSpec* <about-date>Dec. 2021 – Jan. 2022</about-date>
-
-## Work history
-
-[**Sana Benefits**](https://sanabenefits.com/) \| *Remote*
-<about-position>Associate Software Engineer <about-date>Feb. 2022 – present</about-date></about-position>
-
-[**Booster Apps**](https://boosterapps.com/) and [**Rivo**](https://www.rivo.io/) \| *Remote*
-<about-position>Tech Support Manager <about-date>July 2021 – Feb. 2022</about-date></about-position>
-<about-position>Tech Support Engineer <about-date>June 2020 – June 2021</about-date></about-position>
 
 ## Education
 
