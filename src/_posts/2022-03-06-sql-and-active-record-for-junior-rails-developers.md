@@ -8,9 +8,7 @@ subtitle: demystifying the database
   - [SQL exercises](#sql-exercises)
   - [Deeper into SQL](#deeper-into-sql)
 - [Active Record resources](#active-record-resources)
-  - [Active Record features](#active-record-features)
-  - [Querying](#querying)
-  - [Model design and architecture](#model-design-and-architecture)
+- [Model design and architecture](#model-design-and-architecture)
 
 Databases are hard. A few months ago when I started learning Ruby on Rails, I had trouble shifting from a pure Ruby mindset (where I manipulate data via Ruby's lovely Enumerable methods) to an Active Record mindset (where I manipulate data from the database as part of a query and not via Enumerable methods). I also kept putting off learning SQL because it was intimidating. Instead I doubled down on Rails basics and testing. Those were great time investments, but now the time has come to learn SQL and Active Record beyond the basics.
 
@@ -42,17 +40,13 @@ SQL resources are listed first here, but that's not meant as a recommendation to
 
 ## Active Record resources
 
-### Active Record features
-
+- [Advanced Active Record](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails#advanced-forms-and-active-record) at the Odin Project
 - [The Rails Guides](https://guides.rubyonrails.org) on Active Record
-- [Some nice docs](https://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html) from the Rails API Documentation
-
-### Querying
-
+- [Some nice Active Record docs](https://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html) from the Rails API Documentation
 - [Advanced ActiveRecord Querying](https://thoughtbot.com/upcase/advanced-activerecord-querying) on Upcase
 - [An upcoming course](https://twitter.com/jmcharnes/status/1499760253440860161) on Active Record
 
-### Model design and architecture
+## Model design and architecture
 
 I'm still looking for a good book or course on this, but in the meantime here are some helpful blog posts.
 

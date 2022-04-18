@@ -1,4 +1,31 @@
 ---
+- id: https://canaldafantasia.com/category/tolkien-audiolivro/o-hobbit
+  rating: 4
+  type: book
+  name: J. R. R. Tolkien – O Hobbit
+  site: https://canaldafantasia.com/category/tolkien-audiolivro/o-hobbit
+  genres:
+  - novel
+  - portuguese
+  date: in progress
+  date_in_words: In progress
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
+- id: https://www.railsspeed.com
+  rating: 4
+  type: book
+  name: Nate Berkopec – The Complete Guide to Rails Performance
+  site: https://www.railsspeed.com
+  genres:
+  - ruby
+  date: in progress
+  date_in_words: In progress
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
 - id: https://rubystyle.guide
   rating: 4
   type: course
@@ -65,11 +92,11 @@
   groups: 
   blurb: 
   notes: 
-- id: https://acoup.blog
+- id: https://www.youtube.com/c/AGreatDivorce/playlists
   rating: 4
-  type: piece
+  type: audio
   name: A Collection of Unmitigated Pedantry
-  site: https://acoup.blog
+  site: https://www.youtube.com/c/AGreatDivorce/playlists
   genres:
   - history
   date: '2022-02-20'
@@ -93,10 +120,10 @@
   date_in_words: February  8
   reread?: false
   groups: 
-  blurb: Rigorously shows that committed gay marriages are actually not prohibited
-    in the Bible. Also, the book's approach of discerning the "moral logic" around
-    an issue is invaluable for understanding the Bible as a whole, or any other ancient
-    text.
+  blurb: Shows with careful analysis that committed gay marriages are actually not
+    prohibited in the Bible. Also, the book's approach of discerning the "moral logic"
+    around an issue is invaluable for understanding the Bible as a whole, or any other
+    ancient text.
   notes:
   - 'Ch. 8: "In Romans 2:1, “Passing judgment on another” is the sin that is equated
     with the licentiousness, greed, and lust portrayed in 1:18-32. The posture of
