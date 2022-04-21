@@ -38,6 +38,8 @@ Which brings us to my next point.
 
 As a self-taught developer, it's also important to *build stuff*. You have no degree that tells people how good you are. Instead, your portfolio does all the talking. For the solo learner who needs to put together a portfolio of working, useful apps, Ruby and Rails are excellent tools.
 
+Part of this productivity boost, it must be said, comes from how many conventions are built into Rails. Honestly, the reason I looked for alternatives to JS frameworks in the first place is that the JS ecosystem has so many options at every turn, and it's hard for a beginner to know what decisions to make.
+
 It's not been much longer than a year since I started learning Ruby part-time in the spare hours left over after work and family, but in that time I've already built a few projects that are useful to me:
 
 - First, [a CLI app](https://github.com/fpsvogel/readstat) that analyzes my CSV reading log and shows stats on my reading. (I'll eventually move its core functions into my Rails app.)
