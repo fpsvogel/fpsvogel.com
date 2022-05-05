@@ -15,7 +15,7 @@ Recently I heard about this convenient feature of [Elixir maps](https://hexdocs.
 
 Nice! This is something I've been wishing for in Ruby. In a current project I have a configuration hash that is passed around and used in a variety of objects. The hash is quite large and several levels deep, so my code abounds with chains of `Hash#fetch` such as `config.fetch(:item).fetch(:template).fetch(:variants)`.
 
-(The reason I do this instead of `config[:item][:template][:variants]` is that the `KeyError` raised by `fetch` in case of a missing key is more helpful than the `nil` that results from the regular square bracket notation of `Hash#[]`. In fact, that `nil` could cause a major debugging headache if it results in an error somewhere else far from where the `nil` originated.)
+(The reason I do this instead of `config[:item][:template][:variants]` is that the `KeyError` raised by `fetch` in case of a missing key is more helpful than the `nil` that results from the regular square bracket syntax of `Hash#[]`. In fact, that `nil` could cause a major debugging headache if it results in an error somewhere else far from where the `nil` originated.)
 
 In place of those `fetch`es, what if I could instead write `config.item.template.variants`, with an error being raised for any missing keys? Then I would have the same safety net but with a more concise syntax.
 
