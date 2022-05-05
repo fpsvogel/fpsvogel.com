@@ -1,12 +1,25 @@
 ---
-- id: https://canaldafantasia.com/category/tolkien-audiolivro/o-hobbit
+- id: https://canaldafantasia.com/category/tolkien-audiolivro/senhor-dos-aneis-tolkien-audiolivro
   rating: 4
   type: book
-  name: J. R. R. Tolkien – O Hobbit
-  site: https://canaldafantasia.com/category/tolkien-audiolivro/o-hobbit
+  name: J. R. R. Tolkien – O Senhor dos Anéis
+  site: https://canaldafantasia.com/category/tolkien-audiolivro/senhor-dos-aneis-tolkien-audiolivro
   genres:
   - novel
   - portuguese
+  date: in progress
+  date_in_words: In progress
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
+- id: B007978OY6
+  rating: 5
+  type: book
+  name: J. R. R. Tolkien – The Lord of the Rings 〜 narrated by Rob Inglis,
+  site: https://www.goodreads.com/book/isbn?isbn=B007978OY6
+  genres:
+  - novel
   date: in progress
   date_in_words: In progress
   reread?: false
@@ -22,6 +35,34 @@
   - ruby
   date: in progress
   date_in_words: In progress
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
+- id: https://canaldafantasia.com/category/tolkien-audiolivro/o-hobbit
+  rating: 4
+  type: book
+  name: J. R. R. Tolkien – O Hobbit
+  site: https://canaldafantasia.com/category/tolkien-audiolivro/o-hobbit
+  genres:
+  - novel
+  - portuguese
+  date: '2022-04-24'
+  date_in_words: April 24
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
+- id: B08XQYMWVQ
+  rating: 4
+  type: book
+  name: Trans
+  site: https://www.goodreads.com/book/isbn?isbn=B08XQYMWVQ
+  genres:
+  - politics
+  - science
+  date: '2022-04-22'
+  date_in_words: April 22
   reread?: false
   groups: 
   blurb: 
@@ -1407,19 +1448,6 @@
   - language
   date: '2018-08-20'
   date_in_words: August 20
-  reread?: false
-  groups: 
-  blurb: 
-  notes: 
-- id: B007978OY6
-  rating: 5
-  type: book
-  name: J. R. R. Tolkien – The Lord of the Rings
-  site: https://www.goodreads.com/book/isbn?isbn=B007978OY6
-  genres:
-  - novel
-  date: '2018-08-10'
-  date_in_words: August 10
   reread?: false
   groups: 
   blurb: 
