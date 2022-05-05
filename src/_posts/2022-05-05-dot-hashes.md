@@ -92,10 +92,10 @@ require 'active_support/core_ext/object/blank'
 #### SETUP
 
 # 1. regular hash
-hash = { address: { category: { desc: "Urban" } } }
+vanilla = { address: { category: { desc: "Urban" } } }
 
 # 7. hash_dot gem
-hash_dot = hash.to_dot
+hash_dot = vanilla.to_dot
 
 # 4. fetch alias
 class Hash
@@ -118,9 +118,9 @@ asoo.address.category = ActiveSupport::OrderedOptions.new
 asoo.address.category.desc = "Urban"
 
 # 6. per-hash dot access
-def allow_dot_access(hash)
-  hash.each do |key, value|
-    hash.define_singleton_method(key) { fetch(key) }
+def allow_dot_access(vanilla_hash)
+  vanilla_hash.each do |key, value|
+    vanilla_hash.define_singleton_method(key) { fetch(key) }
     if value.is_a?(Hash) then allow_dot_access(value); end
   end
 end
@@ -162,7 +162,7 @@ iterations = 50000
 Benchmark.bm(8) do |bm|
   bm.report("1. default notation   :") do
     iterations.times do
-      hash[:address][:category][:desc]
+      vanilla[:address][:category][:desc]
     end
   end
 
@@ -174,13 +174,13 @@ Benchmark.bm(8) do |bm|
 
   bm.report("3. fetch              :") do
     iterations.times do
-      hash.fetch(:address).fetch(:category).fetch(:desc)
+      vanilla.fetch(:address).fetch(:category).fetch(:desc)
     end
   end
 
   bm.report("4. fetch alias        :") do
     iterations.times do
-      hash.f(:address).f(:category).f(:desc)
+      vanilla.f(:address).f(:category).f(:desc)
     end
   end
 
@@ -214,7 +214,7 @@ Benchmark.bm(8) do |bm|
 
   bm.report("9. hashie             :") do
     iterations.times do
-      hash.address.category.desc
+      vanilla.address.category.desc
     end
   end
 end
