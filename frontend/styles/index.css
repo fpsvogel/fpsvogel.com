@@ -239,6 +239,10 @@ article p:first-of-type {
   margin-top: 1.8rem;
 }
 
+del {
+  background-color: unset;
+}
+
 post-prev-next {
   margin-top: 2.5rem;
   & a {
