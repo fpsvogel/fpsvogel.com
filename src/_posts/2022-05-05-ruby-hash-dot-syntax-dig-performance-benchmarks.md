@@ -32,7 +32,7 @@ Originally I set out to find a performant approach to dot syntax, but by the end
 
 ## Baselines
 
-First, here are benchmarks on standard syntax (mostly). For the benchmark code, see the end of this post. Keep in mind that I measured only access (reading) performance, not initialization or writing.
+First, here are benchmarks on standard syntax (mostly). For the benchmark code, see the end of this post.
 
 1. Bracket notation: `hash[:address][:category][:desc]`
 2. Dig: `hash.dig(:address, :category, :desc)`
@@ -57,7 +57,7 @@ First, here are benchmarks on standard syntax (mostly). For the benchmark code, 
 
 ## Dot syntax
 
-Here are a few approaches to dot notation for hashes or hash-like structures, benchmarked:
+Here are a few approaches to dot notation for hashes or hash-like structures, benchmarked. Keep in mind that I measured only access (reading) performance, not initialization or writing.
 
 1. Faux dot notation by flattening a hash and giving it composite keys, as in `config[:"item.template.variants"]`. I copied this approach [from here](https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash), with the main difference that I use symbols as keys because they are more performant than strings. Note that in this approach, that hash's bracket accessor (`Hash#[]`) is overridden to use `fetch`.
 2. An OpenStruct, which is sometimes suggested in these sorts of conversations.
@@ -116,9 +116,9 @@ Here are a few different implementations, with benchmarks:
 
 ## Moral of the story
 
-In the middle of all this, I seriously considered giving up and just going back to `fetch`, because it's the most performant and any other syntax risks making my code more cryptic to my future self. When I see `config.fetch(:item)` I know I'm dealing with a hash, unlike when I see `config.item`. I'm sure even `config.dig!(:item, :template)` will give my future self pause. For me this cost is outweighed by the better readability that I get in return, but it's surprising that this is what ended up being the major cost, rather than any performance hit, because my eventual solution is just as fast as `fetch` (in real life, though not quite in the benchmarks).
+In the middle of all this, I seriously considered giving up and just going back to `fetch`, because it's the most performant and any other syntax risks making my code more cryptic to my future self. When I see `config.fetch(:item)` I know I'm dealing with a hash, unlike when I see `config.item`. I'm sure even `config.dig!(:item, :template)` will give my future self pause. For me this cost is outweighed by the better readability that I get in return, but it's surprising that this (and not performance) is what made the decision a difficult one.
 
-Which leads into the other surprising takeaway: in this case it wasn't hard to custom-build the most performant solution for my project. So maybe I should try a DIY mindset more often, rather than immediately reaching for a gem (or ten).
+Which leads into the other surprising takeaway: in this case it wasn't hard to custom-build a very performant solution for my project. So maybe I should try a DIY mindset more often, rather than immediately reaching for a gem (or ten).
 
 In the end, maybe the real cost of my solution was in the absurd amount of time that I spend on all this benchmarking, hairsplitting, yak shaving, and bikeshedding. Enough! But I hope you've enjoyed my little adventure as much as I'm enjoying seeing it finished.
 
