@@ -120,7 +120,7 @@ In the middle of all this, I seriously considered giving up and just going back 
 
 Which leads into the other surprising takeaway: in this case it wasn't hard to custom-build a very performant solution for my project. So maybe I should try a DIY mindset more often, rather than immediately reaching for a gem (or ten).
 
-In the end, maybe the real cost of my solution was in the absurd amount of time that I spend on all this benchmarking, hairsplitting, yak shaving, and bikeshedding. Enough! But I hope you've enjoyed my little adventure as much as I'm enjoying seeing it finished.
+In the end, maybe the real cost of my solution was in the absurd amount of time that I spent on all this benchmarking, hairsplitting, yak shaving, and bikeshedding. Enough! But I hope you've enjoyed my little adventure as much as I'm enjoying seeing it finished.
 
 ## Appendix: the benchmark code
 
