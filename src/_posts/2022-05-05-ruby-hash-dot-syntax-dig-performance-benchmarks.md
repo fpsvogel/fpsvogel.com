@@ -23,21 +23,21 @@ Nice! This is something I've been wishing for in Ruby. In a current project I ha
 
 (The reason I do this instead of `config[:item][:template][:variants]` or `config.dig(:item, :template, :variants)` is that the `KeyError` raised by `fetch`, in case of a missing key, is more helpful than the default `nil` value from brackets or `dig`. In fact, that `nil` could cause a major debugging headache if it results in an error somewhere else far from where the `nil` originated.)
 
-Is there a more concise alternative to those repeated `fetch`es, but with the same safety net of a `KeyError`? Of course! This is Ruby, after all, where anything is possible. But whether it's *advisable*… that's the real question. In this post, we'll look at two possible syntaxes along with their performance and usability implications:
+Can we hack our way to a more concise alternative to those repeated `fetch`es, but with the same safety net of a `KeyError`? Of course! This is Ruby, after all, where anything is possible. But whether it's *advisable*… that's the real question. In this post, we'll look at two possible syntaxes along with their performance and usability implications:
 
 - Dot syntax: `config.item.template.variants`
-- Dig syntax: `config.dig!(:item, :template, :variants)`
+- Dig syntax: `config.dig!(:item, :template, :variants)` (or `dig_fetch` or `deep_fetch` if you prefer)
 
-Originally I set out to find a performant approach to dot syntax, but by the end I had pivoted, for reasons that I'll explain.
+Originally I set out to find a performant approach to dot syntax, but by the end I had changed my mind, for reasons that I'll explain.
 
 ## Baselines
 
 First, here are benchmarks on standard syntax (mostly). For the benchmark code, see the end of this post.
 
-1. Bracket notation: `hash[:address][:category][:desc]`
-2. Dig: `hash.dig(:address, :category, :desc)`
-3. Chained `fetch`: `hash.fetch(:address).fetch(:category).fetch(:desc)`
-4. A shorter `fetch` alias: `hash.f(:address).f(:category).f(:desc)`. Because why not.
+1. Bracket notation: `hash[:a][:b]`
+2. Dig: `hash.dig(:a, :b)`
+3. Chained `fetch`: `hash.fetch(:a).fetch(:b)`
+4. A shorter `fetch` alias: `hash.f(:a).f(:b)`. Because why not.
 
 ```
                            user     system      total        real
@@ -51,7 +51,7 @@ First, here are benchmarks on standard syntax (mostly). For the benchmark code, 
 
 - These are all very performant. But remember, brackets and `dig` return `nil` where I want a `KeyError`, and chained `fetch` is what I'm trying to get away from.
 - In some runs, `dig` (#2) was faster than brackets (#1), but more often brackets win by a hair.
-- Chained `fetch` (#3) is consistently slower than brackets here in the benchmarks, but my project's test suite does not run any faster when I replace all calls to `fetch` with square brackets. It's a good reminder that benchmarks don't always reflect real-life performance.
+- Chained `fetch` (#3) is consistently slower than brackets here in the benchmarks, but my project's test suite does not run any faster when I replace all calls to `fetch` with brackets. It's a good reminder that benchmarks don't always reflect real-life performance.
 - Even though the `fetch` alias (#4) is just as fast as `fetch` itself in the benchmarks, my project's test suite took 20% longer to run when I replaced all calls to `fetch` with an alias. Again, benchmarks don't tell the whole story.
   - 20% slower is not much, especially since all of my tests run in well under one second. But there's also the fact that anyone else who looks at my code, most likely my future forgetful self, will be confused about what `config.f` means. (*"What the `f` is that?!"* if you'll pardon the pun.) Still, I was curious about the performance hit and that's why I included the `fetch` alias here.
 
@@ -59,7 +59,7 @@ First, here are benchmarks on standard syntax (mostly). For the benchmark code, 
 
 Here are a few approaches to dot notation for hashes or hash-like structures, benchmarked. Keep in mind that I measured only access (reading) performance, not initialization or writing.
 
-1. Faux dot notation by flattening a hash and giving it composite keys, as in `config[:"item.template.variants"]`. I copied this approach [from here](https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash), with the main difference that I use symbols as keys because they are more performant than strings. Note that in this approach, that hash's bracket accessor (`Hash#[]`) is overridden to use `fetch`.
+1. Faux dot notation by flattening a hash and giving it composite keys, as in `config[:"item.template.variants"]`. I copied this approach [from here](https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash), with the main difference that I use symbols as keys because they're more performant than strings. This approach uses brackets, but only because that hash's bracket accessor (`Hash#[]`) is overridden to use `fetch`.
 2. An OpenStruct, which is sometimes suggested in these sorts of conversations.
 3. Augmenting a single hash with methods corresponding to its keys.
 4. [ActiveSupport::OrderedOptions](https://api.rubyonrails.org/classes/ActiveSupport/OrderedOptions.html).
@@ -79,13 +79,13 @@ Here are a few approaches to dot notation for hashes or hash-like structures, be
 **Notes:**
 
 - Some approaches to dot notation involve more annoying setup than others, and/or significant limitations. For example, the flattened hash with composite keys (#1) is super fast, but it's far from the vanilla nested hash that I began with. This makes certain hash operations more complicated, such as iterating over hash keys. For my purposes it's not worth the headache.
-- The OpenStruct is faster than I thought it would be. But its fatal flaws, for my purposes, are that it's not a hash and therefore lacks a lot of functionality, and also it does not raise an error for a nonexistent attribute (like the `KeyError` from `fetch`) but instead returns `nil`.
-- Per-hash dot access (#3) is the fastest true dot notation for a hash. (Note that it only works for a hash that does not get any new keys once it's set up, which is just fine for my config hash.) However, when applied in my project, it still made my tests run for 70% longer. Again, that's not as bad as it sounds for my sub-1-second test suite.
-- But then something unexpected happened as soon as I replaced my project's calls to `fetch` with dot notation. My code looked *more messy* even though it was now *more concise*. The reason, I think, is that there was no longer a slew of (syntax-highlighted) symbols at the points where I access the config hash, and so it was a bit harder to spot where config values were being accessed. Instead of brightly-colored symbols evenly spaced by `fetch`, my eyes now saw only a mush of method calls until my brain processed the words and told me whether that's a place where the config hash is accessed. Hmm. Now I was wondering if there was a way to keep the symbols involved, but in a more concise way than chaining `fetch`.
+- The OpenStruct is faster than I thought it would be. But its fatal flaws, for my purposes, are that it's not a hash and therefore lacks a lot of functionality, and also it doesn't raise an error for a nonexistent attribute (like the `KeyError` from `fetch`) but instead returns `nil`.
+- Per-hash dot access (#3) is the fastest true dot notation for a hash. (Note that it only works for a hash that doesn't get any new keys once it's set up, which is just fine for my config hash.) However, when applied in my project, it still made my tests run for 70% longer. Again, that's not as bad as it sounds for my sub-1-second test suite.
+- But then something unexpected happened as soon as I replaced my project's calls to `fetch` with dot notation. My code looked *more messy* even though it was now *more concise*. The reason, I think, is that there was no longer a slew of (syntax-highlighted) symbols at the points where I access the config hash, and so it was a bit harder to see at a glance where config values were being used. Instead of brightly-colored symbols evenly spaced by `fetch`, my eyes now saw only a mush of method calls until my brain processed the words and told me whether that's a place where the config hash is accessed. Hmm. Now I was wondering if there was a way to keep the symbols involved, but in a more concise way than chaining `fetch`.
 
 ## Dig syntax
 
-`Hash#dig` looks nice: `hash.dig(:address, :category, :desc)`. But again, the problem is that it defaults to `nil` for nonexistent keys. What if we could make a similar method that raises a `KeyError` instead?
+`Hash#dig` looks nice: `hash.dig(:item, :template, :variants)`. But again, the problem is that it defaults to `nil` for nonexistent keys. What if we could make a similar method that raises a `KeyError` instead?
 
 This has actually been proposed as an addition to Ruby several times ([1](https://bugs.ruby-lang.org/issues/15563), [2](https://bugs.ruby-lang.org/issues/14602), [3](https://bugs.ruby-lang.org/issues/12282)), but it seems unlikely to be added. So… let's do it ourselves!
 
@@ -107,12 +107,12 @@ Here are a few different implementations, with benchmarks:
 **Notes:**
 
 - The first option is to `dig` into a hash equipped with `KeyError` defaults. This comes with no performance penalty, but it means that I have to modify my config hash in the beginning to give it defaults that raise a `KeyError`.
-  - Recall that I also had to modify the hash when I tried per-hash dot access (#3 in the previous section), but this time I'm less comfortable with the modification, because this one can "slip out" in less noticeable ways.
-  - For example, if at some point in my code the config hash is operated on in a way that creates a derived hash (e.g. by calling `map` on it and using the result), that derived hash would be a plain old hash without the `KeyError` defaults.
-  - That plain old hash might get passed around, with me thinking it's the original that has the special defaults. I might do `dig` on the hash, and `dig` would work as in a normal hash without me ever knowing that anything was missing. So this approach is too fragile for my liking.
+  - Recall that I also had to modify the hash when I tried per-hash dot access (#3 in the previous section). But this time I'm less comfortable with the modification, because this one can "slip out" in less noticeable ways.
+  - For example, if at some point in my code the config hash is operated on in a way that creates a derived hash (e.g. by calling `map` on it and using the result), that derived hash would be a fresh new hash without the `KeyError` defaults.
+  - That new hash might get passed around, with me thinking it's the original that has the special defaults. I might use `dig` on the hash, and `dig` would work as in any hash (without my trusty `KeyError`) without me ever knowing that anything was missing. So this approach is too fragile for my liking.
   - Plus, my future self might wonder *"Why did I use `dig` and not fetch?"* until future self re-discovers my hack.
 - The [dig_bang](https://github.com/dogweather/digbang) and [deep_fetch](https://github.com/pewniak747/deep_fetch) gems (#3 and #4) add this same "dig with errors" but without the above downsides. The benchmarks suggest that they're pretty slow, but actually my tests were only about 10% slower when using them.
-- Then I implemented my own cruder implementation based on a case statement, which is not far from the baseline speed, and now my tests run just as fast as before. It's obviously less flexible than `dig_bang` or `deep_fetch`, but in my project I don't foresee ever needing to dig more than four levels into a hash, so for me it's perfect.
+- Then I implemented my own cruder implementation based on a case statement. It's more performant, and now my tests run just as fast as before. It's obviously less flexible than `dig_bang` or `deep_fetch`, but in my project I don't foresee ever needing to dig more than four levels into a hash, so for me it's perfect.
 
 ## Moral of the story
 
