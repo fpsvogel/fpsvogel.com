@@ -18,7 +18,7 @@ Nice! This is something I've been wishing for in Ruby. In a current project I ha
 Two notes on why I've been doing it this way:
 
 - The reason I use `fetch` instead of `config[:item][:template][:variants]` or `config.dig(:item, :template, :variants)` is that the `KeyError` raised by `fetch`, in case of a missing key, is more helpful than the default `nil` value from brackets or `dig`. In fact, that `nil` could cause a major debugging headache if it results in an error somewhere else far from where the `nil` originated.
-- If you're wondering why I'm using a raw hash instead of a custom `Config` class with syntactic sugar such as `config[:item, :template, :variants]`: that could be a great idea in some projects! But in this project, some objects use only a part of the config and I don't want to pass in the entire config into those objects. Also, some objects perform hash operations using parts of the config. So if I'm creating separate `Config` objects just to wrap inner hashes from the main `Config`, and if I'm converting these `Config` objects into a hash at various points, then it seems I should simply use a hash to begin with. In this project it's simpler to deal with hashes all the time, so that I don't have to ask myself, *"Let's see, is this a `Config` object here, or has it turned into a hash?"*
+- If you're wondering why I'm using a raw hash instead of a custom `Config` class with syntactic sugar such as `config[:item, :template, :variants]`: that could be a great idea in some projects! But in this project, some objects use only a part of the config and I don't want to pass the entire config into those objects. Also, some objects perform hash operations using parts of the config. So if I'm creating separate `Config` objects just to wrap inner hashes from the main `Config`, and if I'm converting these `Config` objects into a hash at various points, then it seems I should simply use a hash to begin with. In this project it's simpler to deal with hashes all the time, so that I don't have to ask myself, *"Let's see, is this a `Config` object here, or has it turned into a hash?"*
 
 So, if we stick with a raw hash, can we hack our way to a more concise alternative to those repeated `fetch`es, but with the same safety net of a `KeyError`? Of course! This is Ruby, after all, where anything is possible. But whether it's *advisable*… that's the real question. In this post, we'll look at two possible syntaxes along with their performance and usability implications:
 
@@ -56,7 +56,7 @@ First, here are benchmarks on standard syntax (mostly). For the benchmark code, 
 
 Here are a few approaches to dot notation for hashes or hash-like structures, benchmarked. Keep in mind that I measured only access (reading) performance, not initialization or writing.
 
-1. Faux dot notation by flattening a hash and giving it composite keys, as in `config[:"item.template.variants"]`. I copied this approach [from here](https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash), with the main difference that I use symbols as keys because they're more performant than strings. This approach uses brackets, but only because that hash's bracket accessor (`Hash#[]`) is overridden to use `fetch`.
+1. Faux dot notation by flattening a hash and giving it composite keys, as in `config[:"item.template.variants"]`. I copied this approach [from here](https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash), with the main difference that I use symbols as keys because they're more performant than strings. Note that `:"string"` is similar to `"string".to_sym` but faster because a string is not created every time. Also, this approach uses brackets, but only because that hash's bracket accessor (`Hash#[]`) is overridden to use `fetch`.
 2. An OpenStruct, which is sometimes suggested in these sorts of conversations.
 3. Augmenting a single hash with methods corresponding to its keys.
 4. [ActiveSupport::OrderedOptions](https://api.rubyonrails.org/classes/ActiveSupport/OrderedOptions.html).
@@ -151,9 +151,9 @@ def to_namespace_hash(object, prefix = nil)
   if object.is_a? Hash
     object.map do |key, value|
       if prefix
-        to_namespace_hash value, :"#{prefix}.#{key}"
+        to_namespace_hash value, "#{prefix}.#{key}".to_sym
       else
-        to_namespace_hash value, :"#{key}"
+        to_namespace_hash value, "#{key}".to_sym
       end
     end.reduce(&:merge)
   else
