@@ -1,17 +1,11 @@
 ---
-title: Dot and dig! notation for Ruby hashes
-subtitle: a tale of two syntaxes, or there and back again
+title: Dot syntax and dig! for Ruby hashes
+subtitle: benchmarks and usability considerations
 ---
 
 - [Baselines](#baselines)
 - [Dot syntax](#dot-syntax)
-- [Dig syntax](#dig-syntax)
-- [Moral of the story](#moral-of-the-story)
-- [Appendix: the benchmark code](#appendix-the-benchmark-code)
-[Dig syntax](#dig-syntax)
-- [Baselines](#baselines)
-- [Dot syntax](#dot-syntax)
-- [Dig syntax](#dig-syntax)
+- [Dig with errors](#dig-with-errors)
 - [Moral of the story](#moral-of-the-story)
 - [Appendix: the benchmark code](#appendix-the-benchmark-code)
 
@@ -19,14 +13,14 @@ Recently I heard about this convenient feature of [Elixir maps](https://hexdocs.
 
 > To access atom keys, one may also use the `map.key` notation. Note that `map.key` will raise a `KeyError` if the `map` doesn't contain the key `:key`, compared to `map[:key]`, that would return `nil`.
 
-Nice! This is something I've been wishing for in Ruby. In a current project I have a configuration hash that is passed around and used in a variety of objects. The hash is quite large and several levels deep, so my code abounds with chains of `Hash#fetch` such as `config.fetch(:item).fetch(:template).fetch(:variants)`.
+Nice! This is something I've been wishing for in Ruby. In a current project I have a configuration hash that is passed around and used in a variety of objects. The hash is quite large and several levels deep, so my code abounds with chains of `Hash#fetch` such as `config.fetch(:item).fetch(:template).fetch(:variants)`. Which, as you can imagine, makes some lines very long and not particularly readable 😒
 
 (The reason I do this instead of `config[:item][:template][:variants]` or `config.dig(:item, :template, :variants)` is that the `KeyError` raised by `fetch`, in case of a missing key, is more helpful than the default `nil` value from brackets or `dig`. In fact, that `nil` could cause a major debugging headache if it results in an error somewhere else far from where the `nil` originated.)
 
 Can we hack our way to a more concise alternative to those repeated `fetch`es, but with the same safety net of a `KeyError`? Of course! This is Ruby, after all, where anything is possible. But whether it's *advisable*… that's the real question. In this post, we'll look at two possible syntaxes along with their performance and usability implications:
 
 - Dot syntax: `config.item.template.variants`
-- Dig syntax: `config.dig!(:item, :template, :variants)` (or `dig_fetch` or `deep_fetch` if you prefer)
+- Dig with errors: `config.dig!(:item, :template, :variants)`
 
 Originally I set out to find a performant approach to dot syntax, but by the end I had changed my mind, for reasons that I'll explain.
 
@@ -53,7 +47,7 @@ First, here are benchmarks on standard syntax (mostly). For the benchmark code, 
 - In some runs, `dig` (#2) was faster than brackets (#1), but more often brackets win by a hair.
 - Chained `fetch` (#3) is consistently slower than brackets here in the benchmarks, but my project's test suite does not run any faster when I replace all calls to `fetch` with brackets. It's a good reminder that benchmarks don't always reflect real-life performance.
 - Even though the `fetch` alias (#4) is just as fast as `fetch` itself in the benchmarks, my project's test suite took 20% longer to run when I replaced all calls to `fetch` with an alias. Again, benchmarks don't tell the whole story.
-  - 20% slower is not much, especially since all of my tests run in well under one second. But there's also the fact that anyone else who looks at my code, most likely my future forgetful self, will be confused about what `config.f` means. (*"What the `f` is that?!"* if you'll pardon the pun.) Still, I was curious about the performance hit and that's why I included the `fetch` alias here.
+  - 20% slower is not much, especially since all of my tests run in well under one second. But there's also the fact that anyone else who looks at my code, most likely my future forgetful self, will be confused about what `config.f` means. (*"What the `f` is that?!"* if you'll pardon the pun 😅) Still, I was curious about the performance hit and that's why I included the `fetch` alias here.
 
 ## Dot syntax
 
@@ -81,13 +75,13 @@ Here are a few approaches to dot notation for hashes or hash-like structures, be
 - Some approaches to dot notation involve more annoying setup than others, and/or significant limitations. For example, the flattened hash with composite keys (#1) is super fast, but it's far from the vanilla nested hash that I began with. This makes certain hash operations more complicated, such as iterating over hash keys. For my purposes it's not worth the headache.
 - The OpenStruct is faster than I thought it would be. But its fatal flaws, for my purposes, are that it's not a hash and therefore lacks a lot of functionality, and also it doesn't raise an error for a nonexistent attribute (like the `KeyError` from `fetch`) but instead returns `nil`.
 - Per-hash dot access (#3) is the fastest true dot notation for a hash. (Note that it only works for a hash that doesn't get any new keys once it's set up, which is just fine for my config hash.) However, when applied in my project, it still made my tests run for 70% longer. Again, that's not as bad as it sounds for my sub-1-second test suite.
-- But then something unexpected happened as soon as I replaced my project's calls to `fetch` with dot notation. My code looked *more messy* even though it was now *more concise*. The reason, I think, is that there was no longer a slew of (syntax-highlighted) symbols at the points where I access the config hash, and so it was a bit harder to see at a glance where config values were being used. Instead of brightly-colored symbols evenly spaced by `fetch`, my eyes now saw only a mush of method calls until my brain processed the words and told me whether that's a place where the config hash is accessed. Hmm. Now I was wondering if there was a way to keep the symbols involved, but in a more concise way than chaining `fetch`.
+- But then something unexpected happened as soon as I replaced my project's calls to `fetch` with dot notation. My code looked *more messy* even though it was now *more concise*. The reason, I think, is that there was no longer a slew of (syntax-highlighted) symbols at the points where I access the config hash, and so it was a bit harder to see at a glance where config values were being used. Instead of brightly-colored symbols evenly spaced by `fetch`, my eyes now saw only a mush of method calls until my brain processed the words and told me whether that's a place where the config hash is accessed. Hmm. Now I was wondering if there was a way to keep the symbols involved, but in a more concise way than chaining `fetch` 🤔
 
-## Dig syntax
+## Dig with errors
 
 `Hash#dig` looks nice: `hash.dig(:item, :template, :variants)`. But again, the problem is that it defaults to `nil` for nonexistent keys. What if we could make a similar method that raises a `KeyError` instead?
 
-This has actually been proposed as an addition to Ruby several times ([1](https://bugs.ruby-lang.org/issues/15563), [2](https://bugs.ruby-lang.org/issues/14602), [3](https://bugs.ruby-lang.org/issues/12282)), but it seems unlikely to be added. So… let's do it ourselves!
+This has actually been proposed as an addition to Ruby several times ([1](https://bugs.ruby-lang.org/issues/15563), [2](https://bugs.ruby-lang.org/issues/14602), [3](https://bugs.ruby-lang.org/issues/12282)) with various names including `dig!`,  `deep_fetch`, and `dig_fetch`. But the method seems unlikely to be added in the near future. So… let's do it ourselves!
 
 Here are a few different implementations, with benchmarks:
 
@@ -112,7 +106,7 @@ Here are a few different implementations, with benchmarks:
   - That new hash might get passed around, with me thinking it's the original that has the special defaults. I might use `dig` on the hash, and `dig` would work as in any hash (without my trusty `KeyError`) without me ever knowing that anything was missing. So this approach is too fragile for my liking.
   - Plus, my future self might wonder *"Why did I use `dig` and not fetch?"* until future self re-discovers my hack.
 - The [dig_bang](https://github.com/dogweather/digbang) and [deep_fetch](https://github.com/pewniak747/deep_fetch) gems (#3 and #4) add this same "dig with errors" but without the above downsides. The benchmarks suggest that they're pretty slow, but actually my tests were only about 10% slower when using them.
-- Then I implemented my own cruder implementation based on a case statement. It's more performant, and now my tests run just as fast as before. It's obviously less flexible than `dig_bang` or `deep_fetch`, but in my project I don't foresee ever needing to dig more than four levels into a hash, so for me it's perfect.
+- Then I implemented my own cruder implementation based on a case statement (#2). It's more performant, and now my tests run just as fast as before. It's obviously less flexible than `dig_bang` or `deep_fetch`, but in my project I don't foresee ever needing to dig more than four levels into a hash, so for me it's perfect 🌟
 
 ## Moral of the story
 
