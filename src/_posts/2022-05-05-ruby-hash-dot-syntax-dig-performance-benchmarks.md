@@ -35,7 +35,7 @@ First, here are benchmarks on standard syntax (mostly). For the benchmark code, 
 1. Bracket notation: `hash[:a][:b]`
 2. Dig: `hash.dig(:a, :b)`
 3. Chained `fetch`: `hash.fetch(:a).fetch(:b)`
-4. A shorter `fetch` alias: `hash.f(:a).f(:b)`. Because why not.
+4. A shorter `fetch` alias: `hash > :a > :b`. Because why not.
 
 ```
                            user     system      total        real
@@ -50,8 +50,7 @@ First, here are benchmarks on standard syntax (mostly). For the benchmark code, 
 - These are all very performant. But remember, brackets and `dig` return `nil` where I want a `KeyError`, and chained `fetch` is what I'm trying to get away from.
 - In some runs, `dig` (#2) was faster than brackets (#1), but more often brackets win by a hair.
 - Chained `fetch` (#3) is consistently slower than brackets here in the benchmarks, but my project's test suite does not run any faster when I replace all calls to `fetch` with brackets. It's a good reminder that benchmarks don't always reflect real-life performance.
-- Even though the `fetch` alias (#4) is just as fast as `fetch` itself in the benchmarks, my project's test suite took 20% longer to run when I replaced all calls to `fetch` with an alias. Again, benchmarks don't tell the whole story.
-  - 20% slower is not much, especially since all of my tests run in well under one second. But there's also the fact that anyone else who looks at my code, most likely my future forgetful self, will be confused about what `config.f` means. (*"What the `f` is that?!"* if you'll pardon the pun 😅) Still, I was curious about the performance hit and that's why I included the `fetch` alias here.
+- Even though the `fetch` alias (#4) is just as fast as `fetch` itself in the benchmarks, my project's test suite took 20% longer to run when I replaced all calls to `fetch` with an alias. 20% slower is not much, especially since all of my tests run in well under one second. But there's also the fact that while `config > … > …` looks really cool, it is a bit cryptic (likely to confuse my future forgetful self), and I have to surround it with parentheses every time I want to call a method on the return value. Still, I was curious about the performance hit and that's why I included the `fetch` alias here.
 
 ## Dot syntax
 
@@ -125,7 +124,7 @@ The problem is that I have to modify my config hash in the beginning to give it 
 
 For example, if at some point in my code the config hash is operated on in a way that creates a derived hash (e.g. by calling `map` on it and using the result), that derived hash would be a fresh new hash without the `KeyError` defaults.
 
-That new hash might get passed around, with me thinking it's the original that has the special defaults. I might use `dig` on the hash, and `dig` would work as in any hash (without my trusty `KeyError`) without me ever knowing that anything was missing. 💀
+That new hash might get passed around, with me thinking it's the original that has the special defaults. I might use `dig` on the hash, and `dig` would work as in any hash (without my trusty `KeyError`) without me ever knowing that anything was missing 💀
 
 So this approach is too fragile for my liking. Plus, my future self might wonder *"Why did I use `dig` and not fetch?"* until future self re-discovers my hack.
 
@@ -148,7 +147,7 @@ vanilla = { address: { category: { desc: "Urban" } } }
 
 # fetch alias
 class Hash
-  alias_method :f, :fetch
+  alias_method :>, :fetch
 end
 
 ## FOR DOT BENCHMARKS
@@ -279,7 +278,7 @@ Benchmark.bm(8) do |bm|
 
   bm.report("4. fetch alias        :") do
     iterations.times do
-      vanilla.f(:address).f(:category).f(:desc)
+      vanilla > :address > :category > :desc
     end
   end
 
