@@ -132,8 +132,6 @@ So this approach is too fragile for my liking. Plus, my future self might wonder
 ## Appendix B: the benchmark code
 
 ```ruby
-# frozen_string_literal: true
-
 require 'benchmark'
 require 'ostruct'
 require 'active_support/ordered_options'
