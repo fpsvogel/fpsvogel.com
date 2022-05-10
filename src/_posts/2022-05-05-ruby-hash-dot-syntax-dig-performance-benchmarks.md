@@ -7,7 +7,8 @@ subtitle: benchmarks and usability considerations
 - [Dot syntax](#dot-syntax)
 - [Dig with errors](#dig-with-errors)
 - [Moral of the story](#moral-of-the-story)
-- [Appendix: the benchmark code](#appendix-the-benchmark-code)
+- [Appendix A: regular `dig` on a hash with error-raising defaults](#appendix-a-regular-dig-on-a-hash-with-error-raising-defaults)
+- [Appendix B: the benchmark code](#appendix-b-the-benchmark-code)
 
 Recently I heard about this convenient feature of [Elixir maps](https://hexdocs.pm/elixir/Map.html):
 
@@ -86,30 +87,27 @@ Here are a few approaches to dot notation for hashes or hash-like structures, be
 
 This has actually been proposed as an addition to Ruby several times ([1](https://bugs.ruby-lang.org/issues/15563), [2](https://bugs.ruby-lang.org/issues/14602), [3](https://bugs.ruby-lang.org/issues/12282)) with various names including `dig!`,  `deep_fetch`, and `dig_fetch`. But the method seems unlikely to be added in the near future. So… let's do it ourselves!
 
-Here are a few different implementations, with benchmarks:
+Here are a few different implementations, with benchmarks. There are also a couple of gems for it, [dig_bang](https://github.com/dogweather/digbang) and [deep_fetch](https://github.com/pewniak747/deep_fetch), but I didn't include them here because `dig_bang` uses `reduce` (#4 below) and `deep_fetch` uses recursion, which performs the same.
 
 1. Regular `dig` on a hash that has had its defaults set such that it raises an error for nonexistent keys.
 2. `Hash#case_dig!`, which raises a `KeyError` for nonexistent keys. It's called `case_dig!` because it's implemented with a simple case statement.
-3. `Hash#dig!` through the [dig_bang](https://github.com/dogweather/digbang) gem.
-4. `Hash#deep_fetch` through the [deep_fetch](https://github.com/pewniak747/deep_fetch) gem.
+3. `Hash#while_dig!`, similar but implemented with a `while` loop.
+4. `Hash#reduce_dig!`. This is the "most Ruby" implementation.
 
 ```
                            user     system      total        real
 1. dig, error defaults:  0.003750   0.000000   0.003750 (  0.003750)
 2. case_dig!          :  0.007850   0.000000   0.007850 (  0.007856)
-3. dig_bang           :  0.028551   0.000000   0.028551 (  0.028570)
-4. deep_fetch         :  0.028791   0.000000   0.028791 (  0.028794)
+3. while_dig!         :  0.014849   0.000000   0.014849 (  0.014852)
+4. reduce_dig!        :  0.027889   0.000056   0.027945 (  0.027950)
 ```
 
 **Notes:**
 
-- The first option is to `dig` into a hash equipped with `KeyError` defaults. This comes with no performance penalty, but it means that I have to modify my config hash in the beginning to give it defaults that raise a `KeyError`.
-  - Recall that I also had to modify the hash when I tried per-hash dot access (#3 in the previous section). But this time I'm less comfortable with the modification, because this one can "slip out" in less noticeable ways.
-  - For example, if at some point in my code the config hash is operated on in a way that creates a derived hash (e.g. by calling `map` on it and using the result), that derived hash would be a fresh new hash without the `KeyError` defaults.
-  - That new hash might get passed around, with me thinking it's the original that has the special defaults. I might use `dig` on the hash, and `dig` would work as in any hash (without my trusty `KeyError`) without me ever knowing that anything was missing. So this approach is too fragile for my liking.
-  - Plus, my future self might wonder *"Why did I use `dig` and not fetch?"* until future self re-discovers my hack.
-- The [dig_bang](https://github.com/dogweather/digbang) and [deep_fetch](https://github.com/pewniak747/deep_fetch) gems (#3 and #4) add this same "dig with errors" but without the above downsides. The benchmarks suggest that they're pretty slow, but actually my tests were only about 10% slower when using them.
-- Then I implemented my own cruder implementation based on a case statement (#2). It's more performant, and now my tests run just as fast as before. It's obviously less flexible than `dig_bang` or `deep_fetch`, but in my project I don't foresee ever needing to dig more than four levels into a hash, so for me it's perfect 🌟
+- The most vanilla approach is to use regular `dig` on a hash that's been given `KeyError`-raising defaults. This is a bad idea in a way that's hard to explain in a bullet point. See [Appendix A](#appendix-a-regular-dig-on-a-hash-with-error-raising-defaults) if you want to know.
+- `reduce_dig!` (#4) is the most idiomatic and flexible implementation, so it's probably what you should use.
+- `while_dig!` (#3) is for you if you want to ~~sell your soul~~ trade idiomatic Ruby for a bit of extra speed.
+- `case_dig!` (#2) throws aesthetics and flexibility completely out the window because it's implemented with a case statement, and it can only dig as deep as the case statement is tall. But in my project I don't foresee ever needing to dig more than four levels into a hash, so for me it's perfect 🌟 Best of all, my tests don't run any slower now than they used to. But please don't copy me. That case statement is truly ugly.
 
 ## Moral of the story
 
@@ -119,16 +117,28 @@ Which leads into the other surprising takeaway: in this case it wasn't hard to c
 
 In the end, maybe the real cost of my solution was in the absurd amount of time that I spent on all this benchmarking, hairsplitting, yak shaving, and bikeshedding. Enough! But I hope you've enjoyed my little adventure as much as I'm enjoying seeing it finished.
 
-## Appendix: the benchmark code
+## Appendix A: regular `dig` on a hash with error-raising defaults
+
+So why is this a bad idea? It comes with no performance penalty because it's just regular `dig` on a regular hash. What could go wrong?
+
+The problem is that I have to modify my config hash in the beginning to give it defaults that raise a `KeyError`. Recall that I also had to modify the hash when I tried per-hash dot access (#3 in the benchmarks on dot syntax above). But this time I'm less comfortable with the modification, because this one can "slip out" in less noticeable ways.
+
+For example, if at some point in my code the config hash is operated on in a way that creates a derived hash (e.g. by calling `map` on it and using the result), that derived hash would be a fresh new hash without the `KeyError` defaults.
+
+That new hash might get passed around, with me thinking it's the original that has the special defaults. I might use `dig` on the hash, and `dig` would work as in any hash (without my trusty `KeyError`) without me ever knowing that anything was missing. 💀
+
+So this approach is too fragile for my liking. Plus, my future self might wonder *"Why did I use `dig` and not fetch?"* until future self re-discovers my hack.
+
+## Appendix B: the benchmark code
 
 ```ruby
+# frozen_string_literal: true
+
 require 'benchmark'
 require 'ostruct'
 require 'active_support/ordered_options'
 require 'hash_dot'
 require 'hashie'
-require 'dig_bang'
-require 'deep_fetch'
 require 'active_support/core_ext/object/blank'
 
 #### SETUP
@@ -216,8 +226,9 @@ end
 
 errorful = add_key_error_defaults({ address: { category: { desc: "Urban" } } })
 
-# case_dig!
+# dig! implementations
 class Hash
+  # ewwwwwwwwwwwww
   def case_dig!(key1, key2 = nil, key3 = nil, key4 = nil)
     if key4
       fetch(key1).fetch(key2).fetch(key3).fetch(key4)
@@ -228,6 +239,18 @@ class Hash
     else
       fetch(key1)
     end
+  end
+
+  def while_dig!(*keys)
+    hash = self
+    while key = keys.shift
+      hash = hash.fetch(key)
+    end
+    hash
+  end
+
+  def reduce_dig!(*keys)
+    keys.reduce(self) { |memo, key| memo.fetch(key) }
   end
 end
 
@@ -266,7 +289,7 @@ Benchmark.bm(8) do |bm|
 
   bm.report("1. flat composite keys:") do
     iterations.times do
-      flat[:"address.category.desc"]
+      flat["address.category.desc".to_sym]
     end
   end
 
@@ -318,15 +341,15 @@ Benchmark.bm(8) do |bm|
     end
   end
 
-  bm.report("3. dig_bang           :") do
+  bm.report("3. while_dig!         :") do
     iterations.times do
-      vanilla.dig!(:address, :category, :desc)
+      vanilla.while_dig!(:address, :category, :desc)
     end
   end
 
-  bm.report("4. deep_fetch         :") do
+  bm.report("4. reduce_dig!        :") do
     iterations.times do
-      vanilla.deep_fetch(:address, :category, :desc)
+      vanilla.reduce_dig!(:address, :category, :desc)
     end
   end
 end
