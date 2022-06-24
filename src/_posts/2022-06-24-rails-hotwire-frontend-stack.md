@@ -10,7 +10,7 @@ subtitle: a Ruby stack for modern web apps
 - [StimulusReflex](#stimulusreflex)
 - [Conclusion](#conclusion)
 
-When I started my career switch into software development two years ago, I decided to focus my efforts on Ruby. I did this for [a few reasons](https://fpsvogel.com/posts/2021/why-learn-ruby), but one of them is that Rails offers great "bang for the buck": there's a lot that I can build with just Rails, HTML, and CSS.
+When I started my career switch into software development two years ago, I decided to focus my efforts on Ruby. I did this for [a few reasons](/posts/2021/why-learn-ruby), but one of them is that Rails offers great "bang for the buck": there's a lot that I can build with just Rails, HTML, and CSS.
 
 However, this minimal vanilla stack becomes limiting when two factors come into play:
 
@@ -68,7 +68,7 @@ Also, as illustrated in that post, you can use [Ruby2JS](https://www.ruby2js.com
 
 Turbo + web components can take you a long way in making your Rails app feel modern, but there are other tools in this space that can complement them. I've already mentioned Stimulus, but there's also [StimulusReflex](https://docs.stimulusreflex.com) which is like Stimulus but on the server, and [CableReady](https://cableready.stimulusreflex.com/) which is somewhat like [Turbo Streams](https://turbo.hotwired.dev/handbook/streams) but more flexible. Be sure to give these a try if your app is highly interactive, or if you just want to expand your horizons beyond Hotwire.
 
-Also, [the StimulusReflex Discord server](https://discord.com/invite/stimulus-reflex) is an amazing place even for discussing all the other tech mentioned in this post. (Which is very ironic. Ever since Hotwire's release, it has marketed itself as THE solution, not even mentioning the similar tools had already been coming out of the StimulusReflex community for two years. Even so, it's in this very community that you can find best Hotwire support.)
+Also, [the StimulusReflex Discord server](https://discord.com/invite/stimulus-reflex) is an amazing place even for discussing all the other tech mentioned in this post. (Which is very ironic. Ever since Hotwire's release, it has marketed itself as THE solution, not even mentioning the similar tools had already been coming out of the StimulusReflex community for two years. Even so, it's in this very community that you can find the best Hotwire support.)
 
 ## Conclusion
 
