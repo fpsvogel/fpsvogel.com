@@ -39,6 +39,22 @@
   groups: 
   blurb: 
   notes: 
+- id: https://peteenns.com/podcast
+  rating: 4
+  type: audio
+  name: Pete Enns & Jared Byas – The Bible for Normal People
+  site: https://peteenns.com/podcast
+  genres:
+  - religion
+  - exvangelical
+  - podcast
+  date: in progress
+  date_in_words: In progress
+  reread?: false
+  groups: 
+  blurb: If you're fed up with mindless Bible-thumping, give this a try. I love the
+    humor too.
+  notes: 
 - id: https://canaldafantasia.com/category/tolkien-audiolivro/o-hobbit
   rating: 4
   type: book
@@ -464,7 +480,7 @@
     that I wasn't already anxious about disease, these days…
 - id: https://books.google.com/books?id=gwpMAwAAQBAJ&pg=PA125
   rating: 4
-  type: book
+  type: piece
   name: 'Gregory Boyd – Evolution as Cosmic Warfare: A Biblical Perspective on Satan
     and "Natural" Evil'
   site: https://books.google.com/books?id=gwpMAwAAQBAJ&pg=PA125
@@ -490,6 +506,9 @@
     the suffering "built into" nature. I couldn''t help recalling Tolkien''s creation
     account in The Silmarillion, because I think it is an amazingly vivid portrayal
     of the same theodicy: https://archive.org/details/TheSilmarillionIllustratedJ.R.R.TolkienTedNasmith/page/n25/mode/2up'
+  - But the Silmarillion's creation story, unlike Boyd's take, has classical theist
+    overtones in that the gods play the universe into being as a song, and then they
+    play the song back as if they are outside of time.
 - id: https://vocal.media/fiction/on-being-human-qxlbw20r1g
   rating: 4
   type: piece
@@ -659,22 +678,6 @@
   reread?: false
   groups: 
   blurb: 
-  notes: 
-- id: https://www.escribacafe.com
-  rating: 4
-  type: audio
-  name: Escriba Café
-  site: https://www.escribacafe.com
-  genres:
-  - portuguese
-  - history
-  - podcast
-  date: '2021-06-16'
-  date_in_words: June 16
-  reread?: false
-  groups: 
-  blurb: 'Most Portuguese podcasts are annoyingly chatty, but this one is the opposite:
-    historical yarns intended to transport you into another time and place. Love it.'
   notes: 
 - id: B00IYUYF4A
   rating: 5
