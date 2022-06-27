@@ -31,7 +31,7 @@ Joking aside, I'm using this acronym here only as an outline for this blog post,
 
 There's not much to say about [Rails](https://rubyonrails.org): it's boring tech, and therefore a good choice for most web apps.
 
-For anything but a large app, [Roda](http://roda.jeremyevans.net) is well worth considering. It's not the easiest for beginners, due to its philosophy of being bare-bones by default but highly extendable. But it's gradually becoming [integrated into Bridgetown](https://www.fullstackruby.dev/fullstack-development/2022/06/03/what-would-it-take-for-roda-to-win), whose batteries-included approach is making Roda much more accessible.
+[Roda](http://roda.jeremyevans.net) is well worth considering. It's not the easiest for beginners, due to its philosophy of being bare-bones by default but highly extendable. But it's gradually becoming [integrated into Bridgetown](https://www.fullstackruby.dev/fullstack-development/2022/06/03/what-would-it-take-for-roda-to-win), whose batteries-included approach is making Roda much more accessible.
 
 ## ViewComponent
 
