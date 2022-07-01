@@ -31,7 +31,11 @@ Joking aside, I'm using this acronym here only as an outline for this blog post,
 
 There's not much to say about [Rails](https://rubyonrails.org): it's boring tech, and therefore a good choice for most web apps.
 
-[Roda](http://roda.jeremyevans.net) is well worth considering. It's not the easiest for beginners, due to its philosophy of being bare-bones by default but highly extendable. But it's gradually becoming [integrated into Bridgetown](https://www.fullstackruby.dev/fullstack-development/2022/06/03/what-would-it-take-for-roda-to-win), whose batteries-included approach is making Roda much more accessible.
+[Roda](http://roda.jeremyevans.net) is also worth considering. Unlike the batteries-included philosophy of Rails, Roda is bare-bones by default but highly extensible. This makes Roda apps fast and more architecturally flexible. Besides [the docs](http://roda.jeremyevans.net/documentation.html), here are some places to get started with Roda:
+
+- [An interview](https://topenddevs.com/podcasts/ruby-rogues/episodes/building-with-just-what-you-need-using-roda-with-jeremy-evans-ruby-507) with its creator Jeremy Evans.
+- [App skeleton](https://github.com/jeremyevans/roda-sequel-stack) using Roda and Sequel, which has a similar purpose to the `rails new` command.
+- [A post on Bridgetown's ongoing Roda integration](https://www.fullstackruby.dev/fullstack-development/2022/06/03/what-would-it-take-for-roda-to-win), which is making Roda more accessible thanks to Bridgetown's batteries-included approach.
 
 ## ViewComponent
 
