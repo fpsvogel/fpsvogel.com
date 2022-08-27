@@ -32,10 +32,11 @@ For two years before I got this job, I learned programming on the side while wor
 
 Thankfully it was an easy fix, because I was the one holding myself back. Juniors at my company are encouraged to take time to deepen their skills, apart from product work; I just wasn't taking the time. Part of the problem was that I simply needed to slow down (see above). As soon as I did that, it became easier to spend an hour here and there on learning and deepening my skills.
 
-I've found two other practices useful in maintaining a learning habit:
+I've found a few other practices useful in maintaining a learning habit:
 
--  **Set goals.** Identify one or two areas where you want to improve, and focus on those. For me it helps that I already have lots to choose from in [my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby-and-cs), which I've been building up for the past two years.
--  **Keep an open mind.** Even as a junior it's easy to think that you know better than most other developers, or to turn your nose up at X or Y bandwagon that your company's developers have jumped onto. But if you resist that close-mindedness and try to see the good side of even the technologies and techniques that you don't like, then you'll learn a lot more. That happened with me a few months ago, when I spent time learning more RSpec, and it finally clicked in my mind and I started to appreciate its strong points.
+- **Set goals.** Identify one or two areas where you want to improve, and focus on those. For me it helps that I already have lots to choose from in [my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby-and-cs), which I've been building up for the past two years.
+- **Keep an open mind.** Even as a junior it's easy to think that you know better than most other developers, or to turn your nose up at X or Y bandwagon that your company's developers have jumped onto. But if you resist that close-mindedness and try to see the good side of even the technologies and techniques that you don't like, then you'll learn a lot more. That happened with me a few months ago, when I spent time learning more RSpec, and it finally clicked in my mind and I started to appreciate its strong points.
+- **Find mentors.** If you're not getting much one-on-one guidance at work, I suggest (a) asking persistently until you at least have someone who can check in with your learning on a regular basis, and (b) looking for mentors outside of your company, such as at [First Ruby Friend](https://firstrubyfriend.org). I've also found the [StimulusReflex Discord server](https://discord.com/invite/stimulus-reflex) to be a welcoming place for my questions—and I haven't even learned StimulusReflex yet, but they have very active channels for Ruby, Rails, and lots more.
 
 ## Don't be a silo: connect more, communicate better
 
