@@ -47,7 +47,7 @@ Side note: given a bit more time, I would improve on the UI by making multi-sele
 - Selectize actually has a multi-select mode, but only one option ever comes through in the form data. So I would need to find a way to hook into the form submission event, grab all the selected items from the Selectize API, and insert them into the data to be submitted.
 - Build it from scratch [using Hotwire](https://thoughtbot.com/blog/hotwire-typeahead-searching) or (more suitably, perhaps) by [building a web component](https://www.fullstackruby.dev/fullstack-development/2022/01/04/how-ruby-web-components-work-together/).
 
-*UPDATE, June 2022: There are more modern alternatives to Selectize that I missed before, which now would be my first choice: [Tom Select](https://tom-select.js.org/) (for which someone has written [a Stimulus wrapper](https://gist.github.com/tabishiqbal/dc78239aa5b81b257db0633ace75ecc0)) and [Slim Select](https://slimselectjs.com/).*
+*UPDATE, June 2022: There are more modern alternatives to Selectize that I missed before, which now would be my first choice: [Tom Select](https://tom-select.js.org/) (for which someone has written [a Stimulus wrapper](https://gist.github.com/tabishiqbal/dc78239aa5b81b257db0633ace75ecc0)), [Slim Select](https://slimselectjs.com/), and [Choices](https://github.com/Choices-js/Choices).*
 
 My dreams of multi-select aside, I now had a working searchable dropdown box. That was the easy part. The hard part was populating it with a list of all the specialties, which, as it turns out, the API does not provide.
 
