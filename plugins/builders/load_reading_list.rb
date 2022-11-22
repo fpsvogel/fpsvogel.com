@@ -1,5 +1,6 @@
-require "reading/csv/parse"
+require "reading/csv"
 require "dropbox_api"
+require "debug"
 
 class Builders::LoadReadingList < SiteBuilder
   CONFIG_DEFAULTS = {
@@ -47,84 +48,31 @@ class Builders::LoadReadingList < SiteBuilder
   end
 
   def load_from_csv
-    old_items = send("old_items_#{config.reading.list_update_mode}")
-    raw_new_items = send("raw_new_items_#{config.reading.list_update_mode}", old_items)
-    new_items = select_by_rating(raw_new_items)
-                .then { |items| select_by_genre(items) }
-                .then { |items| select_public(items) }
-                .then { |items| select_done_or_in_progress(items) }
-                .then { |items| simplify(items) }
-                # TODO not necessary if I made sure the types were all strings
-                .then { |items| items.map { |item| item.update(type: item[:type].to_s) } }
-    # TODO not necessary if I made sure the types were all strings
-    all_items = (new_items + old_items).uniq
-    sort_by_date(all_items)
+    items = select_by_rating(parse_items)
+      .then { |items| select_by_genre(items) }
+      .then { |items| select_public(items) }
+      .then { |items| select_done_or_in_progress(items) }
+      .then { |items| simplify(items) }
+      # TODO not necessary if I made sure the types were all strings
+      .then { |items| items.map { |item| item.update(type: item[:type].to_s) } }
+    sort_by_date(items)
   end
 
-  def old_items_refresh
-    site.data.reading.map { |item| to_normal_hash(item) }
-  end
-
-  def old_items_rebuild
-    []
-  end
-
-  def old_items_rebuild_local
-    if dropbox_access?
-      old_items_refresh
-    else
-      old_items_rebuild
-    end
-  end
-
-  def raw_new_items_refresh(old_items)
-    parse(custom_config: { csv: { selective_continue: selective_continue(old_items) } })
-  end
-
-  def selective_continue(old_items)
-    # countdown: the number of old items that are parsed beyond the stopping
-    # point of the topmost old item, in case some new items were placed below it.
-    countdown = 10
-    countdown_started = false
-    old_items_ids = old_items[0..countdown].map { |old_item| old_item[:id] }
-    lambda do |added_item|
-      added_item_ids =
-        added_item[:variants].map do |variant|
-          [variant[:isbn], variant[:sources].map { |source| source[:url] }]
-        end.flatten.compact
-      if (added_item_ids & old_items_ids).any?
-        already_added = true
-        countdown_started = true
-      end
-      countdown -= 1 if countdown_started
-      return false if countdown < 0
-      return :skip if already_added
-      true
-    end
-  end
-
-  def raw_new_items_rebuild(_old_items)
-    parse
-  end
-
-  def raw_new_items_rebuild_local(old_items)
-    if dropbox_access?
-      raw_new_items_refresh(old_items)
-    else
-      raw_new_items_rebuild(old_items)
-    end
-  end
-
-  def parse(custom_config: {})
+  def parse_items(custom_config: {})
     if config.reading.formats
       custom_config[:item] ||= {}
       custom_config[:item][:formats] = to_normal_hash(config.reading.formats)
     end
-    # if my_dropbox_file is nil, then the local file path is used instead.
-    Reading::Csv::Parse.new(custom_config)
-                       .call(my_dropbox_file,
-                              path: config.reading.local_filepath,
-                              skip_compact_planned: true)
+
+    custom_config[:csv] ||= {}
+    custom_config[:csv][:skip_compact_planned] = true
+
+    Reading::CSV.new(custom_config)
+      .parse(
+        my_dropbox_file,
+        # If my_dropbox_file is nil, then the local file path is used instead.
+        path: config.reading.local_filepath,
+      )
   end
 
   def my_dropbox_file
@@ -162,6 +110,7 @@ class Builders::LoadReadingList < SiteBuilder
 
   def select_by_genre(items)
     return items if config.reading.excluded_genres.nil? || config.reading.excluded_genres.empty?
+
     items.select do |item|
       overlapping = item[:genres] & config.reading.excluded_genres
       overlapping.empty?
@@ -175,11 +124,11 @@ class Builders::LoadReadingList < SiteBuilder
   end
 
   def select_done_or_in_progress(items)
-    items.select do |item|
-      item[:experiences].any? do |experience|
-        experience[:date_started]
-      end
-    end
+    items.select { |item|
+      item[:experiences].any? { |experience|
+        experience[:spans]
+      }
+    }
   end
 
   def simplify(items)
@@ -198,7 +147,7 @@ class Builders::LoadReadingList < SiteBuilder
         end + (extra_info || [])
       name = "#{item[:author] + " – " if item[:author]}#{item[:title]}" \
              "#{" 〜 " + (series_and_extras).join(" 〜 ") unless series_and_extras.empty?}"
-      date = item[:experiences].last[:date_finished]&.gsub("/", "-")
+      date = item[:experiences].last[:spans].last[:dates]&.end&.gsub("/", "-")
       {
         id: first_isbn || first_url,
         rating: item[:rating],
@@ -268,7 +217,8 @@ class Builders::LoadReadingList < SiteBuilder
   end
 
   def add_type_emojis(items)
-    formats = config.reading.formats || Reading.config[:item][:formats]
+    formats = config.reading.formats || Reading::Config.new.hash[:item][:formats]
+
     items.map do |item|
       item.merge({
         type_emoji: config.reading.types[item.fetch(:type)] ||

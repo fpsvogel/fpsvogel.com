@@ -12,8 +12,9 @@ group :bridgetown_plugins do
   gem "bridgetown-feed"
   gem "bridgetown-svg-inliner"
   gem "bridgetown-sitemap"
-  gem "reading-csv"
+  gem "reading"
   gem "rinku"
   gem "dropbox_api"
+  gem "debug"
   # gem "bridgetown-routes", "~> 1.0.0.beta1"
 end
