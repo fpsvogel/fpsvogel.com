@@ -10,7 +10,7 @@ subtitle: "lightning Rails app #1"
 
 > It was the year 2121. It was a post-apocalyptic world. Zombies crowded around my house. One started pounding at my front door. I huddled in the corner of my living room, too terrified to move.
 
-This is the default story starter in [Story Droid](https://storydroid.herokuapp.com/), a little app I built as I started reading Jason Swett's [Complete Guide to Rails Testing](https://www.codewithjason.com/complete-guide-to-rails-testing/). I needed a throwaway app where I could apply my new testing skills, and this was my first idea. [Here's the GitHub repo.](https://github.com/fpsvogel/storydroid)
+This is the default story starter in [Story Droid](https://github.com/fpsvogel/storydroid), a little app I built as I started reading Jason Swett's [Complete Guide to Rails Testing](https://www.codewithjason.com/complete-guide-to-rails-testing/). I needed a throwaway app where I could apply my new testing skills, and this was my first idea.
 
 I have a couple other ideas, though, so I'm making this a three-part series on "lightning apps", so named because I built this first one in the spare hours of a single day, with minor improvements and fixes in the few days following. I'll try to do the same with the next two. In the end, I'll have built three little apps, and I'll pick one or two to expand with more features and more tests. As I build each one, I'll post on what new things I've done in each app.
 

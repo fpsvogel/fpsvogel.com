@@ -30,20 +30,20 @@ I'm a self-taught Rubyist diving deeper into maintainable Rails. In mid-2020 I q
 - Documenting my learning path.
 - During my first year (before the projects below) I learned Ruby and practiced TDD and design patterns by building [a command-line app](https://github.com/fpsvogel/readstat). I also learned some computer science and frontend skills.
 
-[**Doctor Lookup**](https://doctorlookup.herokuapp.com) \| <small>[GitHub](https://github.com/fpsvogel/doctorlookup)</small> \| *Rails 7, RSpec, VCR, WebMock, Hotwire (Turbo Streams)* <about-date>Jan. 2022</about-date>
+[**Doctor Lookup**](https://github.com/fpsvogel/doctorlookup) \| *Rails 7, RSpec, VCR, WebMock, Hotwire (Turbo Streams)* <about-date>Jan. 2022</about-date>
 
 - Created a search app for finding doctors and other healthcare providers in the U.S.
 
-[**Story Toss**](https://storytoss.herokuapp.com) \| <small>[GitHub](https://github.com/fpsvogel/storytoss)</small> \| *Rails 7, RSpec, Factory Bot, Hotwire (Stimulus + Turbo Frames)* <about-date>Dec. 2021</about-date>
+[**Story Toss**](https://github.com/fpsvogel/storytoss) \| *Rails 7, RSpec, Factory Bot, Hotwire (Stimulus + Turbo Frames)* <about-date>Dec. 2021</about-date>
 
 - Created an app implementation of the game "Pass the Story."
 - Built it as an informal capstone project for Jason Swett's [Complete Guide to Rails Testing](https://www.codewithjason.com/complete-guide-to-rails-testing/).
 
-[**Wiki Stumble**](https://wikistumble.herokuapp.com) \| <small>[GitHub](https://github.com/fpsvogel/wikistumble)</small> \| *Rails 7, RSpec, VCR, WebMock* <about-date>Dec. 2021</about-date>
+[**Wiki Stumble**](https://github.com/fpsvogel/wikistumble) \| *Rails 7, RSpec, VCR, WebMock* <about-date>Dec. 2021</about-date>
 
 - Created an app that gives personalized recommendations of Wikipedia articles.
 
-[**Plain Reading**](https://plainreading.herokuapp.com) \| <small>[GitHub](https://github.com/fpsvogel/plainreading)</small> \| *Rails 7* <about-date>Sept. – Nov. 2021</about-date>
+[**Plain Reading**](https://github.com/fpsvogel/plainreading) \| *Rails 7* <about-date>Sept. – Nov. 2021</about-date>
 
 - Created an app that parses a user's plain-text reading list from Dropbox, and shows it as a web page.
 

@@ -7,7 +7,7 @@ subtitle: "lightning Rails app #3"
 - [Building up testing habits](#building-up-testing-habits)
 - [The verdict: will I continue work on this app?](#the-verdict-will-i-continue-work-on-this-app)
 
-This month I've been building little apps to improve my Rails testing skills. My latest is [Story Toss](https://storytoss.herokuapp.com/), a variation on the game "Pass the Story," where each player writes a bit of a story and then passes it on the next player—in this case, any other user who wants to continue the story. [Here's the GitHub repo.](https://github.com/fpsvogel/storytoss)
+This month I've been building little apps to improve my Rails testing skills. My latest is [Story Toss](https://github.com/fpsvogel/storytoss), a variation on the game "Pass the Story," where each player writes a bit of a story and then passes it on the next player—in this case, any other user who wants to continue the story.
 
 Surprisingly, there is no existing app implementation of the game that I could find. There is the related site [FoldingStory](http://foldingstory.com/), but there players can't see the whole story when adding on to it, only the most recent bit. This has amusing results, but I wanted to build a game where players could make more informed decisions when continuing a story.
 

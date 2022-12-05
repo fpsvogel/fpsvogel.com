@@ -10,7 +10,7 @@ subtitle: how I built it
 - [5. Next improvements](#5-next-improvements)
 - [Conclusion](#conclusion)
 
-After [a year of studying pure Ruby and basic frontend skills](https://github.com/fpsvogel/learn-ruby-and-cs), I've finally started learning Rails and built my first app: [Plain Reading](https://plainreading.herokuapp.com).
+After [a year of studying pure Ruby and basic frontend skills](https://github.com/fpsvogel/learn-ruby-and-cs), I've finally started learning Rails and built my first app: [Plain Reading](https://github.com/fpsvogel/plainreading).
 
 Rails is loved for its speed of development, and in that regard it did not disappoint. A month ago I had just finished watching my first Rails tutorial and my app was 0% done. Now, one month later, I've built a working, useful app *just by working on it a little bit each day*, in the time left over from life as an adult with a full-time job. Here's how I built it.
 

@@ -11,7 +11,7 @@ subtitle: "lightning Rails app #4"
 
 *UPDATE 2022-10-18: A kind reader has pointed out that searching by specialty no longer returns any results. I dug into it a bit and found that the rules of the NPI API has changed in ways that I don't understand. [A query specifying only the specialty](https://npiregistry.cms.hhs.gov/api/?taxonomy_description=Family%20Medicine&version=2.1) works, but [a query with an added parameter](https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-1&taxonomy_description=Family%20Medicine&version=2.1) to limit results to individuals (as opposed to organizations) doesn't work anymore. [A query with specialty and other parameters](https://npiregistry.cms.hhs.gov/api/?taxonomy_description=Family%20Medicine&first_name=John&last_name=Smith&version=2.1) also doesn't work anymore. I don't see any clues about this change on [the API's help page](https://npiregistry.cms.hhs.gov/api-page). Hmm… life beckons, so I'm going to leave this as an exercise for the reader 😂*
 
-Last month I built three little apps to improve my Rails testing skills. As part of a job application, I've now built a fourth: [Doctor Lookup](https://doctorlookup.herokuapp.com/), a tool for finding doctors and other healthcare providers in the U.S. [Here's the GitHub repo.](https://github.com/fpsvogel/doctorlookup)
+Last month I built three little apps to improve my Rails testing skills. As part of a job application, I've now built a fourth: [Doctor Lookup](https://github.com/fpsvogel/doctorlookup), a tool for finding doctors and other healthcare providers in the U.S.
 
 Before I get more into Doctor Lookup, here are my posts on last month's little apps:
 

@@ -18,7 +18,7 @@ Occasionally I get the urge to read Wikipedia. Not on a particular topic, justâ€
 
 What I really wanted, though, was a way to get personalized recommendations of articles, like [StumbleUpon](https://en.wikipedia.org/wiki/StumbleUpon) but for Wikipedia. That way I could avoid some of the hit-or-miss results of browsing random articles, and I wouldn't have to wade through topic lists either.
 
-So I've built [Wiki Stumble](https://wikistumble.herokuapp.com/), a little app that suggests Wikipedia articles based on user-selected categories and also based on the user's reaction (thumbs up or down) to previous recommendations. [Here's the GitHub repo.](https://github.com/fpsvogel/wikistumble)
+So I've built [Wiki Stumble](https://github.com/fpsvogel/wikistumble), a little app that suggests Wikipedia articles based on user-selected categories and also based on the user's reaction (thumbs up or down) to previous recommendations.
 
 This is my second "lightning app" this month, so named because I'm making them in the spare hours of a day or two each. In the end I'll choose one or two to continue expanding while I learn better Rails testing skills. These lightning apps are simple and intentionally leave out a lot of features, but I'm still trying to do something new in each one.
 
