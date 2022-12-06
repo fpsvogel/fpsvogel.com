@@ -25,13 +25,14 @@
   genres:
   - ruby
   - cs
-  date: in progress
-  date_in_words: In progress
+  date: '2022-12-01'
+  date_in_words: December  1
   reread?: false
   groups: 
   blurb: 
   notes:
-  - A revelation. It's like I've never known what programming means.
+  - In my first read-through this was a revelation, as if I'd never known what programming
+    means. I didn't get as much out of it on subsequent re-reads.
   - Single Responsibility Principle (Responsibility-Driven Design)
   - call accessors, do NOT use data directly; also hide data structures
   - single responsibility for methods too! this avoids the need for comments
@@ -103,25 +104,10 @@
     Trump. Also shows by how slender a thread the rule of law prevailed: Pence was
     indecisive about whether he would validate the electoral college votes on Jan.
     6, and who knows what would''ve happened if he had decided otherwise.'
-- id: B07NSF49QZ
-  rating: 4
-  type: book
-  name: 'Why Churches Need to Talk about Sexuality: Lessons Learned from Hard Conversations
-    about Sex, Gender, Identity, and the Bible'
-  site: https://www.goodreads.com/book/isbn?isbn=B07NSF49QZ
-  genres:
-  - religion
-  - politics
-  date: '2022-11-05'
-  date_in_words: November  5
-  reread?: false
-  groups: 
-  blurb: 
-  notes: 
 - id: B0198UC0BE
   rating: 4
   type: book
-  name: 'Us versus Us: The Untold Story of Religion and the LGBT Community'
+  name: 'Andrew Marin – Us versus Us: The Untold Story of Religion and the LGBT Community'
   site: https://www.goodreads.com/book/isbn?isbn=B0198UC0BE
   genres:
   - religion

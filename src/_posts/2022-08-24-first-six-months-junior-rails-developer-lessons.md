@@ -1,6 +1,6 @@
 ---
 title: The first six months
-subtitle: Lessons learned as a junior developer
+subtitle: lessons learned as a junior developer
 ---
 
 - [Find balance](#find-balance)

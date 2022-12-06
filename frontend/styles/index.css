@@ -235,7 +235,7 @@ label[for=toc] + ul li {
   margin: 0;
 }
 
-article p:first-of-type {
+article > p:first-of-type {
   margin-top: 1.8rem;
 }
 
