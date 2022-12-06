@@ -8,8 +8,8 @@ subtitle: is there a third way?
 - [Two philosophical camps?](#two-philosophical-camps)
 - [Service object skepticism](#service-object-skepticism)
 - [Second-guessing myself; more study needed](#second-guessing-myself-more-study-needed)
-  - [Inductive study: open-source Rails codebases](#inductive-study-open-source-rails-codebases)
   - [Deductive study: books, talks, and gems](#deductive-study-books-talks-and-gems)
+  - [Inductive study: open-source Rails codebases](#inductive-study-open-source-rails-codebases)
 - [Conclusion: to be continued…](#conclusion-to-be-continued)
 
 *Disclaimer: In this blog post I raise many questions and give few answers. At the bottom I list resources which I'm exploring in search of an answer, so [skip down](#second-guessing-myself-more-study-needed) if that's all you care about.*
@@ -49,12 +49,18 @@ Advocates of service objects often [think of Active Record models as **models of
 For several months I thought the anti-service-object camp was right, end of discussion. It seemed clear to me that Active Record models are intended to be domain models:
 
 <!-- omit in toc -->
-#### It's spelled out in the Rails Guides.
+#### 1. It's spelled out in the Rails Guides.
 
-[See for yourself.](https://guides.rubyonrails.org/active_record_basics.html#what-is-active-record-questionmark)
+From the section ["What is Active Record?"](https://guides.rubyonrails.org/active_record_basics.html#what-is-active-record-questionmark)(emphasis mine):
+
+> "Active Record is the M in MVC - the model - which is the layer of the system responsible for **representing business data and logic**. Active Record facilitates the creation and use of **business objects** whose data requires persistent storage to a database."
+
+And, shortly afterward:
+
+> "In Active Record, objects carry **both persistent data and behavior which operates on that data**."
 
 <!-- omit in toc -->
-#### Martin Fowler, who first described the Active Record pattern, agrees.
+#### 2. Martin Fowler, who first described the Active Record pattern, agrees.
 
 To quote [his article on the Active Record pattern](https://www.martinfowler.com/eaaCatalog/activeRecord.html):
 
@@ -71,7 +77,7 @@ And:
 > "In general, the more behavior you find in the services, the more likely you are to be robbing yourself of the benefits of a domain model. If all your logic is in services, you've robbed yourself blind."
 
 <!-- omit in toc -->
-#### Conversely, domain models don't have to be Active Record models; they can be PORO models.
+#### 3. Conversely, domain models don't have to be Active Record models; they can be PORO models.
 
 Taking advantage of this can alleviate many of the "fat model" problems that service objects seek to solve.
 
@@ -91,7 +97,26 @@ Fast forward a few months. I still don't like service objects, and I still like 
 
 After all, if so many people **feel the need** for service objects, and if OOP is evidently **so hard to get right**, aren't these signs that **something** is missing? ***Maybe*** that missing something is just better OOP, but in that case good OOP is hard to come by and we at least need a more accessible way to do it.
 
-So I've set out to explore the problem of organizing business logic from more angles than before, using the resources listed below. These lists are excerpted from [my "Learning Ruby" road map](https://github.com/fpsvogel/learn-ruby) which I often update, so you may want to find these lists there if this post is old at the time of your reading it. The sections corresponding to the lists below are, at the time of writing, ["Rails codebases"](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study) and ["Rails architecture"](https://github.com/fpsvogel/learn-ruby#rails-architecture).
+So I've set out to explore the problem of organizing business logic from more angles than before, using the resources listed below. These lists are excerpted from [my "Learning Ruby" road map](https://github.com/fpsvogel/learn-ruby) which I often update, so you may want to find these lists there if this post is old at the time of your reading it. The sections corresponding to the lists below are, at the time of writing, ["Rails architecture"](https://github.com/fpsvogel/learn-ruby#rails-architecture) and ["Rails codebases"](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study).
+
+### Deductive study: books, talks, and gems
+
+Here are some resources that I hope will shed light on the question of organizing business logic better, both in terms of solutions ***and*** in terms of **when (under what conditions) these alternative approaches are beneficial** as opposed to simple OOP with Rails defaults. This list is not exhaustive; in particular I've omitted gems that are just a service object implementation. Some of these resources are closely related to service objects, but that's intentional–I'm compensating for my bias against them.
+
+- **Domain-Driven Design**, which aims to augment OOP to prevent problems such as fat models. It's intended for large, complex domains. Resources: ["Getting modules right with Domain-driven Design"](https://www.youtube.com/watch?v=Q_0XW46IlHY) (talk), [*Learning Domain-Driven Design*](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/) (book).
+- **Other approaches** that are more lightweight and have some of the same goals:
+  - [*Data Oriented Web Development with Ruby*](https://solnic.podia.com/data-oriented-web-development-with-ruby) (upcoming book) by Peter Solnica, who is on the [Hanami](https://hanamirb.org/) core team. Learning Hanami wouldn't be a bad idea either.
+  - [*Maintainable Rails*](https://leanpub.com/maintain-rails) (book), which uses gems that are part of the Hanami ecosystem.
+  - ["Organizing business logic in Rails with contexts"](https://nts.strzibny.name/business-logic-in-rails-with-contexts/) (blog post).
+  - Learn more about the repository pattern: [article](https://engineering.solarisbank.com/the-repository-pattern-in-ruby-with-the-active-record-library-f0445fa282c), [talk](https://www.youtube.com/watch?v=36LB8bfEeVc).
+- **Relevant gems** that seem worth learning from:
+  - [dry-transaction](https://dry-rb.org/gems/dry-transaction)
+  - [Interactor](https://github.com/collectiveidea/interactor)
+  - [Sequent](https://www.sequent.io/) – CQRS and event sourcing
+  - [Rails Event Store](https://github.com/RailsEventStore/rails_event_store) – for an event-driven architecture
+  - [Ventable](https://github.com/kigster/ventable) – a variation of the Observer design pattern
+  - [Wisper](https://github.com/krisleech/wisper) – the Publish-Subscribe design pattern
+  - [Packwerk](https://github.com/Shopify/packwerk) – to enforce boundaries and modularize Rails applications
 
 ### Inductive study: open-source Rails codebases
 
@@ -113,25 +138,6 @@ I rarely read a lot of code outside of work, but I plan to change that. Below ar
   - [github.com/instructure/canvas-lms](https://github.com/instructure/canvas-lms) (745k lines): *A popular LMS (learning management system).*
   - [gitlab.com/gitlab-org/gitlab](https://gitlab.com/gitlab-org/gitlab) (1.8 million lines): *Like GitHub but with CI/CD and DevOps features built in. Has great [docs on architecture](https://docs.gitlab.com/ee/development/architecture.html).*
 
-### Deductive study: books, talks, and gems
-
-Here are some resources that I hope will shed light on the question of organizing business logic better, both in terms of solutions ***and*** in terms of **when (under what conditions) these alternative approaches are beneficial** as opposed to simple OOP with Rails defaults. This list is not exhaustive; in particular I came across gems that were essentially service objects in a fancier package, which for the most part I've omitted.
-
-- **Domain-Driven Design**, which aims to augment OOP to prevent problems such as fat models. It's intended for large, complex domains. Resources: ["Getting modules right with Domain-driven Design"](https://www.youtube.com/watch?v=Q_0XW46IlHY) (talk), [*Learning Domain-Driven Design*](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/) (book).
-- **Other approaches** that are more lightweight and have some of the same goals:
-  - [*Data Oriented Web Development with Ruby*](https://solnic.podia.com/data-oriented-web-development-with-ruby) (upcoming book) by Peter Solnica, who is on the [Hanami](https://hanamirb.org/) core team. Learning Hanami wouldn't be a bad idea either.
-  - [*Maintainable Rails*](https://leanpub.com/maintain-rails) (book), which uses gems that are part of the Hanami ecosystem.
-  - ["Organizing business logic in Rails with contexts"](https://nts.strzibny.name/business-logic-in-rails-with-contexts/) (blog post).
-  - Learn more about the repository pattern: [article](https://engineering.solarisbank.com/the-repository-pattern-in-ruby-with-the-active-record-library-f0445fa282c), [talk](https://www.youtube.com/watch?v=36LB8bfEeVc).
-- **Relevant gems** that seem worth learning from:
-  - [dry-transaction](https://dry-rb.org/gems/dry-transaction)
-  - [Interactor](https://github.com/collectiveidea/interactor)
-  - [Sequent](https://www.sequent.io/) – CQRS and event sourcing
-  - [Rails Event Store](https://github.com/RailsEventStore/rails_event_store) – for an event-driven architecture
-  - [Ventable](https://github.com/kigster/ventable) – a variation of the Observer design pattern
-  - [Wisper](https://github.com/krisleech/wisper) – the Publish-Subscribe design pattern
-  - [Packwerk](https://github.com/Shopify/packwerk) – to enforce boundaries and modularize Rails applications
-
 ## Conclusion: to be continued…
 
-In a year or two I may be able to give something more like an answer to the questions I've raised here. For now, I've made a start by processing my thoughts in writing and making note of some promising resources. If any of this helps you as well, dear reader, then all the better!
+In a year or two I may be able to give something more like an answer to the questions I've raised here. For now, I've made a start by processing my thoughts and mapping out some promising resources. If any of this helps you as well, dear reader, then all the better!
