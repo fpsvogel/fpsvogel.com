@@ -67,12 +67,14 @@ class Builders::LoadReadingList < SiteBuilder
     custom_config[:csv] ||= {}
     custom_config[:csv][:skip_compact_planned] = true
 
-    Reading::CSV.new(custom_config)
-      .parse(
-        my_dropbox_file,
-        # If my_dropbox_file is nil, then the local file path is used instead.
-        path: config.reading.local_filepath,
-      )
+    csv = Reading::CSV.new(
+      my_dropbox_file,
+      # If my_dropbox_file is nil, then the local file path is used instead.
+      path: config.reading.local_filepath,
+      config: custom_config,
+    )
+
+    csv.parse
   end
 
   def my_dropbox_file
