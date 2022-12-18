@@ -50,12 +50,13 @@ class Builders::LoadReadingList < SiteBuilder
   def load_from_csv
     items = select_by_rating(parse_items)
       .then { |items| select_by_genre(items) }
-      .then { |items| select_public(items) }
       .then { |items| select_done_or_in_progress(items) }
       .then { |items| simplify(items) }
       # TODO not necessary if I made sure the types were all strings
       .then { |items| items.map { |item| item.update(type: item[:type].to_s) } }
+
     sort_by_date(items)
+    items
   end
 
   def parse_items(custom_config: {})
@@ -119,12 +120,6 @@ class Builders::LoadReadingList < SiteBuilder
     end
   end
 
-  def select_public(items)
-    items.select do |item|
-      item[:visibility] == 3 # TODO use a constant here.
-    end
-  end
-
   def select_done_or_in_progress(items)
     items.select { |item|
       item[:experiences].any? { |experience|
@@ -149,7 +144,7 @@ class Builders::LoadReadingList < SiteBuilder
         end + (extra_info || [])
       name = "#{item[:author] + " – " if item[:author]}#{item[:title]}" \
              "#{" 〜 " + (series_and_extras).join(" 〜 ") unless series_and_extras.empty?}"
-      date = item[:experiences].last[:spans].last[:dates]&.end&.gsub("/", "-")
+      date = item[:experiences].last[:spans].last[:dates]&.end
       {
         id: first_isbn || first_url,
         rating: item[:rating],
@@ -159,13 +154,18 @@ class Builders::LoadReadingList < SiteBuilder
         name: name,
         site: url_from_isbn || first_url,
         genres: item[:genres],
-        date: date || config.reading.in_progress_string,
-        date_in_words: (Date.parse(date).strftime("%B %e") if date) ||
+        date: date&.strftime("%Y-%m-%d") || config.reading.in_progress_string,
+        date_in_words: date&.strftime("%B %e") ||
                        config.reading.in_progress_string.capitalize,
         reread?: item[:experiences].map { |experience| experience[:date_finished] }.compact.count > 1,
         groups: item[:experiences].map { |experience| experience[:group] }.compact.presence,
-        blurb: item[:blurb],
-        notes: item[:public_notes].presence
+        blurb: item[:notes]
+                .find { |note| note[:blurb] }
+                &.dig(:content),
+        notes: item[:notes]
+                .select { |note| !note[:private] && !note[:blurb] }
+                .map { |note| note[:content] }
+                .presence,
       }
     end
   end

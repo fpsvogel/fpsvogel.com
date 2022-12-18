@@ -17,60 +17,24 @@
     is my favorite because instead of a series of tediously trivial stories about
     home, farm, and gods, it presents a marvelous picture of ancient Greece through
     historically-rooted hilarious vignettes, many of them quite funny.
-- id: B07F88LY9M
+- id: B07TK3NSW5
   rating: 4
   type: book
-  name: 'Sandi Metz – Practical Object-Oriented Design: An Agile Primer Using Ruby'
-  site: https://www.goodreads.com/book/isbn?isbn=B07F88LY9M
+  name: 'The Triumph of Injustice: How the Rich Dodge Taxes and How to Make Them Pay'
+  site: https://www.goodreads.com/book/isbn?isbn=B07TK3NSW5
   genres:
-  - ruby
-  - cs
-  date: '2022-12-01'
-  date_in_words: December  1
+  - politics
+  date: '2022-12-07'
+  date_in_words: December  7
   reread?: false
   groups: 
   blurb: 
   notes:
-  - In my first read-through this was a revelation, as if I'd never known what programming
-    means. I didn't get as much out of it on subsequent re-reads.
-  - Single Responsibility Principle (Responsibility-Driven Design)
-  - call accessors, do NOT use data directly; also hide data structures
-  - single responsibility for methods too! this avoids the need for comments
-  - dependency injection (move dependencies outside of classes, e.g. external class
-    names), or if constrained then isolate dependencies in initialize
-  - also encapsulate external messages in separate wrapper methods
-  - use keyword arguments w/ defaults (can be messages to self), or if constrained
-    then wrap (external) positional methods in a factory (module)
-  - 'think about direction of dependency: depend on abstractions/interfaces or classes
-    w/ few dependents & not likely to change'
-  - use sequence diagrams (UML) to form an intention about a program, to define public
-    interfaces (message-based design), before writing first test, before writing classes
-  - shift as much as possible into private interfaces (the kitchen vs. the menu);
-    in public interfaces focus on the "what" not the "how"; this way, make each class's
-    context small; classes shouldn't even know what their dependents do, but should
-    just ask them to do their part
-  - do not define public/private, just name methods in private interface like _some_private_method
-  - to solve Demeter violations, decouple code by improving public interfaces (don't
-    chain because it increases knowledge and overspecifies the context), not just
-    by delegation with wrappers
-  - 'recognize hidden ducks: case statements that switch on class, kind_of?/is_a?,
-    responds_to?'
-  - when creating a superclass, start blank and promote abstractions (don't start
-    w/ existing class and demote concretions)
-  - 'template method pattern: def initialize(**opts); @tire_size = opts-- :tire_size
-    ¦¦ default_tire_size'
-  - 'but supply an implementation for every message a class sends, like this: def
-    default_tire_size; raise NotImplementedError, "#{self.class} should have implemented
-    #{__method__}"; end'
-  - set up hooks in the superclass for subclasses to override (don't force subclasses
-    to send super at the end of overrides) e.g. post_initialize() and local_spares()
-  - composition is more flexible than inheritance/modules, with fewer dependenies
-    (see recumbent_config)
-  - ruthlessly delete unused code
-  - when testing involves roles, use stubs/doubles (fake/idealized objects in a role)
-  - prove command messages with mocks
-  - to test duck types (roles), include test modules (…InterfaceTest)
-  - test inherited code (…InterfaceTest and …SubclassTest)
+  - Other books on this topic that I've tried are huge downers and hard to stomach.
+    This book, though it duly gives a historical overview chock full of baddies, sets
+    itself apart in how much space it devotes to possible solutions (nearly half the
+    book!). The audiobook narrator is very lively as well, one of the best I've heard
+    in nonfiction.
 - id: https://www.wnycstudios.org/podcasts/anthropocene-reviewed
   rating: 4
   type: audio
@@ -209,24 +173,6 @@
     as we sculpt the stone or break it up and throw it away. All this is not delusion,
     even from a scientific point of view, because science doesn't tell us the ultimate
     cause of the universe, or why natural laws persist from moment to moment.
-- id: https://peteenns.com/podcast
-  rating: 4
-  type: audio
-  name: Pete Enns & Jared Byas – The Bible for Normal People
-  site: https://peteenns.com/podcast
-  genres:
-  - religion
-  - exvangelical
-  - podcast
-  date: '2022-06-27'
-  date_in_words: June 27
-  reread?: false
-  groups: 
-  blurb: If you're fed up with mindless Bible-thumping, give this a try. Instructive
-    and entertaining.
-  notes:
-  - 'Favorites: #160 The Risk of an "Errant" Bible, #172 A Whole Different Way of
-    Reading Genesis, #207 Respecting the Bible for What It Is (and Isn''t)'
 - id: https://canaldafantasia.com/category/tolkien-audiolivro/o-hobbit
   rating: 4
   type: book
@@ -412,6 +358,60 @@
     is because he does not know how it is to be adapted or related to the whole. …
     God forbid, however, that someone who does not know why the Creator has done what
     He has done should be foolish enough to suppose that God has in such cases erred."'
+- id: B07F88LY9M
+  rating: 4
+  type: book
+  name: 'Sandi Metz – Practical Object-Oriented Design: An Agile Primer Using Ruby'
+  site: https://www.goodreads.com/book/isbn?isbn=B07F88LY9M
+  genres:
+  - ruby
+  - cs
+  date: '2022-12-01'
+  date_in_words: December  1
+  reread?: false
+  groups: 
+  blurb: 
+  notes:
+  - In my first read-through this was a revelation, as if I'd never known what programming
+    means. I didn't get as much out of it on subsequent re-reads.
+  - Single Responsibility Principle (Responsibility-Driven Design)
+  - call accessors, do NOT use data directly; also hide data structures
+  - single responsibility for methods too! this avoids the need for comments
+  - dependency injection (move dependencies outside of classes, e.g. external class
+    names), or if constrained then isolate dependencies in initialize
+  - also encapsulate external messages in separate wrapper methods
+  - use keyword arguments w/ defaults (can be messages to self), or if constrained
+    then wrap (external) positional methods in a factory (module)
+  - 'think about direction of dependency: depend on abstractions/interfaces or classes
+    w/ few dependents & not likely to change'
+  - use sequence diagrams (UML) to form an intention about a program, to define public
+    interfaces (message-based design), before writing first test, before writing classes
+  - shift as much as possible into private interfaces (the kitchen vs. the menu);
+    in public interfaces focus on the "what" not the "how"; this way, make each class's
+    context small; classes shouldn't even know what their dependents do, but should
+    just ask them to do their part
+  - do not define public/private, just name methods in private interface like _some_private_method
+  - to solve Demeter violations, decouple code by improving public interfaces (don't
+    chain because it increases knowledge and overspecifies the context), not just
+    by delegation with wrappers
+  - 'recognize hidden ducks: case statements that switch on class, kind_of?/is_a?,
+    responds_to?'
+  - when creating a superclass, start blank and promote abstractions (don't start
+    w/ existing class and demote concretions)
+  - 'template method pattern: def initialize(**opts); @tire_size = opts-- :tire_size
+    ¦¦ default_tire_size'
+  - 'but supply an implementation for every message a class sends, like this: def
+    default_tire_size; raise NotImplementedError, "#{self.class} should have implemented
+    #{__method__}"; end'
+  - set up hooks in the superclass for subclasses to override (don't force subclasses
+    to send super at the end of overrides) e.g. post_initialize() and local_spares()
+  - composition is more flexible than inheritance/modules, with fewer dependenies
+    (see recumbent_config)
+  - ruthlessly delete unused code
+  - when testing involves roles, use stubs/doubles (fake/idealized objects in a role)
+  - prove command messages with mocks
+  - to test duck types (roles), include test modules (…InterfaceTest)
+  - test inherited code (…InterfaceTest and …SubclassTest)
 - id: B071CXGXM2
   rating: 4
   type: book
@@ -428,6 +428,22 @@
   groups: 
   blurb: Loved it, not because I needed it but because it's the most handy all-in-one
     book on evolution to give to doubting Christians.
+  notes: 
+- id: https://peteenns.com/podcast
+  rating: 4
+  type: audio
+  name: Pete Enns & Jared Byas – The Bible for Normal People
+  site: https://peteenns.com/podcast
+  genres:
+  - religion
+  - exvangelical
+  - podcast
+  date: '2022-06-27'
+  date_in_words: June 27
+  reread?: false
+  groups: 
+  blurb: If you're fed up with mindless Bible-thumping, give this a try. Instructive
+    and entertaining.
   notes: 
 - id: B07BJLMZ5W
   rating: 4
@@ -536,8 +552,8 @@
 - id: B003VM8QK0
   rating: 4
   type: book
-  name: "John Walton – The Lost World of Genesis One: Ancient Cosmology and the Origins
-    Debate 〜 \U0001F50AAudible Plus 5:35"
+  name: 'John Walton – The Lost World of Genesis One: Ancient Cosmology and the Origins
+    Debate'
   site: https://www.goodreads.com/book/isbn?isbn=B003VM8QK0
   genres:
   - religion
@@ -690,11 +706,28 @@
   groups: 
   blurb: 
   notes: 
+- id: https://www.escribacafe.com
+  rating: 4
+  type: audio
+  name: Escriba Café
+  site: https://www.escribacafe.com
+  genres:
+  - portuguese
+  - history
+  - podcast
+  date: '2021-06-13'
+  date_in_words: June 13
+  reread?: false
+  groups: 
+  blurb: 'Most Portuguese podcasts are annoyingly chatty, but this one is the opposite:
+    engrossing stories from history with such high production value that I''m transported
+    into another time and place. Love it.'
+  notes: 
 - id: B00IYUYF4A
   rating: 5
   type: book
   name: 'Randall Munroe – What If?: Serious Scientific Answers to Absurd Hypothetical
-    Questions 〜 ⚡320'
+    Questions'
   site: https://www.goodreads.com/book/isbn?isbn=B00IYUYF4A
   genres:
   - science
@@ -952,7 +985,8 @@
   reread?: false
   groups: 
   blurb: 
-  notes: 
+  notes:
+  - He may yet make me rethink my approach to LGBT. Will read his other books.
 - id: B01FBZXSNO
   rating: 4
   type: book
@@ -1047,22 +1081,6 @@
     Log-structured File Systems (buffer + entirely sequential write to free area +
     inode map), data integrity (checksums, scrubbing)'
   - APPENDICES - distributed systems, SSDs
-- id: https://www.youtube.com/channel/UCL0SAgCgdXdTDkKZXYyOtlg
-  rating: 4
-  type: audio
-  name: David Cay Johnston – talks on economics and Trump
-  site: https://www.youtube.com/channel/UCL0SAgCgdXdTDkKZXYyOtlg
-  genres:
-  - politics
-  date: '2020-09-30'
-  date_in_words: September 30
-  reread?: false
-  groups: 
-  blurb: 
-  notes:
-  - 'Finally I understand real-world politics. Favorites: https://youtu.be/Jm1rdbbH3oU,
-    https://youtu.be/3ve4c3UZSkI, https://youtu.be/wE2dRO4iKhs, https://youtu.be/aYHauMXZtJ0,
-    https://youtu.be/Azck1jY79cA, https://youtu.be/RF0TPbCt6pQ'
 - id: https://youtu.be/-dk3NOEgX7o
   rating: 4
   type: video
@@ -1100,6 +1118,22 @@
   notes:
   - 'I finally understand why Obama''s presidency was a failed promise: because the
     GOP was hijacked by Breitbart et al.'
+- id: https://www.youtube.com/channel/UCL0SAgCgdXdTDkKZXYyOtlg
+  rating: 4
+  type: audio
+  name: David Cay Johnston – talks on economics and Trump
+  site: https://www.youtube.com/channel/UCL0SAgCgdXdTDkKZXYyOtlg
+  genres:
+  - politics
+  date: '2020-09-30'
+  date_in_words: September 30
+  reread?: false
+  groups: 
+  blurb: 
+  notes:
+  - 'Finally I understand real-world politics. Favorites: https://youtu.be/Jm1rdbbH3oU,
+    https://youtu.be/3ve4c3UZSkI, https://youtu.be/wE2dRO4iKhs, https://youtu.be/aYHauMXZtJ0,
+    https://youtu.be/Azck1jY79cA, https://youtu.be/RF0TPbCt6pQ'
 - id: '1451648537'
   rating: 4
   type: book
@@ -1272,19 +1306,6 @@
   blurb: 
   notes:
   - The Focus on the Family radio drama is great.
-- id: B0042JSMDW
-  rating: 4
-  type: book
-  name: Paradise Lost
-  site: https://www.goodreads.com/book/isbn?isbn=B0042JSMDW
-  genres:
-  - poetry
-  date: '2019-09-30'
-  date_in_words: September 30
-  reread?: false
-  groups: 
-  blurb: 
-  notes: 
 - id: '0062303910'
   rating: 4
   type: book
@@ -1333,6 +1354,19 @@
   - fiction
   date: '2019-08-10'
   date_in_words: August 10
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
+- id: B0042JSMDW
+  rating: 4
+  type: book
+  name: Paradise Lost
+  site: https://www.goodreads.com/book/isbn?isbn=B0042JSMDW
+  genres:
+  - poetry
+  date: '2019-09-30'
+  date_in_words: September 30
   reread?: false
   groups: 
   blurb: 
@@ -1529,19 +1563,6 @@
   groups: 
   blurb: 
   notes: 
-- id: '0618260307'
-  rating: 4
-  type: book
-  name: J. R. R. Tolkien – The Hobbit
-  site: https://www.goodreads.com/book/isbn?isbn=0618260307
-  genres:
-  - fiction
-  date: '2017-10-10'
-  date_in_words: October 10
-  reread?: false
-  groups: 
-  blurb: 
-  notes: 
 - id: B00BE24WT8
   rating: 4
   type: book
@@ -1558,6 +1579,19 @@
   blurb: 
   notes:
   - Best on audio.
+- id: '0618260307'
+  rating: 4
+  type: book
+  name: J. R. R. Tolkien – The Hobbit
+  site: https://www.goodreads.com/book/isbn?isbn=0618260307
+  genres:
+  - fiction
+  date: '2017-10-10'
+  date_in_words: October 10
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
 - id: '0465089984'
   rating: 4
   type: book
@@ -1611,19 +1645,6 @@
   groups: 
   blurb: 
   notes: 
-- id: '0521547814'
-  rating: 4
-  type: book
-  name: Humanism and the Culture of Renaissance Europe
-  site: https://www.goodreads.com/book/isbn?isbn=0521547814
-  genres:
-  - history
-  date: '2017-04-30'
-  date_in_words: April 30
-  reread?: false
-  groups: 
-  blurb: 
-  notes: 
 - id: '1606352768'
   rating: 4
   type: book
@@ -1634,6 +1655,19 @@
   - biography
   date: '2017-04-20'
   date_in_words: April 20
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
+- id: '0521547814'
+  rating: 4
+  type: book
+  name: Humanism and the Culture of Renaissance Europe
+  site: https://www.goodreads.com/book/isbn?isbn=0521547814
+  genres:
+  - history
+  date: '2017-04-30'
+  date_in_words: April 30
   reread?: false
   groups: 
   blurb: 
