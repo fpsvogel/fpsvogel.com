@@ -56,27 +56,29 @@ First, here are benchmarks on standard syntax (mostly). For the benchmark code, 
 
 Here are a few approaches to dot notation for hashes or hash-like structures, benchmarked. Keep in mind that I measured only access (reading) performance, not initialization or writing.
 
-1. Faux dot notation by flattening a hash and giving it composite keys, as in `config[:"item.template.variants"]`. I copied this approach [from here](https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash), with the main difference that I use symbols as keys because they're more performant than strings. Note that `:"string"` is similar to `"string".to_sym` but faster because a string is not created every time. Also, this approach uses brackets, but only because that hash's bracket accessor (`Hash#[]`) is overridden to use `fetch`.
-2. An OpenStruct, which is sometimes suggested in these sorts of conversations.
-3. Augmenting a single hash with methods corresponding to its keys.
-4. [ActiveSupport::OrderedOptions](https://api.rubyonrails.org/classes/ActiveSupport/OrderedOptions.html).
-5. [hash_dot](https://github.com/adsteel/hash_dot) gem. Also, my benchmark code is based on [the benchmarks in hash_dot's README](https://github.com/adsteel/hash_dot#benchmarks).
-6. [Hashie](https://github.com/hashie/hashie#methodaccess) gem.
+1. A Struct.
+2. Faux dot notation by flattening a hash and giving it composite keys, as in `config[:"item.template.variants"]`. I copied this approach [from here](https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash), with the main difference that I use symbols as keys because they're more performant than strings. Note that `:"string"` is similar to `"string".to_sym` but faster because a string is not created every time. Also, this approach uses brackets, but only because that hash's bracket accessor (`Hash#[]`) is overridden to use `fetch`.
+3. An OpenStruct.
+4. Augmenting a single hash with methods corresponding to its keys.
+5. [ActiveSupport::OrderedOptions](https://api.rubyonrails.org/classes/ActiveSupport/OrderedOptions.html).
+6. [hash_dot](https://github.com/adsteel/hash_dot) gem. Also, my benchmark code is based on [the benchmarks in hash_dot's README](https://github.com/adsteel/hash_dot#benchmarks).
+7. [Hashie](https://github.com/hashie/hashie#methodaccess) gem.
 
 ```
                            user     system      total        real
-1. flat composite keys:  0.003461   0.000000   0.003461 (  0.003461)
-2. OpenStruct         :  0.009731   0.000000   0.009731 (  0.009772)
-3. per-hash dot access:  0.015300   0.000000   0.015300 (  0.015304)
-4. AS::OrderedOptions :  0.070637   0.000000   0.070637 (  0.070640)
-5. hash_dot           :  0.163008   0.000000   0.163008 (  0.163076)
-6. hashie             :  0.163450   0.000000   0.163450 (  0.163451)
+1. Struct             :  0.002540   0.000000   0.002540 (  0.002541)
+2. flat composite keys:  0.008301   0.000000   0.008301 (  0.008314)
+3. OpenStruct         :  0.009731   0.000000   0.009731 (  0.009772)
+4. per-hash dot access:  0.015300   0.000000   0.015300 (  0.015304)
+5. AS::OrderedOptions :  0.070637   0.000000   0.070637 (  0.070640)
+6. hash_dot           :  0.163008   0.000000   0.163008 (  0.163076)
+7. hashie             :  0.163450   0.000000   0.163450 (  0.163451)
 ```
 
 **Notes:**
 
 - Some approaches to dot notation involve more annoying setup than others, and/or significant limitations. For example, the flattened hash with composite keys (#1) is super fast, but it's far from the vanilla nested hash that I began with. This makes certain hash operations more complicated, such as iterating over hash keys. For my purposes it's not worth the headache.
-- The OpenStruct is faster than I thought it would be. But its fatal flaws, for my purposes, are that it's not a hash and therefore lacks a lot of functionality, and also it doesn't raise an error for a nonexistent attribute (like the `KeyError` from `fetch`) but instead returns `nil`.
+- Struct and OpenStruct are also annoying to create from a hash, but a Struct is 🔥fast🔥 and OpenStruct is not bad either. But their fatal flaws, for my purposes, are that they're not hashes and therefore they lack a lot of functionality. Also, OpenStruct doesn't raise an error for a nonexistent attribute (like the `KeyError` from `fetch`) but instead returns `nil`.
 - Per-hash dot access (#3) is the fastest true dot notation for a hash. (Note that it only works for a hash that doesn't get any new keys once it's set up, which is just fine for my config hash.) However, when applied in my project, it still made my tests run for 70% longer. Again, that's not as bad as it sounds for my sub-1-second test suite.
 - But then something unexpected happened as soon as I replaced my project's calls to `fetch` with dot notation. My code looked *more messy* even though it was now *more concise*. The reason, I think, is that there was no longer a slew of (syntax-highlighted) symbols at the points where I access the config hash, and so it was a bit harder to see at a glance where config values were being used. Instead of brightly-colored symbols evenly spaced by `fetch`, my eyes now saw only a mush of method calls until my brain processed the words and told me whether that's a place where the config hash is accessed. Hmm. Now I was wondering if there was a way to keep the symbols involved, but in a more concise way than chaining `fetch` 🤔
 
@@ -151,6 +153,19 @@ class Hash
 end
 
 ## FOR DOT BENCHMARKS
+
+# Struct
+s_top = Struct.new(:address)
+s_inner = Struct.new(:category)
+s_innest = Struct.new(:desc)
+
+struct = s_top.new(
+  s_inner.new(
+    s_innest.new(
+      "Urban"
+    )
+  )
+)
 
 # a flattened hash with composite keys
 # from https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash
@@ -290,31 +305,37 @@ Benchmark.bm(8) do |bm|
 
   puts "DOT:"
 
-  bm.report("1. flat composite keys:") do
+  bm.report("1. Struct             :") do
+    iterations.times do
+      struct.address.category.desc
+    end
+  end
+
+  bm.report("2. flat composite keys:") do
     iterations.times do
       flat["address.category.desc".to_sym]
     end
   end
 
-  bm.report("2. OpenStruct         :") do
+  bm.report("3. OpenStruct         :") do
     iterations.times do
       ostruct.address.category.desc
     end
   end
 
-  bm.report("3. per-hash dot access:") do
+  bm.report("4. per-hash dot access:") do
     iterations.times do
       my_dot.address.category.desc
     end
   end
 
-  bm.report("4. AS::OrderedOptions :") do
+  bm.report("5. AS::OrderedOptions :") do
     iterations.times do
       asoo.address.category.desc
     end
   end
 
-  bm.report("5. hash_dot           :") do
+  bm.report("6. hash_dot           :") do
     iterations.times do
       hash_dot.address.category.desc
     end
@@ -324,7 +345,7 @@ Benchmark.bm(8) do |bm|
     include Hashie::Extensions::MethodAccess
   end
 
-  bm.report("6. hashie             :") do
+  bm.report("7. hashie             :") do
     iterations.times do
       vanilla.address.category.desc
     end
