@@ -173,8 +173,11 @@ flat = to_namespace_hash(flat)
 
 def flat.[](key)
   fetch(key)
-rescue KeyError => e
-  possible_keys = keys.map { |x| x if x.match /.*?#{key}.*?/i }.delete_if(&:blank?).join("\n")
+rescue KeyError
+  possible_keys = keys
+    .map { |x| x if x.match(/.*?#{key}.*?/i) }
+    .delete_if(&:blank?).join("\n")
+
   raise KeyError, "Key '#{key}' not found. Did you mean one of:\n#{possible_keys}"
 end
 
@@ -192,10 +195,15 @@ ostruct = OpenStruct.new(
 # per-hash dot access
 def allow_dot_access(vanilla_hash)
   vanilla_hash.each do |key, value|
-    vanilla_hash.define_singleton_method(key) { fetch(key) }
-    if value.is_a?(Hash) then allow_dot_access(value); end
+    vanilla_hash.define_singleton_method(key) do
+      fetch(key)
+    end
+
+    allow_dot_access(value) if value.is_a?(Hash)
   end
 end
+
+my_dot = allow_dot_access({ address: { category: { desc: "Urban" } } }).freeze
 
 # ActiveSupport::OrderedOptions
 asoo = ActiveSupport::OrderedOptions.new
@@ -205,8 +213,6 @@ asoo.address.category.desc = "Urban"
 
 # hash_dot gem
 hash_dot = vanilla.to_dot
-
-my_dot = allow_dot_access({ address: { category: { desc: "Urban" } } }).freeze
 
 ## FOR DEEP_FETCH BENCHMARKS
 
