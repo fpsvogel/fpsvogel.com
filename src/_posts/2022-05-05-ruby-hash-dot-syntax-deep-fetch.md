@@ -8,7 +8,8 @@ subtitle: benchmarks and usability considerations
 - [Dig with errors](#dig-with-errors)
 - [Moral of the story](#moral-of-the-story)
 - [Appendix A: `dig` on a hash with error-raising defaults](#appendix-a-dig-on-a-hash-with-error-raising-defaults)
-- [Appendix B: the benchmark code](#appendix-b-the-benchmark-code)
+- [Appendix B: `Hash#to_struct`](#appendix-b-hashto_struct)
+- [Appendix C: the benchmark code](#appendix-c-the-benchmark-code)
 
 Recently I heard about this convenient feature of [Elixir maps](https://hexdocs.pm/elixir/Map.html):
 
@@ -30,7 +31,7 @@ Originally I set out to find a performant approach to dot syntax, but by the end
 
 ## Baselines
 
-First, here are benchmarks on standard syntax (mostly). For the benchmark code, see the end of this post.
+First, here are benchmarks on standard syntax (mostly). For the benchmark code, see [the end of this post](#appendix-c-the-benchmark-code).
 
 1. Bracket notation: `hash[:a][:b]`
 2. Dig: `hash.dig(:a, :b)`
@@ -77,9 +78,9 @@ Here are a few approaches to dot notation for hashes or hash-like structures, be
 
 **Notes:**
 
-- Some approaches to dot notation involve more annoying setup than others, and/or significant limitations. For example, the flattened hash with composite keys (#1) is super fast, but it's far from the vanilla nested hash that I began with. This makes certain hash operations more complicated, such as iterating over hash keys. For my purposes it's not worth the headache.
-- Struct and OpenStruct are also annoying to create from a hash, but a Struct is 🔥fast🔥 and OpenStruct is not bad either. But their fatal flaws, for my purposes, are that they're not hashes and therefore they lack a lot of functionality. Also, OpenStruct doesn't raise an error for a nonexistent attribute (like the `KeyError` from `fetch`) but instead returns `nil`.
-- Per-hash dot access (#3) is the fastest true dot notation for a hash. (Note that it only works for a hash that doesn't get any new keys once it's set up, which is just fine for my config hash.) However, when applied in my project, it still made my tests run for 70% longer. Again, that's not as bad as it sounds for my sub-1-second test suite.
+- The Struct is 🔥fast🔥 the OpenStruct is not bad either. These weren't an option for my config hash because it needs hash functionality, but elsewhere I found a use for Structs built from hashes, and along the way I wrote a `Hash#to_struct` method. I've pasted it [in an appendix below](#appendix-b-hashto_struct). Structs are a great option for dot access wherever your data doesn't need to remain in hash form.
+- The flattened hash with composite keys (#2) is also fast, but it too wouldn't work for my present purposes because it's too far from the vanilla nested hash that I began with.
+- Per-hash dot access (#4) is the fastest dot notation for a plain hash. (Note that it only works for a hash that doesn't get any new keys once it's set up, which is just fine for my config hash.) However, when applied in my project, it still made my tests run for 70% longer. Again, that's not as bad as it sounds for my sub-1-second test suite.
 - But then something unexpected happened as soon as I replaced my project's calls to `fetch` with dot notation. My code looked *more messy* even though it was now *more concise*. The reason, I think, is that there was no longer a slew of (syntax-highlighted) symbols at the points where I access the config hash, and so it was a bit harder to see at a glance where config values were being used. Instead of brightly-colored symbols evenly spaced by `fetch`, my eyes now saw only a mush of method calls until my brain processed the words and told me whether that's a place where the config hash is accessed. Hmm. Now I was wondering if there was a way to keep the symbols involved, but in a more concise way than chaining `fetch` 🤔
 
 ## Dig with errors
@@ -105,7 +106,6 @@ Here are a few different implementations, with benchmarks. There are also a coup
 
 **Notes:**
 
-[Appendix A](#appendix-a-dig-on-a-hash-with-error-raising-defaults)
 - `reduce_deep_fetch` (#4) is the most idiomatic and flexible implementation, so it's probably what you should use.
 - `while_deep_fetch` (#3) is for you if you want to ~~sell your soul~~ trade idiomatic Ruby for a bit of extra speed.
 - `case_deep_fetch` (#2) throws aesthetics and flexibility *completely* out the window because it's implemented with a case statement, and it can only dig as deep as the case statement is tall. But in my project I don't foresee ever needing to dig more than four levels into a hash, so for me it's perfect 🌟 Best of all, my tests don't run any slower now than they used to. But please don't copy me. That case statement is truly ugly.
@@ -130,7 +130,37 @@ That new hash might get passed around, with me thinking it's the original that h
 
 So this approach is too fragile for my liking. Plus, my future self might wonder *"Why did I use `dig` and not fetch?"* until future self re-discovers my hack.
 
-## Appendix B: the benchmark code
+## Appendix B: `Hash#to_struct`
+
+This is a Refinement, which you can use by adding `using ToStruct` at the top of a class or file where you want to use it.
+
+```ruby
+# Converts a Hash to a Struct.
+module ToStruct
+  refine Hash do
+    MEMOIZED_STRUCTS = {}
+
+    def to_struct
+      MEMOIZED_STRUCTS[keys] ||= Struct.new(*keys)
+      struct_class = MEMOIZED_STRUCTS[keys]
+
+      struct_values = transform_values { |v|
+        if v.is_a?(Hash)
+          v.to_struct
+        elsif v.is_a?(Array) && v.all? { |el| el.is_a?(Hash) }
+          v.map(&:to_struct)
+        else
+          v
+        end
+      }.values
+
+      struct_class.new(*struct_values)
+    end
+  end
+end
+```
+
+## Appendix C: the benchmark code
 
 ```ruby
 require 'benchmark'
