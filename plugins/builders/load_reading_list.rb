@@ -36,10 +36,12 @@ class Builders::LoadReadingList < SiteBuilder
   def build
     hook :site, :post_read do |site|
       generator do
-        site.data.reading = load_from_csv
-                            .then { |list| save_to_data(list) }
-        site.data.reading = add_type_emojis(site.data.reading)
-                            .then { |list| add_stars(list) }
+        site.data.reading = parse_items
+          .then { filter_items _1 }
+          .then { simplify_items _1 }
+          .then { sort_items_by_date _1 }
+          .tap { save_items_to_file _1 }
+          .then { add_presentation_data_to_items _1 }
         site.data.reading_genres = uniq_of_attribute(:genres, site.data.reading, sort_by: :frequency)
         site.data.reading_ratings = uniq_of_attribute(:rating, site.data.reading, sort_by: :value)
         site.data.reading_config_defaults = config.reading
@@ -47,24 +49,11 @@ class Builders::LoadReadingList < SiteBuilder
     end
   end
 
-  def load_from_csv
-    items = select_by_rating(parse_items)
-      .then { |items| select_by_genre(items) }
-      .then { |items| select_done_or_in_progress(items) }
-      .then { |items| simplify(items) }
-      # TODO not necessary if I made sure the types were all strings
-      .then { |items| items.map { |item| item.update(type: item[:type].to_s) } }
-
-    sort_by_date(items)
-    items
-  end
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+  # Parsing the CSV file into items.
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
   def parse_items(custom_config: {})
-    if config.reading.formats
-      custom_config[:item] ||= {}
-      custom_config[:item][:formats] = to_normal_hash(config.reading.formats)
-    end
-
     custom_config[:csv] ||= {}
     custom_config[:csv][:skip_compact_planned] = true
 
@@ -102,6 +91,17 @@ class Builders::LoadReadingList < SiteBuilder
       ENV["MY_DROPBOX_APP_SECRET"]
   end
 
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+  # Filtering items that should be displayed.
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+  def filter_items(items)
+    items
+      .then { select_by_rating _1 }
+      .then { select_by_genre _1 }
+      .then { select_done_or_in_progress _1 }
+  end
+
   def select_by_rating(items)
     return items if config.reading.minimum_rating.nil?
     items.select do |item|
@@ -128,14 +128,18 @@ class Builders::LoadReadingList < SiteBuilder
     }
   end
 
-  def simplify(items)
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+  # Simplifying items into smaller hashes with only the data to be displayed.
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+  def simplify_items(items)
     items.map do |item|
       first_isbn, first_url, format, extra_info = first_source_info(item)
       if first_isbn
         url_from_isbn = "https://www.goodreads.com/book/isbn?isbn=#{first_isbn}"
       end
       series_and_extras =
-        item[:series].map do |series|
+        item[:variants].first[:series].map do |series|
           if series[:volume]
             "#{series[:name]}, ##{series[:volume]}"
           else
@@ -157,13 +161,14 @@ class Builders::LoadReadingList < SiteBuilder
         date: date&.strftime("%Y-%m-%d") || config.reading.in_progress_string,
         date_in_words: date&.strftime("%B %e") ||
                        config.reading.in_progress_string.capitalize,
-        reread?: item[:experiences].map { |experience| experience[:date_finished] }.compact.count > 1,
-        groups: item[:experiences].map { |experience| experience[:group] }.compact.presence,
+        # TODO update this to accomodate podcast style
+        reread?: item[:experiences].map { _1[:spans].first[:progress] == 1.0 }.compact.count > 1,
+        groups: item[:experiences].map { _1[:group] }.compact.presence,
         blurb: item[:notes]
-                .find { |note| note[:blurb] }
+                .find { |note| note[:blurb?] }
                 &.dig(:content),
         notes: item[:notes]
-                .select { |note| !note[:private] && !note[:blurb] }
+                .select { |note| !note[:private?] && !note[:blurb?] }
                 .map { |note| note[:content] }
                 .presence,
       }
@@ -202,8 +207,12 @@ class Builders::LoadReadingList < SiteBuilder
         .transform_values(&:to_sym)
   end
 
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+  # Sorting simplified items.
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
   # returns items sorted by date (most recent first) then name (alphabetical)
-  def sort_by_date(items)
+  def sort_items_by_date(items)
     in_progress = items.select { |item| item[:date].nil? }
                        .sort_by { |item| item[:name].downcase }
     done = items - in_progress
@@ -216,6 +225,16 @@ class Builders::LoadReadingList < SiteBuilder
       end
     end
     in_progress + done
+  end
+
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+  # Adding emojis to items, which are not saved in reading.yml but only displayed.
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+  def add_presentation_data_to_items(items)
+    items
+      .then { add_type_emojis _1 }
+      .then { add_stars _1 }
   end
 
   def add_type_emojis(items)
@@ -244,6 +263,29 @@ class Builders::LoadReadingList < SiteBuilder
     end
   end
 
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+  # Persist items into a file.
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+  def save_items_to_file(items)
+    File.write("src/_data/reading.yml", to_safe_hashes(items).to_yaml)
+  end
+
+  # transforms an array of hashes so that symbol keys become strings, so they
+  # can be written to YAML that can be read with YAML.safe_load (or YAML.load).
+  def to_safe_hashes(hashes)
+    hashes.map do |item|
+      item.transform_keys(&:to_s)
+          .transform_values do |v|
+            if v.is_a? Symbol
+              v.to_s
+            else
+              v
+            end
+          end
+    end
+  end
+
   # returns the unique varieties of an attribute across all items.
   # sort_by: :frequency or :value
   # convert: type conversion, such as :to_s
@@ -267,31 +309,6 @@ class Builders::LoadReadingList < SiteBuilder
       all = all.sort
     end
     all
-  end
-
-  def save_to_data(list)
-    File.write("src/_data/reading.yml", to_safe_hashes(list).to_yaml)
-    list
-  end
-
-  # transforms an array of hashes so that symbol keys become strings, so they
-  # can be written to YAML that can be read with YAML.safe_load (or YAML.load).
-  def to_safe_hashes(hashes)
-    hashes.map do |item|
-      item.transform_keys(&:to_s)
-          .transform_values do |v|
-            if v.is_a? Symbol
-              v.to_s
-            else
-              v
-            end
-          end
-    end
-  end
-
-  # the reverse of to_safe_hashes (above) and removes dot syntax.
-  def to_normal_hash(hash)
-    hash.to_h.transform_keys(&:to_sym)
   end
 
   # def with_dot_syntax(hashes)
