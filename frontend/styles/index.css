@@ -8,17 +8,12 @@
 posts-li-date,
 posts-li-subtitle,
 posts-li-title,
-post-prev-next,
-post-top-tweet {
+post-footer {
   display: block;
 }
 
 nav-social-link {
   display: inline;
-}
-
-tweet-button {
-  display: inline-block;
 }
 
 body {
@@ -243,35 +238,11 @@ del {
   background-color: unset;
 }
 
-post-prev-next {
+post-footer {
   margin-top: 2.5rem;
   & a {
     display: block;
     padding: .25rem 0;
-  }
-}
-
-post-top-tweet {
-  display: flex;
-}
-
-tweet-button {
-  margin-left: auto;
-  & a {
-    padding: 0.1rem 0.6rem 0.4rem 0.6rem;
-    font-size: 1.2rem;
-    border-radius: .3rem;
-    background: var(--twitter-blue);
-  }
-  & svg {
-    fill: var(--background-color);
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-  }
-  & small {
-    color: var(--background-color);
-    font-weight: 700;
   }
 }
 
@@ -315,11 +286,6 @@ news-feed {
     list-style-type: circle;
     & li:hover {
       list-style-type: disc;
-    }
-  }
-  tweet-button {
-    &:hover {
-      & a {background: var(--twitter-blue-bright) }
     }
   }
 }

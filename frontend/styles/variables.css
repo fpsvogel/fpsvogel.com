@@ -17,8 +17,6 @@ html:root {
   // --code-background-color: #292b2e;// !important;
   --code-text-color: #63b9ff;// !important;
   --bg-dark-color: #17171a;
-  --twitter-blue: #36a7eb;
-  --twitter-blue-bright: #68c4fc;
 }
 
 @media (prefers-color-scheme: light) {

@@ -47,7 +47,7 @@ You can see the final result of this process in [my site's GitHub repo](https://
 
 ## 2. Ruby component and plugin
 
-Next I designed and built my site, a process which was mostly unremarkable, except for one thing: I built a Ruby component and plugin for a complex, data-heavy part of a page. For simpler parts of a page I just used partials, such as `_tweet_button.erb`. But for any significant manipulation of data prior to rendering, building a Ruby component makes more sense. In my case, I wanted a "Reading" page that lists titles from my `reading.csv` file (my homegrown alternative to Goodreads), including only books that I rated at least a 4 out of 5.
+Next I designed and built my site, a process which was mostly unremarkable, except for one thing: I built a Ruby component and plugin for a complex, data-heavy part of a page. For simpler parts of a page I just used partials, such as `_navbar.erb`. But for any significant manipulation of data prior to rendering, building a Ruby component makes more sense. In my case, I wanted a "Reading" page that lists titles from my `reading.csv` file (my homegrown alternative to Goodreads), including only books that I rated at least a 4 out of 5.
 
 Following [the doc on Ruby components](https://edge.bridgetownrb.com/docs/components/ruby), I created a `ReadingList` component in `_components/reading_list.rb`, and its template `_components/reading_list.erb`.
 

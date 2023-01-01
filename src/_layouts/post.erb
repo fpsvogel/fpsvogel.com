@@ -22,7 +22,7 @@ layout: default
   <%= yield %>
 </article>
 
-<post-prev-next>
+<post-footer>
   <% if resource.previous_resource %>
     <a href="<%= resource.previous_resource.relative_url %>#bottom">
       👉 <strong>Next:</strong> <%= resource.previous_resource.data.title %>
@@ -33,9 +33,5 @@ layout: default
       👈 <strong>Previous:</strong> <%= resource.next_resource.data.title %>
     </a>
   <% end %>
-</post-post-prev-next>
-
-<post-top-tweet>
   <a href="#top">🚀 Back to top</a>
-  <%= render "tweet_button", text: resource.data.title, url: resource.absolute_url %>
-</post-top-tweet>
+</post-footer>
