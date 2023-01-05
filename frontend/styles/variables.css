@@ -21,15 +21,15 @@ html:root {
 
 @media (prefers-color-scheme: light) {
   html:root {
+    --background-color: #f3f0e9;
     --link-color: #c94f4f;// !important;
     --link-visited-color: #c94f4f;// !important;
     --link-hover-color: #212121;// !important;
     --text-color: #363636;// !important;
     --text-color-less-contrast: #595959;
     --text-color-more-contrast: #363636;
-    // --code-background-color: #;
     --code-text-color: #29a0ff;// !important;
-    --code-background-color: #f0f0f0; // !important;
+    --code-background-color: var(--highlighted-background-color); // !important;
     --bg-dark-color: #e6e6e6;
   }
 }
