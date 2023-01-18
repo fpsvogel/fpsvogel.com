@@ -12,11 +12,26 @@
   groups: 
   blurb: 
   notes:
-  - Among fans of active/immersive Greek, this book is not well-known compared to
-    others such as Athenaze, Alexandros, and Thrasymachus. Nevertheless, this one
-    is my favorite because instead of a series of tediously trivial stories about
-    home, farm, and gods, it presents a marvelous picture of ancient Greece through
-    historically-rooted hilarious vignettes, many of them quite funny.
+  - Among fans of active/immersive Greek, this book is not as popular as Athenaze,
+    Alexandros, and Thrasymachus. Nevertheless, this one is my favorite because instead
+    of tedious stories about home or retellings of the same old myths, it presents
+    a marvelous picture of ancient Greece through historically-rooted vignettes, many
+    of them quite funny.
+- id: https://youtu.be/hSNWkRw53Jo
+  rating: 4
+  type: video
+  name: Some More News – A Brief Look at Jordan Peterson
+  site: https://youtu.be/hSNWkRw53Jo
+  genres:
+  - politics
+  date: '2023-01-17'
+  date_in_words: January 17
+  reread?: false
+  groups: 
+  blurb: 
+  notes:
+  - I used to like Jordan Peterson, years ago when he was a little less obviously
+    right-wing and I was a lot less grown up. I wish I'd had this video back then.
 - id: B07TK3NSW5
   rating: 4
   type: book
@@ -43,7 +58,7 @@
   site: https://www.goodreads.com/book/isbn?isbn=B07F88LY9M
   genres:
   - ruby
-  - cs
+  - programming
   date: '2022-12-01'
   date_in_words: December  1
   reread?: true
@@ -643,7 +658,7 @@
     Principles 〜 2nd ed. 〜 a.k.a. From Nand to Tetris'
   site: https://www.goodreads.com/book/isbn?isbn=B084V7R8PT
   genres:
-  - cs
+  - programming
   date: '2021-08-19'
   date_in_words: August 19
   reread?: false
@@ -800,7 +815,7 @@
   name: 'Computer Networking: A Top-Down Approach'
   site: https://www.goodreads.com/book/isbn?isbn=9780135928523
   genres:
-  - cs
+  - programming
   date: '2021-05-10'
   date_in_words: May 10
   reread?: false
@@ -916,7 +931,7 @@
   name: Sandi Metz – 99 Bottles of OOP
   site: https://sandimetz.com/99bottles
   genres:
-  - cs
+  - programming
   date: '2021-01-03'
   date_in_words: January  3
   reread?: false
@@ -935,7 +950,7 @@
   site: https://youtu.be/OMPfEXIlTVE
   genres:
   - ruby
-  - cs
+  - programming
   date: '2020-12-29'
   date_in_words: December 29
   reread?: false
@@ -1066,7 +1081,7 @@
   name: 'Operating Systems: Three Easy Pieces'
   site: https://www.goodreads.com/book/isbn?isbn=B00TPZ17O4
   genres:
-  - cs
+  - programming
   date: '2020-10-02'
   date_in_words: October  2
   reread?: false
@@ -1162,7 +1177,7 @@
   name: 'Code: The Hidden Language of Computer Hardware and Software'
   site: https://www.goodreads.com/book/isbn?isbn=B00JDMPOK2
   genres:
-  - cs
+  - programming
   date: '2020-05-19'
   date_in_words: May 19
   reread?: false

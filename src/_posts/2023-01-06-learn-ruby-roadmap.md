@@ -37,7 +37,7 @@ What did my roadmap look like in the first Git commit? Let's go back in time to 
 
 But back to my early roadmap, the emphasis is clear: **I loved Ruby** and **I thought all the important stuff could fit under the Ruby heading**, except for my "healthy dose of computer science" (as I put it) and a smattering of frontend knowledge, which got their own sections.
 
-At the same time, **I was conscious that Ruby was not the most popular choice for a beginner**, and thus "Objections" was the first preliminary section of my roadmap, and the first objection was *"Why Ruby??"* I eventually scrapped the "Objections" section because it made my roadmap *seem* more objectionable than it actually is, but later that year I expanded my answer to "Why Ruby?" into a blog post, ["Ruby for the self-taught developer"](https://fpsvogel.com/posts/2021/why-learn-ruby).
+At the same time, **I was conscious that Ruby was not the most popular choice for a beginner**, and thus "Objections" was the first preliminary section of my roadmap, and the first objection was *"Why Ruby??"* I eventually scrapped the "Objections" section because it made my roadmap *seem* more objectionable than it actually is, but later that year I expanded my answer to "Why Ruby?" into a blog post, ["Ruby for the self-taught developer"](/posts/2021/why-learn-ruby).
 
 ### Time lapse
 
