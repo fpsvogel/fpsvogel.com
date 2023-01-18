@@ -1,7 +1,7 @@
 <li class="nav-social-links" >
   <% links.each.with_index do |(name, url), i| %>
     <nav-social-link>
-      <a href="<%= url %>" target="_blank" rel="me" title="<%= name %>">
+      <a href="<%= url %>" rel="me" title="<%= name %>">
         <%= svg "/images/theme/#{name.downcase.gsub(" ", "-")}.svg" %>
       </a>
     </nav-social-link>
