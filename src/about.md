@@ -4,7 +4,7 @@ title: My resume
 permalink: /about/
 ---
 
-I'm a self-taught Rubyist diving deeper into maintainable Rails. In mid-2020 I quit my previous career in humanities teaching, got a new day job in tech support, and used my free time to work toward my first developer job.
+I'm a self-taught Rubyist who [is always learning](https://github.com/fpsvogel/learn-ruby). In mid-2020 I quit my previous career in humanities teaching, got a new day job in tech support, and used my newfound free time to work toward my first developer job.
 
 ## Work
 
@@ -21,14 +21,11 @@ I'm a self-taught Rubyist diving deeper into maintainable Rails. In mid-2020 I q
 
 [**Circulate (Ruby for Good)**](https://github.com/rubyforgood/circulate/pulls?q=author:fpsvogel) \| *Rails 6, RSpec, Factory Bot* <about-date>Dec. 2021</about-date>
 
-[**Lobsters**](https://github.com/lobsters/lobsters/pulls?q=author:fpsvogel) \| *Rails 6, RSpec* <about-date>Dec. 2021 – Jan. 2022</about-date>
-
 ## Projects
 
-[**My study plan**](https://github.com/fpsvogel/learn-ruby-and-cs) <about-date>June 2020 – present</about-date>
+[**My learning roadmap**](https://github.com/fpsvogel/learn-ruby) <about-date>June 2020 – present</about-date>
 
-- Documenting my learning path.
-- During my first year (before the projects below) I learned Ruby and practiced TDD and design patterns by building [a command-line app](https://github.com/fpsvogel/readstat). I also learned some computer science and frontend skills.
+- Learning in public as a way to keep myself motivated while helping others find good learning resources.
 
 [**Doctor Lookup**](https://github.com/fpsvogel/doctorlookup) \| *Rails 7, RSpec, VCR, WebMock, Hotwire (Turbo Streams)* <about-date>Jan. 2022</about-date>
 
