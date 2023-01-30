@@ -1,4 +1,21 @@
 ---
+- id: https://1001reasonstolearnspanish.com
+  rating: 4
+  type: audio
+  name: Español con Juan
+  site: https://1001reasonstolearnspanish.com
+  genres:
+  - podcast
+  - spanish
+  date: in progress
+  date_in_words: In progress
+  reread?: false
+  groups: 
+  blurb: 
+  notes:
+  - Of the three Spanish learning podcasts that I'm listening to (this, Hoy Hablamos,
+    and Story Learning Spanish), this one is my favorite. Juan makes me smile every
+    day.
 - id: '0521698510'
   rating: 4
   type: book
@@ -12,11 +29,12 @@
   groups: 
   blurb: 
   notes:
-  - Among fans of active/immersive Greek, this book is not as popular as Athenaze,
-    Alexandros, and Thrasymachus. Nevertheless, this one is my favorite because instead
-    of tedious stories about home or retellings of the same old myths, it presents
-    a marvelous picture of ancient Greece through historically-rooted vignettes, many
-    of them quite funny.
+  - 'Among fans of active/immersive Greek, this book is not as popular as Athenaze,
+    Alexandros, and Thrasymachus. I see why: it''s terrible at providing a beginner-friendly
+    gradual progression with lots of repetition. Even so, I like it better than all
+    the others because instead of tedious stories about home or retellings of the
+    same old myths, it tells stories set in ancient Athens, strongly rooted in history
+    or literature, and often quite funny.'
 - id: https://youtu.be/hSNWkRw53Jo
   rating: 4
   type: video
