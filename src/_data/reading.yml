@@ -16,6 +16,20 @@
   - Of the three Spanish learning podcasts that I'm listening to (this, Hoy Hablamos,
     and Story Learning Spanish), this one is my favorite. Juan makes me smile every
     day.
+- id: https://canaldafantasia.com/category/tolkien-audiolivro/senhor-dos-aneis-tolkien-audiolivro
+  rating: 4
+  type: book
+  name: J. R. R. Tolkien – O Senhor dos Anéis
+  site: https://canaldafantasia.com/category/tolkien-audiolivro/senhor-dos-aneis-tolkien-audiolivro
+  genres:
+  - fiction
+  - portuguese
+  date: in progress
+  date_in_words: In progress
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
 - id: '0521698510'
   rating: 4
   type: book
@@ -319,6 +333,22 @@
   groups: 
   blurb: 
   notes: 
+- id: https://www.youtube.com/c/AGreatDivorce/playlists
+  rating: 4
+  type: audio
+  name: A Collection of Unmitigated Pedantry
+  site: https://www.youtube.com/c/AGreatDivorce/playlists
+  genres:
+  - history
+  date: '2022-02-20'
+  date_in_words: February 20
+  reread?: false
+  groups: 
+  blurb: 
+  notes:
+  - 'Audio: https://www.youtube.com/c/AGreatDivorce/playlists'
+  - 'Recurring themes: opposing the cult of the badass, questioning whether the achievements
+    of the elite are worth their cost in the suffering of the ordinary people'
 - id: B00CA6CMLW
   rating: 4
   type: book

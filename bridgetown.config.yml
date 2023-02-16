@@ -22,7 +22,7 @@ defaults:
       author: "Felipe Vogel"
 
 reading:
-  local_filepath: "/mnt/c/Users/Felipe/Dropbox/Apps/SimpleText/reading.csv"
+  local_filepath: "/home/felipe/Dropbox/Apps/SimpleText/reading.csv"
   dropbox_filepath: "/Apps/SimpleText/reading.csv"
   types:
     book: 📕
