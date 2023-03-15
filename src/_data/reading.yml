@@ -16,20 +16,6 @@
   - Of the three Spanish learning podcasts that I'm listening to (this, Hoy Hablamos,
     and Story Learning Spanish), this one is my favorite. Juan makes me smile every
     day.
-- id: https://canaldafantasia.com/category/tolkien-audiolivro/senhor-dos-aneis-tolkien-audiolivro
-  rating: 4
-  type: book
-  name: J. R. R. Tolkien – O Senhor dos Anéis
-  site: https://canaldafantasia.com/category/tolkien-audiolivro/senhor-dos-aneis-tolkien-audiolivro
-  genres:
-  - fiction
-  - portuguese
-  date: in progress
-  date_in_words: In progress
-  reread?: false
-  groups: 
-  blurb: 
-  notes: 
 - id: '0521698510'
   rating: 4
   type: book
@@ -242,6 +228,24 @@
     others. Marcus also goes so far as to claim that ignoring our fellowship with
     others is a form of injustice, a vice, and an impiety because it goes against
     Nature." (cf. Meditations 2.1, 5.16, 9.1)'
+- id: B071CXGXM2
+  rating: 4
+  type: book
+  name: 'Aaron R. Yilmaz – Deliver Us From Evolution?: A Christian Biologist''s In-Depth
+    Look at the Evidence Reveals a Surprising Harmony Between Science and God'
+  site: https://www.goodreads.com/book/isbn?isbn=B071CXGXM2
+  genres:
+  - religion
+  - science
+  - exvangelical
+  date: '2022-08-01'
+  date_in_words: August  1
+  reread?: true
+  groups:
+  - with Hannah
+  blurb: Loved it, not because I needed it but because it's the most handy all-in-one
+    book on evolution to give to doubting Christians.
+  notes: 
 - id: B00SU6CG1W
   rating: 4
   type: book
@@ -493,23 +497,6 @@
     is because he does not know how it is to be adapted or related to the whole. …
     God forbid, however, that someone who does not know why the Creator has done what
     He has done should be foolish enough to suppose that God has in such cases erred."'
-- id: B071CXGXM2
-  rating: 4
-  type: book
-  name: 'Aaron R. Yilmaz – Deliver Us From Evolution?: A Christian Biologist''s In-Depth
-    Look at the Evidence Reveals a Surprising Harmony Between Science and God'
-  site: https://www.goodreads.com/book/isbn?isbn=B071CXGXM2
-  genres:
-  - religion
-  - science
-  - exvangelical
-  date: '2022-01-04'
-  date_in_words: January  4
-  reread?: false
-  groups: 
-  blurb: Loved it, not because I needed it but because it's the most handy all-in-one
-    book on evolution to give to doubting Christians.
-  notes: 
 - id: B07BJLMZ5W
   rating: 4
   type: book

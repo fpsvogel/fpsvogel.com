@@ -7,6 +7,7 @@ html:root {
   --code-text: var(--text-color-more-contrast);
   --code-gray: #8c929c;
   --code-red: #ff8c9a;
+  --code-purple: #e38eff;
   --code-blue: #63b9ff;
   --code-green: #98c77c;
   --code-orange: #ffc27d;
@@ -32,10 +33,11 @@ html:root {
 .highlight .s { color: var(--code-green) } /* string */
 .highlight .s1 { color: var(--code-green) } /* string: single quotes */
 .highlight .s2 { color: var(--code-green) } /* string: double quotes */
+.highlight .sh { color: var(--code-green) } /* string: heredocs */
 .highlight .sx { color: var(--code-green) } /* %-delimited string/array/etc. */
 .highlight .si { color: var(--code-blue) } /* string interpolation */
-.highlight .sr { color: var(--code-red) } /* regex */
-.highlight .se { color: var(--code-cyan) } /* escaped characters */
+.highlight .sr { color: var(--code-purple) } /* regex */
+.highlight .se { color: var(--code-purple) } /* escaped characters */
 
 /* NON-RUBY */
 .highlight .nl { color: var(--code-cyan) } /* JSON key */

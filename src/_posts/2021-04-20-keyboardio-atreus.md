@@ -24,7 +24,7 @@ So I set out in quest of a better keyboard, and it wasn't long before I stumbled
 
 I just want a decent keyboard, for Pete's sake.
 
-Fortunately, I found an easy way out for newbs like me who don't want to invest a significant portion of a lifetime in acquiring a keyboard: the conveniently pre-made and inexpensive [Keyboardio Atreus](https://shop.keyboard.io/products/keyboardio-atreus?variant=31382377201737). I bought mine with BOX Brown key switches, mainly because by that point I had major decision fatigue and so I took Keyboardio recommends BOX Browns for newcomers. A decision saved is a decision gained, as they say.
+Fortunately, I found an easy way out for newbs like me who don't want to invest a significant portion of a lifetime in acquiring a keyboard: the conveniently pre-made and inexpensive [Keyboardio Atreus](https://shop.keyboard.io/products/keyboardio-atreus?variant=31382377201737). I bought mine with BOX Brown key switches, mainly because by that point I had major decision fatigue and so I took Keyboardio's recommendation of BOX Browns for newcomers. A decision saved is a decision gained, as they say.
 
 A couple of broken-on-arrival key switches were promptly replaced with a care package sent by Keyboardio (great customer service!), and then I was ready for the next phase of the journey.
 
