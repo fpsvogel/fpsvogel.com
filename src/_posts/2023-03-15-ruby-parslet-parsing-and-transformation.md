@@ -1,9 +1,9 @@
 ---
-title: Parsing a litter log
-subtitle: trying out Parslet over regular expressions
+title: Parsing text in Ruby, part 1
+subtitle: Parslet transforming my world
 ---
 
-- [Regular expressions: a problem?](#regular-expressions-a-problem)
+- [Regular expressions: not the problem](#regular-expressions-not-the-problem)
 - [Discovering Parslet](#discovering-parslet)
 - [The part where I wanted to run crying back to regular expressions, until I learned to implement my parser incrementally](#the-part-where-i-wanted-to-run-crying-back-to-regular-expressions-until-i-learned-to-implement-my-parser-incrementally)
 - [Takeaways](#takeaways)
@@ -13,25 +13,27 @@ I made a new Ruby gem: [Litter](https://github.com/fpsvogel/litter). It's for av
 
 (*Surely* there are other people who do that… *\*does some googling\** [See?](https://sophieneville.net/2019/05/29/the-diary-of-a-lone-litter-picker-20-reasons-why-its-good-to-collect-trash/) I'm not alone!)
 
-But I had another reason to make this odd gem: **I wanted to explore an approach to text parsing that doesn't rely so much on regular expressions.** So I used the [Parslet](https://kschiess.github.io/parslet/) gem, and I thought it would be worth writing this post on how it went.
+But I had another reason to make this odd gem: **I wanted to explore a more structured approach to text parsing** than what I've come up with on my own so far. So I used the [Parslet](https://kschiess.github.io/parslet/) gem, and I thought it would be worth writing this post on how it went.
 
-## Regular expressions: a problem?
+## Regular expressions: not the problem
+
+Here's the backstory. I'm building another gem called [Reading](https://github.com/fpsvogel/reading) that parses my CSV reading log. It has a custom-built parser that is quite messy, for reasons that I couldn't articulate until just now when I tried Parslet.
+
+At first I thought the messiness came from the numerous regular expressions in my homespun parser. The well-known saying comes to mind:
 
 > Some people, when confronted with a problem, think “I know, I'll use regular expressions.” Now they have two problems.
 >
 > – [Jamie Zawinski](regex.info/blog/2006-09-15/247)
 
-Here's the backstory. I'm building another gem called [Reading](https://github.com/fpsvogel/reading) that parses my CSV reading log. Its custom-built parser relies heavily on regular expressions, and it's a lot messier than I'd like. In particular, it's not easy to re-use code for similarly-parsed syntax that occurs in different places.
+It's true that some of my regular expressions are long and hard to read, but **I don't think regular expressions are the problem** because even if I broke them up and made them easier to read, that parser code would still be a mess.
 
-For example, extra information about a book (series, volume, publisher, etc.) can appear as part of one of two columns, depending on whether I've read the book in multiple editions. I've worked out different ways to re-use the parsing code in cases like this, but the solutions are not uniform or elegant.
+The problem with my Reading parser, I now realize, is this: **it mixes up parsing and transformation** rather than separating them into two steps.
 
-**In short, regular expressions aren't in themselves very modular or composable**, and it's up to me to make up for it by building a neat and tidy parsing structure around them. And I haven't done a good job of that so far. (Then there's the separate problem that all but the simplest regular expressions are **hard to read and understand**.)
-
-Before I set out on an epic quest to tame my regular expressions, I wanted to explore an alternative approach that is more structured and harder to make a mess of.
+*Hold up, what is "transformation" and how is it different from parsing?* I didn't know either, before I tried Parslet. So let's take a look at Parslet to find out!
 
 ## Discovering Parslet
 
-In the book [Text Processing with Ruby](https://pragprog.com/titles/rmtpruby/text-processing-with-ruby/) I found what I was looking for: Parslet. Below is a simple parser and transform similar to the example in the book.
+In the book [Text Processing with Ruby](https://pragprog.com/titles/rmtpruby/text-processing-with-ruby/) I found the structured parsing tool that I was looking for: Parslet. Below is an example similar to the one in the book.
 
 A lot of the syntax is self-explanatory, and for the rest you can refer to Parslet's [Get Started](https://kschiess.github.io/parslet/get-started.html), [Parser](https://kschiess.github.io/parslet/parser.html), and [Transformation](https://kschiess.github.io/parslet/transform.html) guides.
 
@@ -104,9 +106,11 @@ puts hash == OUTPUT
 # => true
 ```
 
-Neat! This looks **a lot cleaner** than a bunch of regular expressions interspersed in DIY parsing code.
+To summarize, a two-step process happens here: first the `INPUT` string is parsed into an intermediate tree structure, and then the tree is transformed into the simpler hash as in `OUTPUT`.
 
-So I decided to build my litter log parser with Parslet.
+Neat! This looks **a lot cleaner** than if I had mixed parsing and transformation together like I did in my Reading parser.
+
+Impressed by this tidiness, I proceeded to build my litter log parser with Parslet.
 
 ## The part where I wanted to run crying back to regular expressions, until I learned to implement my parser incrementally
 
@@ -116,7 +120,7 @@ This happened several times until I realized that instead of writing a bunch of 
 
 ## Takeaways
 
-In the end, [my parser](https://github.com/fpsvogel/litter/blob/7f51f311aad22c02067faef68a4e42162b9baf5f/lib/litter/parsing/parser.rb) and [transformation](https://github.com/fpsvogel/litter/blob/7f51f311aad22c02067faef68a4e42162b9baf5f/lib/litter/parsing/transform.rb) are quite pleasing to the eye, and I think more maintainable than if I'd used regular expressions plus custom parsing code.
+In the end, [my parser](https://github.com/fpsvogel/litter/blob/7f51f311aad22c02067faef68a4e42162b9baf5f/lib/litter/parsing/parser.rb) and [transformation](https://github.com/fpsvogel/litter/blob/7f51f311aad22c02067faef68a4e42162b9baf5f/lib/litter/parsing/transform.rb) are definitely easier to understand than if I'd winged it and built an ad-hoc parser that (as before) doesn't separate transformation into a separate step.
 
 In the tests you can see [example input](https://github.com/fpsvogel/litter/blob/7f51f311aad22c02067faef68a4e42162b9baf5f/test/parse_test.rb#L22-L32) and [example output](https://github.com/fpsvogel/litter/blob/7f51f311aad22c02067faef68a4e42162b9baf5f/test/parse_test.rb#L70-L87). Considering how different the input and output are, the amount of code that I had to write is fairly small.
 
@@ -128,9 +132,9 @@ In my case, I needed to radically change the structure of the output (grouping i
 
 ## Next steps
 
-After this trial run with Parslet, I've decided to use it in my larger project Reading, where it will replace my oversized regular expressions and ad-hoc parsing code. It will take a lot of work to replace what amounts to the majority of the code in that gem, but I think it's worthwhile for a couple of reasons:
+After this trial run with Parslet, I'm considering using it in my larger project Reading, where it could replace my ad-hoc parsing code. It would take a lot of work to replace what amounts to the majority of the code in that gem, but it might be worthwhile for a couple of reasons:
 
-- I have a hard time understanding the current code because **parsing and transformation is all mixed up**. It's only after playing around with Parslet, which separates the two, that I'm finally able to perceive this problem.
+- I have a hard time understanding the parsing code in my Reading gem because, as I've mentioned, **parsing and transformation is all mixed up**. It's only after playing around with Parslet, which separates the two, that I'm finally able to perceive this problem.
 - The column that I still need to implement is **the most complex of all** (the History column for fine-grained tracking of reading/watching), and I've been putting off implementing it because of how messy I imagine it will be with the old hodgepodge approach.
 
-And, well, doing more Parslet is the thing I'm most interested in right now, and I think that counts for *something* in my open-source project that no one uses besides me 😂
+And, well, doing more Parslet (or taking a similar parse-and-transform approach) is the thing I'm most interested in right now, and I think that counts for *something* in my open-source project that no one uses besides me 😂
