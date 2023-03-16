@@ -138,3 +138,7 @@ After this trial run with Parslet, I'm considering using it in my larger project
 - The column that I still need to implement is **the most complex of all** (the History column for fine-grained tracking of reading/watching), and I've been putting off implementing it because of how messy I imagine it will be with the old hodgepodge approach.
 
 And, well, doing more Parslet (or taking a similar parse-and-transform approach) is the thing I'm most interested in right now, and I think that counts for *something* in my open-source project that no one uses besides me 😂
+
+Before you go, here's a particularly trashy spot in the park where I've begun cleaning up. (That is a mattress in the upper-right corner. It will definitely find its way into my litter log.)
+
+![trash strewn along a stream in my neighborhood park](/images/trash-in-park.jpg)
