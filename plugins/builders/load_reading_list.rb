@@ -27,14 +27,12 @@ class Builders::LoadReadingList < SiteBuilder
     custom_config[:csv] ||= {}
     custom_config[:csv][:skip_compact_planned] = true
 
-    csv = Reading::CSV.new(
-      my_dropbox_file,
+    csv = Reading.parse(
       # If my_dropbox_file is nil, then the local file path is used instead.
-      path: config.reading.local_filepath,
+      config.reading.local_filepath,
+      stream: my_dropbox_file,
       config: custom_config,
     )
-
-    csv.parse
   end
 
   def my_dropbox_file
@@ -208,7 +206,7 @@ class Builders::LoadReadingList < SiteBuilder
   end
 
   def add_type_emojis(items)
-    formats = config.reading.formats || Reading::Config.new.hash[:item][:formats]
+    formats = config.reading.formats || Reading::Config.new.hash[:formats]
 
     items.map do |item|
       item.merge({

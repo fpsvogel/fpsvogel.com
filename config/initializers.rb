@@ -11,7 +11,7 @@ Bridgetown.configure do |config|
     },
     # # if you want to override the default set of format names and/or emojis.
     # # the defaults can be seen here:
-    # # https://github.com/fpsvogel/reading-csv/blob/main/lib/reading/csv/config.rb
+    # # https://github.com/fpsvogel/reading-csv/blob/main/lib/reading/config.rb
     # formats: {
     #   print:      "📄",
     #   ebook:      "📱",
