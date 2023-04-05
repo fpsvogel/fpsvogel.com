@@ -7,32 +7,83 @@
   genres:
   - podcast
   - spanish
-  date: in progress
-  date_in_words: In progress
+  date: '2023-04-05'
+  date_in_words: April  5
   reread?: false
   groups: 
   blurb: 
   notes:
   - My favorite Spanish podcast. Juan makes me smile every day.
-- id: '0521698510'
+- id: B075CJVPMX
   rating: 4
   type: book
-  name: 'Reading Greek: Text and Vocabulary'
-  site: https://www.goodreads.com/book/isbn?isbn=0521698510
+  name: How to Make Disease Disappear
+  site: https://www.goodreads.com/book/isbn?isbn=B075CJVPMX
   genres:
-  - greek
-  date: in progress
-  date_in_words: In progress
+  - wellbeing
+  date: '2023-03-31'
+  date_in_words: March 31
   reread?: false
   groups: 
   blurb: 
   notes:
-  - 'Among fans of active/immersive Greek, this book is not as popular as Athenaze,
-    Alexandros, and Thrasymachus. I see why: it''s terrible at providing a beginner-friendly
-    gradual progression with lots of repetition. Even so, I like it better than all
-    the others because instead of tedious stories about home or retellings of the
-    same old myths, it tells stories set in ancient Athens, strongly rooted in history
-    or literature, and often quite funny.'
+  - If you can get your hands on it, *The 4 Pillar Plan* by the same author seems
+    to be a better presentation of the same material. (This the US/Canada version
+    of that UK book.)
+  - 'Highlights:'
+  - lots of veggies great for gut health
+  - microfasting (i.e. not eating late at night)
+  - frequent movement throughout the day better than one long workout
+  - 'HIIT can be done in few-minute bursts anywhere: jumping jacks or burpees in the
+    house, a short sprint while out on a walk, etc.'
+  - glute exercises, see https://www.youtube.com/playlist?list=PLwAWbIQiqJ0BUvhUelyoKacZQv5GjI7pj
+  - a short morning walk for the sunlight
+- id: B009LRWHPY
+  rating: 4
+  type: book
+  name: Happy City
+  site: https://www.goodreads.com/book/isbn?isbn=B009LRWHPY
+  genres:
+  - politics
+  - wellbeing
+  date: '2023-03-26'
+  date_in_words: March 26
+  reread?: false
+  groups: 
+  blurb: 
+  notes:
+  - The last chapter and epilogue are especially inspiring, on how to revitalize your
+    neighborhood and/or switch to a healthier non-suburban lifestyle.
+- id: https://canaldafantasia.com/category/tolkien-audiolivro/senhor-dos-aneis-tolkien-audiolivro
+  rating: 4
+  type: book
+  name: J. R. R. Tolkien – O Senhor dos Anéis
+  site: https://canaldafantasia.com/category/tolkien-audiolivro/senhor-dos-aneis-tolkien-audiolivro
+  genres:
+  - fiction
+  - portuguese
+  date: '2023-03-10'
+  date_in_words: March 10
+  reread?: false
+  groups: 
+  blurb: 
+  notes: 
+- id: https://www.youtube.com/c/AGreatDivorce/playlists
+  rating: 4
+  type: audio
+  name: A Collection of Unmitigated Pedantry
+  site: https://www.youtube.com/c/AGreatDivorce/playlists
+  genres:
+  - history
+  date: '2023-01-25'
+  date_in_words: January 25
+  reread?: false
+  groups: 
+  blurb: 
+  notes:
+  - 'Audio: https://www.youtube.com/c/AGreatDivorce/playlists'
+  - 'Recurring themes: opposing the cult of the badass, questioning whether the achievements
+    of the elite are worth their cost in the suffering of the ordinary people'
 - id: https://youtu.be/hSNWkRw53Jo
   rating: 4
   type: video
@@ -48,6 +99,42 @@
   notes:
   - I used to like Jordan Peterson years ago when he was a little less obviously right-wing,
     and when I was a lot less grown up. I wish I'd had this video back then.
+- id: '0521698510'
+  rating: 4
+  type: book
+  name: 'Reading Greek: Text and Vocabulary'
+  site: https://www.goodreads.com/book/isbn?isbn=0521698510
+  genres:
+  - greek
+  date: '2023-01-10'
+  date_in_words: January 10
+  reread?: false
+  groups: 
+  blurb: 
+  notes:
+  - 'Among fans of active/immersive Greek, this book is not as popular as Athenaze,
+    Alexandros, and Thrasymachus. I see why: it''s terrible at providing a beginner-friendly
+    gradual progression with lots of repetition. Even so, I like it better than all
+    the others because instead of tedious stories about home or retellings of the
+    same old myths, it tells stories set in ancient Athens, strongly rooted in history
+    or literature, and often quite funny.'
+- id: https://www.escribacafe.com
+  rating: 4
+  type: audio
+  name: Escriba Café
+  site: https://www.escribacafe.com
+  genres:
+  - podcast
+  - portuguese
+  - history
+  date: '2022-12-28'
+  date_in_words: December 28
+  reread?: false
+  groups: 
+  blurb: 'Most Portuguese podcasts are annoyingly chatty, but this one is the opposite:
+    engrossing stories from history with such high production value that I''m transported
+    into another time and place. Love it.'
+  notes: 
 - id: B07TK3NSW5
   rating: 4
   type: book
@@ -107,8 +194,8 @@
     responds_to?'
   - when creating a superclass, start blank and promote abstractions (don't start
     w/ existing class and demote concretions)
-  - 'template method pattern: def initialize(**opts); @tire_size = opts-- :tire_size
-    ¦¦ default_tire_size'
+  - 'template method pattern: def initialize(**opts); @tire_size = opts'
+  - ":tire_size ¦¦ default_tire_size"
   - 'but supply an implementation for every message a class sends, like this: def
     default_tire_size; raise NotImplementedError, "#{self.class} should have implemented
     #{__method__}"; end'
@@ -205,7 +292,7 @@
   name: Donald Robertson – How to Think Like a Roman Emperor
   site: https://www.goodreads.com/book/isbn?isbn=B07D2C5NNV
   genres:
-  - philosophy
+  - wellbeing
   - history
   date: '2022-09-11'
   date_in_words: September 11
@@ -226,6 +313,22 @@
     others. Marcus also goes so far as to claim that ignoring our fellowship with
     others is a form of injustice, a vice, and an impiety because it goes against
     Nature." (cf. Meditations 2.1, 5.16, 9.1)'
+- id: https://peteenns.com/podcast
+  rating: 4
+  type: audio
+  name: Pete Enns & Jared Byas – The Bible for Normal People
+  site: https://peteenns.com/podcast
+  genres:
+  - podcast
+  - religion
+  - exvangelical
+  date: '2022-08-28'
+  date_in_words: August 28
+  reread?: false
+  groups: 
+  blurb: If you're fed up with mindless Bible-thumping, give this a try. Instructive
+    and entertaining.
+  notes: 
 - id: B071CXGXM2
   rating: 4
   type: book
@@ -277,22 +380,6 @@
     as we sculpt the stone or break it up and throw it away. All this is not delusion,
     even from a scientific point of view, because science doesn't tell us the ultimate
     cause of the universe, or why natural laws persist from moment to moment.
-- id: https://peteenns.com/podcast
-  rating: 4
-  type: audio
-  name: Pete Enns & Jared Byas – The Bible for Normal People
-  site: https://peteenns.com/podcast
-  genres:
-  - podcast
-  - religion
-  - exvangelical
-  date: '2022-06-27'
-  date_in_words: June 27
-  reread?: false
-  groups: 
-  blurb: If you're fed up with mindless Bible-thumping, give this a try. Instructive
-    and entertaining.
-  notes: 
 - id: https://canaldafantasia.com/category/tolkien-audiolivro/o-hobbit
   rating: 4
   type: book
@@ -335,22 +422,6 @@
   groups: 
   blurb: 
   notes: 
-- id: https://www.youtube.com/c/AGreatDivorce/playlists
-  rating: 4
-  type: audio
-  name: A Collection of Unmitigated Pedantry
-  site: https://www.youtube.com/c/AGreatDivorce/playlists
-  genres:
-  - history
-  date: '2022-02-20'
-  date_in_words: February 20
-  reread?: false
-  groups: 
-  blurb: 
-  notes:
-  - 'Audio: https://www.youtube.com/c/AGreatDivorce/playlists'
-  - 'Recurring themes: opposing the cult of the badass, questioning whether the achievements
-    of the elite are worth their cost in the suffering of the ordinary people'
 - id: B00CA6CMLW
   rating: 4
   type: book
@@ -742,11 +813,11 @@
   notes:
   - 'Favorites: How to Cross a River, How to Power Your House (On Earth), How to Win
     an Election, How to Get Somewhere Fast'
-- id: https://worldchannel.org/show/eyes-on-the-prize/
+- id: https://worldchannel.org/show/eyes-on-the-prize
   rating: 4
   type: video
   name: 'Eyes on the Prize: America''s Civil Rights Movement'
-  site: https://worldchannel.org/show/eyes-on-the-prize/
+  site: https://worldchannel.org/show/eyes-on-the-prize
   genres:
   - history
   - race
@@ -776,23 +847,6 @@
   notes:
   - 'Favorites: Global Windstorm, Relativistic Baseball, Laser Pointer, Hair Dryer,
     Machine-Gun Jetpack, Neutron Bullet.'
-- id: https://www.escribacafe.com/
-  rating: 4
-  type: audio
-  name: Escriba Café
-  site: https://www.escribacafe.com/
-  genres:
-  - podcast
-  - portuguese
-  - history
-  date: '2021-06-13'
-  date_in_words: June 13
-  reread?: false
-  groups: 
-  blurb: 'Most Portuguese podcasts are annoyingly chatty, but this one is the opposite:
-    engrossing stories from history with such high production value that I''m transported
-    into another time and place. Love it.'
-  notes: 
 - id: B082DLMC6L
   rating: 4
   type: book
@@ -833,7 +887,7 @@
   name: That Sugar Film
   site: https://tv.apple.com/us/movie/that-sugar-film/umc.cmc.10l8r7fcznj5qbpm9ecn339xg
   genres:
-  - health
+  - wellbeing
   - science
   date: '2021-05-14'
   date_in_words: May 14
@@ -958,11 +1012,11 @@
   groups: 
   blurb: 
   notes: 
-- id: https://sandimetz.com/99bottles
+- id: https://sandimetz.com/99bottles - author
   rating: 4
   type: book
   name: Sandi Metz – 99 Bottles of OOP
-  site: https://sandimetz.com/99bottles
+  site: https://sandimetz.com/99bottles - author
   genres:
   - programming
   date: '2021-01-03'

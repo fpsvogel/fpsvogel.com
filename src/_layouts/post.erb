@@ -7,10 +7,10 @@ layout: default
     <%= resource.data.title %>
   </h1>
   <h3 class="lowlighted" style="margin: .25rem 0 .15rem 0">
-    <%= resource.data.subtitle&.then do |subtitle|
+    <%= resource.data.subtitle&.then { |subtitle|
           # because #capitalize makes subsequent characters lowercase.
           subtitle[0].upcase + subtitle[1..subtitle.length - 1]
-    end %>
+    } %>
   </h3>
   <small class="lowlighted">
     <%= resource.date.strftime("%B %d, %Y") %> · <%= resource.data.author %> ·

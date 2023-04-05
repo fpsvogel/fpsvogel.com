@@ -201,13 +201,13 @@ struct = s_top.new(
 # from https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash
 def to_namespace_hash(object, prefix = nil)
   if object.is_a? Hash
-    object.map do |key, value|
+    object.map { |key, value|
       if prefix
         to_namespace_hash value, "#{prefix}.#{key}".to_sym
       else
         to_namespace_hash value, "#{key}".to_sym
       end
-    end.reduce(&:merge)
+    }.reduce(&:merge)
   else
     { prefix => object }
   end
