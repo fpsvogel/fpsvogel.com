@@ -29,7 +29,7 @@ class Builders::LoadReadingList < SiteBuilder
 
     csv = Reading.parse(
       # If my_dropbox_file is nil, then the local file path is used instead.
-      config.reading.local_filepath,
+      (config.reading.local_filepath unless my_dropbox_file),
       stream: my_dropbox_file,
       config: custom_config,
     )
