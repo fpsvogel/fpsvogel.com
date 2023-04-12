@@ -138,13 +138,14 @@ export default class extends Controller {
           return 1
         else if (valueA < valueB)
           return -1
-        else { // tie breaker: alphabetical order.
-          let nameA = itemA.querySelector("rl-name").textContent.trim().toLowerCase()
-          let nameB = itemB.querySelector("rl-name").textContent.trim().toLowerCase()
-          if (nameA > nameB)
-            return -1
-          else if (nameA < nameB)
+        else { // tie breaker: date (if rating sort is selected) or alphabetical order
+          let altSort = selectedSort === "rating" ? "date" : "name"
+          let altA = itemA.querySelector(`rl-${altSort}`).textContent.trim().toLowerCase()
+          let altB = itemB.querySelector(`rl-${altSort}`).textContent.trim().toLowerCase()
+          if (altA > altB)
             return 1
+          else if (altA < altB)
+            return -1
           else
             return 0
         }
