@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/fpsvogel/reading.git
-  revision: c6387a01e82f3b58e58d1326e6c5cbe3c69c5a5a
+  revision: 1139cf3635c8e3e9c7341b55311daeb0a95cb136
   branch: 0.8.0
   specs:
-    reading (0.7.0)
+    reading (0.8.0)
       pastel (~> 0.8)
 
 GEM
@@ -16,7 +16,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.3)
+    addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     amazing_print (1.4.0)
     bridgetown (1.2.0)
@@ -99,7 +99,7 @@ GEM
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
-    irb (1.6.3)
+    irb (1.6.4)
       reline (>= 0.3.0)
     jwt (2.7.0)
     kramdown (2.4.0)
@@ -115,7 +115,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.3.0)
     nio4r (2.5.9)
-    nokogiri (1.14.2-x86_64-linux)
+    nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     oauth2 (1.4.11)
       faraday (>= 0.17.3, < 3.0)

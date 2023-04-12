@@ -1,24 +1,24 @@
 <rl-container data-controller="reading-list" data-reading-list-target="container">
   <rl-key>
     <rl-label>Key:</rl-label>
-    <% @config_reading.types.each do |type, emoji| %>
+    <% @config.types.each do |type, hash| %>
       <rl-key-item>
-        <%= emoji %> <%= type %>
+        <%= hash[:emoji] %> <%= type %>
       </rl-key-item>
       |
     <% end %>
-    <% if @config_reading.star_for_rating_minimum %>
+    <% if @config.minimum_rating_for_star %>
       <rl-key-item>
         ⭐ favorite
       </rl-key-item>
     <% else %>
       <rl-key-item>
-        rating scale: 1–<%= @config_reading.rating_scale %>
+        rating scale: 1–<%= @config.maximum_rating %>
       </rl-key-item>
     <% end %>
   </rl-key>
 
-  <% if @config_reading.show_sort %>
+  <% if @config.show_sort %>
     <rl-sorts>
       <rl-label>Sort:</rl-label>
       <rl-sort>
@@ -36,9 +36,9 @@
     <rl-label>
       Filters (<a data-action="click->reading-list#expandFilters" class="dynamic" style="font-size:90%">show all</a>):
     </rl-label>
-    <% if @config_reading.star_for_rating_minimum # star rating mode %>
+    <% if @config.minimum_rating_for_star # star rating mode %>
       <rl-filter>
-        <input type="checkbox" id="filter-rating-star" value="<%= @config_reading.star_for_rating_minimum %>" data-action="change->reading-list#filter">
+        <input type="checkbox" id="filter-rating-star" value="<%= @config.minimum_rating_for_star %>" data-action="change->reading-list#filter">
         <label for="filter-rating">⭐</label>
       </rl-filter>
     <% else # number rating mode %>
@@ -78,28 +78,28 @@
   <rl-table data-reading-list-target="table">
     <% @list.each do |item| %>
       <% blurb_truncated = item.blurb.length > 150 if item.blurb %>
-      <% collapsible = !item.notes.nil? || !item.groups.nil? || blurb_truncated %>
-      <rl-item item-id="<%= item.id %>" <%= "class=collapsed" if collapsible %> data-action="click->reading-list#expandOrCollapse">
+      <% collapsible = !item.public_notes.empty? || !item.groups.empty? || blurb_truncated %>
+      <rl-item item-id="<%= item.isbn || item.url %>" <%= "class=collapsed" if collapsible %> data-action="click->reading-list#expandOrCollapse">
         <rl-head-line>
           <rl-rating>
-            <%= item.star || item.rating %>
+            <%= item.rating %>
           </rl-rating>
           <rl-type>
             <%= item.type_emoji %>
           </rl-type>
           <rl-name-and-tags>
             <rl-name>
-              <a href="<%= item.site %>">
+              <a href="<%= item.url %>">
                 <%= item.name %>
               </a>
             </rl-name>
-            <% if item.groups %>
+            <% if item.groups.any? %>
               <rl-group-read>
-                <%= @config_reading.group_emoji %>
+                🤝🏼
               </rl-group-read>
             <% end %>
             <rl-date>
-              <%= item.date %>
+              <%= item.date_or_status %>
             </rl-date>
             <% item.genres.each do |genre| %>
               <rl-genre>
@@ -117,17 +117,17 @@
               <%=raw Rinku.auto_link(item.blurb) %>
             </rl-blurb>
           <% end %>
-          <% if item.notes || item.groups %>
+          <% if item.public_notes.any? || item.groups.any? %>
             <rl-notes>
-              <% if item.reread? %>
+              <% if item.experience_count > 1 %>
                 <p><strong>Reread? </strong> Yes</p>
               <% end %>
-              <% if item.groups %>
+              <% if item.groups.any? %>
                 <p><strong>Groups: </strong><%= item.groups.join(", ") %></p>
               <% end %>
-              <% if item.notes %>
+              <% if item.public_notes.any? %>
                 <h4>NOTES:</h4>
-                <% item.notes&.each do |note| %>
+                <% item.public_notes&.each do |note| %>
                   <p><%=raw Rinku.auto_link(note) %></p>
                 <% end %>
               <% end %>

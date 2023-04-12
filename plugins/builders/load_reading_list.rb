@@ -6,35 +6,38 @@ class Builders::LoadReadingList < SiteBuilder
   def build
     hook :site, :post_read do |site|
       generator do
-        site.data.reading = parse_items
-          .then { filter_items _1 }
-          .then { simplify_items _1 }
-          .then { sort_items_by_date _1 }
-          .tap { save_items_to_file _1 }
-          .then { add_presentation_data_to_items _1 }
+        items = Reading.parse(
+          # If my_dropbox_file is nil, then the local file path is used instead.
+          config.reading.local_filepath,
+          stream: my_dropbox_file,
+          config: { skip_compact_planned: true },
+        )
+
+        filtered_items = Reading.filter(
+          items:,
+          minimum_rating: 4,
+          excluded_genres: config.reading.excluded_genres || [],
+          status: [:done, :in_progress],
+        )
+
+        site.data.reading = filtered_items.map(&:view).reverse
+
         site.data.reading_genres = uniq_of_attribute(:genres, site.data.reading, sort_by: :frequency)
         site.data.reading_ratings = uniq_of_attribute(:rating, site.data.reading, sort_by: :value)
-        site.data.reading_config_defaults = config.reading
+
+        config_to_save = Reading
+          .default_config[:item][:view]
+          .slice(:types, :minimum_rating_for_star)
+
+        config.reading.merge!(config_to_save)
       end
     end
   end
 
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Parsing the CSV file into items.
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+  private
 
-  def parse_items(custom_config: {})
-    custom_config[:csv] ||= {}
-    custom_config[:csv][:skip_compact_planned] = true
-
-    csv = Reading.parse(
-      # If my_dropbox_file is nil, then the local file path is used instead.
-      config.reading.local_filepath,
-      stream: my_dropbox_file,
-      config: custom_config,
-    )
-  end
-
+  # My reading.csv file on Dropbox, or nil if it is inaccessible.
+  # @return [File, nil]
   def my_dropbox_file
     return nil unless dropbox_access?
     # environment variables come from Netlify settings.
@@ -51,6 +54,9 @@ class Builders::LoadReadingList < SiteBuilder
     Net::HTTP.get(uri)
   end
 
+  # Whether this build has access to my Dropbox account. (There is no access
+  # when building locally, only when deploying.)
+  # @return [Boolean]
   def dropbox_access?
     config.reading.dropbox_filepath &&
       ENV["MY_DROPBOX_ACCESS_TOKEN"] &&
@@ -59,243 +65,30 @@ class Builders::LoadReadingList < SiteBuilder
       ENV["MY_DROPBOX_APP_SECRET"]
   end
 
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Filtering items that should be displayed.
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-  def filter_items(items)
-    items
-      .then { select_by_rating _1 }
-      .then { select_by_genre _1 }
-      .then { select_done_or_in_progress _1 }
-  end
-
-  def select_by_rating(items)
-    return items if config.reading.minimum_rating.nil?
-    items.select { |item|
-      if item[:rating]
-        item[:rating] >= (config.reading.minimum_rating || 0)
-      end
-    }
-  end
-
-  def select_by_genre(items)
-    return items if config.reading.excluded_genres.nil? || config.reading.excluded_genres.empty?
-
-    items.select { |item|
-      overlapping = item[:genres] & config.reading.excluded_genres
-      overlapping.empty?
-    }
-  end
-
-  def select_done_or_in_progress(items)
-    items.select { |item|
-      item[:experiences].any? { |experience|
-        experience[:spans]
-      }
-    }
-  end
-
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Simplifying items into smaller hashes with only the data to be displayed.
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-  def simplify_items(items)
-    items.map { |item|
-      first_isbn, first_url, format, extra_info = first_source_info(item)
-      if first_isbn
-        url_from_isbn = "https://www.goodreads.com/book/isbn?isbn=#{first_isbn}"
-      end
-      series_and_extras =
-        item[:variants].first[:series].map { |series|
-          if series[:volume]
-            "#{series[:name]}, ##{series[:volume]}"
-          else
-            "in #{series[:name]}"
-          end
-        } + (extra_info || [])
-      name = "#{item[:author] + " – " if item[:author]}#{item[:title]}" \
-             "#{" 〜 " + (series_and_extras).join(" 〜 ") unless series_and_extras.empty?}"
-      date = item[:experiences].last[:spans].last[:dates]&.end
-      {
-        id: first_isbn || first_url,
-        rating: item[:rating],
-        type: format_to_type(format) ||
-              format ||
-              config.reading.default_type,
-        name: name,
-        site: url_from_isbn || first_url,
-        genres: item[:genres],
-        date: date&.strftime("%Y-%m-%d") || config.reading.in_progress_string,
-        date_in_words: date&.strftime("%B %e") ||
-                       config.reading.in_progress_string.capitalize,
-        # TODO update this to accomodate podcast style
-        reread?: item[:experiences].map { _1[:spans].first[:progress] == 1.0 }.compact.count > 1,
-        groups: item[:experiences].map { _1[:group] }.compact.presence,
-        blurb: item[:notes]
-                .find { |note| note[:blurb?] }
-                &.dig(:content),
-        notes: item[:notes]
-                .select { |note| !note[:private?] && !note[:blurb?] }
-                .map { |note| note[:content] }
-                .presence,
-      }
-    }
-  end
-
-  def first_source_info(item)
-    first_isbn, format, extra_info =
-      item[:variants].map { |variant|
-        [variant[:isbn], variant[:format], variant[:extra_info]]
-      }
-      .reject { |isbn, format, extra_info| isbn.nil? }
-      .first
-    unless first_isbn
-      first_url, format, extra_info =
-        item[:variants].map { |variant|
-          url = variant[:sources].map { |source| source[:url] }.compact.first
-          [url, variant[:format], variant[:extra_info]]
-        }
-        .reject { |url, format, extra_info| url.nil? }
-        .first
-    end
-    [first_isbn, first_url, format, extra_info]
-  end
-
-  def format_to_type(format)
-    formats_to_types[format]
-  end
-
-  def formats_to_types
-    @formats_to_types ||=
-      config.reading.types_from_formats.flat_map { |type, formats|
-        formats.zip([type] * formats.count)
-      }.to_h
-      .transform_keys(&:to_sym)
-      .transform_values(&:to_sym)
-  end
-
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Sorting simplified items.
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-  # returns items sorted by date (most recent first) then name (alphabetical)
-  def sort_items_by_date(items)
-    in_progress = items.select { |item| item[:date].nil? }
-                       .sort_by { |item| item[:name].downcase }
-    done = items - in_progress
-    done = done.sort { |item_a, item_b|
-      case item_a[:date] <=> item_b[:date]
-      when -1 then 1
-      when 1 then -1
-      else
-        item_a[:name].downcase <=> item_b[:name].downcase
-      end
-    }
-    in_progress + done
-  end
-
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Adding emojis to items, which are not saved in reading.yml but only displayed.
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-  def add_presentation_data_to_items(items)
-    items
-      .then { add_type_emojis _1 }
-      .then { add_stars _1 }
-  end
-
-  def add_type_emojis(items)
-    formats = config.reading.formats || Reading::Config.new.hash[:formats]
-
-    items.map { |item|
-      item.merge({
-        type_emoji: config.reading.types[item.fetch(:type)] ||
-                    formats[item.fetch(:type)] })
-      }
-  end
-
-  def add_stars(items)
-    if config.reading.star_for_rating_minimum
-      items.map { |item|
-        item.merge({ star: if item.fetch(:rating) >= config.reading.star_for_rating_minimum
-                            "⭐"
-                          else
-                            ""
-                          end })
-      }
-    else
-      items.map { |item|
-        item.merge({ star: nil })
-      }
-    end
-  end
-
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Persist items into a file.
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-  def save_items_to_file(items)
-    File.write("src/_data/reading.yml", to_safe_hashes(items).to_yaml)
-  end
-
-  # transforms an array of hashes so that symbol keys become strings, so they
-  # can be written to YAML that can be read with YAML.safe_load (or YAML.load).
-  def to_safe_hashes(hashes)
-    hashes.map { |item|
-      item.transform_keys(&:to_s)
-          .transform_values { |v|
-            if v.is_a? Symbol
-              v.to_s
-            else
-              v
-            end
-          }
-    }
-  end
-
-  # returns the unique varieties of an attribute across all items.
-  # sort_by: :frequency or :value
-  # convert: type conversion, such as :to_s
-  def uniq_of_attribute(attribute, items, sort_by:, convert: nil)
+  # The unique values of an attribute across all items.
+  # @param sort_by [Symbol] :frequency or :value
+  # @return [Array]
+  def uniq_of_attribute(attribute, items, sort_by:)
     all = items.flat_map { |item|
       item.send(attribute).presence
     }.compact
+
     if sort_by == :frequency
-      all = all.group_by(&:itself)
+      all = all
+        .group_by(&:itself)
         .sort_by { |value, duplicates| duplicates.count }
-        .reverse.to_h.keys
+        .reverse
+        .to_h
+        .keys
     else
       all = all.uniq
     end
-    if convert
-      all = all.map { |value| value.send(convert) }
-    end
+
     if sort_by == :value
       all = all.sort
     end
+
     all
   end
-
-  # def with_dot_syntax(hashes)
-  #   hashes.each do |hash|
-  #     hash.define_singleton_method(:method_missing) do |m, *args, **kwargs, &block|
-  #       if include?(m)
-  #         fetch(m)
-  #       else
-  #         super(m, *args, **kwargs, &block)
-  #       end
-  #     end
-  #     hash.define_singleton_method(:respond_to_missing?) do |m, *args, **kwargs|
-  #       include?(m) || super(m, *args, **kwargs, &block)
-  #     end
-  #   end
-  # end
-
-  # def load_from_data
-  #   if File.exist?("src/_data/reading.yml")
-  #     raw = YAML.load(File.read("src/_data/reading.yml"))
-  #     from_safe_hashes(raw)
-  #   end
-  # end
 end

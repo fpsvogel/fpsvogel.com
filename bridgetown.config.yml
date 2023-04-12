@@ -24,18 +24,5 @@ defaults:
 reading:
   local_filepath: "/home/felipe/Dropbox/Apps/SimpleText/reading.csv"
   dropbox_filepath: "/Apps/SimpleText/reading.csv"
-  types:
-    book: 📕
-    course: 🏫
-    piece: ✏️
-    video: 🎞️
-    audio: 🎤
   show_sort: false
-  types_from_formats:
-    # convert reading.csv formats (right) into reading list types (left).
-    book: [print, ebook, audiobook, pdf]
-    course: [course, website]
-  maximum_rating: 5 # the highest possible rating. must be an integer.
-  star_for_rating_minimum: 5 # items rated this or above get a star.
-                             # to show number ratings instead, delete this.
-  minimum_rating: 4 # exclude ratings below this. must be an integer.
+  maximum_rating: 5
