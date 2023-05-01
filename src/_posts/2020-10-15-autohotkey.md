@@ -1,6 +1,7 @@
 ---
 title: AutoHotkey - Windows key, home row arrow keys, mouse shortcuts
 subtitle: and other hacks for Windows productivity
+description: How to be more productive in Windows with keyboard and mouse shortcuts.
 ---
 
 - [SharpKeys for key remapping](#sharpkeys-for-key-remapping)

@@ -1,6 +1,7 @@
 ---
 title: A November of WTFs
 subtitle: the hard parts of learning Rails
+description: Not everything is easy for someone learning Ruby on Rails. Here are the parts that I've found to be the hardest in my first few months.
 ---
 
 - [1. Authentication](#1-authentication)

@@ -1,6 +1,7 @@
 ---
 title: Learning Colemak
 subtitle: typing less painfully, part 1
+description: The Colemak keyboard layout takes time to learn, but for me it's been worthwhile for reducing wrist pain.
 ---
 
 - [1. Choosing an alternative layout](#1-choosing-an-alternative-layout)

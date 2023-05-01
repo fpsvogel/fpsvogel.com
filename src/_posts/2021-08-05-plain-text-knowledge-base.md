@@ -1,6 +1,7 @@
 ---
 title: Plain-text, flat-file knowledge base with syntax highlighting
 subtitle: notes with tags and dates, effortlessly
+description: Sometimes the best note-taking system is a simple one. Mine is a .txt file with syntax-highlighted headings and tags via the VS Code extension Supertext.
 ---
 
 - [An example](#an-example)

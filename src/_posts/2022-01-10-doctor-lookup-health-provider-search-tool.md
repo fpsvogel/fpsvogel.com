@@ -1,6 +1,7 @@
 ---
 title: "Doctor Lookup"
 subtitle: "lightning Rails app #4"
+description: How I built a Ruby on Rails throwaway app for learning purposes, a doctor search tool.
 ---
 
 - [A test-centered approach, as usual](#a-test-centered-approach-as-usual)

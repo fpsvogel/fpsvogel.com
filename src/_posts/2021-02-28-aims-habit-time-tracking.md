@@ -1,6 +1,7 @@
 ---
 title: Habits and time tracking with aims.md
 subtitle: beyond a todo list
+description: How to keep a to-do list and habit tracker all in one, in a plain text file.
 ---
 
 - [1. Set up templates](#1-set-up-templates)

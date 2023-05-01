@@ -1,6 +1,7 @@
 ---
 title: An AI story writer
 subtitle: "lightning Rails app #1"
+description: How I built a Ruby on Rails throwaway app for learning purposes, a story generator using GPT-3.
 ---
 
 - [New things I did in this app](#new-things-i-did-in-this-app)

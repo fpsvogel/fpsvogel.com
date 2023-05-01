@@ -1,6 +1,7 @@
 ---
 title: SQL and Active Record for junior Rails developers
 subtitle: demystifying the database
+description: Resources for learning SQL, Active Record, and how to design your models wisely.
 ---
 
 - [SQL resources](#sql-resources)

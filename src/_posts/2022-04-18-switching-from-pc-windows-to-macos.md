@@ -1,6 +1,7 @@
 ---
 title: MacOS for PC users
 subtitle: a guide for lost souls
+description: Tools and hacks for making your MacOS look and feel more like Windows, for anyone who (like me) is having a hard time transitioning.
 ---
 
 - [Mouse usability](#mouse-usability)

@@ -1,6 +1,7 @@
 ---
 title: RVTWS
 subtitle: a Ruby stack for modern web apps
+description: My dream Ruby stack is Rails/Roda, ViewComponent, Turbo, web components, and StimulusReflex. I still need to learn most of those 😂
 ---
 
 - [Rails or Roda](#rails-or-roda)

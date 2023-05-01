@@ -1,6 +1,7 @@
 ---
 title: Set up Windows Terminal shortcuts
 subtitle: and make Windows a bit more usable
+description: How to make Windows Terminal easier to reach via shortcuts.
 ---
 
 - [Add a Windows Terminal submenu to the Explorer context menu](#add-a-windows-terminal-submenu-to-the-explorer-context-menu)

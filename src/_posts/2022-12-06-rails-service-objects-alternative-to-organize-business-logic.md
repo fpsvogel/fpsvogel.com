@@ -1,6 +1,7 @@
 ---
 title: OOP vs. services for organizing business logic
 subtitle: is there a third way?
+description: Explorations into OOP vs. service objects, and a list of resources for moving past the black-and-white debate into a deeper understanding.
 ---
 
 - [The good old days](#the-good-old-days)

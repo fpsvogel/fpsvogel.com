@@ -1,6 +1,7 @@
 ---
 title: A StumbleUpon-style Wikipedia explorer
 subtitle: "lightning Rails app #2"
+description: How I built a Ruby on Rails throwaway app for learning purposes, a tool that suggests Wikipedia articles according to your likes and dislikes.
 ---
 
 - [New things I did in this app](#new-things-i-did-in-this-app)

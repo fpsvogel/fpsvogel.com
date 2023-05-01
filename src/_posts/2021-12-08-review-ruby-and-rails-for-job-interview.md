@@ -1,6 +1,7 @@
 ---
 title: Reviewing Ruby and Rails
 subtitle: preparing for job interviews
+description: Resources for getting ready for junior developer job interviews, covering testing, design patterns, OOP, and Ruby on Rails.
 ---
 
 I'm looking for my first Rails job. The [dreaded technical interview](https://medium.com/javascript-scene/tech-hiring-has-always-been-broken-heres-how-i-survived-it-for-decades-b7ac33088de6) seems to be rare in the Ruby world, but even for saner interviews it helps to be prepared. So here's what I'm reading (in some cases, re-reading) to shore up my Ruby knowledge this month. (If you're just starting out, see [my study plan](https://github.com/fpsvogel/learn-ruby-and-cs) for a full guide to the Ruby and Rails resources that have helped me most, including lots of free books and courses.)

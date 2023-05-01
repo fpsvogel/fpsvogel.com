@@ -1,6 +1,7 @@
 ---
 title: The Keyboardio Atreus
 subtitle: typing less painfully, part 2
+description: The delightful little Keyboardio Atreus keyboard is helping me type painlessly, plus it's so fun to customize.
 ---
 
 - [Choosing an ergonomic keyboard](#choosing-an-ergonomic-keyboard)

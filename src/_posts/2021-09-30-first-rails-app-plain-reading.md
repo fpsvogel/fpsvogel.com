@@ -1,6 +1,7 @@
 ---
 title: My first Rails app, Plain Reading
 subtitle: how I built it
+description: How I built my first Ruby on Rails app, from learning Rails basics, to choosing frontend libraries, to building and deploying the app.
 ---
 
 - [1. Learn the basics of Rails](#1-learn-the-basics-of-rails)

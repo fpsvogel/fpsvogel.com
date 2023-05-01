@@ -1,6 +1,7 @@
 ---
 title: Parsing text in Ruby, part 2
 subtitle: parse and transform with regular expressions
+description: How to parse text in Ruby using a two-step process of parsing and transforming, similar to the Parslet gem, but with regular expressions instead.
 ---
 
 - [Why not Parslet?](#why-not-parslet)

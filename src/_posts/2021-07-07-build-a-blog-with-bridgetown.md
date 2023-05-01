@@ -1,6 +1,7 @@
 ---
 title: Build a blog with Bridgetown
 subtitle: templates, components, and plugins all in Ruby
+description: How I built my blog with Bridgetown, a site generator based on Ruby, and how I made it auto-update with new data from an API, via GitHub Actions.
 ---
 
 - [1. Setup](#1-setup)

@@ -1,6 +1,7 @@
 ---
 title: Learning Ruby
 subtitle: a retrospective two years later
+description: How my "Learning Ruby" resource list has changed over the past two years since I started learning Ruby, and how to learn Ruby better in the future.
 ---
 
 - [But why Ruby?](#but-why-ruby)

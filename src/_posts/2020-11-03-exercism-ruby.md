@@ -1,6 +1,7 @@
 ---
 title: Ruby practice with Exercism
 subtitle: what I learned
+description: Exercism is a great hands-on way to learn a new programming language. Here are the lessons I learned from doing their Ruby track.
 ---
 
 - [1. Learn from the work of others, then refactor](#1-learn-from-the-work-of-others-then-refactor)

@@ -1,6 +1,7 @@
 ---
 title: Learning Linux
 subtitle: a journey to the wellspring of hackerdom
+description: Resources for learning Linux, including how Linux works, the command line, and more.
 ---
 
 - [Linux learning resources](#linux-learning-resources)

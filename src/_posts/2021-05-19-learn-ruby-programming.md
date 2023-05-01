@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Ruby and computer science
 subtitle: a self-learning curriculum
+description: My "Learning Ruby" list is meant to help me keep track of my learning, but it can also help others find Ruby and computer science learning resources.
 ---
 
 - [Objections](#objections)

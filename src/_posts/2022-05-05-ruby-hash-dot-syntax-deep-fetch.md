@@ -1,6 +1,7 @@
 ---
 title: Dot syntax and deep_fetch for Ruby hashes
 subtitle: benchmarks and usability considerations
+description: To access deeply nested Ruby hashes conveniently, two possibilities are dot syntax and a custom Hash#deep_fetch. Here I test the performance of each.
 ---
 
 - [Baselines](#baselines)

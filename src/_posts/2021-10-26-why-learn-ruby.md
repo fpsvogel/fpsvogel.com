@@ -1,6 +1,7 @@
 ---
 title: Ruby for the self-taught developer
 subtitle: why it's a great fit
+description: With so many programming languages to choose from, why pick Ruby? Because it's fun and optimized for speed of development. Common objections are addressed!
 ---
 
 - [1. It's fun](#1-its-fun)

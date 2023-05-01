@@ -1,7 +1,13 @@
 ---
 title: My first Ruby app
 subtitle: lessons learned
+description: Writing my first Ruby app taught me a lot about automated testing, where to put code that's likely to change, and writing clear code.
 ---
+
+- [Lesson 1: Write tests](#lesson-1-write-tests)
+- [Lesson 2: Remove change from the core](#lesson-2-remove-change-from-the-core)
+- [Lesson 3: Write clear code](#lesson-3-write-clear-code)
+- [Areas of improvement](#areas-of-improvement)
 
 I've just released my first Ruby app: [Readstat](https://github.com/fpsvogel/readstat), a CLI app that gives statistics on a plain text (CSV) reading log. This is also my first completed app in any language, so I learned a lot along the way. Here are the highlights.
 

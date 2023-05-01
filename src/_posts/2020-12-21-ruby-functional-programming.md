@@ -1,6 +1,7 @@
 ---
 title: Functional programming techniques in Ruby
 subtitle: pipelines, callable objects, and other tools for cleaner code
+description: Functional programming can make your Ruby code easier to understand. I made a gem for piping data through callable objects.
 ---
 
 - [1. Pipe data …](#1-pipe-data-)

@@ -1,6 +1,7 @@
 ---
 title: Parsing text in Ruby, part 1
 subtitle: Parslet transforming my world
+description: How to clean up your text parsing in Ruby using the Parslet gem, which separates parsing and transformation into two distinct steps.
 ---
 
 - [Regular expressions: not the problem](#regular-expressions-not-the-problem)

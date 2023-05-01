@@ -1,6 +1,7 @@
 ---
 title: The first six months
 subtitle: lessons learned as a junior developer
+description: What I learned in my first 6 months as a junior Rails developer. Work-life balance, keeping up my learning, and making human connections top the list.
 ---
 
 - [Find balance](#find-balance)

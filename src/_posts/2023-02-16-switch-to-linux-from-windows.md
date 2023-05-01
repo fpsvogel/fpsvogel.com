@@ -1,6 +1,7 @@
 ---
 title: Switching to Linux
 subtitle: notes from a former Windows user
+description: A Windows user's experience switching to Linux Mint, and what I gained in a better terminal and more time spent on the keyboard. Shell scripts included!
 ---
 
 - [Why Linux?](#why-linux)

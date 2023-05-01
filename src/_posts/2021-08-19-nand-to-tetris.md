@@ -1,6 +1,7 @@
 ---
 title: Nand to Tetris
 subtitle: computer science and lessons in optimization
+description: Learning how to build a computer is not only fun, but also teaches important lessons in optimization that even software developers can take to heart.
 ---
 
 - [Nand to Tetris: an intro](#nand-to-tetris-an-intro)

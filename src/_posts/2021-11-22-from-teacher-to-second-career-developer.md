@@ -1,6 +1,7 @@
 ---
 title: From teacher to developer
 subtitle: coming home to my second career
+description: The story of how I quit teaching and am now shifting into software development as a second-career developer.
 ---
 
 - [The backstory](#the-backstory)

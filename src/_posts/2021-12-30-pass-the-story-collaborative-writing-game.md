@@ -1,6 +1,7 @@
 ---
 title: "A \"Pass the Story\" collaborative writing game"
 subtitle: "lightning Rails app #3"
+description: How I built a Ruby on Rails throwaway app for learning purposes, a collaborative story writing game.
 ---
 
 - [New things I did in this app](#new-things-i-did-in-this-app)

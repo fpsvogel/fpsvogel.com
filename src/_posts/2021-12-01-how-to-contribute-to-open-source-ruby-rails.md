@@ -1,6 +1,7 @@
 ---
 title: How to contribute to open source
 subtitle: a guide for Rails beginners
+description: How to make your first open-source contribution, including tips on finding a project, setting it up on your machine, and opening your first PR.
 ---
 
 - [Find a project](#find-a-project)
