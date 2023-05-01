@@ -13,7 +13,7 @@ layout: default
     } %>
   </h3>
   <small class="lowlighted">
-    <%= resource.date.strftime("%B %d, %Y") %> · <%= resource.data.author %> ·
+    <%= resource.date.strftime("%B %e, %Y").squeeze %> · <%= resource.data.author %> ·
   </small>
 
   <input type="checkbox" id="toc" />
