@@ -33,6 +33,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@ruby2js/esbuild-plugin@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ruby2js/esbuild-plugin/-/esbuild-plugin-1.0.0.tgz#6ba798a4bc4e59a899ceb503c1ff9af9e6183582"
+  integrity sha512-bP9+kf1VrRxKux1nKi+NfLOE2STl6ea0Ym9C1QFDIR1fpqDyLKSyhVrDYMYRAk6ZxGIyKS/JfbcQB+e35v6qgQ==
+  dependencies:
+    convert-source-map "^1.8.0"
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
@@ -196,6 +203,11 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+
+convert-source-map@^1.8.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.9.0.tgz#7faae62353fb4213366d0ca98358d22e8368b05f"
+  integrity sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==
 
 css-blank-pseudo@^3.0.2:
   version "3.0.2"

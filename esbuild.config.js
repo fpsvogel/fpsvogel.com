@@ -22,6 +22,13 @@ const outputFolder = "output"
 //    ]
 //  }
 //  ```
-const esbuildOptions = {}
+
+const ruby2js = require("@ruby2js/esbuild-plugin")
+
+const esbuildOptions = {
+  plugins: [
+    ruby2js(),
+  ]
+}
 
 build(outputFolder, esbuildOptions)
