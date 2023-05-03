@@ -4,4 +4,5 @@ Bridgetown.configure do |config|
   init :"bridgetown-svg-inliner"
   init :"bridgetown-sitemap"
   init :"rinku"
+  init :"bridgetown-lit-renderer" 
 end

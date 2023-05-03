@@ -23,6 +23,9 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo": "^7.1.0",
+    "bridgetown-lit-renderer": "2.0.0",
+    "esbuild-plugin-lit-css": "^2.0.3",
+    "lit": "^2.7.3",
     "postcss-scss": "^4.0.3"
   }
 }
