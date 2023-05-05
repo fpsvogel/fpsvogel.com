@@ -1,1 +1,0 @@
-import components from "bridgetownComponents/**/*.{lit.js,lit.js.rb}"

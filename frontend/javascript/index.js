@@ -1,7 +1,6 @@
 import "index.css"
 import { Application } from "@hotwired/stimulus"
 import * as Turbo from "@hotwired/turbo"
-import "bridgetown-lit-renderer"
 
 // Uncomment the line below to add transition animations when Turbo navigates.
 // We recommend adding <meta name="turbo-cache-control" content="no-preview" />
@@ -11,8 +10,6 @@ import "bridgetown-lit-renderer"
 // import "./turbo_transitions.js"
 
 // Import all JavaScript & CSS files from src/_components
-// To opt into `.global.css` & `.lit.css` nomenclature, change the `css` extension below to `global.css`.
-// Read https://www.bridgetownrb.com/docs/components/lit#sidecar-css-files for documentation.
 import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}"
 
 console.info("Bridgetown is loaded!")
