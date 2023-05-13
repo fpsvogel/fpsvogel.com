@@ -7,9 +7,9 @@ class Builders::LoadReadingList < SiteBuilder
     hook :site, :post_read do |site|
       generator do
         items = Reading.parse(
+          lines: my_dropbox_file,
           # If my_dropbox_file is nil, then the local file path is used instead.
-          config.reading.local_filepath,
-          stream: my_dropbox_file,
+          path: config.reading.local_filepath,
           config: { skip_compact_planned: true },
         )
 
