@@ -7,6 +7,7 @@ gem "bridgetown", "1.3.0.beta1"
 # (you can optionally limit this to the "development" group)
 gem "puma"
 
+gem "faraday", "~>2.7" # fixes https://github.com/travis-ci/dpl/issues/1247
 gem "bridgetown-seo-tag"
 gem "bridgetown-feed"
 gem "bridgetown-svg-inliner"
