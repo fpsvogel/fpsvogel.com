@@ -165,6 +165,7 @@ nav li > nav-social-link::after {
 
 .posts-ul a {
   display: block;
+  text-decoration: none;
 }
 
 .posts-ul li * {
@@ -232,6 +233,15 @@ label[for=toc] + ul li {
 
 article > p:first-of-type {
   margin-top: 1.8rem;
+}
+
+main {
+  & a {
+    text-decoration: underline;
+  }
+  & rl-name a {
+    text-decoration: none;
+  }
 }
 
 del {
