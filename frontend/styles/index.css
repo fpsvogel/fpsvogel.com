@@ -166,6 +166,9 @@ nav li > nav-social-link::after {
 .posts-ul a {
   display: block;
   text-decoration: none;
+  & posts-li-title {
+    text-decoration: underline;
+  }
 }
 
 .posts-ul li * {

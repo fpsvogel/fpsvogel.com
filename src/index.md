@@ -8,11 +8,7 @@ Take a look at [my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby)
 
 ### Recent posts
 
-<small>
-  <a href="/posts" style="text-decoration: none">
-    👉 See all
-  </a>
-</small>
+<small>[👉 See all](/posts)</small>
 
 <ul>
   <% collections.posts.resources.take(3).each do |post| %>
