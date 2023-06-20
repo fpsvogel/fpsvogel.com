@@ -12,7 +12,7 @@ gem "bridgetown-seo-tag"
 gem "bridgetown-feed"
 gem "bridgetown-svg-inliner"
 gem "bridgetown-sitemap"
-gem "reading", git: "https://github.com/fpsvogel/reading.git", branch: "0.9.0"
+gem "reading", git: "https://github.com/fpsvogel/reading.git", ref: '297e717'
 gem "rinku"
 gem "dropbox_api"
 gem "debug"

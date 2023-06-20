@@ -84,7 +84,7 @@ h3[id^="what-ive-been"] {
   }
 }
 
-:not(a) > strong, h1, h2, h3, h4, h5, h6 {
+:not(a) > h1, h2, h3, h4, h5, h6 {
   color: var(--text-color-more-contrast);
 }
 
