@@ -72,13 +72,17 @@ I'm not including [roguelikes](https://en.wikipedia.org/wiki/Roguelike) under th
 
 ## … and why they're not what I have in mind
 
-I want to make something *outside these established genres* because I must admit, I haven't enjoyed most text-based games that I've tried.
+I want to make something *outside these established genres*. I really like *the idea* of interactive fiction, but I wouldn't enjoy writing one and it's not my favorite medium to play/read, either. I've tried a few of them over the years, but recently made an effort to try others and *appreciate them* as much as I could. Here's what I found.
 
-First let's consider parser-based interactive fiction. It's **not very accessible** to newcomers like me. Every time I tried one, my initial excitement was dampened when I realized I'd have to look up and memorize commands just to move around and look at things. To be fair, some modern-day titles such as [Counterfeit Monkey](https://ifdb.org/viewgame?id=aearuuxv83plclpl) include a very helpful tutorial. I even found one, [FeedVid Live](https://varunramesh.itch.io/feedvid-live), where the possible commands are intuitive based on context.
+I like that parser-based interactive fiction is more game-like. And if it has a good tutorial or intuitive context-based commands, it can be fairly accessible (see [Counterfeit Monkey](https://ifdb.org/viewgame?id=aearuuxv83plclpl) and [FeedVid Live](https://varunramesh.itch.io/feedvid-live) for examples).
 
-Hypertext interactive fiction feels more accessible to me, though it can get very literary and avant-garde, in which case I'd rather read a book. A couple that I enjoyed are [Hana Feels](http://hanafeels.com/) and [You Will Select a Decision](https://selectadecision.info/).
+Hypertext interactive fiction is nice in that it requires no explanation. Two of my favorites are [Hana Feels](http://hanafeels.com/) and [You Will Select a Decision](https://selectadecision.info/).
 
-The examples linked above are free to play, but there's also commercial interactive fiction. Most are choice-based, such as [Sorcery!](https://www.inklestudios.com/sorcery) and [Roadwarden](https://moralanxietystudio.com/roadwarden). There are also story-heavy RPGs reminiscent of interactive fiction, such as [Disco Elysium](https://discoelysium.com/) and [Wildermyth](https://wildermyth.com/).
+There's even commercial interactive fiction. Two that look interesting to me are [Sorcery!](https://www.inklestudios.com/sorcery) and [Roadwarden](https://moralanxietystudio.com/roadwarden).
+
+Some story-heavy RPGs are reminiscent of interactive fiction, such as [Disco Elysium](https://discoelysium.com/) and [Wildermyth](https://wildermyth.com/).
+
+But in the end, I still want to make something different from any of these.
 
 ## So what game *do* I want to make?
 
@@ -90,7 +94,7 @@ I'll start by pointing to inspiring games that I want mine to be like *in spirit
 
 So I suppose I want to make a text-based game that **incorporates interactive fiction** (more on this below), but **is essentially a sandbox RPG** set in a procedurally-generated open world that continues to evolve over time, a sort of world simulation where pretty much **anything can happen.** Towns can be founded and wiped out by floods, animals can spread disease and be hunted to extinction, a drought can cause famine and malnutrition, the nobility can intermarry, discontented peasants can rise up in revolt.
 
-What makes these goals anything *close* to attainable is what I've already said: **there will be no graphics** or (initially) any other assets to worry about, just text. Also, **there will be no small-scale physics** because the world won't exist as a grid of small spaces like in Dwarf Fortress, but instead will be composed of various large areas or regions. (For example, a town could be one area, the farmlands outside the town another area, and the forest beyond it yet another area.)
+What makes these goals anything *close* to attainable in my (probably deluded) mind is what I've already said: **there will be no graphics** or (initially) any other assets to worry about, just text. Also, **there will be no small-scale physics** because the world won't exist as a grid of small spaces like in Dwarf Fortress, but instead will be composed of various large areas or regions. (For example, a town could be one area, the farmlands outside the town another area, and the forest beyond it yet another area.)
 
 But hold on, **how can interactive fiction fit with a procedurally-generated world?** Well, the trick will be for each story to provide parameters and custom content to the world generator. This way, the world generator will still do its thing and the story won't have to define *every tiny detail* of its world, only the broad strokes and important details necessary to make the story work. (Though, a story will inevitably grind to a halt if one of its key people or places is destroyed—remember, anything can happen! So stories will have to provide some minimum of contingency plans in case of mishap, and getting stuck through bad luck will always be a possibility.)
 
