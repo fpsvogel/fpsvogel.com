@@ -78,11 +78,11 @@ But recently I made a renewed effort to explore interactive fiction and *appreci
 
 Parser-based interactive fiction feels more game-like on the whole, with its clear concept of spaces to be explored. It can be hard for a newcomer to learn, but that's not a problem if a good tutorial is included ([*Counterfeit Monkey*](https://ifdb.org/viewgame?id=aearuuxv83plclpl)) or if the commands are intuitive based on the context ([*FeedVid Live*](https://varunramesh.itch.io/feedvid-live)).
 
-Hypertext interactive fiction has a simpler UI (just links) but is more varied, covering the entire spectrum from games de-emphasizing narrative ([*Seedship*](https://philome.la/johnayliff/seedship/play/index.html)) to avant-garde stories ([*Orifice Clique*](https://xrafstar.monster/games/twine/clique/)). Two of my favorites are [*You Will Select a Decision*](https://selectadecision.info/) (hilarious) and [*Hana Feels*](http://hanafeels.com/) (heartbreaking).
+Hypertext interactive fiction has a simpler UI (just links) but is also more varied, covering the entire spectrum from conventional game mechanics ([*Seedship*](https://philome.la/johnayliff/seedship/play/index.html)) to avant-garde storytelling ([*Orifice Clique*](https://xrafstar.monster/games/twine/clique/)), from hilarious ([*You Will Select a Decision*](https://selectadecision.info/)) to heartbreaking ([*Hana Feels*](http://hanafeels.com/)).
 
 Commercial interactive fiction has made a comeback in the past ten years or so ([*Sorcery!*](https://www.inklestudios.com/sorcery), [*Roadwarden*](https://moralanxietystudio.com/roadwarden)). And some story-heavy RPGs are reminiscent of interactive fiction ([*Disco Elysium*](https://discoelysium.com/), [*Wildermyth*](https://wildermyth.com/)).
 
-But in the end, I still want to make something different from any of these.
+So I was able to better appreciate interactive fiction this time around, but I still didn't come across anything like the game I want to make.
 
 ## So what game *do* I want to make?
 
