@@ -31,6 +31,8 @@ I found most of my job leads in the [Ruby on Rails Link](https://www.rubyonrails
 
 *What about LinkedIn?* Yes, be sure to have a LinkedIn profile, if only for recruiters to be able to contact you. But I found only a few junior roles on LinkedIn, and none that I applied for. Some other sites that might be worth checking just in case: [Indeed](https://www.indeed.com/), [AngelList](https://angel.co/), [Hired](https://hired.com), [RailsGigs](https://www.railsgigs.com/), and the [GoRails job board](https://jobs.gorails.com/). If you live outside the U.S., be sure to look in local job boards if there are any in your area. (If you're not sure, try asking in [Ruby on Rails Link](https://www.rubyonrails.link/).)
 
+*UPDATE July 2023:* There's also [the Ruby Central job board](https://rubycentral.jobboardly.com/).
+
 ## My job search: a bird's-eye view
 
 Over two months, I applied to seven companies. Most were startups, and only one of them (thoughtbot) is widely known in the Ruby community. I got an interview at six out of the seven companies. In five of them I moved past the first interview.
