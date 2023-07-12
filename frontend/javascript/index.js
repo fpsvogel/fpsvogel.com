@@ -27,3 +27,5 @@ Object.entries(controllers).forEach(([filename, controller]) => {
     Stimulus.register(identifier, controller.default)
   }
 })
+
+import "chartkick/chart.js"

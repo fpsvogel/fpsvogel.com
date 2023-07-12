@@ -58,6 +58,7 @@ GEM
     bridgetown-svg-inliner (2.0.0)
       bridgetown (>= 1.2.0, < 2.0)
       nokogiri
+    chartkick (5.0.2)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
     debug (1.8.0)
@@ -141,6 +142,7 @@ DEPENDENCIES
   bridgetown-seo-tag
   bridgetown-sitemap
   bridgetown-svg-inliner
+  chartkick
   debug
   dropbox_api
   faraday (~> 2.7)
