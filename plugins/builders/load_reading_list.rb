@@ -11,6 +11,7 @@ class Builders::LoadReadingList < SiteBuilder
           # If my_dropbox_file is nil, then the local file path is used instead.
           path: config.reading.local_filepath,
           config: { skip_compact_planned: true },
+          error_handler: ->(e) { puts "Skipped a row due to a parsing error: #{e}" },
         )
 
         filtered_items = Reading.filter(
