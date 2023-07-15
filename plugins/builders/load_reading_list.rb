@@ -10,9 +10,10 @@ class Builders::LoadReadingList < SiteBuilder
           lines: my_dropbox_file,
           # If my_dropbox_file is nil, then the local file path is used instead.
           path: config.reading.local_filepath,
-          config: { skip_compact_planned: true },
           error_handler: ->(e) { puts "Skipped a row due to a parsing error: #{e}" },
         )
+
+        get_stats(items)
 
         filtered_items = Reading.filter(
           items:,
@@ -21,13 +22,13 @@ class Builders::LoadReadingList < SiteBuilder
           status: [:done, :in_progress],
         )
 
-        site.data.reading = filtered_items.map(&:view).reverse
+        site.data.reading_list = filtered_items.map(&:view).reverse
 
-        site.data.reading_genres = uniq_of_attribute(:genres, site.data.reading, sort_by: :frequency)
-        site.data.reading_ratings = uniq_of_attribute(:rating, site.data.reading, sort_by: :value)
+        site.data.reading_genres = uniq_of_attribute(:genres, site.data.reading_list, sort_by: :frequency)
+        site.data.reading_ratings = uniq_of_attribute(:rating, site.data.reading_list, sort_by: :value)
 
         config_to_save = Reading
-          .default_config[:item][:view]
+          .config[:item][:view]
           .slice(:types, :minimum_rating_for_star)
 
         config.reading.merge!(config_to_save)
@@ -66,6 +67,67 @@ class Builders::LoadReadingList < SiteBuilder
       ENV["MY_DROPBOX_APP_SECRET"]
   end
 
+  # Queries for statistics on the given Items, and saves the results to site data.
+  # @param items [Array<Item>]
+  def get_stats(items)
+    stats = {}
+
+    stats[:amount_by_genre_favorites] =
+      Reading.stats(input: "amount by genre status!=planned rating=4,5", items:)
+      .transform_values(&:to_i)
+      .to_a
+      .sort_by { |_genre, amount| amount }
+      .reverse
+      .to_h
+
+    stats[:top_genres_by_year] =
+      Reading.stats(input: "amount by year,genre status!=planned", items:)
+      .transform_values { |genre_counts|
+        genre_counts
+          .transform_values(&:to_i)
+          .max_by(4, &:last)
+          .to_h
+      }
+      .delete_if { |year, _genre_counts| year < 2017 }
+      .flat_map { |year, genre_counts| genre_counts.map { |genre, count| [genre, [year, count]] } }
+      .group_by(&:first)
+      .transform_values { _1.map(&:last).to_h }
+      .map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }
+
+    stats[:average_rating_by_genre] =
+      Reading.stats(input: "average rating by genre status!=planned", items:)
+      .transform_values { |rating| rating.round(2) }
+      .sort_by { |_genre, rating| rating }
+      .reverse
+      .to_h
+
+    stats[:rating_counts] =
+      Reading.stats(input: "count by rating", items:)
+
+    stats[:top_amounts] =
+      Reading.stats(input: "top 10 amounts", items:)
+      .to_h
+      .transform_values(&:to_i)
+
+    stats[:top_speeds] =
+      Reading.stats(input: "top 10 speeds", items:)
+      .to_h
+      .transform_values { |speed| (speed[:amount] / speed[:days].to_f).to_i }
+      .transform_keys { |title| title.split(':').first }
+
+    stats[:top_annotated] =
+      items
+        .map { |item|
+          notes_word_count = item.notes.sum { |note| note.content.scan(/[\w-]+/).size }
+          [item, notes_word_count]
+        }
+        .max_by(10, &:last)
+        .to_h
+        .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
+        .transform_keys { |title| title.split(':').first }
+
+    site.data.reading_stats = stats
+  end
 
   # The unique values of an attribute across all items.
   # @param sort_by [Symbol] :frequency or :value

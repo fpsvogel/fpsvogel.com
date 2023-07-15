@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/fpsvogel/reading.git
-  revision: 678df403f78ba7a4b18917779b8cf7d74e9a3d0a
+  revision: 47cd899dcab1e465c8b9968720c5e54a12d1f945
   branch: 0.9.0
   specs:
     reading (0.8.0)
@@ -80,7 +80,7 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
-    irb (1.7.2)
+    irb (1.7.4)
       reline (>= 0.3.6)
     jwt (2.7.1)
     kramdown (2.4.0)
@@ -118,7 +118,7 @@ GEM
       io-console (~> 0.5)
     rexml (3.2.5)
     rinku (2.0.6)
-    roda (3.69.0)
+    roda (3.70.0)
       rack
     rouge (3.30.0)
     ruby2_keywords (0.0.5)
