@@ -8,10 +8,10 @@ These statistics refer to *all* of my reading, not just my favorites as on the "
 
 **Contents:**
 
-- [Each year's top genres](#each-years-top-genres)
-- [My favorite genres](#my-favorite-genres)
+- [Most-read genres](#most-read-genres)
+- [Favorite genres](#favorite-genres)
 - [What I feel about each genre](#what-i-feel-about-each-genre)
-- [How my ratings are distributed](#how-my-ratings-are-distributed)
+- [Rating distribution](#rating-distribution)
 - [Longest items](#longest-items)
 - [Most annotated items](#most-annotated-items)
 - [Fastest reads](#fastest-reads)
@@ -20,13 +20,13 @@ These statistics refer to *all* of my reading, not just my favorites as on the "
 
 <% stats = @site.data.reading_stats %>
 
-## Each year's top genres
+## Most-read genres
 
 Page counts of each year's top 4 genres.
 
-<%= column_chart(stats[:top_genres_by_year], xtitle: "Year", ytitle: "Pages", stacked: true, library: { plugins: { tooltip: { filter: ->() {} } } }) %>
+<%= column_chart(stats[:top_genres_by_year], stacked: true, library: { plugins: { tooltip: { filter: ->() {} } } }) %>
 
-## My favorite genres
+## Favorite genres
 
 Page counts of 4- and 5-star items, by genre.
 
@@ -36,9 +36,9 @@ Page counts of 4- and 5-star items, by genre.
 
 Average rating by genre.
 
-<%= bar_chart(stats[:average_rating_by_genre], height: "800px", min: 1.0, max: 5.0, xtitle: "Rating", ytitle: "Genre") %>
+<%= bar_chart(stats[:average_rating_by_genre], height: "700px", min: 1.0, max: 5.0) %>
 
-## How my ratings are distributed
+## Rating distribution
 
 Item count by rating.
 
@@ -46,12 +46,18 @@ Item count by rating.
 
 ## Longest items
 
-<%= bar_chart(stats[:top_amounts], xtitle: "Pages") %>
+Page counts of *amounts*, meaning that a re-read adds to the total.
+
+<%= bar_chart(stats[:top_amounts]) %>
 
 ## Most annotated items
 
-<%= bar_chart(stats[:top_annotated], xtitle: "Notes word count") %>
+Word counts of notes.
+
+<%= bar_chart(stats[:top_annotated]) %>
 
 ## Fastest reads
 
-<%= bar_chart(stats[:top_speeds], xtitle: "Pages/day") %>
+Pages per day.
+
+<%= bar_chart(stats[:top_speeds]) %>
