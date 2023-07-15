@@ -1,15 +1,15 @@
 ---
 layout: page
 title: Reading Stats
-permalink: /stats/
+permalink: /reading-stats/
 ---
 
 These statistics refer to *all* of my reading, not just my favorites as on the "Reading List" page. This page too is built automatically with the help of my [Reading](https://github.com/fpsvogel/reading) gem.
 
 **Contents:**
 
-- [Most-read genres](#most-read-genres)
 - [Favorite genres](#favorite-genres)
+- [Most-read genres](#most-read-genres)
 - [What I feel about each genre](#what-i-feel-about-each-genre)
 - [Rating distribution](#rating-distribution)
 - [Longest items](#longest-items)
@@ -20,17 +20,17 @@ These statistics refer to *all* of my reading, not just my favorites as on the "
 
 <% stats = @site.data.reading_stats %>
 
-## Most-read genres
-
-Page counts of each year's top 4 genres.
-
-<%= column_chart(stats[:top_genres_by_year], stacked: true, library: { plugins: { tooltip: { filter: ->() {} } } }) %>
-
 ## Favorite genres
 
-Page counts of 4- and 5-star items, by genre.
+Total pages read of 4- and 5-star items, by genre.
 
 <%= pie_chart(stats[:amount_by_genre_favorites], height: "480px") %>
+
+## Most-read genres
+
+Total pages read of each year's top 4 genres.
+
+<%= column_chart(stats[:top_genres_by_year], stacked: true, library: { plugins: { tooltip: { filter: ->() {} } } }) %>
 
 ## What I feel about each genre
 
