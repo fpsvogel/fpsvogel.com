@@ -73,7 +73,7 @@ class Builders::LoadReadingList < SiteBuilder
     stats = {}
 
     stats[:amount_by_genre_favorites] =
-      Reading.stats(input: "amount by genre status!=planned rating=4,5", items:)
+      Reading.stats(input: "amount by genre rating>3", items:)
       .transform_values(&:to_i)
       .to_a
       .sort_by { |_genre, amount| amount }
@@ -81,7 +81,7 @@ class Builders::LoadReadingList < SiteBuilder
       .to_h
 
     stats[:top_genres_by_year] =
-      Reading.stats(input: "amount by year,genre status!=planned", items:)
+      Reading.stats(input: "amount by year, genre", items:)
       .transform_values { |genre_counts|
         genre_counts
           .transform_values(&:to_i)
@@ -95,14 +95,14 @@ class Builders::LoadReadingList < SiteBuilder
       .map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }
 
     stats[:average_rating_by_genre] =
-      Reading.stats(input: "average rating by genre status!=planned", items:)
-      .transform_values { |rating| rating.round(2) }
+      Reading.stats(input: "average rating by genre", items:)
+      .reject { |_genre, rating| rating.nil? }
       .sort_by { |_genre, rating| rating }
       .reverse
       .to_h
 
     stats[:rating_counts] =
-      Reading.stats(input: "count by rating", items:)
+      Reading.stats(input: "total items by rating", items:)
 
     stats[:top_amounts] =
       Reading.stats(input: "top 10 amounts", items:)
@@ -118,7 +118,12 @@ class Builders::LoadReadingList < SiteBuilder
     stats[:top_annotated] =
       items
         .map { |item|
-          notes_word_count = item.notes.sum { |note| note.content.scan(/[\w-]+/).size }
+          notes_word_count = item
+            .notes
+            .sum { |note|
+              note.content.scan(/[\w-]+/).size
+            }
+
           [item, notes_word_count]
         }
         .max_by(10, &:last)

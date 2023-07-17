@@ -4,7 +4,7 @@ title: Reading Stats
 permalink: /reading-stats/
 ---
 
-These statistics refer to *all* of my reading, not just my favorites as on the "Reading List" page. This page too is built automatically with the help of my [Reading](https://github.com/fpsvogel/reading) gem.
+These statistics refer to *all* of my reading, not just my favorites as on the "Reading List" page. This page too is updated automatically with the help of my [Reading](https://github.com/fpsvogel/reading) gem.
 
 **Contents:**
 
@@ -13,8 +13,8 @@ These statistics refer to *all* of my reading, not just my favorites as on the "
 - [What I feel about each genre](#what-i-feel-about-each-genre)
 - [Rating distribution](#rating-distribution)
 - [Longest items](#longest-items)
-- [Most annotated items](#most-annotated-items)
 - [Fastest reads](#fastest-reads)
+- [Most annotated items](#most-annotated-items)
 
 ***Note:** The length of audio/visual items is converted to page counts according to my average reading speed of 35 pages per hour.*
 
@@ -50,14 +50,14 @@ Page counts of *amounts*, meaning that a re-read adds to the total.
 
 <%= bar_chart(stats[:top_amounts]) %>
 
-## Most annotated items
-
-Word counts of notes.
-
-<%= bar_chart(stats[:top_annotated]) %>
-
 ## Fastest reads
 
 Pages per day.
 
 <%= bar_chart(stats[:top_speeds]) %>
+
+## Most annotated items
+
+Word counts of notes.
+
+<%= bar_chart(stats[:top_annotated]) %>
