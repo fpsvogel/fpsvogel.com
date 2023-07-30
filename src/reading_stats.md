@@ -12,6 +12,7 @@ These statistics refer to *all* of my reading, not just my favorites as on the "
 - [Most-read genres](#most-read-genres)
 - [What I feel about each genre](#what-i-feel-about-each-genre)
 - [Rating distribution](#rating-distribution)
+- [Most re-reads](#most-re-reads)
 - [Longest items](#longest-items)
 - [Fastest reads](#fastest-reads)
 - [Most annotated items](#most-annotated-items)
@@ -43,6 +44,12 @@ Average rating by genre.
 Item count by rating.
 
 <%= pie_chart(stats[:rating_counts]) %>
+
+## Most re-reads
+
+Highest numbers of completed readings/listenings/watches, including the first one.
+
+<%= bar_chart(stats[:top_experiences], library: { scales: { x: { ticks: { precision: 0 } } } }) %>
 
 ## Longest items
 

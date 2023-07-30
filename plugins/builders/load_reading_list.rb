@@ -104,6 +104,23 @@ class Builders::LoadReadingList < SiteBuilder
     stats[:rating_counts] =
       Reading.stats(input: "total items by rating", items:)
 
+    stats[:top_experiences] =
+      items
+      .map { |item|
+        experience_count = item
+          .experiences
+          .select { |experience|
+            experience.spans.all? { _1.progress == 1.0 }
+          }
+          .count
+
+        [item, [experience_count, item.rating]]
+      }
+      .max_by(10, &:last)
+      .to_h
+      .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
+      .transform_keys { |title| title.split(':').first }
+
     stats[:top_amounts] =
       Reading.stats(input: "top 10 amounts", items:)
       .to_h
@@ -117,19 +134,19 @@ class Builders::LoadReadingList < SiteBuilder
 
     stats[:top_annotated] =
       items
-        .map { |item|
-          notes_word_count = item
-            .notes
-            .sum { |note|
-              note.content.scan(/[\w-]+/).size
-            }
+      .map { |item|
+        notes_word_count = item
+          .notes
+          .sum { |note|
+            note.content.scan(/[\w-]+/).size
+          }
 
-          [item, notes_word_count]
-        }
-        .max_by(10, &:last)
-        .to_h
-        .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
-        .transform_keys { |title| title.split(':').first }
+        [item, notes_word_count]
+      }
+      .max_by(10, &:last)
+      .to_h
+      .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
+      .transform_keys { |title| title.split(':').first }
 
     site.data.reading_stats = stats
   end
