@@ -43,7 +43,7 @@ Note that the titles I mention here are not the *most popular* TTRPGs, just the 
 
 ## My favorite TTRPG
 
-My favorite find is [*ALONe*](https://www.drivethrurpg.com/product/168609) with the [*GameMaster's Apprentice (GMA)* cards](https://jamesturneronline.net/game-masters-apprentice) and [*Adventure Guide Pack*](https://www.drivethrurpg.com/product/179835).
+My favorite find is [*ALONe*](https://www.drivethrurpg.com/product/168609) with *The GameMaster's Apprentice (GMA)* ([online]((https://jamesturneronline.net/game-masters-apprentice)) or [physical cards](https://www.drivethrurpg.com/product/125685/The-GameMasters-Apprentice-Base-Deck)) and [*GMA Adventure Guide Pack*](https://www.drivethrurpg.com/product/179835).
 
 I like *ALONe* for several reasons:
 
@@ -121,4 +121,4 @@ I may avoid these in favor of a more portable setup, but here they are just in c
 
 ## Did it work? We shall see…
 
-I'll add an update to this post a few months from now, when I've had a chance to see, in the long run, whether solo TTRPGs really do help me in my quest for creative freedom. The worst-case scenario is that they'll become yet another form of practice that didn't stick, but at least I'll have given it a try. And who knows? Maybe you, dear reader, will be inspired to give it a try too.
+I'll add an update here or write a sequel post a few months from now, when I've had a chance to see, in the long run, whether solo TTRPGs really do help me in my quest for creative freedom. The worst-case scenario is that they'll become yet another form of practice that didn't stick, but at least I'll have given it a try. And who knows? Maybe you, dear reader, will be inspired to give it a try too.
