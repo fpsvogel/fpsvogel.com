@@ -91,7 +91,7 @@ In fact, I learned some coding way back in high school, but never got anywhere c
 
 ### Building something new
 
-It also feels good to have built something that is genuinely **new**, that no one else has built in quite the same way. Yeah, it's extremely niche: my gem has only 3 stars on GitHub, compared to the 300+ stars of [my "Learn Ruby" list](https://github.com/fpsvogel/learn-ruby). But it's *original*, and in my head that adds some imaginary stars to the total.
+It also feels good to have built something that is genuinely **new**, that no one else has built in quite the same way. Yeah, it's extremely niche: my gem has only 3 stars on GitHub, compared to the 300+ stars of [my "Learn Ruby" list](https://github.com/fpsvogel/learn-ruby). But it's *original*, and in my head that adds some imaginary stars to the total (as well as the fact that I use the gem a lot myself).
 
 It's true that some other projects overlap with my efforts:
 
@@ -103,7 +103,7 @@ But even if I'd known of these projects three years ago, I still would've gone a
 
 ### Moving on
 
-And of course, it's nice to move on to other projects after three years working on this one. I've been thinking about making a game, as [I recently wrote about](/posts/2023/why-make-a-text-based-game). That would be another way to show up my teenage self, because back then my dream was to make a game, but really all I did was to *play* games 🙄
+And of course, it's nice to move on to other projects after three years working on this one. I've been thinking about making a game, as [I recently wrote about](/posts/2023/why-make-a-text-based-game). That would be another way to show up my teenage self, because back then my dream was to make a game, but really all I did was *play* games 🙄
 
 I still plan giving the Reading gem a 1.0 release after (presumably) bug fixes and code cleanup. And eventually I might integrate it with a social network, maybe [BookWyrm](https://bookwyrm.social/) (the Fediverse alternative to Goodreads) once it has a public API. (Even if I *wanted* to integrate with Goodreads, at this point I couldn't because the Goodreads public API has been largely discontinued…)
 
