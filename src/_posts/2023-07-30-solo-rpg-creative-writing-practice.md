@@ -50,7 +50,7 @@ I like *ALONe* for several reasons:
 - It's focused on **narrative** rather than the minutiae of combat.
 - It's **freeform**. It works for any setting, rather than being limited by a particular system of stats and skills.
 - It's **simple**.
-- It's **all-in-one** thanks to the *GMA* cards. Solo role-playing typically involves *extensive* referencing of tables to generate or inspire content. Not so with this one!
+- It's **all-in-one** thanks to the *GMA* cards. Solo role-playing can be a bit cumbersome to a newcomer, in that it involves referencing tables to generate or inspire content. Not so with this one!
 
 Other narrative-focused TTRPGs that I found interesting are [*Freeform Universal*](https://www.perilplanet.com/freeform-universal) (especially the [2nd edition beta](https://www.perilplanet.com/wp-content/uploads/2020/12/Neon-City-character-sheet-form-fill.pdf)), and [*Risus*](https://www.drivethrurpg.com/product/170294/Risus-The-Anything-RPG) plus the [*Risusverse*](https://www.risusiverse.com/).
 
@@ -121,4 +121,4 @@ I may avoid these in favor of a more portable setup, but here they are just in c
 
 ## Did it work? We shall see…
 
-I'll add an update to this post a few months from now, when I've had a chance to see whether solo TTRPGs really do help me in my quest for creative freedom. The worst-case scenario is that they'll become yet another form of practice that didn't stick, but at least I'll have given it a try. And who knows? Maybe you, dear reader, will be inspired to give it a try too.
+I'll add an update to this post a few months from now, when I've had a chance to see, in the long run, whether solo TTRPGs really do help me in my quest for creative freedom. The worst-case scenario is that they'll become yet another form of practice that didn't stick, but at least I'll have given it a try. And who knows? Maybe you, dear reader, will be inspired to give it a try too.
