@@ -13,6 +13,7 @@ description: If you're clumsy at writing fiction or making up stories, solo role
   - [Random content generation](#random-content-generation)
   - [Story inspiration](#story-inspiration)
   - [Mapmaking guides and tools](#mapmaking-guides-and-tools)
+- [Did it work? We shall see…](#did-it-work-we-shall-see)
 
 Today, a very different topic: **solo tabletop role-playing games** (a.k.a. TTRPGs). Normally I write about programming here, but recently with the arrival of my first baby, this blog is suddenly ~~unfocused~~ *diverse and fun*. But seriously, I wanted to write about solo RPGs because they're helping me become **more creative** and **less paralyzed by perfectionism**.
 
@@ -117,3 +118,7 @@ I may avoid these in favor of a more portable setup, but here they are just in c
 - [*Nortantis Fantasy Map Generator*](https://jeheydorn.github.io/nortantis)
 - [watabou's map generators](https://watabou.itch.io)
 - [*Wonderdraft*](https://www.wonderdraft.net)
+
+## Did it work? We shall see…
+
+I'll add an update to this post a few months from now, when I've had a chance to see whether solo TTRPGs really do help me in my quest for creative freedom. The worst-case scenario is that they'll become yet another form of practice that didn't stick, but at least I'll have given it a try. And who knows? Maybe you, dear reader, will be inspired to give it a try too.
