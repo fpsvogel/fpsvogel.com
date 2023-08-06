@@ -41,6 +41,8 @@ After an epic journey of discovery, which started at [/r/Solo_Roleplaying](https
 
 Note that the titles I mention here are not the *most popular* TTRPGs, just the ones that I myself find most interesting. A few minutes perusing the subreddit will tell you which ones are most popular. (Or I could just tell you that it's [*Ironsworn*](https://www.ironswornrpg.com).)
 
+And if you want a high-level overview, watch ["A Beginner's Guide to Solo Role Playing (solo RPGs)"](https://www.youtube.com/watch?v=iYHt1pdScK0).
+
 ## My favorite TTRPG
 
 My favorite find is [*ALONe*](https://www.drivethrurpg.com/product/168609) with *The GameMaster's Apprentice (GMA)* ([online]((https://jamesturneronline.net/game-masters-apprentice)) or [physical cards](https://www.drivethrurpg.com/product/125685/The-GameMasters-Apprentice-Base-Deck)) and [*GMA Adventure Guide Pack*](https://www.drivethrurpg.com/product/179835).
@@ -62,6 +64,8 @@ Here are some other TTRPGs that I've bookmarked for later:
 
 - [*Pendragon*](https://en.wikipedia.org/wiki/Pendragon_(role-playing_game)) is very *crunchy* (as the more numbers-heavy games are described), but I just can't resist its detailed literary-historical setting.
 - *Dungeon Hero* ([Vol. 1](https://lonespelunker.itch.io/dungeon-hero), [Vol. 2](https://lonespelunker.itch.io/dungeon-hero-volume-2), [Vol. 3](https://lonespelunker.itch.io/dungeon-hero-volume-3-bump-in-the-night)) and its successor [*Welcome Aboard, Captain*](https://lonespelunker.itch.io/welcome-aboard-captain) are two other games designed for solo play, these even simpler than *ALONe* and more game-like.
+- [*You Sure?*](https://capacle.itch.io/you-sure) is *even simpler*!
+- [*The Storymaster's Tales*](https://www.storymasterstales.com) is a good option for introducing kids to TTRPGs.
 - [*Microscope*](https://www.lamemage.com/microscope) as a world-building tool. Solo resources for it:
   - [Lens](https://docs.google.com/document/d/1isWrSPL417PN6eSCYQmxKnFxPXQUn9IjZW4W2xfToDc)
   - [Videos by Clare C. Marshall](https://www.youtube.com/watch?v=q4h9Yg1UWjY)
@@ -97,6 +101,8 @@ I may avoid these in favor of a more portable setup, but here they are just in c
 ### Random content generation
 
 - Many [lists of tools](https://www.reddit.com/r/rpg_generators/comments/142jvzk/30_days_of_rpg_generator_sites_full_list)
+- [*Chaos Gen*](https://www.chaosgen.com/gen-tags/fantasy) (fantasy RPG generators)
+- ["Guide to Free and PWYW Random Table PDFs for Fantasy"](https://www.randroll.com/guide-free-pdfs-fantasy)
 - [*Adventuresmith*](https://play.google.com/store/apps/details?id=org.steavesea.adventuresmith) has generators from various TTRPGs
 - Plot generators: [1](https://www.herebetaverns.com/plot-hook-generator), [2](https://www.plot-generator.org.uk), [3](https://blog.reedsy.com/plot-generator/), [4](https://writingexercises.co.uk/plotgenerator.php), [5](https://donjon.bin.sh/fantasy/adventure/), [6](https://www.seventhsanctum.com/generate.php?Genname=storygen)
 
@@ -104,6 +110,7 @@ I may avoid these in favor of a more portable setup, but here they are just in c
 
 - [*TaleWeaver* cards](https://www.scribd.com/document/98415/TaleWeaver-Card-Deck) and [accompanying book](https://www.scribd.com/document/98412/Tale-Weaver)
 - [*Zero Dice*](https://tangent-zero.com/zero_dice/zero_dice.htm)
+- [*Rory's Story Cubes*](https://www.storycubes.com/en/) are especially good for kids.
 - [*Story Engine Deck*](https://storyenginedeck.com)
 - [*The Wildwood Tarot*](https://www.thewildwoodtarot.com)
 - [*StoryWorld* cards](https://www.goodreads.com/series/68911-storyworld-create-a-story)
