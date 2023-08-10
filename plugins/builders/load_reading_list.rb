@@ -6,10 +6,16 @@ class Builders::LoadReadingList < SiteBuilder
   def build
     hook :site, :post_read do |site|
       generator do
+        if File.exist?(config.reading.local_filepath)
+          local_filepath = config.reading.local_filepath
+        else
+          local_filepath = config.reading.alt_local_filepath
+        end
+
         items = Reading.parse(
           lines: my_dropbox_file,
           # If my_dropbox_file is nil, then the local file path is used instead.
-          path: config.reading.local_filepath,
+          path: local_filepath,
           error_handler: ->(e) { puts "Skipped a row due to a parsing error: #{e}" },
         )
 
