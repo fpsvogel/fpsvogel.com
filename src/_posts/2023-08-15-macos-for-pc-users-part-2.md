@@ -17,7 +17,7 @@ For all you incurable PC users out there, I hope this post gives you some hope i
 Before we get into Mac-specific tools: earlier this year I replaced Windows with Linux on my PC, and a lot of the lessons I learned there are equally applicable to MacOS:
 
 - [Customize Zsh to get a lovely terminal.](/posts/2023/switch-to-linux-from-windows#payoff-1-a-lovely-terminal)
-  - [Here is the shell script](https://github.com/fpsvogel/macos-scripts/blob/main/zshrc/zsh_shift_select) that enables Shift selection in the terminal.
+  - [Here is the shell script](https://github.com/fpsvogel/macos-scripts/blob/main/zshrc/shift_select) that enables Shift selection in the terminal.
 - [My tricks for staying on the keyboard](/posts/2023/switch-to-linux-from-windows#payoff-2-more-time-spent-on-the-keyboard-less-on-the-mouse) are mostly applicable.
 
 ## MacOS apps for more PC-ification
@@ -36,7 +36,7 @@ All this may seem silly to those of you who are thinking, ***"Just give it up an
 
 This would be a fair point, ***if*** I were committed to using *only* a Mac for the foreseeable future. But the thing is, I still use my PC outside of work, and I don't want to drop $2500 for a personal MacBook Pro that (for my purposes) would be equivalent to my PC.
 
-In fact, I want to *avoid* getting locked into the Apple ecosystem, for a variety of practical and philosophical reasons. I'll pass over the usual suspects (*"I want to be free"*, *"It makes me feel superior"*, etc.) and talk about one motivation that's less obvious: ***I learn more by using Linux***.
+In fact, I want to *avoid* getting locked into the Apple ecosystem, for a variety of practical and philosophical reasons. I'll pass over the usual suspects (*"I want to be free"*, *"It makes me feel superior"*, etc.) and talk about one motivation that's less obvious: **I learn more by using Linux**.
 
 In a draft of this post, I wrote about how in Linux I didn't have to spend so much time customizing the OS to my liking. Upon further reflection, I realize that's not true: in Linux, [I wrote plenty of shell scripts](https://github.com/fpsvogel/linux-scripts) to tweak various things. But that's the thing: **in Linux I write shell scripts**, whereas in MacOS I may need to buy a $20 app to make the same customization.
 
@@ -44,7 +44,7 @@ I'll admit that in MacOS I got up and running faster, and the $120 that I've spe
 
 In short, I find that **using Linux is more educational**, even if it involves a lengthier setup. (And my only experience with Linux is installing it on formerly-Windows PCs. These days there are lots of PCs that ship with Linux, where there are fewer hardware compatibility issues to work around.)
 
-And even if getting set up in Linux does take longer, that's far outweighed by **the ongoing cost of being a software developer on a Mac**. I've spent more time working around errors installing developer tools on my Mac that *just worked* in Linux, than vice versa. Perhaps this is because I started using a Mac in the M1 generation, when not all tools supported the ARM chips. *Perhaps.* But I suspect that when web servers are running on Linux, it's only natural that maintaining a development environment would be simpler on my Linux machine.
+And even if getting set up in Linux does take longer, that's far outweighed by **the ongoing cost of being a software developer on a Mac**. I've spent more time working around errors installing developer tools on my Mac that *just worked* in Linux, than vice versa. Perhaps this is because I started using a Mac in the M1 generation, when not all tools supported the ARM chips. Perhaps it's because as a newcomer I just don't know the common workarounds. *Perhaps.* But I suspect that when web servers are running on Linux, it's only natural that maintaining a development environment would be simpler on my Linux machine.
 
 I'll stop complaining now. Focus on the positive…
 
