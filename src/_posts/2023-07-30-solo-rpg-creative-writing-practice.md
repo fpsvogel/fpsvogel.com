@@ -64,14 +64,14 @@ Here are some other TTRPGs that I've bookmarked for later:
 
 - [*Pendragon*](https://en.wikipedia.org/wiki/Pendragon_(role-playing_game)) is very *crunchy* (as the more numbers-heavy games are described), but I just can't resist its detailed literary-historical setting.
 - *Dungeon Hero* ([Vol. 1](https://lonespelunker.itch.io/dungeon-hero), [Vol. 2](https://lonespelunker.itch.io/dungeon-hero-volume-2), [Vol. 3](https://lonespelunker.itch.io/dungeon-hero-volume-3-bump-in-the-night)) and its successor [*Welcome Aboard, Captain*](https://lonespelunker.itch.io/welcome-aboard-captain) are two other games designed for solo play, these even simpler than *ALONe* and more game-like.
-- [*You Sure?*](https://capacle.itch.io/you-sure) is *even simpler*!
 - [*The Storymaster's Tales*](https://www.storymasterstales.com) is a good option for introducing kids to TTRPGs.
+- [*Alone among the Stars*](https://noroadhome.itch.io/alone-among-the-stars) (or [an online version](https://adnroy.itch.io/alone-among-the-stars-twine-version)) and [*Thousand Year Old Vampire*](https://thousandyearoldvampire.com/products/thousand-year-old-vampire-pdf-only) are popular *journaling games*, which are closer to pure creative writing practice, and tied to a specific theme or setting.
 - [*Microscope*](https://www.lamemage.com/microscope) as a world-building tool. Solo resources for it:
   - [Lens](https://docs.google.com/document/d/1isWrSPL417PN6eSCYQmxKnFxPXQUn9IjZW4W2xfToDc)
   - [Videos by Clare C. Marshall](https://www.youtube.com/watch?v=q4h9Yg1UWjY)
   - [Blog post](https://whyigame.wordpress.com/2018/01/14/solo-rp-microscope-rpg)
   - Series of posts: [1](https://web.archive.org/web/20170107021652/http://www.risusmonkey.com/2011/03/solo-gaming-on-long-flight.html), [2](https://web.archive.org/web/20160330173740/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-2-first-pass.html), [3](https://web.archive.org/web/20160330172817/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-3-making.html), [4](https://web.archive.org/web/20160330173127/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-4-making.html)
-- [*Alone among the Stars*](https://noroadhome.itch.io/alone-among-the-stars) (or [an online version](https://adnroy.itch.io/alone-among-the-stars-twine-version)) and [*Thousand Year Old Vampire*](https://thousandyearoldvampire.com/products/thousand-year-old-vampire-pdf-only) are popular *journaling games*, which are closer to pure creative writing practice, and tied to a specific theme or setting.
+- Other worldbuilding games: [*Mappa Imperium*](https://nookrium.itch.io/mappa-imperium), [*Artefact*](https://mouseholepress.itch.io/artefact) (try it alongside [*The Kleptogoblicon*](https://perchance.org/kleptogoblicon)), [*DELVE*](https://www.blackwellwriter.com/en-us/products/delve-a-solo-map-drawing-game)/[*UMBRA*](https://www.blackwellwriter.com/en-us/products/umbra-a-game-of-final-frontiers),[*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) (has a worldbuilding element).
 
 ## Solo role-playing tools
 
@@ -82,13 +82,20 @@ As I said, my favorite *ALONe* provides everything needed for solo play and that
 These are what help move the story along in solo play, in the absence of a GM (game master).
 
 - [*Mythic GME*](https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition) and [the mobile app](https://play.google.com/store/apps/details?id=com.dasher.mythicgme2e)
-- [*MUNE*](https://forums.giantitp.com/showthread.php?567342-MUNE-a-GM-emulator) and [the mobile app](https://play.google.com/store/apps/details?id=com.toppinc.dnd.muneengine)
-- [*One Page Solo Engine*](https://inflatablestudios.itch.io/one-page-solo-engine) and [the online version](https://inflatablestudios.itch.io/one-page-solo-engine-online) or [the mobile app](https://play.google.com/store/apps/details?id=dev.InflatableStudios.OnePageSoloEngine)
 - [*CRGE/UNE/BOLD*](https://www.drivethrurpg.com/browse/pub/7251/Conjecture-Games)
 - [*Motif*](https://www.drivethrurpg.com/browse/pub/7970/Thought-Punks/subcategory/22614_38729/Motif-Framework)
 - [*Game Unfolding Machine*](https://jeansenvaars.itch.io/game-unfolding-machine) and [*Transient Predictions*](https://jeansenvaars.itch.io/transient-predictions)
-- [*Juice Oracle*](https://thunder9861.itch.io/juice-oracle)
 - [*Radiance Engine*](https://oddfishgames.com/products/the-solar-system-everything-digital-bundle-radiance-radiance-advanced-luminous-shine)
+
+These are more minimalist:
+
+- [*One Page Solo Engine*](https://inflatablestudios.itch.io/one-page-solo-engine) and [the online version](https://inflatablestudios.itch.io/one-page-solo-engine-online) or [the mobile app](https://play.google.com/store/apps/details?id=dev.InflatableStudios.OnePageSoloEngine)
+- [*MUNE*](https://forums.giantitp.com/showthread.php?567342-MUNE-a-GM-emulator) and [the mobile app](https://play.google.com/store/apps/details?id=com.toppinc.dnd.muneengine)
+- [*Recluse*](https://gravenutterance.itch.io/recluse)
+- [*Diedream*](https://alfredvalley.itch.io/diedream)
+- [*These Meagre Entrails*](https://mendercap.itch.io/these-meagre-entrails)
+- [*You Sure?*](https://capacle.itch.io/you-sure)
+- [*Juice Oracle*](https://thunder9861.itch.io/juice-oracle)
 
 ### Playing TTRPGs on the computer
 

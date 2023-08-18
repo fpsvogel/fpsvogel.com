@@ -1,7 +1,7 @@
 ---
 title: MacOS for PC users, part 2
 subtitle: more tools for lost souls
-description: More tools and hacks for making your MacOS feel more like Windows or Linux.
+description: More tools and hacks for making your MacOS feel more like Windows or Linux, and why I still prefer PCs over my Mac.
 ---
 
 - [Lessons from my switch to Linux](#lessons-from-my-switch-to-linux)
@@ -36,7 +36,7 @@ All this may seem silly to those of you who are thinking, ***"Just give it up an
 
 This would be a fair point, ***if*** I were committed to using *only* a Mac for the foreseeable future. But the thing is, I still use my PC outside of work, and I don't want to drop $2500 for a personal MacBook Pro that (for my purposes) would be equivalent to my PC.
 
-In fact, I want to *avoid* getting locked into the Apple ecosystem, for a variety of practical and philosophical reasons. I'll pass over the usual suspects (*"I want to be free"*, *"It makes me feel superior"*, etc.) and talk about one motivation that's less obvious: **I learn more by using Linux**.
+In fact, I want to *avoid* getting locked into the Apple ecosystem, for a variety of practical and philosophical reasons. I'll pass over the usual suspects (*"I'm a cheapskate"*, *"It makes me feel superior"*, *"FREEEEDOM!!"* etc.) and talk about one motivation that's less obvious: **I learn more by using Linux**.
 
 In a draft of this post, I wrote about how in Linux I didn't have to spend so much time customizing the OS to my liking. Upon further reflection, I realize that's not true: in Linux, [I wrote plenty of shell scripts](https://github.com/fpsvogel/linux-scripts) to tweak various things. But that's the thing: **in Linux I write shell scripts**, whereas in MacOS I may need to buy a $20 app to make the same customization.
 
