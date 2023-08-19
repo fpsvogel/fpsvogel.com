@@ -26,9 +26,9 @@ end
 
 Of course, we'll have to add actual content in order for this to become a game. But first let's add a more fundamental element of fun: **things happening in real time**.
 
-Let's imagine that we've just begun our adventure, and our aspiring hero is in the newbie area, ready to take on a wolf or rat. Suddenly, one of the basic beasties appears out of nowhere and lunges! At this point, it would be pretty strange if the hero could sit there calmly contemplating what to do next while their aggressor is frozen mid-leap. And yet **our game loop currently blocks output while it's waiting for input**. Let's change that.
+To see why, let's imagine that we've just begun our adventure, and our aspiring hero is in the newbie area, ready to take on a wolf or rat. Suddenly, one of the basic beasties appears out of nowhere and lunges! At this point, it would be pretty strange if the hero could sit there calmly contemplating what to do next while their aggressor is frozen mid-leap. And yet **our game loop currently blocks output while it's waiting for input**. Let's change that.
 
-Here's an exaggerated demonstration of the simultaneous input/output we're aiming for:
+Here's a demonstration (slightly exaggerated) of the simultaneous input/output we're aiming for:
 
 <img src="/images/worlds-realtime-teaser.gif" alt="A simple text-based game in the terminal, where output is appearing while input is being typed below the output." style="width:500px; margin-left: auto; margin-right:auto; display:block"/>
 
@@ -43,7 +43,7 @@ class Runner
       input = nil # We'll implement this in the next section.
 
       if output = Updater.tick(input)
-        Helper.puts output
+        puts output
       end
     end
   end
