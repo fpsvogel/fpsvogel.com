@@ -112,6 +112,7 @@ class Builders::LoadReadingList < SiteBuilder
 
     stats[:top_experiences] =
       items
+      .select(&:rating)
       .map { |item|
         experience_count = item
           .experiences
