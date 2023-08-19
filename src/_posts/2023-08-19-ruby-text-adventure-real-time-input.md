@@ -7,6 +7,7 @@ description: How to do non-blocking input in a Ruby CLI app, as a foundation to 
 - [The simplest possible game loop](#the-simplest-possible-game-loop)
 - [Getting some output](#getting-some-output)
 - [Simultaneous input](#simultaneous-input)
+- [Pros, cons, and future plans](#pros-cons-and-future-plans)
 
 Not long ago [I resolved to make a game in Ruby](/posts/2023/why-make-a-text-based-game)—specifically a text-based game, because procuring sprites is tedious.
 
@@ -29,7 +30,7 @@ Let's imagine that we've just begun our adventure, and our aspiring hero is in t
 
 Here's an exaggerated demonstration of the simultaneous input/output we're aiming for:
 
-![A simple text-based game in the terminal, where output is appearing while input is being typed below the output.](/images/worlds-realtime-teaser.gif)
+<img src="/images/worlds-realtime-teaser.gif" alt="A simple text-based game in the terminal, where output is appearing while input is being typed below the output." style="width:500px; margin-left: auto; margin-right:auto; display:block"/>
 
 ## Getting some output
 
@@ -73,7 +74,7 @@ Runner.io_loop
 
 The result:
 
-![In the terminal, output of "One second has passed" appearing every second](/images/worlds-realtime-output.gif)
+<img src="/images/worlds-realtime-output.gif" alt='In the terminal, output of "One second has passed" appearing every second' style="width:500px; margin-left: auto; margin-right:auto; display:block"/>
 
 Now let's bring back input, this time in a way that doesn't block output.
 
@@ -101,7 +102,6 @@ class Helper
 
   # Reads newly inputted characters in a way that doesn't block output,
   # to allow output above the input line.
-  # @return [String] all inputted characters.
   def self.read_nonblock
     line = ''
 
@@ -192,8 +192,22 @@ end
 
 And, violà! There we have the essentials for building a real-time text-based game. Here's what the above code looks like when run:
 
-![A simple text-based game in the terminal, where output is appearing while input is being typed.](/images/worlds-realtime-input.gif)
+<img src="/images/worlds-realtime-input.gif" alt="A simple text-based game in the terminal, where output is appearing while input is being typed." style="width:500px; margin-left: auto; margin-right:auto; display:block"/>
 
-I've omitted some conveniences from the code samples above, such as colored output and backspacing to delete input. You can see more complete code in [the GitHub repo](https://github.com/fpsvogel/worlds-console) (and [here's the point](https://github.com/fpsvogel/worlds-console/tree/0.1.0) where just the features related to this post are implemented).
+## Pros, cons, and future plans
 
-Now that our real-time input/output system is in place, we can start thinking about **how to organize the game world**. That'll be the topic of the next post in this series.
+There are other ways to build a real-time text-based game: [Curses](https://github.com/ruby/curses), [Scarpe](https://github.com/scarpe-team/scarpe), [DragonRuby Game Toolkit](https://dragonruby.itch.io/), or a web app, to name a few.
+
+So why take the approach I've outlined in this post? What I like about it is that **it's simple**. There's nothing more straightforward than writing to standard output, line by line, and that simplicity will speed up the development of the "guts" of the game.
+
+This approach has its downsides, of course:
+
+- It's visually unappealing.
+- It's not very user-friendly, especially since hacking the terminal input means all the terminal's native text-editing features are gone.
+  - To somewhat make up for this and the visual blandness, I'm adding colors and backspacing (to delete input), which you can see in [the GitHub repo](https://github.com/fpsvogel/worlds-console). (See [the 0.1.0 release](https://github.com/fpsvogel/worlds-console/tree/0.1.0) if you want to see just the features related to this post.)
+- It doesn't work with screen readers.
+- It requires a fairly recent version of Ruby, which not many people will want to install just to try out this game.
+
+Later on I'm thinking of making a web interface for the game—in fact, **that has become a big motivator for me**, since it would give me a great excuse to get good at [Hotwire](https://hotwired.dev/) by using it to build a fancy real-time UI. But for now I'll stick with my minimalist terminal-hacking approach because of its convenience to me as I work on the game's back end.
+
+What next? Now that our real-time input/output system is in place, we can start thinking about **how to organize the game world**. That'll be the topic of the next post in this series.
