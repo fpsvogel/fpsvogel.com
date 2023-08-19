@@ -206,7 +206,7 @@ This approach has its downsides, of course:
 - It's not very user-friendly, especially since hacking the terminal input means all the terminal's native text-editing features are gone.
   - To somewhat make up for this and the visual blandness, I'm adding colors and backspacing (to delete input), which you can see in [the GitHub repo](https://github.com/fpsvogel/worlds-console). (See [the 0.1.0 release](https://github.com/fpsvogel/worlds-console/tree/0.1.0) if you want to see just the features related to this post.)
 - It doesn't work with screen readers.
-- It requires a fairly recent version of Ruby, which not many people will want to install just to try out this game.
+- It requires installing a Ruby gem, which is not convenient for most people.
 
 Later on I'm thinking of making a web interface for the game—in fact, **that has become a big motivator for me**, since it would give me a great excuse to get good at [Hotwire](https://hotwired.dev/) by using it to build a fancy real-time UI. But for now I'll stick with my minimalist terminal-hacking approach because of its convenience to me as I work on the game's back end.
 
