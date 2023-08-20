@@ -63,7 +63,7 @@ I soon realized I needed a single place to store my notes, or else I'd lose them
 
 So I decided to ditch Goodreads. I exported my Goodreads data and converted it into **a plain-text reading log in a CSV file**, which [I wrote about in a blog post](/posts/2020/readcsv).
 
-I found that using a plain-text reading log was actually delightful, thanks to [the Rainbow CSV extension](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) for VS Code. It's also nice to have a keyboard shortcut that adds a row template, to reduce boilerplate typing. I made that with [an AutoHotkey script](https://github.com/fpsvogel/reading/blob/main/doc/autohotkey-reading-row-shortcut.ahk) and later with [a Ruby scriptg](https://github.com/fpsvogel/reading/blob/main/doc/ruby_reading_csv_row_shortcut.rb).
+I found that using a plain-text reading log was actually delightful, thanks to [the Rainbow CSV extension](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) for VS Code. It's also nice to have a keyboard shortcut that adds a row template, to reduce boilerplate typing. I made that with [an AutoHotkey script](https://github.com/fpsvogel/reading/blob/main/doc/autohotkey-reading-row-shortcut.ahk) and later with [a Ruby script](https://github.com/fpsvogel/reading/blob/main/doc/ruby_reading_csv_row_shortcut.rb).
 
 The one problem with my new approach was that **I didn't have a way to see a list of my top-rated books and share it with friends** (the single benefit I got from Goodreads). Manually keeping a separate list of my favorites would take too much time and would be error-prone, and so my next thought was, to quote [an xkcd comic](https://xkcd.com/1319/), *"I should write a program automating this!"*
 
