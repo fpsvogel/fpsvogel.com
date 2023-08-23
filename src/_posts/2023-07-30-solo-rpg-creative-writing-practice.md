@@ -71,7 +71,7 @@ Here are some other TTRPGs that I've bookmarked for later:
   - [Videos by Clare C. Marshall](https://www.youtube.com/watch?v=q4h9Yg1UWjY)
   - [Blog post](https://whyigame.wordpress.com/2018/01/14/solo-rp-microscope-rpg)
   - Series of posts: [1](https://web.archive.org/web/20170107021652/http://www.risusmonkey.com/2011/03/solo-gaming-on-long-flight.html), [2](https://web.archive.org/web/20160330173740/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-2-first-pass.html), [3](https://web.archive.org/web/20160330172817/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-3-making.html), [4](https://web.archive.org/web/20160330173127/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-4-making.html)
-- Other worldbuilding games: [*Mappa Imperium*](https://nookrium.itch.io/mappa-imperium), [*Artefact*](https://mouseholepress.itch.io/artefact) (try it alongside [*The Kleptogoblicon*](https://perchance.org/kleptogoblicon)), [*DELVE*](https://www.blackwellwriter.com/en-us/products/delve-a-solo-map-drawing-game)/[*UMBRA*](https://www.blackwellwriter.com/en-us/products/umbra-a-game-of-final-frontiers),[*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) (has a worldbuilding element).
+- Other worldbuilding games: [*Mappa Imperium*](https://nookrium.itch.io/mappa-imperium), [*Artefact*](https://mouseholepress.itch.io/artefact) (try it alongside [*The Kleptogoblicon*](https://perchance.org/kleptogoblicon)), [*DELVE*](https://www.blackwellwriter.com/en-us/products/delve-a-solo-map-drawing-game)/[*UMBRA*](https://www.blackwellwriter.com/en-us/products/umbra-a-game-of-final-frontiers), [*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) (has a worldbuilding element).
 
 ## Solo role-playing tools
 
@@ -109,7 +109,7 @@ I may avoid these in favor of a more portable setup, but here they are just in c
 
 - Many [lists of tools](https://www.reddit.com/r/rpg_generators/comments/142jvzk/30_days_of_rpg_generator_sites_full_list)
 - [*Chaos Gen*](https://www.chaosgen.com/gen-tags/fantasy) (fantasy RPG generators)
-- ["Guide to Free and PWYW Random Table PDFs for Fantasy"](https://www.randroll.com/guide-free-pdfs-fantasy)
+- ["Guide to Free and PWYW Random Table PDFs for Fantasy"](https://www.randroll.com/guide-free-pdfs-fantasy) (and [its counterpart for sci-fi and other non-fantasy](https://www.randroll.com/guide-free-pdfs-futuristic/))
 - [*Adventuresmith*](https://play.google.com/store/apps/details?id=org.steavesea.adventuresmith) has generators from various TTRPGs
 - Plot generators: [1](https://www.herebetaverns.com/plot-hook-generator), [2](https://www.plot-generator.org.uk), [3](https://blog.reedsy.com/plot-generator/), [4](https://writingexercises.co.uk/plotgenerator.php), [5](https://donjon.bin.sh/fantasy/adventure/), [6](https://www.seventhsanctum.com/generate.php?Genname=storygen)
 

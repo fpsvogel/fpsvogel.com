@@ -28,6 +28,11 @@ I'm a self-taught Rubyist who in mid-2020 left a career in humanities teaching, 
 - [Featured on the Ruby Rogues podcast](https://rubyrogues.com/bridgetown-rb-ft-felipe-vogel-ruby-526) for the Bridgetown tutorial that I wrote alongside my site.
 - My Bridgetown tutorial was also [featured in Ruby Weekly](https://rubyweekly.com/issues/561#:~:text=Build%20a%20Static%20Site%20in%20Ruby%20with%20Bridgetown).
 
+[**"Worlds" Ruby gem**](https://github.com/fpsvogel/worlds-console) <about-date>2023</about-date>
+
+- WIP text-based game.
+- Planned: a web interface to be built with Hotwire.
+
 [**"Reading" Ruby gem**](https://github.com/fpsvogel/reading) <about-date>2021 – present</about-date>
 
 - A parser for plain-text CSV reading logs.
