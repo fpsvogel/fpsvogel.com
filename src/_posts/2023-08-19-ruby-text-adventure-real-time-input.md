@@ -196,7 +196,7 @@ And, violà! There we have the essentials for building a real-time text-based ga
 
 ## Pros, cons, and future plans
 
-There are other ways to build a real-time text-based game: [Curses](https://github.com/ruby/curses), [Scarpe](https://github.com/scarpe-team/scarpe), [DragonRuby Game Toolkit](https://dragonruby.itch.io/), or a web app, to name a few.
+There are other ways to build a real-time text-based game, including [Curses](https://github.com/ruby/curses), [Scarpe](https://github.com/scarpe-team/scarpe), and [DragonRuby Game Toolkit](https://dragonruby.itch.io/).
 
 So why take the approach I've outlined in this post? What I like about it is that **it's simple**. There's nothing more straightforward than writing to standard output, line by line, and that simplicity will speed up the development of the "guts" of the game.
 
@@ -208,6 +208,6 @@ This approach has its downsides, of course:
 - It doesn't work with screen readers.
 - It requires installing a Ruby gem, which is not convenient for most people.
 
-Later on I'm thinking of making a web interface for the game—in fact, **that has become a big motivator for me**, since it would give me a great excuse to get good at [Hotwire](https://hotwired.dev/) by using it to build a fancy real-time UI. But for now I'll stick with my minimalist terminal-hacking approach because of its convenience to me as I work on the game's back end.
+Later on I'd like to build another interface that's easily accessible via the Web, but for now I'll stick with my minimalist terminal-hacking approach because of its convenience to me as I work on the game's back end.
 
 What next? Now that our real-time input/output system is in place, we can start thinking about **how to organize the game world**. That'll be the topic of the next post in this series.

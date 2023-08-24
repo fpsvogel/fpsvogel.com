@@ -31,7 +31,6 @@ I'm a self-taught Rubyist who in mid-2020 left a career in humanities teaching, 
 [**"Worlds" Ruby gem**](https://github.com/fpsvogel/worlds-console) <about-date>2023</about-date>
 
 - WIP text-based game.
-- Planned: a web interface to be built with Hotwire.
 
 [**"Reading" Ruby gem**](https://github.com/fpsvogel/reading) <about-date>2021 – present</about-date>
 
