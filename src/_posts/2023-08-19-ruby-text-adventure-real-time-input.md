@@ -1,5 +1,5 @@
 ---
-title: Building text-based game in Ruby, part 1
+title: Building a text-based game in Ruby, part 1
 subtitle: simultaneous, real-time input and output
 description: How to do non-blocking input in a Ruby CLI app, as a foundation to a real-time text-based RPG where input and output happen in parallel in a terminal.
 ---
