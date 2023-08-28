@@ -26,7 +26,7 @@ I also learned how to set up certain things myself that Rails handles behind the
 
 ## Dropping in Turbo Streams
 
-After I'd copied and re-organized my code from the old Rails app, it was time to give the new Wiki Stumble a snappy SPA feel.
+After I'd copied and re-organized my code from the old Rails app, it was time to give the new Wiki Stumble a seamless SPA feel using [Turbo Streams](https://turbo.hotwired.dev/handbook/streams), part of the [Hotwire](https://hotwired.dev/) suite of tools for "HTML over the wire".
 
 There was a specific problem I wanted to solve: every time the user pressed the "Next article" button, **the entire page was being reloaded**, and the user would have to scroll down a bit from the top to see the article again. To avoid this, I could use a Turbo Stream response to **re-render just the part of the page that shows the article**.
 
