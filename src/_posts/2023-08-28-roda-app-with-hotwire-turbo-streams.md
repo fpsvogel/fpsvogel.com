@@ -6,9 +6,9 @@ description: I rewrote a Ruby on Rails app in Roda, using Turbo Streams for an S
 
 - [Roda, the DIY framework](#roda-the-diy-framework)
 - [Dropping in Turbo Streams](#dropping-in-turbo-streams)
-- [Future plans](#future-plans)
+- [Up next: improve performance](#up-next-improve-performance)
 
-Two years ago, amid throwaway projects furiously hammered out ahead of my first developer job hunt, I made a little Rails app that I **actually liked**, a mashup of StumbleUpon and Wikipedia called Wiki Stumble. [Here's my post from back then](https://fpsvogel.com/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon) on how I made the app.
+Two years ago, amid throwaway projects furiously hammered out ahead of my first developer job hunt, I made a little Rails app that I **actually liked**, a mashup of StumbleUpon and Wikipedia called Wiki Stumble. [Here's my post from back then](/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon) on how I made the app.
 
 Now, as I'm circling back to tie up some loose ends, I took the opportunity **to learn a Ruby app framework besides Rails**, and **to practice my Hotwire skills**.
 
@@ -60,13 +60,10 @@ And in the new template I put the two stream updates:
 
 Easy peasy!
 
-## Future plans
+## Up next: improve performance
 
-I thought about continuing further with the Wiki Stumble app, adding user accounts and authentication. But the app wouldn't gain much by that. Small as it is, it fulfills its purpose as a toy well enough already.
+Despite the Turbo Streams updates, Wiki Stumble still **doesn't feel snappy**. The reason is on the back end: fetching the next article that matches the user's preferences is **expensive**, involving up to a dozen API calls across multiple Wikipedia APIs.
 
-So I'll come up with a new project to learn other tools that I didn't yet get a chance to explore:
-  - [Sequel](https://github.com/jeremyevans/sequel) as an alternative to Active Record.
-  - [ViewComponent](https://viewcomponent.org/) or [Phlex](https://www.phlex.fun/) to organize view-related code.
-  - Turbo enhancements by the StimulusReflex team: [Turbo Boost Commands](https://hopsoft.io/@turbo-boost/commands), [Turbo Boost Streams](https://hopsoft.io/@turbo-boost/streams), and [TurboPower](https://github.com/marcoroth/turbo_power).
+Doing all of that within each server request adds a delay of up to several seconds, so I'll have to engineer a way to call the APIs outside of the request-response cycle. Once I've solved that problem, I'll have fixed all the issues that plagued the app back when I built it with Rails, and I can call it done.
 
-In the meantime, I wish you happy Wikipedia-surfing!
+But for now, I'm glad to have found Roda and Turbo Streams to be such a pleasant and powerful combination ❤️
