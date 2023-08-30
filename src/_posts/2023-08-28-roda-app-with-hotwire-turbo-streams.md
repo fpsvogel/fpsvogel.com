@@ -12,7 +12,7 @@ Two years ago, amid throwaway projects furiously hammered out ahead of my first 
 
 Now, as I'm circling back to tie up some loose ends, I took the opportunity **to learn a Ruby app framework besides Rails**, and **to practice my Hotwire skills**.
 
-[Here's the GitHub repo](https://github.com/fpsvogel/wikistumble) of the new Wiki Stumble app, and [here's the live site](https://wikistumble.onrender.com/) deployed to Render.
+[Here's the GitHub repo](https://github.com/fpsvogel/wikistumble) of the new Wiki Stumble app, and [here's the live site](https://wikistumble.onrender.com/) deployed to Render. (Note that the app currently runs a bit slow due to [back-end issues that I talk about below](#up-next-improve-performance).)
 
 ## Roda, the DIY framework
 
