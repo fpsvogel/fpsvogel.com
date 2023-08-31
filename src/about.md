@@ -25,10 +25,10 @@ I'm a self-taught Rubyist who in mid-2020 left a career in humanities teaching, 
 [**This website**](https://fpsvogel.com) \| <small>[GitHub](https://github.com/fpsvogel/blog-2021)</small> \| *Bridgetown, Hotwire (Stimulus + Turbo Drive)* <about-date>2021 – present</about-date>
 
 - Blogging monthly on development-related topics.
-- [Featured on the Ruby Rogues podcast](https://rubyrogues.com/bridgetown-rb-ft-felipe-vogel-ruby-526) for the Bridgetown tutorial that I wrote alongside my site.
+- [Featured on the Ruby Rogues podcast](https://topenddevs.com/podcasts/ruby-rogues/episodes/bridgetown-rb-ft-felipe-vogel-ruby-526) for the Bridgetown tutorial that I wrote alongside my site.
 - My Bridgetown tutorial was also [featured in Ruby Weekly](https://rubyweekly.com/issues/561#:~:text=Build%20a%20Static%20Site%20in%20Ruby%20with%20Bridgetown).
 
-[**Wiki Stumble**](https://wikistumble.onrender.com/) \| *Roda, Hotwire (Turbo Streams)* <about-date>August 2023</about-date>
+[**Wiki Stumble**](https://wikistumble.com/) \| *Roda, Hotwire (Turbo Streams)* <about-date>August 2023</about-date>
 
 - A mashup of StumbleUpon and Wikipedia.
 
