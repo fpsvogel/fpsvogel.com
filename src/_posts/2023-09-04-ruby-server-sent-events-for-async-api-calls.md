@@ -91,9 +91,7 @@ Here's how I solved each of these in turn.
 
 [Here](https://github.com/fpsvogel/wikistumble/blob/4d5d48332a8dc27c278af9cfdaae4232c0866324/app/router.rb#L110-L135) and [here](https://github.com/fpsvogel/wikistumble/blob/4d5d48332a8dc27c278af9cfdaae4232c0866324/app/helpers/stream_helper.rb) are what my streaming code looks like now.
 
-**Side note:** Rack full hijacking has a hacky feel to it, but I didn't have much luck with the cleaner approaches that I tried (partial hijacking and [returning a streaming body](https://github.com/rack/rack/pull/1745)), so I contented myself with full hijacking.
-
-I also considered using HTTP/2 with the highly concurrent [Falcon](https://socketry.github.io/falcon/) web server, but I quickly realized that would be over-optimization, and anyway my app performs well enough for its likely near-zero users. Relevant discussions on HTTP/2: [1](https://discuss.rubyonrails.org/t/what-is-the-story-with-http-2-in-rails/75224), [2](https://github.com/puma/puma/issues/2697).
+**Side note:** Rack full hijacking feels pretty hacky, but I didn't have much luck with the cleaner approaches that I tried: partial hijacking, [returning a streaming body](https://github.com/rack/rack/pull/1745), and swapping out Puma for the highly concurrent [Falcon](https://socketry.github.io/falcon/) web server. I want to try Falcon again sometime because it's part of the async Ruby ecosystem, which looks great. [Here's an introduction to async Ruby.](https://brunosutic.com/blog/async-ruby) But for now, I contented myself with Puma and Rack full hijacking because Wiki Stumble performs well enough that way.
 
 ## Conclusion: outside-the-box lessons
 
