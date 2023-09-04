@@ -2,9 +2,9 @@
 layout: home
 ---
 
-I'm Felipe, a self-taught Rubyist who used to be a humanities teacher.
+I'm Felipe, a Rubyist and web developer. I was originally self-taught from a humanities teaching background.
 
-Take a look at [my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby) if you're an aspiring developer and/or interested in Ruby. Helping other beginners is also a goal of my blog here, but it's equally a place where I reflect on what and and how I'm learning.
+Take a look at [my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby) if you're an aspiring developer and/or interested in Ruby. Helping beginners is also a goal of my blog here, but it's equally a place where I reflect on what and and how I'm learning.
 
 ### Recent posts
 
