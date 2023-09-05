@@ -32,7 +32,7 @@ My search for lightweight, async server-to-client communication led me to…
 
 [This article by Julia Evans](https://jvns.ca/blog/2021/01/12/day-36--server-sent-events-are-cool--and-a-fun-bug/) is a great introduction to server-sent events, a.k.a. EventSource. It's like half of WebSockets, but over HTTP! 🤯
 
-Adding server-sent events to Wiki Stumble was pretty straightforward, thanks to a Turbo Streams integration. (It doesn't seem to be documented apart from [this PR](https://github.com/hotwired/turbo/pull/415). Thanks to Ayush Newatia, author of [The Rails and Hotwire Codex](https://railsandhotwirecodex.com/), for pointing me to that PR.)
+Adding server-sent events to Wiki Stumble was pretty straightforward, thanks to a Turbo Streams integration. (It doesn't seem to be documented apart from [this PR](https://github.com/hotwired/turbo/pull/415). Thanks to Ayush Newatia, author of [The Rails and Hotwire Codex](https://railsandhotwirecodex.com/), for pointing me to that PR over at [The Spicy Web](https://discord.gg/CUuYVH7Qa9) Discord.)
 
 All I had to do was add `<turbo-stream-source>` elements to the page, like this:
 
