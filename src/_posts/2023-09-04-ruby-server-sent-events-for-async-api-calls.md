@@ -32,7 +32,9 @@ My search for lightweight, async server-to-client communication led me to…
 
 [This article by Julia Evans](https://jvns.ca/blog/2021/01/12/day-36--server-sent-events-are-cool--and-a-fun-bug/) is a great introduction to server-sent events, a.k.a. EventSource. It's like half of WebSockets, but over HTTP! 🤯
 
-Adding server-sent events to Wiki Stumble was pretty straightforward, thanks to a Turbo Streams integration (which doesn't seem to be documented apart from [this PR](https://github.com/hotwired/turbo/pull/415)). All I had to do was add `<turbo-stream-source>` elements, like this:
+Adding server-sent events to Wiki Stumble was pretty straightforward, thanks to a Turbo Streams integration. (It doesn't seem to be documented apart from [this PR](https://github.com/hotwired/turbo/pull/415). Thanks to Ayush Newatia, author of [The Rails and Hotwire Codex](https://railsandhotwirecodex.com/), for pointing me to that PR.)
+
+All I had to do was add `<turbo-stream-source>` elements to the page, like this:
 
 ```html
 <turbo-stream-source src="/next"></turbo-stream-source>
@@ -52,7 +54,7 @@ But on its own, **this isn't enough.** At best, in place of the old article, the
 
 I needed **a buffer** of next articles, preferably *several articles* just in case the user is button-happy and advances to the next article several times in quick succession. The tradeoff is that changes in the user's category preferences won't immediately be reflected in the next articles, but I think the performance gain is worth it.
 
-Since I'm not using a database, this buffer has to be stored on the page itself. I decided to use **hidden inputs** in a form.
+Since I'm not using a database, this buffer has to be stored on the page itself. I decided to use **hidden inputs** in a form. (I also thought about putting the buffer in the session cookie, which already stores the current article and the user's category preferences. But the session cookie isn't big enough to fit all that.)
 
 ## What's actually happening at this point
 
