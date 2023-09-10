@@ -32,7 +32,7 @@ export default class extends Controller {
     let anchor = window.location.hash.substr(1)
     let anchorItem = this.tableTarget.querySelector(`rl-item[item-id='${anchor}']`)
 
-    if (anchorItem !== null) {
+    if (anchor !== '' && anchorItem !== null) {
       anchorItem.classList.add("expanded")
       anchorItem.classList.remove("collapsed")
       anchorItem.scrollIntoView()
