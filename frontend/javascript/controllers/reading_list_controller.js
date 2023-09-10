@@ -32,7 +32,7 @@ export default class extends Controller {
     let anchor = window.location.hash.substr(1)
     let anchorItem = this.tableTarget.querySelector(`rl-item[item-id='${anchor}']`)
 
-    if (anchorItem != null) {
+    if (anchorItem !== null) {
       anchorItem.classList.add("expanded")
       anchorItem.classList.remove("collapsed")
       anchorItem.scrollIntoView()
@@ -96,12 +96,12 @@ export default class extends Controller {
       let byGenre = this.showByGenre(item, selectedGenres)
 
       if (byRating && byGenre) {
-        if (item.parentElement.tagName == "HIDDEN-ITEM-WRAPPER") {
+        if (item.parentElement.tagName === "HIDDEN-ITEM-WRAPPER") {
           // Show the item.
           item.style.display = "block"
           item.parentElement.outerHTML = item.outerHTML
         }
-      } else if (item.parentElement.tagName != "HIDDEN-ITEM-WRAPPER") {
+      } else if (item.parentElement.tagName !== "HIDDEN-ITEM-WRAPPER") {
         // Hide the item.
         item.style.display = "none"
         item.outerHTML = "<hidden-item-wrapper>" + item.outerHTML + "</hidden-item-wrapper>"
@@ -118,7 +118,7 @@ export default class extends Controller {
       if (!starRatingFilter.checked) {
         return true
       } else {
-        if (itemRating == "⭐") {
+        if (itemRating === "⭐") {
           return true
         }
         return false
@@ -133,7 +133,7 @@ export default class extends Controller {
     let itemGenres = Array.from(item.querySelectorAll("rl-genre")).map(genre => genre.textContent)
     let intersection = itemGenres.filter(g => selectedGenres.includes(g.trim()))
 
-    if (intersection.length == 0) {
+    if (intersection.length === 0) {
       return false
     }
     return true
@@ -150,7 +150,7 @@ export default class extends Controller {
           let valueA = itemA.querySelector("rl-" + selectedSort).textContent.trim()
           let valueB = itemB.querySelector("rl-" + selectedSort).textContent.trim()
 
-          if (valueA > valueB || valueA == "in progress")
+          if (valueA > valueB || valueA === "in progress")
             return 1
           else if (valueA < valueB)
             return -1
@@ -192,8 +192,8 @@ export default class extends Controller {
   isDescendant(element, ancestorTagName) {
     let node = element.parentNode
 
-    while (node != null) {
-      if (node.tagName == ancestorTagName) {
+    while (node !== null) {
+      if (node.tagName === ancestorTagName) {
         return true
       }
       node = node.parentNode
@@ -206,8 +206,8 @@ export default class extends Controller {
   expandOrCollapse(event) {
     let clickedTag = event.target.tagName
     let item = event.currentTarget
-    let nameClicked = clickedTag == "A"
-    let notesClicked = clickedTag == "P"
+    let nameClicked = clickedTag === "A"
+    let notesClicked = clickedTag === "P"
 
     if (!nameClicked && !notesClicked) {
       if (item.classList.contains("collapsed")) {
