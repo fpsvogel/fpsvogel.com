@@ -4,7 +4,9 @@ title: My resume
 permalink: /about/
 ---
 
-I'm a web developer and Rubyist, originally self-taught from a humanities teaching background. I'm comfortable across the full stack, building **maintainable and scalable Rails apps** and bringing to life **user-friendly UIs with Hotwire or React**. I love to learn and stretch myself, as you'll see in my projects below!
+I'm a web developer and Rubyist, originally self-taught from a humanities teaching background.
+
+I'm comfortable across the full stack, building **maintainable and scalable Rails apps** and bringing to life **user-friendly UIs with Hotwire or React**. I also love to learn and stretch myself, as you'll see in my projects below!
 
 ## Work
 
@@ -12,7 +14,7 @@ I'm a web developer and Rubyist, originally self-taught from a humanities teachi
 <about-position>Software Engineer <about-date>April 2023 – present</about-date></about-position>
 <about-position>Associate Software Engineer <about-date>Feb. 2022 – March 2023</about-date></about-position>
 
-[**Booster Apps**](https://boosterapps.com/) and [**Rivo**](https://www.rivo.io/) \| *Remote*
+[**Booster Apps**](https://boosterapps.com/) / [**Rivo**](https://www.rivo.io/) \| *Remote*
 <about-position>Tech Support Manager <about-date>July 2021 – Feb. 2022</about-date></about-position>
 <about-position>Tech Support Engineer <about-date>June 2020 – June 2021</about-date></about-position>
 
@@ -22,23 +24,20 @@ I'm a web developer and Rubyist, originally self-taught from a humanities teachi
 
 - Documenting my learning and helping others find resources.
 
-[**This website**](https://fpsvogel.com) \| <small>[GitHub](https://github.com/fpsvogel/blog-2021)</small> \| *Bridgetown, Hotwire (Stimulus + Turbo Drive)* <about-date>2021 – present</about-date>
+[**This website**](https://fpsvogel.com) \| <small>[GitHub](https://github.com/fpsvogel/fpsvogel.com)</small> \| *Bridgetown, Hotwire (Stimulus + Turbo Drive)* <about-date>2021 – present</about-date>
 
 - Blogging on development-related topics.
 - [Featured on the Ruby Rogues podcast](https://topenddevs.com/podcasts/ruby-rogues/episodes/bridgetown-rb-ft-felipe-vogel-ruby-526) for the Bridgetown tutorial that I wrote alongside my site.
 - My Bridgetown tutorial was also [featured in Ruby Weekly](https://rubyweekly.com/issues/561#:~:text=Build%20a%20Static%20Site%20in%20Ruby%20with%20Bridgetown).
 
-[**Wiki Stumble**](https://wikistumble.com/) \| *Roda, Hotwire (Turbo Streams)* <about-date>August 2023</about-date>
+[**Wiki Stumble**](https://wikistumble.com/) \| <small>[GitHub](https://github.com/fpsvogel/wikistumble)</small> \| *Roda, Hotwire (Turbo Streams)* <about-date>August 2023</about-date>
 
 - StumbleUpon meets Wikipedia: discover articles personalized to your likes and dislikes.
 
-[**"Reading" Ruby gem**](https://github.com/fpsvogel/reading) <about-date>2021 – present</about-date>
+[**Reading**](https://github.com/fpsvogel/reading) \| *Ruby gem* <about-date>2021 – present</about-date>
 
 - A parser for plain-text CSV reading logs.
-
-[**"Worlds" Ruby gem**](https://github.com/fpsvogel/worlds-console) <about-date>2023</about-date>
-
-- WIP text-based game.
+- Powers this website's [Reading List](/reading) and [Reading Stats](/reading-stats) pages.
 
 ## Open source contributions
 
