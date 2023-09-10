@@ -4,7 +4,7 @@ title: My resume
 permalink: /about/
 ---
 
-I'm a self-taught Rubyist who in mid-2020 left a career in humanities teaching, got a new day job in tech support, and used my newfound free time to work toward my first developer job.
+I'm a web developer and Rubyist, originally self-taught from a humanities teaching background. I'm comfortable across the full stack, building **maintainable and scalable Rails apps** and bringing to life **user-friendly UIs with Hotwire or React**. I love to learn and stretch myself, as you'll see in my projects below!
 
 ## Work
 

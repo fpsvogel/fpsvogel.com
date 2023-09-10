@@ -5,6 +5,5 @@
 # in the templates via {{ site.metadata.myvariable }}.
 
 title: Felipe Vogel
-tagline: Self-taught Rubyist
 email: fps.vogel@example.com
-description: A former humanities teacher and now second-career Ruby developer sharing resources for learning Ruby and Rails, building tools for tracking my reading, and reflecting on lessons learned in software development.
+description: Web developer and Rubyist, originally from a humanities teaching background. I blog about coding projects that I do for fun and to learn new things.
