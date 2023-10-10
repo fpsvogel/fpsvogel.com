@@ -28,7 +28,7 @@ These are in addition to the apps and hacks I recommended [in my previous post o
 - [BetterTouchTool](https://folivora.ai) is the only way I could solve the problem of MacOS keyboard shortcuts that I don't use, can't be customized, and conflict with useful app shortcuts, such as <kbd>Cmd</kbd> + <kbd>H</kbd> (`Hide window` in MacOS, `History` in Firefox). With BetterTouchTool, I can remap these to "No Action", so that they're usable in apps.
   - BetterTouchTool is a great shortcut app in general, too. For me it has completely replaced Keyboard Maestro, which I used last year.
 - [Espanso](https://espanso.org) too has replaced Keyboard Maestro in the other way I used it—for snippets. Espanso is cross-platform, so I can effortlessly keep my snippets in sync between my Mac and my PC.
-- [Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html) (for my recently-acquired [Logitech MX Master 3s](https://www.logitech.com/en-us/products/mice/mx-master-3s.html)) has replaced SteerMouse for customizing mouse speed and scrolling.
+- ~~[Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html) (for my recently-acquired [Logitech MX Master 3s](https://www.logitech.com/en-us/products/mice/mx-master-3s.html)) has replaced SteerMouse for customizing mouse speed and scrolling.~~ ***UPDATE:** I'm back to SteerMouse because every time the mouse pointer disappears (while typing), Logi Options+ apparently reverts to the default (slow) pointer speed, and when I move the mouse again it takes a second to switch back to my preferred fast pointer speed.*
 
 ## Conclusion that's longer than the post: joy using my (non-)Mac
 
