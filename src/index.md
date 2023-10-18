@@ -4,7 +4,7 @@ layout: home
 
 I'm Felipe, teacher-turned-developer.
 
-Take a look at [my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby) if you're an aspiring developer and/or interested in Ruby. Helping beginners is one goal of my blog here, but it's equally a place where I reflect on what and and how I'm learning.
+This site is where reflect on what I'm learning and how. Usually I write about Ruby programming, often with beginners in mind. See also [my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby).
 
 ### Recent posts
 
