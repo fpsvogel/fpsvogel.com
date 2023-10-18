@@ -1,10 +1,10 @@
 ---
 layout: page
-title: My resume
+title: About me
 permalink: /about/
 ---
 
-I'm a web developer and Rubyist, originally self-taught from a humanities teaching background.
+I'm Felipe Vogel, a web developer and Rubyist. Originally I was self-taught from a humanities teaching background.
 
 I'm comfortable across the full stack, building **maintainable and scalable Rails apps** and bringing to life **modern, user-friendly UIs with Hotwire or React**. I also love to learn and stretch myself!
 
@@ -18,15 +18,19 @@ I'm comfortable across the full stack, building **maintainable and scalable Rail
 <about-position>Tech Support Manager <about-date>July 2021 – Feb. 2022</about-date></about-position>
 <about-position>Tech Support Engineer <about-date>June 2020 – June 2021</about-date></about-position>
 
-## Learning projects
+## Personal projects
 
 [**"Learn Ruby" resource list**](https://github.com/fpsvogel/learn-ruby) <about-date>2020 – present</about-date>
 
 [**This website**](https://fpsvogel.com) \| <small>[GitHub](https://github.com/fpsvogel/fpsvogel.com)</small> \| *Bridgetown, Hotwire (Stimulus + Turbo Drive)* <about-date>2021 – present</about-date>
 
+[**Exercism (contributions)**](https://github.com/exercism/ruby/pulls?q=author:fpsvogel) \| *Ruby exercises* <about-date>2023</about-date>
+
+[**Exercism (mentoring)**](https://exercism.org/profiles/fps-vogel/testimonials) \| *Ruby track* <about-date>2023</about-date>
+
 [**Wiki Stumble**](https://wikistumble.com/) \| <small>[GitHub](https://github.com/fpsvogel/wikistumble)</small> \| *Roda, Hotwire (Turbo Streams)* <about-date>August 2023</about-date>
 
-[**Reading**](https://github.com/fpsvogel/reading) \| *Ruby gem* <about-date>2021 – present</about-date>
+[**Reading**](https://github.com/fpsvogel/reading) \| *Ruby gem* <about-date>2021 – 2023</about-date>
 
 ## Open source contributions
 
