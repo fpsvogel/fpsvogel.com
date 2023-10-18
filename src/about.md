@@ -32,12 +32,6 @@ I'm comfortable across the full stack, building **maintainable and scalable Rail
 
 [**Reading**](https://github.com/fpsvogel/reading) \| *Ruby gem* <about-date>2021 – 2023</about-date>
 
-## Open source contributions
-
-[**Bridgetown**](https://github.com/bridgetownrb/bridgetown/pulls?q=author:fpsvogel) \| *Ruby 3* <about-date>Jan. 2022</about-date>
-
-[**Circulate (Ruby for Good)**](https://github.com/rubyforgood/circulate/pulls?q=author:fpsvogel) \| *Rails 6, RSpec, Factory Bot* <about-date>Dec. 2021</about-date>
-
 ## Education
 
 M.A. in Classical Studies \| *University of Kentucky* <about-date>2014 – 2017</about-date>
