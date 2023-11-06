@@ -6,13 +6,18 @@ permalink: /about/
 
 I'm Felipe Vogel, a web developer and Rubyist. Originally I was self-taught from a humanities teaching background.
 
-I'm comfortable across the full stack, building **maintainable and scalable Rails apps** with **modern, user-friendly UIs with Hotwire or React**. I love deepening my skills and helping others do the same.
+I'm comfortable across the full stack, building **scalable and maintainable Rails apps** with **modern, user-friendly UIs**. I love deepening my skills and helping others do the same.
 
 ## Work
 
 [**Sana Benefits**](https://sanabenefits.com/) \| *Remote*
 <about-position>Software Engineer <about-date>April 2023 – October 2023</about-date></about-position>
 <about-position>Associate Software Engineer <about-date>Feb. 2022 – March 2023</about-date></about-position>
+
+- Built full-stack features in a Rails 7 + React app for managing health insurance.
+- Automated the insurance renewal process, cutting renewal times in half.
+- Optimized background jobs heavy on DB queries, reducing their runtime from minutes to seconds and improving their reliability.
+- Started a weekly engineering book club.
 
 [**Booster Apps**](https://boosterapps.com/) / [**Rivo**](https://www.rivo.io/) \| *Remote*
 <about-position>Tech Support Manager <about-date>July 2021 – Feb. 2022</about-date></about-position>
