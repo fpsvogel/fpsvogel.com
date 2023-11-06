@@ -4,7 +4,7 @@ layout: home
 
 I'm Felipe, teacher-turned-developer.
 
-This site is where reflect on what I'm learning and how. Usually I write about Ruby programming, often with beginners in mind. See also [my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby).
+This site is where I reflect on what I'm learning and how. Usually I write about Ruby programming. You may also be interested in my ["Learn Ruby"](https://github.com/fpsvogel/learn-ruby) resource list.
 
 ### Recent posts
 
