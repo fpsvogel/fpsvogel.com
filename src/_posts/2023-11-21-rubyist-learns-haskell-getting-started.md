@@ -1,10 +1,11 @@
 ---
 title: A Rubyist learns Haskell, part 1
 subtitle: not so different after all?
-description: First impressions of Haskell, including surprising points of connection with Ruby and, on the other hand,  utter and mind-blowing differences.
+description: First impressions of Haskell, including surprising similarities with Ruby and, of course, the mind-blowing differences of OOP vs. functional programming.
 ---
 
-- [Why Haskell?](#why-haskell)
+- [How?](#how)
+- [But *why*?](#but-why)
 - [Not so different from Ruby after all?](#not-so-different-from-ruby-after-all)
   - [Consistency of language design](#consistency-of-language-design)
   - [Elegant syntax](#elegant-syntax)
@@ -14,11 +15,17 @@ description: First impressions of Haskell, including surprising points of connec
   - [An entirely different paradigm](#an-entirely-different-paradigm)
 - [Coming next](#coming-next)
 
-Recently I *almost* decided to learn Java to widen my career prospects. Here's proof:
+Lately a question has been on my mind, a classic for programmers:
 
-![A screenshot from a message in the Ruby on Rails Link Slack community, where I ask if anyone has experience working with Java and what that's like.](/images/slack-java-question.png)
+*"What language should I learn next?"*
 
-Thankfully, I ended up reeling back in disgust and thinking, ***"You know, what the heck, I'll learn Haskell."*** No job prospects there, but… eh, who cares.
+More specifically: *"A language that **has jobs**, or one that I would **actually enjoy**?"*
+
+I struck a good balance a few years ago when I taught myself Ruby along with front-end basics, which I enjoy a lot *and* got me hired as an entry-level engineer. In fact, I'd be happy spending the next ten years writing Ruby for fun and profit.
+
+So this time I threw employability out the window *completely* and chose **Haskell**.
+
+## How?
 
 I'm starting with [the Haskell Wikibook](https://en.m.wikibooks.org/wiki/Haskell), supplemented (of course) by…
 
@@ -30,19 +37,19 @@ I'm starting with [the Haskell Wikibook](https://en.m.wikibooks.org/wiki/Haskell
 
 Yep, this is going to be great.
 
-Despite the embarrassment that I'll probably feel later on as I look back on this amateur and uninformed post, I feel it's important to write down my first impressions as I begin my Haskell adventure.
+Despite the embarrassment that I'll probably feel later when I look back on this amateur and uninformed post, I feel it's important to write down my first impressions as I begin my Haskell adventure.
 
-## Why Haskell?
+## But *why*?
 
-Because it's *different*. Ruby is quintessentially object-oriented, whereas Haskell is quintessentially functional.
+Because Haskell is *different*. Ruby is quintessentially object-oriented, whereas Haskell is quintessentially functional.
 
 (*I know*, that's an oversimplification: Ruby's diverse influences include functional languages of yore, and apparently [OOP is discussed without disdain](https://well-typed.com/blog/2018/03/oop-in-haskell/) in some corners of the Haskell world.)
 
 Why learn something so different? It's **not to forget about Ruby and OOP**, but to *write better Ruby* by using a functional approach wherever it makes sense, and to use functional-friendly tools like [dry-rb](https://dry-rb.org/) and [Hanami](https://hanamirb.org/) more effectively.
 
-It won't always be easy to bridge the conceptual gap between these two paradigms, and bring lessons from one into the other, but I think the effort will be a worthwhile.
+It won't always be easy to bridge the conceptual gap between these two paradigms, so I braced myself for the initial shock of diving into Haskell.
 
-But I've been pleasantly surprised in these early days at how often something in Haskell felt familiar to me, coming from Ruby.
+But I've been pleasantly surprised in these early days at how often something in Haskell felt **familiar** to me, coming from Ruby.
 
 ## Not so different from Ruby after all?
 
@@ -50,7 +57,7 @@ But I've been pleasantly surprised in these early days at how often something in
 
 The snobbishness of its devotees is not Haskell's only similarity with Ruby. In fact, I've sensed **an odd kinship** between these languages that are in many ways on opposite ends of the spectrum. Maybe it's because they take their opposite approaches with **a similar purity or single-mindedness**. Here's an example.
 
-In Ruby, everything is an object. So `2 == 2` is the syntactic sugar for `2.==(2)`. The number `2` (believe it or not) is an object that has the method `==`.
+In Ruby, everything is an object. So `2 == 2` is the syntactic sugar for `2.==(2)`. The number `2`, as any Rubyist knows, is an object that has the method `==`.
 
 In Haskell, functions are everywhere. So `2 == 2` is syntactic sugar for `(==) 2 2`. Here, `==` is just a function.
 
@@ -59,6 +66,8 @@ In both cases, `==` is not a language keyword but a natural outgrowth of the lan
 As Victor Shepelev noted in [a recent article](https://zverok.substack.com/i/138314697/irks-and-quirks),
 
 > A lot of things that in other languages are represented by separate grammar elements, in Ruby, are just methods calls on objects.
+
+I'm wondering if something similar could be said of Haskell and functions.
 
 ### Elegant syntax
 
@@ -105,7 +114,7 @@ mySignum x | x < 0 = -1 | x > 0 = 1 | otherwise = "zero"
 
 An error comes up if you try to define this function, because the compiler wants all the possible return values to be of the same type.
 
-The solution (if there is one) would involve defining an explicit type signature. I say "explicit" because all the above examples of the `mySignum` function have an *inferred* type signature. If you open up the Haskell REPL and enter one of the valid definitions of `mySingum` from the previous section, you can then enter `:t mySignum` and the inferred type is displayed:
+The solution (as far as I understand it) would involve defining an explicit type signature. I say "explicit" because all the above examples of the `mySignum` function have an *inferred* type signature. If you open up the Haskell REPL and enter one of the valid definitions of `mySingum` from the previous section, you can then enter `:t mySignum` and the inferred type is displayed:
 
 ```haskell
 mySignum :: (Ord a1, Num a1, Num a2) => a1 -> a2
