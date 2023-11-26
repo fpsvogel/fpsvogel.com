@@ -107,9 +107,9 @@ Here are a few different implementations, with benchmarks. There are also a coup
 
 **Notes:**
 
-- `reduce_deep_fetch` (#4) is the most idiomatic and flexible implementation, so it's probably what you should use.
-- `while_deep_fetch` (#3) is for you if you want to ~~sell your soul~~ trade idiomatic Ruby for a bit of extra speed.
-- `case_deep_fetch` (#2) throws aesthetics and flexibility *completely* out the window because it's implemented with a case statement, and it can only dig as deep as the case statement is tall. But in my project I don't foresee ever needing to dig more than four levels into a hash, so for me it's perfect 🌟 Best of all, my tests don't run any slower now than they used to. But please don't copy me. That case statement is truly ugly.
+- `reduce_deep_fetch` (#4) is the most idiomatic and flexible implementation, so it's what I chose in the end. In my case, there was no noticeable performance difference between this and the other two. For the difference to be noticeable, my Ruby app would have to be doing millions of deep fetches.
+- `while_deep_fetch` (#3) is for you if you want to ~~sell your soul~~ trade idiomatic Ruby for a bit of extra benchmark speed.
+- `case_deep_fetch` (#2) throws aesthetics and flexibility *completely* out the window because it's implemented with a case statement, and it can only dig as deep as the case statement is tall.
 
 ## Moral of the story
 
