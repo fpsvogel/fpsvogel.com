@@ -1,0 +1,11 @@
+# Re-build and deploy weekly to sync the Reading page to my reading.csv file.
+name: Deploy to Netlify
+on:
+  schedule:
+    # Every Tuesday at midnight. See https://crontab.guru
+    - cron: '0 0 * * TUE'
+jobs:
+  post_to_netlify_deploy_hook:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -X POST -d {} ${{ secrets.DEPLOY_HOOK_URL }}
