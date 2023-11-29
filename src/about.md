@@ -4,39 +4,15 @@ title: About me
 permalink: /about/
 ---
 
-I'm Felipe Vogel, a web developer and Rubyist. Originally I was self-taught from a humanities teaching background.
+Howdy! I'm Felipe Vogel, software engineer and Rubyist.
 
-I'm comfortable across the full stack, building **scalable and maintainable Rails apps** with **modern, user-friendly UIs**. I love deepening my skills and helping others do the same.
+I'm a full-stack developer who relishes the multi-faceted challenges of architecting a scalable and maintainable back end with an intuitive, delightful UI.
 
-## Work
+I also love fostering a culture of learning in engineering teams, as well as mentoring at places like [Exercism](https://exercism.org/profiles/fpsvogel/testimonials).
 
-[**Sana Benefits**](https://sanabenefits.com/) \| *Remote*
-<about-position>Software Engineer <about-date>April 2023 – October 2023</about-date></about-position>
-<about-position>Associate Software Engineer <about-date>Feb. 2022 – March 2023</about-date></about-position>
+Fun facts about me:
 
-- Built full-stack features in a Rails 7 + React app for managing health insurance.
-- Automated the insurance renewal process, cutting renewal times in half.
-- Optimized background jobs heavy on DB queries, reducing their runtime from minutes to seconds and improving their reliability.
-- Started a weekly engineering book club.
-
-[**Booster Apps**](https://boosterapps.com/) / [**Rivo**](https://www.rivo.io/) \| *Remote*
-<about-position>Tech Support Manager <about-date>July 2021 – Feb. 2022</about-date></about-position>
-<about-position>Tech Support Engineer <about-date>June 2020 – June 2021</about-date></about-position>
-
-## Personal projects
-
-**Exercism** ([**mentoring**](https://exercism.org/profiles/fpsvogel/testimonials) and [**contributions**](https://github.com/exercism/ruby/pulls?q=author:fpsvogel)) \| *Ruby track* <about-date>2023</about-date>
-
-[**The Agency of Learning**](https://agencyoflearning.com) (member) \| <about-date>November 2023 – present</about-date>
-
-[**Wiki Stumble**](https://wikistumble.com/) \| <small>[GitHub](https://github.com/fpsvogel/wikistumble)</small> \| *Roda, Hotwire (Turbo Streams)* <about-date>August 2023</about-date>
-
-[**"Learn Ruby" resource list**](https://github.com/fpsvogel/learn-ruby) <about-date>2020 – present</about-date>
-
-[**This website**](https://fpsvogel.com) \| <small>[GitHub](https://github.com/fpsvogel/fpsvogel.com)</small> \| *Bridgetown, Hotwire (Stimulus + Turbo Drive)* <about-date>2021 – present</about-date>
-
-## Education
-
-M.A. in Classical Studies \| *University of Kentucky* <about-date>2014 – 2017</about-date>
-
-B.A. in English Literature \| *LeTourneau University* <about-date>2010 – 2014</about-date>
+- **I used to be a humanities teacher** in a former career that took me all the way to West Africa.
+- **I grew up in Brazil** in southern Amazonia, regularly living with the Jarawara indigenous people (whose village you can see [on Google Maps](https://maps.app.goo.gl/RiiDxSkuyz9ATJpL7)—be sure to switch to satellite view).
+- **I'm a big Latin nerd.** In grad school, I got to take most of my classes in Latin and lived in the *domus Latina* (Latin house), where we spoke only Latin except when we had guests… which, as you might guess, was rare.
+- **My favorite "just for fun" books** are [*What If?*](https://what-if.xkcd.com/) and [*William Shakespeare's Star Wars*](https://iandoescher.com/william-shakespeares-star-wars/).
