@@ -35,7 +35,7 @@ I found most of my job leads in the [Ruby on Rails Link](https://www.rubyonrails
 
 ## My job search: a bird's-eye view
 
-Over two months, I applied to seven companies. Most were startups, and only one of them (thoughtbot) is widely known in the Ruby community. I got an interview at six out of the seven companies. In five of them I moved past the first interview.
+Over two months, I applied to seven companies, most of them startups. I got a first-step interview or recruiter screening at six of those companies, and in five of them I moved forward to next steps.
 
 (In the one where I didn't move past the first interview, it was because I asked about the salary range and it was too low—or rather, the interviewer did the classic "Well, what do YOU want to be paid?" and my answer was evidently far beyond what they thought reasonable.)
 
