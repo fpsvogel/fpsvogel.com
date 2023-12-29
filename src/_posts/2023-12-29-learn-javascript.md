@@ -35,7 +35,11 @@ Oh, and speaking of *my last job*—recently I was laid off as part of a massive
 
 Being unemployed and **seeing so many jobs involving a JS front end**—that's ultimately what gave me the push I needed to get serious about JS.
 
-That's what I mean when I say JS is "inescapable": not that we can't build anything without it—in fact, I quite enjoy making sites with minimal JS and plenty of dynamic interactivity. I only mean that **JS skills are mandatory for someone like me** who has only a few years of experience, and therefore fewer job options. Even if I *could* find a backend-only position (which is doubtful), I'm not sure I want to pigeonhole myself like that. Plus, I really do enjoy full-stack development.
+That's what I mean when I say JS is "inescapable": not that we can't build anything without it—in fact, I quite enjoy making sites with minimal JS and plenty of interactivity. I only mean that **JS skills are mandatory for someone like me** who has only a few years of experience, and therefore fewer job options. Even if I *could* find a backend-only position (which is doubtful), I'm not sure I want to pigeonhole myself like that.
+
+Plus, I really do enjoy full-stack development. And even if in some utopian universe I were able to land a full-stack position using some of the above-mentioned libraries instead of a heavy JS front end, it would still be important to understand what's going on behind the scenes. After all, those libraries are JS that's running on the page allowing my non-JS code to do cool, interactive things.
+
+So many reasons to learn JS!
 
 ## How?
 
