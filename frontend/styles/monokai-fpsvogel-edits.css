@@ -39,12 +39,18 @@ html:root {
 .highlight .sr { color: var(--code-purple) } /* regex */
 .highlight .se { color: var(--code-purple) } /* escaped characters */
 
-/* NON-RUBY */
+/* JS */
 .highlight .nl { color: var(--code-cyan) } /* JSON key */
-/* JSON value */
 .language-json .highlight .s1, .language-json .highlight .s2 {
-  color: var(--code-text);
+  color: var(--code-text); /* JSON value */
 }
+.highlight .kd { color: var(--code-red) } /* const, let, var */
+.highlight .nx { color: var(--code-text) } /* variable names */
+.language-js .highlight .na { color: var(--code-cyan) } /* object literal keys */
+.language-js .highlight .na + .p { color: var(--code-cyan) } /* object literal key colon */
+.highlight .dl { color: var(--code-green) } /* string quotes */
+
+/* OTHER */
 .highlight .na { color: var(--code-gray) } /* XML version= */
 .highlight .nt { color: var(--code-green) } /* XML tag */
 /* XML value */
