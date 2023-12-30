@@ -76,7 +76,7 @@ Here's the advice I would give myself if I could go back in time to the beginnin
   - If there isn't a Ruby meetup in your area, consider starting one!
   - Other (non-Ruby) local developer meetups are also worth looking into.
 - **Post regularly on LinkedIn.** I'm posting tips from my job search (the content of this post) as well as a "Reasons to hire me" series of posts—essentially, glimpses into my accomplishments.
-  - Also make sure to like and comment on other people's posts, including people you don't know personally. In fact, one way to expand your network is to interact with posts in your sub-field. For example, here are search results for posts from the past 24 hours [for "#ruby #rubyonrails"](https://www.linkedin.com/search/results/content/?datePosted="past-24h"&keywords=%23ruby %23rubyonrails) and [for "ruby rails"](https://www.linkedin.com/search/results/content/?datePosted="past-24h"&keywords=ruby rails).
+  - Also make sure to like and comment on other people's posts, including people you don't know personally.
 - **Leverage your existing network.** The steps below are an alternative to cold-applying to companies where you don't know anyone, but it can be even more effective to stay in touch or reconnect with people you *already know*. To some extent this will happen naturally as you post on LinkedIn, but you can also be proactive: message old acquaintances and schoolmates who might know of jobs, write former co-workers a LinkedIn recommendation—do whatever feels right in each particular relationship.
 
 ## Embracing networking: the routine
@@ -97,7 +97,7 @@ In my day-to-day I spend most of my time on the points above, but when it comes 
 
 Once I've found an interesting job posting or company (with or without an open position), here's what I do.
 
-These steps (apart from the last one in B.) don't apply to opportunities given by a recruiter, because the recruiter *is* your initial connection.
+These steps (apart from the last one in B.) probably don't apply to opportunities given by a recruiter, because the recruiter *is* your initial connection.
 
 The first step is to use [LinkedIn search](https://www.linkedin.com/search/results/people) to get a list of people who work at that company.
 
@@ -134,9 +134,10 @@ What if you don't have any connections at the company, or if you do but you want
 When your networking pays off and you're chugging along in the interview process, here are some tips to keep in mind:
 
 - **Explain your thinking in the coding exercise.** In a live coding exercise, be sure to *constantly communicate* what you're thinking, and why you're doing what you're doing. If it's a take-home assignment, include a "Design choices" section in the README which explains your reasoning, including tradeoffs that you made, alternatives that you didn't choose, and in what scenarios those would've made more sense.
+- **Write notes on the list of interview topics**, if they’re sent to you ahead of time. Brainstorm and pick out a few memorable stories that you could share in each interview.
+- **Do research to fill any knowledge gaps**, whether on the list of interview topics or in general areas where you've felt a lack of confidence in interviews. For example, over the past few months I've improved my JS skills since I hadn't learned it as systematically as Ruby.
 - **Get plenty of sleep** in the days leading up to interviews.
 - **Look up the interviewers on LinkedIn, if you have their names.** You might get ideas on what's important to them and what you can bring up in the conversation.
-- **Write notes on the list of interview topics**, if they’re sent to you ahead of time. Brainstorm and pick out a few memorable stories that you could share in each interview. And of course, do some research to fill any knowledge gaps relating to the topics.
 - **Send a thank-you note after each interview.** Again, you'll have to sign up for LinkedIn Premium to send these messages, unless you've already connected on LinkedIn.
 - **Thank each interviewer one more time at the end**, whether you get a rejection email or a job offer. This last contact can be an extra springboard to something in the future, and you might even get new information.
   - For example, I recently sent a final round of thank-yous after a rejection, and I made sure to say *"You can expect to hear from me again! 😁"* because of how interested I am in the company. One of the interviewers replied by saying they really liked me, but that I was facing stiff competition (in the end they decided on someone with 16 years of experience), and that they'd keep me in mind when they have openings in the future.
