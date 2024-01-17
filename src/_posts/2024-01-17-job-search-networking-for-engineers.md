@@ -1,7 +1,7 @@
 ---
 title: Job networking for developers
 subtitle: notes from a job hunt
-description: A Ruby on Rails job search has taught me that in 2023, cold applications are ineffective compared to networking (connections, references, recruiters).
+description: A Ruby on Rails job search has taught me that in 2024, cold applications are ineffective compared to networking (connections, references, recruiters).
 ---
 
 - [Applying for jobs: a waste of time](#applying-for-jobs-a-waste-of-time)
@@ -33,7 +33,7 @@ So I jumped into action with my tried-and-true approach: doing new projects to p
 
 Which means that my old strategy **completely failed**.
 
-Welcome to 2023, where it seems like half of your friends in tech are laid off, and companies ignore the ensuing flood of cold applications in favor of personal connections.
+Welcome to 2023-24, where it seems like half of your friends in tech are laid off, and companies ignore the ensuing flood of cold applications in favor of personal connections.
 
 ## Setting aside my objections to greasing the wheels
 
