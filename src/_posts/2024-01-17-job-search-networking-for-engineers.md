@@ -1,7 +1,7 @@
 ---
 title: Job networking for developers
 subtitle: notes from a job hunt
-description: A Ruby on Rails job search has taught me that in 2024, cold applications are ineffective compared to networking (connections, references, recruiters).
+description: A Ruby on Rails job search has taught me that in 2024, cold applications are ineffective compared to networking (connections, referrals, recruiters).
 ---
 
 - [Applying for jobs: a waste of time](#applying-for-jobs-a-waste-of-time)
@@ -11,7 +11,7 @@ description: A Ruby on Rails job search has taught me that in 2024, cold applica
   - [1. Finding an opportunity](#1-finding-an-opportunity)
   - [2. Making a connection](#2-making-a-connection)
     - [A. Find someone who can refer you](#a-find-someone-who-can-refer-you)
-    - [B. Talk to someone in order to set yourself apart without a reference](#b-talk-to-someone-in-order-to-set-yourself-apart-without-a-reference)
+    - [B. Talk to someone in order to set yourself apart without a referral](#b-talk-to-someone-in-order-to-set-yourself-apart-without-a-referral)
 - [Conclusion: does it work?](#conclusion-does-it-work)
 - [BONUS: after the recruiter screening](#bonus-after-the-recruiter-screening)
 
@@ -29,7 +29,7 @@ Actually, I'd already started my job search several weeks before the layoffs. I 
 
 So I jumped into action with my tried-and-true approach: doing new projects to put on my resume, submitting job applications, and waiting for the interviews to roll in.
 
-… Except the interviews *didn't* roll in. In fact, after two months and dozens of applications, I'd gotten only *one* positive response, and that one doesn't even count as my tried-and-true approach because I had an extra advantage, a reference from someone I know in the company.
+… Except the interviews *didn't* roll in. In fact, after two months and dozens of applications, I'd gotten only *one* positive response, and that one doesn't even count as my tried-and-true approach because I had an extra advantage, a referral from someone I know in the company.
 
 Which means that my old strategy **completely failed**.
 
@@ -117,7 +117,7 @@ Of course, this is easiest when it's a 1st-degree connection, but here are a cou
 
 What if you don't have any connections at the company? Or you do have connections, but you want to give your application an extra "oomph"? That's where the next approach comes into play.
 
-#### B. Talk to someone in order to set yourself apart without a reference
+#### B. Talk to someone in order to set yourself apart without a referral
 
 1. In LinkedIn search results for people who work at that company, look for engineering managers or other leaders in product/engineering.
   - Avoid directly contacting talent/recruiting staff. From what I hear, they are understaffed these days, so you have a better chance at having a meaningful conversation with engineering management.
@@ -128,7 +128,7 @@ What if you don't have any connections at the company? Or you do have connection
     - *Hey \_\_\_\_\_, I saw the open engineering position at \_\_\_\_\_, and I think I'd be a great fit but I have a few questions. Who should I talk to about that? I used to be a teacher and I love mentoring others, especially aspiring second-career developers. So \_\_\_\_\_'s mission really resonates with me. Let me know if you want me to send you my resume. Thanks!*
     - *Hi \_\_\_\_\_, I saw \_\_\_\_\_'s open backend engineer role, and I have a few questions about it. Would you be open to talking about it, or could you point me to someone who might be? I love your LinkedIn bio, by the way. "\_\_\_[a bit from their bio]\_\_\_" and "\_\_\_[another bit]\_\_\_". I heartily agree! If other engineers at \_\_\_\_\_ also take that approach, then I would definitely fit in there.*
 3. You might be asked to apply, in which case you should go ahead and do so.
-  - If you happen to have a 1st-degree connection at the company, be sure to ask them for a reference *before* you apply, in case you need a special application link from them.
+  - If you happen to have a 1st-degree connection at the company, be sure to ask them for a referral *before* you apply, in case you need a special application link from them.
   - What about cover letters? Many applications have an optional space for them. I've heard mixed advice, but I myself write a cover letter only if I have something really memorable to say.
   - So now you've submitted the application. You might be thinking, *"What did I do all that extra work for, if in the end I'm applying for the job just the same?"* The difference is that **now you're not just another random applicant among hundreds**, and the personal connection you've established (small as it may be) will help set you apart.
 4. Here's another way to use 2nd-degree connections. At some point early in the interview process, ask your friends who know those 2nd-degree connections to ask them to mention your name to the hiring manager. The more your name comes up, the better.
