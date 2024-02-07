@@ -34,7 +34,7 @@ Here's a demonstration (slightly exaggerated) of the simultaneous input/output w
 
 ## Getting some output
 
-Before we tackle simultaneous input, let's set up some output. Below are the `Runner` class containing our game loop but slightly modified, and the `Updater` class which reacts to input (echoing it) and updates game state (a timer that generates a message every second).
+Before we tackle simultaneous input, let's set up some output. Below are the `Runner` class containing our simple game loop from above but now slightly modified, and the `Updater` class which reacts to input (echoing it) and updates game state (a timer that generates a message every second).
 
 ```ruby
 class Runner

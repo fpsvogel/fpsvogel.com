@@ -2,6 +2,7 @@
 title: Solo RPGs as creative writing practice
 subtitle: overcoming my inhibitions
 description: If you're clumsy at writing fiction or making up stories, solo role-playing games may be the inhibition-freeing creative practice you've been looking for.
+updated: 2024-02-07
 ---
 
 - [How I discovered solo TTRPGs](#how-i-discovered-solo-ttrpgs)
@@ -39,7 +40,7 @@ As it turns out, **yes** and **yes** and **probably not**!
 
 After an epic journey of discovery, which started at [/r/Solo_Roleplaying](https://www.reddit.com/r/Solo_Roleplaying), I now present to you my findings on solo TTRPGs.
 
-Note that the titles I mention here are not the *most popular* TTRPGs, just the ones that I myself find most interesting. A few minutes perusing the subreddit will tell you which ones are most popular. (Or I could just tell you that it's [*Ironsworn*](https://www.ironswornrpg.com).)
+Note that the titles I mention here are not the *most popular* TTRPGs, just the ones that I myself find most interesting. A few minutes perusing the subreddit will show you which ones are most popular. (Or I could just tell you that it's [*Ironsworn*](https://www.ironswornrpg.com).)
 
 And if you want a high-level overview, watch ["A Beginner's Guide to Solo Role Playing (solo RPGs)"](https://www.youtube.com/watch?v=iYHt1pdScK0).
 
@@ -65,13 +66,14 @@ Here are some other TTRPGs that I've bookmarked for later:
 - [*Pendragon*](https://en.wikipedia.org/wiki/Pendragon_(role-playing_game)) is very *crunchy* (as the more numbers-heavy games are described), but I just can't resist its detailed literary-historical setting.
 - *Dungeon Hero* ([Vol. 1](https://lonespelunker.itch.io/dungeon-hero), [Vol. 2](https://lonespelunker.itch.io/dungeon-hero-volume-2), [Vol. 3](https://lonespelunker.itch.io/dungeon-hero-volume-3-bump-in-the-night)) and its successor [*Welcome Aboard, Captain*](https://lonespelunker.itch.io/welcome-aboard-captain) are two other games designed for solo play, these even simpler than *ALONe* and more game-like.
 - [*The Storymaster's Tales*](https://www.storymasterstales.com) is a good option for introducing kids to TTRPGs.
-- [*Alone among the Stars*](https://noroadhome.itch.io/alone-among-the-stars) (or [an online version](https://adnroy.itch.io/alone-among-the-stars-twine-version)) and [*Thousand Year Old Vampire*](https://thousandyearoldvampire.com/products/thousand-year-old-vampire-pdf-only) are popular *journaling games*, which are closer to pure creative writing practice, and tied to a specific theme or setting.
+- [*Space Aces: Voyages in Infinite Space*](https://www.etsy.com/listing/1646603705/space-aces-voyages-in-infinite-space) is another good one for kids, and for the galaxy-exploring kid inside me.
+- [*For Small Creatures Such As We*](https://www.kickstarter.com/projects/diamondblood/for-small-creatures-such-as-we) is an upcoming *journaling game*, which is closer to pure creative writing.
 - [*Microscope*](https://www.lamemage.com/microscope) as a world-building tool. Solo resources for it:
   - [Lens](https://docs.google.com/document/d/1isWrSPL417PN6eSCYQmxKnFxPXQUn9IjZW4W2xfToDc)
   - [Videos by Clare C. Marshall](https://www.youtube.com/watch?v=q4h9Yg1UWjY)
   - [Blog post](https://whyigame.wordpress.com/2018/01/14/solo-rp-microscope-rpg)
   - Series of posts: [1](https://web.archive.org/web/20170107021652/http://www.risusmonkey.com/2011/03/solo-gaming-on-long-flight.html), [2](https://web.archive.org/web/20160330173740/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-2-first-pass.html), [3](https://web.archive.org/web/20160330172817/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-3-making.html), [4](https://web.archive.org/web/20160330173127/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-4-making.html)
-- Other worldbuilding games: [*Mappa Imperium*](https://nookrium.itch.io/mappa-imperium), [*Artefact*](https://mouseholepress.itch.io/artefact) (try it alongside [*The Kleptogoblicon*](https://perchance.org/kleptogoblicon)), [*DELVE*](https://www.blackwellwriter.com/en-us/products/delve-a-solo-map-drawing-game)/[*UMBRA*](https://www.blackwellwriter.com/en-us/products/umbra-a-game-of-final-frontiers), [*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) (has a worldbuilding element).
+- Other worldbuilding games: [*Mappa Imperium*](https://nookrium.itch.io/mappa-imperium), [*Foundations*](https://biglizardgames.itch.io/foundations), [*Cartograph*](https://www.kickstarter.com/projects/ravensridge/cartograph-atlas-edition-a-solo-mapmaking-ttrpg) [*Artefact*](https://mouseholepress.itch.io/artefact) (try it alongside [*The Kleptogoblicon*](https://perchance.org/kleptogoblicon)), [*DELVE*](https://www.blackwellwriter.com/en-us/products/delve-a-solo-map-drawing-game)/[*UMBRA*](https://www.blackwellwriter.com/en-us/products/umbra-a-game-of-final-frontiers), [*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) (has a worldbuilding element).
 
 ## Solo role-playing tools
 

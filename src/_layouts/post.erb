@@ -13,7 +13,7 @@ layout: default
     } %>
   </h3>
   <small class="lowlighted">
-    <%= resource.date.strftime("%B %e, %Y") %> · <%= resource.data.author %> ·
+    <%= resource.date.strftime("%B %e, %Y") %> <%= "(updated #{resource.data.updated.strftime("%B %e, %Y")})" if resource.data.updated %> · <%= resource.data.author %> ·
   </small>
 
   <input type="checkbox" id="toc" />

@@ -2,25 +2,83 @@
 title: Building a text-based game
 subtitle: convincing myself it's not a dumb idea
 description: The text-based game is old. But could it have unique potential for interactive fiction set in an open-world sandbox RPG?
+updated: 2024-02-07
 ---
 
-- [Answering my inner critic](#answering-my-inner-critic)
-- [Text-based games, old and new](#text-based-games-old-and-new)
-- [… and why they're not what I have in mind](#-and-why-theyre-not-what-i-have-in-mind)
+- [What *are* text-based games?](#what-are-text-based-games)
+- [Trying out the sub-genres](#trying-out-the-sub-genres)
 - [So what game *do* I want to make?](#so-what-game-do-i-want-to-make)
-- [My inner critic's last assault, and my "why"](#my-inner-critics-last-assault-and-my-why)
-- [Conclusion: have I convinced myself?](#conclusion-have-i-convinced-myself)
-- [Appendix: writing interactive fiction in Ruby](#appendix-writing-interactive-fiction-in-ruby)
+- [Appendix A: writing text-based games in Ruby](#appendix-a-writing-text-based-games-in-ruby)
+- [Appendix B: Answering my inner critic](#appendix-b-answering-my-inner-critic)
 
 I've been mulling over ideas for my next hobby project, now that I'm almost done making my [CSV reading log parser](https://github.com/fpsvogel/reading).
 
 I've decided on *(drumroll…)* **a text-based game!**
 
-*What, **seriously?** Isn't that the quintessential **newbie project** for first-time coders? That's **so** beneath you.*
+*What, **seriously?** Isn't that the quintessential **newbie project** for first-time coders?*
 
-That's what the critical voice in my head keeps saying. So in this post I'll try to convince myself that making a text-based game is not, in fact, a dumb idea.
+That's what the critical voice in my head keeps saying. So in this post I'll dive into the rich and intriguing world of text-based games to convince myself that making one is not, in fact, a dumb idea. In [an appendix below](#appendix-b-answering-my-inner-critic) I've more directly answered my inner critic and its suggestions of more "serious" projects.
 
-## Answering my inner critic
+## What *are* text-based games?
+
+For the sake of simplicity, under this one heading of "text-based games" I'm lumping together various overlapping sub-genres, including these:
+
+- **Interactive fiction** (hereafter "IF") is the most popular type of text-based game today, with a lively community centered around annual competitions (e.g. [IFComp](https://ifcomp.org/), [XYZZY Awards](https://xyzzyawards.org/)), the [IF Community Forum](https://intfiction.org/), and [IFDB](https://ifdb.org/), just to name a few places. IF is an amalgamation of different forms, such as:
+  - **Parser-based** IF, in which the player types commands like `north` or `examine sign`.
+  - **Hypertext** IF, which is a branching narrative navigated via links interspersed within the text. Hypertext IF often feels less like playing a game, and more like reading a short story or poem.
+  - **Choice-based** IF is a kind of hypertext IF in which narrative branches are shown at the end of text nodes, just like in the old *Choose Your Own Adventure* books.
+- **Text adventures** are an older name for parser-based IF. Puzzles were a bigger element than in contemporary parser-based IF, where story more often takes center stage.
+- [**MUDs**](https://en.wikipedia.org/wiki/Multi-user_dungeon) are essentially MMORPGs but with text and a parser instead of graphics. In fact, MMORPGs are the direct successor to MUDs, and pretty much replaced them.
+- **Procedural text-based games** have little or no authored story, but are more replayable. [Roguelikes](https://en.wikipedia.org/wiki/Roguelike) are a well-known example, though they're arguably graphical rather than text-based.
+
+## Trying out the sub-genres
+
+Until recently, I'd only ever tried a few IF titles, so now I'm making a renewed effort to explore IF and *appreciate it* as much as I can. Here are my impressions, along with some examples.
+
+**Parser-based IF** feels more game-like on the whole, with its clear concept of spaces to be explored. It can be hard for a newcomer to learn, but that's not a problem if a good tutorial is included ([*Blue Lacuna*](https://ifdb.org/viewgame?id=ez2mcyx4zi98qlkh), [*The Dreamhold*](https://eblong.com/zarf/if.html#dreamhold), [*Counterfeit Monkey*](https://ifdb.org/viewgame?id=aearuuxv83plclpl)) or if the commands are very intuitive based on context ([*FeedVid Live*](https://varunramesh.itch.io/feedvid-live)).
+
+**Hypertext and choice-based IF** have a simpler UI (just links) but are extremely varied thematically, covering the spectrum from popular fiction ([*A Tale of Crowns*](https://qeresi.itch.io/a-tale-of-crowns)) to avant-garde (many of [Porpentine's games](https://xrafstar.monster/games/)), from comical ([*You Will Select a Decision*](https://selectadecision.info/)) to touching [*Digital: A Love Story*](https://scoutshonour.com/digital/) to heartbreaking ([*Hana Feels*](http://hanafeels.com/)).
+
+**MUDs** are… hard to get into. They seem to have evolved less over the decades than the other sub-genres I'm exploring. Which is great if you got into MUDs in the 1980s, but to me (*a tired 30-something new parent in the 2020s*) it's too much of a time commitment to learn how to enjoy MUDs. So I'll leave it at that.
+
+**Procedural text-based games** are easier fun, being more like graphical games than IF is, and (classic roguelikes aside) being simpler than MUDs. Common settings include medieval fantasy (most roguelikes, [Warsim](https://store.steampowered.com/app/659540/Warsim_The_Realm_of_Aslona/)) and space exploration ([*Seedship*](https://johnayliff.itch.io/seedship), [*Voyageur*](https://brunodias.itch.io/voyageur)).
+
+As an aside, **commercial IF** has seen an uptick in the past ten or fifteen years from studios such as [A Sharp](https://store.steampowered.com/curator/37604253-A-Sharp), [Choice of Games](https://www.choiceofgames.com), [inkle](https://www.inklestudios.com/), and [Failbetter Games](https://www.failbettergames.com/games), as well as solo creators.
+
+For the most part, I was able to better appreciate text-based games this time around. Still, I didn't come across any that are quite like the game I want to make.
+
+## So what game *do* I want to make?
+
+Essentially, a game with more world simulation than what is typical in contemporary interactive fiction.
+
+I'll start by pointing to a few inspiring games that I want mine to be like *in spirit*, even if some of these are more graphical than what I'm aiming for.
+
+- [***Dwarf Fortress***](http://www.bay12games.com/dwarves/) because it offers nearly limitless creative possibilities in the quest for survival (as well as lots of ways to die). I'm also impressed by the procedural world generation and the insane level of detail in the world simulation, which [makes some of the game's bugs pretty entertaining to read about](https://www.theguardian.com/games/2022/nov/16/unexpected-nudity-and-vomit-covered-cats-how-dwarf-fortress-tells-some-of-gamings-most-bizarre-stories).
+- [***Kenshi***](https://store.steampowered.com/app/233860/Kenshi) is graphical but it's otherwise similar to the sandbox survival aspect that I have in mind. Some other open-world games (*Elder Scrolls*, *Mount and Blade*) are closer *thematically* to what I'm aiming for, but they emphasize *combat* to the exclusion of much else, and their worlds are not as changeable or sandbox-like.
+- [***Upheaval***](https://leonegaming.itch.io/upheaval) is an in-progress "text-based fantasy roleplaying adventure sandbox", basically a big world with a non-linear story presented just through text menus. It's something like the blend that I'm going for, though it's a bit more narrative-driven. (It probably belongs with the interactive fiction examples above.) Here's [a glimpse at the gameplay](https://www.youtube.com/watch?v=KFmaZTMceRU), and [a complete playthrough](https://www.youtube.com/watch?v=hXACGyWFVy8).
+- [***The Hobbit***](https://en.wikipedia.org/wiki/The_Hobbit_(1982_video_game)) is a 1982 text adventure that I discovered in the book [*50 Years of Text Games*](https://aareed.itch.io/50-years-of-text-games). *The Hobbit* is an attempt at an authored story within a simulation, similar to what I'm aiming for. The results can be… surprising. Players have gone off script by killing Smaug using Gollum's corpse, or by picking up Elrond and carrying him around for a free and inexhaustible supply of Elven lunches. NPCs can also act unpredictably: Gandalf is liable to go off and get killed somewhere, and Bard the Bowman, upon the player's asking him to slay Smaug, might just say "No" before being promptly roasted by the dragon. In the words of the game's main creator, Veronika Megler: *"I was really aiming for something like life where the outcome is the result of many independent occurrences and decisions by many people, and sometimes things just don't work out. […] I actively wanted the unpredictability."* *The Hobbit* was unique, and it still is as far as I can tell. Other text-based games—heck, other games of *any sort* that have an authored narrative—just don't have this level of freedom, where the world plays out haphazardly and chaotic events might completely tank the storyline. There have been only a handful of similar attempts, all of them ill-fated:
+  - Carnegie-Mellon's 1990s [Oz Project](https://www.cs.cmu.edu/afs/cs/project/oz/web/oz.html) produced only a small experiment called [*The Playground*](https://if50.substack.com/p/1994-the-playground) before being disbanded.
+  - [*Façade*](https://en.wikipedia.org/wiki/Façade_(video_game)) (2005) was another experiment, whose developers (not coincidentally) included a graduate of Carnegie-Mellon who had been involved with the Oz Project. A full-length follow-up called *The Party* was planned, but it never got off the ground.
+  - The [Versu](https://versu.com) engine (2014) was a "character AI for interactive stories" that was abandoned before its release.
+
+So, to put it more directly, I want to make a text-based game that is **a detailed world simulation** in which **an authored story takes place** (more on that below). I might borrow elements from other genres, such as real-time play like in MUDs, the gritty freedom of a survival sandbox RPG, and an alternative to parser-based input [explored by Emily Short](https://emshort.blog/2010/06/07/so-do-we-need-this-parser-thing-anyway/).
+
+But the game's essence is the setting: an open world that evolves over time, where pretty much **anything can happen.** Towns can be founded and wiped out by floods, animals can spread disease and be hunted to extinction, a drought can cause famine and malnutrition, the nobility can intermarry, discontented peasants can rise up in revolt.
+
+What makes these world-simulating ambitions anything *close* to attainable in my (probably deluded) mind is what I've already said: **there will be no graphics** or other assets to worry about, just text. Also, certain things will be simpler because **the world will be defined in physically low resolution**, i.e. the world won't exist as a grid of small spaces like in Dwarf Fortress, but instead will be composed of various large areas or regions. (For example, a town could be one area, the region surrounding the town another area, and the mountains to the east yet another area.) This means I won't have to implement as much small-scale physics à la Dwarf Fortress. Even procedural generation will be limited, since it'll be easy enough to handcraft a world map as a setting for a story. The game can fill in the gaps like wildlife and minor locations, so that only the world's overall shape and important details need to be defined by a story's author.
+
+Returning to the other half of the equation, **how can an authored story happen in an open-world sandbox?** Wouldn't a story grind to a halt if one of its key people or places were destroyed? Well, yes… remember, anything can happen! So stories will have to provide some minimum of contingency plans in case of mishap, so that the authored story has some level of interplay with the emergent narratives coming from the world simulation. Still, getting stuck through bad luck will always be a possibility. But maybe that's OK. The unofficial motto of Dwarf Fortress, *"losing is fun"*, reminds us that chaotic failures are not always a bad thing.
+
+## Appendix A: writing text-based games in Ruby
+
+If I were going to write traditional text-based games, there are [many commonly-used authoring tools I could choose from](https://emshort.blog/how-to-play/writing-if/). But I love Ruby, so I might have chosen one of these instead:
+
+- [**Gamefic**](https://github.com/castwide/gamefic) for parser-based interactive fiction. It can [build games for the Web](https://github.com/castwide/gamefic-sdk#making-games-for-the-web). Here's [an example story's code](https://github.com/castwide/gamefic-sdk/blob/master/examples/cloak_of_darkness/main.rb) and [its explanation](https://github.com/castwide/gamefic-sdk/blob/master/examples/cloak_of_darkness/Cloak_of_Darkness.md).
+- [**ScottKit**](https://github.com/MikeTaylor/scottkit) for '80s-style text adventures. It has a nice DSL (see [the tutorial](https://github.com/MikeTaylor/scottkit/blob/master/docs/tutorial.md)).
+- [**Ruby Mud**](https://github.com/RickCarlino/mud) for building MUDs.
+- [**AresMUSH**](https://www.aresmush.com) ([GitHub](https://github.com/AresMUSH/aresmush)) also for building MUDs, but in a more pre-built and opinionated way. Compare to [Evennia](https://www.evennia.com/) in Python.
+
+## Appendix B: Answering my inner critic
 
 <!-- omit in toc -->
 ### 🤨 "A *game*? Seriously? It's been *ten years* since you've done any gaming. Now you've just had your first baby. Isn't it time to move on?"
@@ -54,75 +112,6 @@ These robot shenanigans could be fun, and they might be inspiring to my kid when
 
 Indeed I have, not least because DragonRuby has [a great community around it](https://discord.dragonruby.org).
 
-**The problem** with me making a graphical game is **sprites and other assets**: making them (or even mixing-and-matching premade assets) would be **tedious**. I *could* make an arcade-like action game that avoids sprites, maybe something along the lines of my childhood favorite [*Gravity Well*](https://youtu.be/GZIeLXlqefE?t=1636). But that would involve fairly complex geometry and physics, which are also high on my *"don't want to deal with it"* list.
+**The problem** with me making a graphical game is **sprites and other assets**: making them (or even mixing-and-matching premade assets) would be **tedious**. I *could* make a game that uses geometrical shapes instead of sprites, maybe something along the lines of my childhood favorite [*Gravity Well*](https://youtu.be/GZIeLXlqefE?t=1636), or the perennially fascinating sand games (e.g. [Sandboxels](https://sandboxels.r74n.com/), [Powder Game](https://dan-ball.jp/en/javagame/dust/)), or simply a platformer that uses only rectangles ([Thomas Was Alone](https://store.steampowered.com/app/220780/Thomas_Was_Alone/) is the best-known [among many](https://itch.io/games/genre-platformer/tag-square)). But any of these may involve fairly complex geometry and physics, which are also high on my *"don't want to deal with it"* list.
 
 In a text-based game, these headaches would be out of the picture (because *there is no picture*, heh). And later on if I choose to add graphical features and/or I want to distribute the game more widely, I can easily move it into DragonRuby. In the meantime **I'll simply output text to the terminal**, just like it was done in the early days.
-
-Speaking of which, what *are* text-based games anyway?
-
-## Text-based games, old and new
-
-For the sake of simplicity, under this one heading of "text-based games" I'm lumping together various terms denoting different overlapping genres:
-
-- **Text adventures** began in the 1970s and are generally parser-based, meaning that the player types commands like `north` or `examine sign`. Text adventures commonly feature puzzles, and they may or may not have a strong story element. This type of game is still made today by enthusiasts, though story is now more emphasized than in the early days, and puzzles less so. Also, the term *interactive fiction* is now more common (see below).
-- [**MUDs**](https://en.wikipedia.org/wiki/Multi-user_dungeon) are the multiplayer counterpart to text adventures, similar to modern MMORPGs but with text and a parser instead of graphics. MUDs are not nearly as popular as they once were, due of course to modern MMORPGs.
-- **Interactive fiction** is the term most widely used today for text-based games. It's also the broadest term, including not only parser-based games but also a more recent form that uses *hypertext* instead of a parser, where the narrative is made non-linear by links interspersed within the text, or after each section of text (as in *Choose Your Own Adventure* books). This *hypertext* or *choice-based* interactive fiction often feels less like playing a game, and more like reading a short story or poem.
-
-I'm not including [roguelikes](https://en.wikipedia.org/wiki/Roguelike) under this umbrella because they are essentially graphical, even if the graphics consist of ASCII characters.
-
-## … and why they're not what I have in mind
-
-I want to make something *outside these established genres*. I really like *the idea* of interactive fiction, but I wouldn't enjoy writing one. It's also not my favorite medium to play/read.
-
-But I'd only ever tried a few of them, until recently I made a renewed effort to explore interactive fiction and *appreciate it* as much as I could. Here are my impressions, along with some examples.
-
-I like that **parser-based interactive fiction** feels more game-like on the whole, with its clear concept of spaces to be explored. It can be hard for a newcomer to learn, but that's not a problem if a good tutorial is included ([*Counterfeit Monkey*](https://ifdb.org/viewgame?id=aearuuxv83plclpl)) or if the commands are intuitive based on context ([*FeedVid Live*](https://varunramesh.itch.io/feedvid-live)).
-
-**Hypertext interactive fiction** has a simpler UI (just links) but is also more varied, covering the entire spectrum from conventional game mechanics ([*Seedship*](https://philome.la/johnayliff/seedship/play/index.html), [*A Dark Room*](https://adarkroom.doublespeakgames.com/)) to avant-garde storytelling ([*Orifice Clique*](https://xrafstar.monster/games/twine/clique/)), from hilarious ([*You Will Select a Decision*](https://selectadecision.info/)) to heartbreaking ([*Hana Feels*](http://hanafeels.com/)).
-
-**Commercial interactive fiction** has made a comeback in the past ten years or so ([*Sorcery!*](https://www.inklestudios.com/sorcery), [*Roadwarden*](https://moralanxietystudio.com/roadwarden)). And some story-heavy RPGs are reminiscent of interactive fiction ([*Disco Elysium*](https://discoelysium.com/), [*Wildermyth*](https://wildermyth.com/)).
-
-So I was able to better appreciate the genre this time around, but I still didn't come across any interactive fiction like the game I want to make.
-
-## So what game *do* I want to make?
-
-I'll start by pointing to a few inspiring games that I want mine to be like *in spirit*, even if these are in other genres and more graphical than what I'm aiming for.
-
-- [***Dwarf Fortress***](http://www.bay12games.com/dwarves/) because it offers nearly limitless creative possibilities in the quest for survival (as well as lots of ways to die). I'm also impressed by the procedural world generation and the insane level of detail in the world simulation, which [makes some of the game's bugs pretty entertaining to read about](https://www.theguardian.com/games/2022/nov/16/unexpected-nudity-and-vomit-covered-cats-how-dwarf-fortress-tells-some-of-gamings-most-bizarre-stories).
-- [***Upheaval***](https://leonegaming.itch.io/upheaval) is an in-progress "text-based fantasy roleplaying adventure sandbox", basically a big world with a non-linear story presented just through text menus. It's something like the blend that I'm going for, though a bit more narrative-driven (so much that maybe it belongs with the interactive fiction examples above). Here's [a glimpse at the gameplay](https://www.youtube.com/watch?v=KFmaZTMceRU), and [a complete playthrough](https://www.youtube.com/watch?v=hXACGyWFVy8).
-- [***Warsim: The Realm of Aslona***](https://www.gog.com/en/game/warsim_the_realm_of_aslona) is another charming game that gives the feeling of vastness even though it too consists entirely of text menus.
-- [***Kenshi***](https://store.steampowered.com/app/233860/Kenshi) is graphical but it's otherwise similar to the sandbox survival aspect that I have in mind. Some other open-world games (*Elder Scrolls*, *Mount and Blade*) are closer *thematically* to what I'm aiming for, but they emphasize *combat* to the exclusion of much else, and their worlds are not as changeable or sandbox-like.
-
-So I suppose I want to make a text-based game that **incorporates interactive fiction** (more on this below), but **is essentially a sandbox RPG** set in an open world that continues to evolve over time, a sort of world simulation where pretty much **anything can happen.** Towns can be founded and wiped out by floods, animals can spread disease and be hunted to extinction, a drought can cause famine and malnutrition, the nobility can intermarry, discontented peasants can rise up in revolt.
-
-What makes these goals anything *close* to attainable in my (probably deluded) mind is what I've already said: **there will be no graphics** or other assets to worry about, just text. Also, certain things will be simpler because **the world will be defined in physically low resolution**, i.e. the world won't exist as a grid of small spaces like in Dwarf Fortress, but instead will be composed of various large areas or regions. (For example, a town could be one area, the region surrounding the town another area, and the mountains beyond it yet another area.) This means **I won't have to implement small-scale physics** like in Dwarf Fortress, **or procedural world generation** since it'll be easy enough to handcraft a world map as a setting for a story, as long as the game fills in the gaps like wildlife and minor locations, so that only the world's overall shape and important details need to be defined by a story's author.
-
-But hold on, **how can interactive fiction fit with an open-world sandbox?** Wouldn't a story grind to a halt if one of its key people or places were destroyed? Well, yes… remember, anything can happen! So stories will have to provide some minimum of contingency plans in case of mishap, and getting stuck through bad luck will always be a possibility.
-
-## My inner critic's last assault, and my "why"
-
-<!-- omit in toc -->
-### 😤 *Sigh.* "Let me try one last time. This game is doomed to be a boring, elaborate mess. No graphics, not even backdrops or ASCII art?? Getting stuck through sheer bad luck?! Nobody will play it. Why waste your time?"
-
-I fully expect no one will play my game. Heck, ***I myself*** probably won't play my game much. *But that's the beauty of it!* Because the goal of this project isn't to produce a popular game with wide appeal. No, I'm doing it for the fun and challenge of taking this whacky mashup of ideas and embodying it in code. **For me the real game is in making the game.** (So *meta*, right??)
-
-## Conclusion: have I convinced myself?
-
-Yes! I've got to say, though, that last self-criticism hit me hard, because I often slip into being a perfectionist and demanding that everything I make be *great* and *impressive*, otherwise it's not worth doing. So it really goes against the grain for me to make something **knowing it will probably be lame in the end**, but making it anyway just to enjoy the creative process, and to learn how to model new sorts of concepts in code.
-
-See? I've already learned and grown from this project, and I haven't even begun yet!
-
-And now that I've acknowledged its fate, I feel relieved of the pressure to make it into a game that other people will love. I don't have to bow to anyone's expectations. This feels… spacious.*
-
-## Appendix: writing interactive fiction in Ruby
-
-If I were going to write traditional interactive fiction, there are [many commonly-used authoring tools I could choose from](https://emshort.blog/how-to-play/writing-if/). But I love Ruby, so I might have chosen one of these instead:
-
-- [**Gamefic**](https://github.com/castwide/gamefic) for parser-based interactive fiction. It can [build games for the Web](https://github.com/castwide/gamefic-sdk#making-games-for-the-web). Here's [an example story's code](https://github.com/castwide/gamefic-sdk/blob/master/examples/cloak_of_darkness/main.rb) and [its explanation](https://github.com/castwide/gamefic-sdk/blob/master/examples/cloak_of_darkness/Cloak_of_Darkness.md).
-- [**ScottKit**](https://github.com/MikeTaylor/scottkit) for '80s-style text adventures. It has a nice DSL (see [the tutorial](https://github.com/MikeTaylor/scottkit/blob/master/docs/tutorial.md)).
-- [**Ruby Mud**](https://github.com/RickCarlino/mud) for building MUDs.
-- [**AresMUSH**](https://www.aresmush.com) ([GitHub](https://github.com/AresMUSH/aresmush)) also for building MUDs, but in a more pre-built and opinionated way. Compare to [Evennia](https://www.evennia.com/) in Python.
-
-<br>
-
-\* <small>The muffled voice of the critic interjects again, questioning my sanity for wanting to spend untold hours just to make another one of those GitHub repos that you stumble upon, only to scratch your head in confusion and close the tab within three seconds. However, these protestations are in vain, being henceforth banished to footnotes.</small>
