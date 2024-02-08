@@ -2,7 +2,7 @@
 title: Solo RPGs as creative writing practice
 subtitle: overcoming my inhibitions
 description: If you're clumsy at writing fiction or making up stories, solo role-playing games may be the inhibition-freeing creative practice you've been looking for.
-updated: 2024-02-07
+updated: 2024-02-08
 ---
 
 - [How I discovered solo TTRPGs](#how-i-discovered-solo-ttrpgs)
@@ -24,7 +24,7 @@ I enjoy *reading* fiction, but I feel like I'm terrible at *making* it. And sinc
 
 But how should I start, if it's those very inhibitions that make any kind of practice routine impossible? It only takes a minute of staring at a blank page (or, worse, the beginning of a story I've written) for me to lose my enthusiasm and run to a more familiar pastime, by which I mean coding.
 
-And yet… once you've realized your #1 hobby is *the same thing that you do all day at work*, and you contemplate the fact that your kid might not end up sharing that interest (at least in the next, let's say, ten years), you become highly motivated to put your eggs in more baskets, as the saying goes.
+And yet… once you've realized your #1 hobby is *the same thing that you do all day at work*, and you contemplate the fact that your kid might not end up sharing that interest (at least in the next, let's say, ten years), you become highly motivated to put your eggs in more baskets.
 
 So, how to make creative writing more approachable? I wondered if **making it into a game** might help.
 
@@ -33,7 +33,7 @@ I recalled the handful of *Dungeons & Dragons* sessions that I played a few year
 Questions flooded into my brain:
 
 - *Is there a more narrative-focused TTRPG?*
-- *All the TTRPG groups in my area are for D&D… could I instead play solo, just for the storytelling and creative writing practice?*
+- *All the TTRPG groups in my area are for D&D… could I instead play a TTRPG solo, just for the storytelling and creative writing practice?*
 - *Am I crazy for wanting to try this?*
 
 As it turns out, **yes** and **yes** and **probably not**!
@@ -61,23 +61,36 @@ But neither of these is *designed* for solo play, so you'd have to supplement th
 
 ## Honorable mentions
 
-Here are some other TTRPGs that I've bookmarked for later:
+Here are some other TTRPGs that I'm exploring:
 
-- [*Pendragon*](https://en.wikipedia.org/wiki/Pendragon_(role-playing_game)) is very *crunchy* (as the more numbers-heavy games are described), but I just can't resist its detailed literary-historical setting.
 - *Dungeon Hero* ([Vol. 1](https://lonespelunker.itch.io/dungeon-hero), [Vol. 2](https://lonespelunker.itch.io/dungeon-hero-volume-2), [Vol. 3](https://lonespelunker.itch.io/dungeon-hero-volume-3-bump-in-the-night)) and its successor [*Welcome Aboard, Captain*](https://lonespelunker.itch.io/welcome-aboard-captain) are two other games designed for solo play, these even simpler than *ALONe* and more game-like.
 - [*The Storymaster's Tales*](https://www.storymasterstales.com) is a good option for introducing kids to TTRPGs.
-- [*Space Aces: Voyages in Infinite Space*](https://www.etsy.com/listing/1646603705/space-aces-voyages-in-infinite-space) is another good one for kids, and for the galaxy-exploring kid inside me.
+- [*Space Aces: Voyages in Infinite Space*](https://www.etsy.com/listing/1646603705/space-aces-voyages-in-infinite-space) (plus [supplements](https://p0rthos47.itch.io/)) is another good one for kids, and for the galaxy-exploring kid in me.
 - [*For Small Creatures Such As We*](https://www.kickstarter.com/projects/diamondblood/for-small-creatures-such-as-we) is an upcoming *journaling game*, which is closer to pure creative writing.
 - [*Microscope*](https://www.lamemage.com/microscope) as a world-building tool. Solo resources for it:
   - [Lens](https://docs.google.com/document/d/1isWrSPL417PN6eSCYQmxKnFxPXQUn9IjZW4W2xfToDc)
   - [Videos by Clare C. Marshall](https://www.youtube.com/watch?v=q4h9Yg1UWjY)
   - [Blog post](https://whyigame.wordpress.com/2018/01/14/solo-rp-microscope-rpg)
   - Series of posts: [1](https://web.archive.org/web/20170107021652/http://www.risusmonkey.com/2011/03/solo-gaming-on-long-flight.html), [2](https://web.archive.org/web/20160330173740/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-2-first-pass.html), [3](https://web.archive.org/web/20160330172817/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-3-making.html), [4](https://web.archive.org/web/20160330173127/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-4-making.html)
-- Other worldbuilding games: [*Mappa Imperium*](https://nookrium.itch.io/mappa-imperium), [*Foundations*](https://biglizardgames.itch.io/foundations), [*Cartograph*](https://www.kickstarter.com/projects/ravensridge/cartograph-atlas-edition-a-solo-mapmaking-ttrpg) [*Artefact*](https://mouseholepress.itch.io/artefact) (try it alongside [*The Kleptogoblicon*](https://perchance.org/kleptogoblicon)), [*DELVE*](https://www.blackwellwriter.com/en-us/products/delve-a-solo-map-drawing-game)/[*UMBRA*](https://www.blackwellwriter.com/en-us/products/umbra-a-game-of-final-frontiers), [*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) (has a worldbuilding element).
+- Other world-building games:
+  - [*Mappa Imperium*](https://nookrium.itch.io/mappa-imperium)
+  - [*Foundations*](https://biglizardgames.itch.io/foundations)
+  - [*Cartograph*](https://www.kickstarter.com/projects/ravensridge/cartograph-atlas-edition-a-solo-mapmaking-ttrpg)
+  - [*Artefact*](https://mouseholepress.itch.io/artefact) (try it alongside [*The Kleptogoblicon*](https://perchance.org/kleptogoblicon))
+  - [*DELVE*](https://www.blackwellwriter.com/en-us/products/delve-a-solo-map-drawing-game) / [*UMBRA*](https://www.blackwellwriter.com/en-us/products/umbra-a-game-of-final-frontiers)
+  - [*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) has a world-building element.
+- The following are a lot more *crunchy* (as the more numbers-heavy games are described) than any of the above, but I just can't resist their detailed literary-historical settings:
+  - [*Pendragon*](https://en.wikipedia.org/wiki/Pendragon_(role-playing_game))
+  - [*Paladin*](https://www.chaosium.com/paladin/)
+  - [*Aquelarre*](https://preview.drivethrurpg.com/en/product/237059/Aquelarre)
+  - [*Chronica Feudalis*](https://chronicafeudalis.com/)
+  - [*Wolves of God*](https://preview.drivethrurpg.com/en/product/308470/Wolves-of-God-Adventures-in-Dark-Ages-England)
+  - [*1366*](https://preview.drivethrurpg.com/en/product/111240/1366-Second-Edition)
+  - [*Maelstrom*](https://preview.drivethrurpg.com/en/publisher/667/arion-games/category/4422/maelstrom), especially *Domesday* and *Rome*
 
 ## Solo role-playing tools
 
-As I said, my favorite *ALONe* provides everything needed for solo play and that's why it's my favorite so far, but later on I may want to branch out and explore these other tools.
+Like I said above, *ALONe* provides everything needed for solo play and that's why it's my favorite so far, but later on I may want to branch out and explore these other tools.
 
 ### Oracles
 
@@ -137,4 +150,4 @@ I may avoid these in favor of a more portable setup, but here they are just in c
 
 ## Did it work? We shall see…
 
-I'll add an update here or write a sequel post a few months from now, when I've had a chance to see, in the long run, whether solo TTRPGs really do help me in my quest for creative freedom. The worst-case scenario is that they'll become yet another form of practice that didn't stick, but at least I'll have given it a try. And who knows? Maybe you, dear reader, will be inspired to give it a try too.
+I'll add an update here or write a sequel post in the future, when I've had a chance to see whether solo TTRPGs really do help me in my quest for creative freedom. The worst-case scenario is that they'll become yet another form of practice that didn't stick, but at least I'll have given it a try. And who knows? Maybe you, dear reader, will be inspired to give it a try too.
