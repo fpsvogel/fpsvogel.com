@@ -82,11 +82,11 @@ Here are some other TTRPGs that I'm exploring:
 - The following are a lot more *crunchy* (as the more numbers-heavy games are described) than any of the above, but I just can't resist their detailed literary-historical settings:
   - [*Pendragon*](https://en.wikipedia.org/wiki/Pendragon_(role-playing_game))
   - [*Paladin*](https://www.chaosium.com/paladin/)
-  - [*Aquelarre*](https://preview.drivethrurpg.com/en/product/237059/Aquelarre)
+  - [*Aquelarre*](https://drivethrurpg.com/product/237059/Aquelarre)
   - [*Chronica Feudalis*](https://chronicafeudalis.com/)
-  - [*Wolves of God*](https://preview.drivethrurpg.com/en/product/308470/Wolves-of-God-Adventures-in-Dark-Ages-England)
-  - [*1366*](https://preview.drivethrurpg.com/en/product/111240/1366-Second-Edition)
-  - [*Maelstrom*](https://preview.drivethrurpg.com/en/publisher/667/arion-games/category/4422/maelstrom), especially *Domesday* and *Rome*
+  - [*Wolves of God*](https://drivethrurpg.com/product/308470/Wolves-of-God-Adventures-in-Dark-Ages-England)
+  - [*1366*](https://drivethrurpg.com/product/111240/1366-Second-Edition)
+  - [*Maelstrom*](https://drivethrurpg.com/publisher/667/arion-games/category/4422/maelstrom), especially *Domesday* and *Rome*
 
 ## Solo role-playing tools
 
