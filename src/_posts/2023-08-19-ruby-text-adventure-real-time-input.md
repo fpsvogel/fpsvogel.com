@@ -30,7 +30,7 @@ To see why, let's imagine that we've just begun our adventure, and our aspiring 
 
 Here's a demonstration (slightly exaggerated) of the simultaneous input/output we're aiming for:
 
-<img src="/images/worlds-realtime-teaser.gif" alt="A simple text-based game in the terminal, where output is appearing while input is being typed below the output." style="width:500px; margin-left: auto; margin-right:auto; display:block"/>
+<img src="/images/worlds-realtime-teaser.gif" alt="A simple text-based game in the terminal, where output is appearing while input is being typed below the output." style="width:500px"/>
 
 ## Getting some output
 
@@ -74,7 +74,7 @@ Runner.io_loop
 
 The result:
 
-<img src="/images/worlds-realtime-output.gif" alt='In the terminal, output of "One second has passed" appearing every second' style="width:500px; margin-left: auto; margin-right:auto; display:block"/>
+<img src="/images/worlds-realtime-output.gif" alt='In the terminal, output of "One second has passed" appearing every second' style="width:500px"/>
 
 Now let's bring back input, this time in a way that doesn't block output.
 
@@ -192,7 +192,7 @@ end
 
 And, violà! There we have the essentials for building a real-time text-based game. Here's what the above code looks like when run:
 
-<img src="/images/worlds-realtime-input.gif" alt="A simple text-based game in the terminal, where output is appearing while input is being typed." style="width:500px; margin-left: auto; margin-right:auto; display:block"/>
+<img src="/images/worlds-realtime-input.gif" alt="A simple text-based game in the terminal, where output is appearing while input is being typed." style="width:500px"/>
 
 ## Pros, cons, and future plans
 

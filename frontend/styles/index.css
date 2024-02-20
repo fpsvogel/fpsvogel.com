@@ -246,6 +246,12 @@ main {
   }
 }
 
+main img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 del {
   background-color: unset;
 }
