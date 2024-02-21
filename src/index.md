@@ -9,9 +9,9 @@ This site is where I reflect on what I'm learning and how. Usually I write about
 ## My favorite posts
 
 <% favorites_ruby = %w[
-  2021/how-to-contribute-to-open-source-ruby-rails
-  2020/exercism-ruby-practice
   2021/build-a-blog-with-ruby-bridgetown
+  2020/exercism-ruby-practice
+  2021/how-to-contribute-to-open-source-ruby-rails
 ] %>
 
 <% favorites_other = %w[
