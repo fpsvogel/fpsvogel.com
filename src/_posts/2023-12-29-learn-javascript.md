@@ -17,7 +17,7 @@ tl;dr I'm systematically learning JavaScript using [these resources](#how).
 
 Because JS is inescapable in web development.
 
-Sure, you can use any number of JS-avoidance libraries. I'm a fan of [Turbo](https://turbo.hotwired.dev/), and there's also [htmx](https://htmx.org/), [Unpoly](https://unpoly.com/), [Alpine](https://alpinejs.dev/), [hyperscript](https://hyperscript.org/), [swup](https://swup.js.org/), [barba.js](https://barba.js.org/), and probably others.
+Sure, you can use any number of JS-avoidance libraries. I'm a fan of [Turbo](https://turbo.hotwired.dev/), and there's also [htmx](https://htmx.org/), [htmz](https://leanrada.com/htmz/) [Unpoly](https://unpoly.com/), [Alpine](https://alpinejs.dev/), [hyperscript](https://hyperscript.org/), [swup](https://swup.js.org/), [barba.js](https://barba.js.org/), and probably others.
 
 Then there are stack-specific libraries: [StimulusReflex](https://docs.stimulusreflex.com/) for Rails, [Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view), [Laravel Livewire](https://laravel-livewire.com/), [Unicorn](https://www.django-unicorn.com/) and [Tetra](https://www.tetraframework.com/) for Django, [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) for .NET, … and the list goes on.
 
