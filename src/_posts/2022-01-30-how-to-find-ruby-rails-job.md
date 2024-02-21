@@ -1,6 +1,6 @@
 ---
 title: How to find your first Rails job
-subtitle: notes from my job hunt
+subtitle: notes from a job hunt
 description: How I found my first Ruby on Rails junior developer job. I share places to job search, resume strategies, and tips for interviews and technical exercises.
 ---
 
