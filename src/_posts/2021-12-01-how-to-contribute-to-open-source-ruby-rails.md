@@ -14,17 +14,12 @@ Here's how I recently got started contributing to open-source Ruby on Rails proj
 
 ## Find a project
 
-Here are a few beginner-friendly projects, though there are certainly others.
+Here are some beginner-friendly projects that I know of:
 
 - [Lobsters](https://github.com/lobsters/lobsters)
-- [RailsDevs](https://github.com/joemasilotti/railsdevs.com)
-- [Ruby for Good](https://rubyforgood.org/) makes software for nonprofit organizations. Each of their projects has a Slack community, so they're extra easy to get into.
-  - [Human Essentials](https://github.com/rubyforgood/human-essentials)
-  - [CASA](https://github.com/rubyforgood/casa)
-  - [Circulate](https://github.com/rubyforgood/circulate)
-  - [InKind Admin](https://github.com/rubyforgood/inkind-admin) and [InKind Volunteer](https://github.com/rubyforgood/inkind-volunteer) (Rails + React)
+- [Ruby for Good](https://rubyforgood.org/) makes software for nonprofit organizations. Some of their projects has a Slack community, which could come in handy as you learn your way around a project.
 
-If you want to widen your search, explore the resources at [First Timers Only](https://www.firsttimersonly.com/) or see [this list of open-source Rails codebases](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study) that I've compiled.
+If you want to widen your search, see [this list of open-source Rails codebases](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study) that I've compiled, or explore the resources at [First Timers Only](https://www.firsttimersonly.com/).
 
 As you consider projects to contribute to, keep these questions in mind:
 

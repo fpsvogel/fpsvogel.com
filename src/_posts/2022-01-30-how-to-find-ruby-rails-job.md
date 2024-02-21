@@ -56,7 +56,7 @@ To get an initial interview, having an impressive resume is key. To give you som
 Here are efforts that I didn't get comments on, but I'm sure they didn't hurt:
 
 - **Polish your GitHub portfolio.** Here's mine: [github.com/fpsvogel](https://github.com/fpsvogel). Make sure each of your pinned projects has a nice README including a summary of why it's on portfolio. If you want to spend even more time perfecting your READMEs, [here's an awesome README list](https://github.com/matiassingers/awesome-readme) to give you ideas, and here are a few that are built specifically as part of a learner's portfolio of Rails apps: [lortza/tarot](https://github.com/lortza/tarot), [lortza/sorrygirl](https://github.com/lortza/sorrygirl), [lortza/therapy_tracker](https://github.com/lortza/therapy_tracker).
-- **Make a web version of your resume.** Here's mine: [fpsvogel.com/about](/about/). This is in addition to (not instead of) the PDF version that I submitted in applications. [Here's my resume in PDF](https://www.overleaf.com/read/mgxfqgqngjqf) as of January 2022. I made it with LaTeX, but a plain old word processor would work too. Remember, keep it under one page!
+- **Make a web version of your resume.** Here's mine: [fpsvogel.com/about](https://web.archive.org/web/20220525141940/https://fpsvogel.com/about/). This is in addition to (not instead of) the PDF version that I submitted in applications. [Here's my resume in PDF](https://www.overleaf.com/read/mgxfqgqngjqf) as of January 2022. I made it with LaTeX, but a plain old word processor would work too. Remember, keep it under one page!
 
 ## What to ask in the initial interview
 

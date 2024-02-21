@@ -11,6 +11,8 @@ updated: 2024-02-07
 - [Appendix A: writing text-based games in Ruby](#appendix-a-writing-text-based-games-in-ruby)
 - [Appendix B: Answering my inner critic](#appendix-b-answering-my-inner-critic)
 
+*UPDATE: To see the beginnings of the actual project that I envision here, see my follow-up post [Building a text-based game in Ruby, part 1](/posts/2023/ruby-text-based-game-real-time-input)*.
+
 I've been mulling over ideas for my next hobby project, now that I'm almost done making my [CSV reading log parser](https://github.com/fpsvogel/reading).
 
 I've decided on *(drumroll…)* **a text-based game!**

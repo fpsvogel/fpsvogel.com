@@ -106,7 +106,7 @@ That's not a contradiction!
 
 There are lots of ways we can help others better *because* we're forging ahead in a self-driven way. Here are two examples.
 
-The first is a common piece of advice among developers. Find some part of the code base that needs TLC or better understanding. Work on it, and **become an expert in it**. Eventually you're the go-to person in that area, even for more senior engineers.
+The first is a common piece of advice among developers. Find some part of the codebase that needs TLC or better understanding. Work on it, and **become an expert in it**. Eventually you're the go-to person in that area, even for more senior engineers.
 
 Another example: **I document my learning** in a way that's meant to be helpful to other learners.
 
@@ -349,13 +349,13 @@ Six months into my previous job, the engineering department held a Bug Blitz—n
 
 To make it more fun, each task was assigned a point value. At the end of the month, points would be tallied and a winner would be declared.
 
-Much was still unfamiliar to me at that point. So I started out with the mindset that if I could learn a new area of the code base, that would be a win for me.
+Much was still unfamiliar to me at that point. So I started out with the mindset that if I could learn a new area of the codebase, that would be a win for me.
 
-However, after a couple weeks I noticed I'd racked up quite a few points by tackling a part of the code base where there was a series of related tasks. (I was improving various background jobs that send medical claims data to our partner organizations, specifically by optimizing their performance and making them automatically retryable.)
+However, after a couple weeks I noticed I'd racked up quite a few points by tackling a part of the codebase where there was a series of related tasks. (I was improving various background jobs that send medical claims data to our partner organizations, specifically by optimizing their performance and making them automatically retryable.)
 
 Stirred by ambition for the prize (a pair of yellow sneakers), I redoubled my efforts.
 
-But I didn't lose sight of my real goal of helping out. Now that I had a little expertise in this area of the code base, I helped colleagues get started working alongside me on the same sort of task.
+But I didn't lose sight of my real goal of helping out. Now that I had a little expertise in this area of the codebase, I helped colleagues get started working alongside me on the same sort of task.
 
 In the end, I managed to get highest number of points and won my sneakers, which I wore proudly all through the fall and winter.
 
@@ -365,17 +365,17 @@ Shoutout to Nikola Vojvodic, who got me up to speed and reviewed all my PRs that
 
 ### 15. I finish the job
 
-After the Bug Blitz was over at my previous job, we engineers switched from the concerted effort to reduce tech debt across the code base, back to business as usual in our own corners of the code base.
+After the Bug Blitz was over at my previous job, we engineers switched from the concerted effort to reduce tech debt across the codebase, back to business as usual in our own corners of the codebase.
 
 But things would never be the same for me.
 
 *(Fade in orchestral music, rising in a slow crescendo.)*
 
-I now had a fledgling expertise in another part of the code base. I didn't want it to go to waste.
+I now had a fledgling expertise in another part of the codebase. I didn't want it to go to waste.
 
 Plus, not all of the tech debt had been dealt with over there.
 
-So as soon as I found a breather between projects, I went back to tie up loose ends. Then I collaborated with the engineers who work in that area of the code base to design a generalized solution, reducing code duplication so that we wouldn't keep having to rewrite largely similar implementations.
+So as soon as I found a breather between projects, I went back to tie up loose ends. Then I collaborated with the engineers who work in that area of the codebase to design a generalized solution, reducing code duplication so that we wouldn't keep having to rewrite largely similar implementations.
 
 The job was done, but it was just the beginning of collaboration outside my team. More on that next time.
 
@@ -389,9 +389,9 @@ How did I get into working across team boundaries? Here are a few ways:
 
 - When my day-to-day work brought me in contact with code in a different part of our app that needed some TLC, and it was simple enough that it didn't need to be passed off to the team that owned the code, **I went ahead and made the change**, tagging the appropriate engineers to review the PR. A common example was removing dead code that wasn't used anymore.
 - Sometimes a project in my team required coordination with another team, such as collaborating with the infra team to move some of our background jobs to dedicated infrastructure.
-- Once, the entire engineering team held put projects on hold for a month-long "Bug Blitz", focusing everyone's efforts on reducing tech debt across the code base. This is where I first started diving into code outside of my team's domain.
+- Once, the entire engineering team held put projects on hold for a month-long "Bug Blitz", focusing everyone's efforts on reducing tech debt across the codebase. This is where I first started diving into code outside of my team's domain.
 
-Breaking out of my team's silo gave me a broader knowledge of the code base, and **this was valuable in more than an abstract sense**: as my team built more complex dashboards that brought together data from different domains of the app, I was ready thanks to the cross-domain work I'd already done.
+Breaking out of my team's silo gave me a broader knowledge of the codebase, and **this was valuable in more than an abstract sense**: as my team built more complex dashboards that brought together data from different domains of the app, I was ready thanks to the cross-domain work I'd already done.
 
 ### 17. I foster a culture of learning
 
@@ -403,7 +403,7 @@ I also suggested to my manager that we **start an engineering book club**, which
 
 Wherever I land a job next, you can bet I'll start an engineering book club if there isn't one already. (I'm itching to re-read [*Layered Design for Ruby on Rails Applications*](https://www.packtpub.com/product/layered-design-for-ruby-on-rails-applications/9781801813785) with other engineers.)
 
-Learning together with other engineers is not only fun, but it helps **everyone** level up. Even if you're a senior engineer and you already know everything in the book under discussion, you might learn something more deeply by explaining it to someone else, or you might learn something new about the code base that someone brings up in the discussion.
+Learning together with other engineers is not only fun, but it helps **everyone** level up. Even if you're a senior engineer and you already know everything in the book under discussion, you might learn something more deeply by explaining it to someone else, or you might learn something new about the codebase that someone brings up in the discussion.
 
 A traditional book club might not work for every team, though. That's why I want to explore different approaches, like a coding dojo and Samman technical coaching, starting with [Emily Bache's resources on these](https://leanpub.com/u/emilybache).
 

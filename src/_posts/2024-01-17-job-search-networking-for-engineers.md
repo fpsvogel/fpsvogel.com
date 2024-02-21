@@ -78,7 +78,7 @@ I mention Ruby because that's where I focused my search, but if you work with a 
     - [Portland Ruby Brigade](https://www.meetup.com/portland-ruby-brigade/)
   - If there isn't a Ruby meetup in your area, consider starting one!
   - Other (non-Ruby) local developer meetups are also worth looking into.
-- **Post regularly on LinkedIn.** [I posted every weekday](https://www.linkedin.com/in/fpsvogel/recent-activity/all/) for a month. Some days I posted tips from my job search (the content of this post), and on other days I posted a "Reasons to hire me" series—essentially, glimpses into my accomplishments.
+- **Post regularly on LinkedIn.** [I posted every weekday](/posts/2024/linkedin-posts-for-job-search-networking) for two months. Some days I posted tips from my job search (the content of this post), and on other days I posted a "Reasons to hire me" series—essentially, glimpses into my accomplishments.
   - Also make sure to like and comment on other people's posts, including people you don't know personally.
 - **Leverage your existing network.** The steps below are an alternative to cold-applying to companies where you don't know anyone, but it can be even more effective to stay in touch or reconnect with people you *already know*. To some extent this will happen naturally as you post on LinkedIn, but you can also be proactive: message old acquaintances and schoolmates who might know of jobs, write former co-workers a LinkedIn recommendation—do whatever feels right in each particular relationship.
 
