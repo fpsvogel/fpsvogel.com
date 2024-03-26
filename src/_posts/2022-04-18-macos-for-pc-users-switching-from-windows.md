@@ -42,8 +42,8 @@ To enable Windows-style keyboard shortcuts, I did the following:
 "@$\UF702" = "moveWordBackwardAndModifySelection:"; // cmd shift left
 "@$\UF703" = "moveWordForwardAndModifySelection:"; // cmd shift right
 
-"@\UF728" = "deleteWordBackward:"; // cmd backspace
-"@\177" = "deleteWordForward:"; // cmd delete
+"@\177" = "deleteWordBackward:"; // cmd backspace
+"@\UF728" = "deleteWordForward:"; // cmd delete
 }
 ```
 - Added [this script](https://stackoverflow.com/questions/5407916/zsh-zle-shift-selection/30899296#30899296) to Zsh config to enable familiar text-editing shortcuts in the terminal.
