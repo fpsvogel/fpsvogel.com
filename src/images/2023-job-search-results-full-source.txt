@@ -1,0 +1,117 @@
+// SankeyMATIC diagram inputs - Saved: 2/29/2024, 3:41:47 PM
+// https://sankeymatic.com/build/
+
+// === Nodes and Flows ===
+
+// Enter Flows between Nodes, like this:
+//         Source [AMOUNT] Target
+
+Cold application [112] No recruiter screening
+Cold application [1] Recruiter screening
+
+Existing connection [6] Recruiter screening
+Existing connection [4] No recruiter screening
+
+LinkedIn messaging [2] No response
+LinkedIn messaging [5] Conversation
+
+Conversation [1] Recruiter screening
+Conversation [4] No recruiter screening
+No response [2] No recruiter screening
+
+Third-party recruiter [1] Recruiter screening
+
+Recruiter screening [5] Further interviews #9467bd
+Recruiter screening [4] No further interviews #9467bd
+
+Further interviews [2] Offer #17becf
+Further interviews [3] No offer #17becf
+
+:Existing connection #2ca02c
+:Third-party recruiter #d62728
+:LinkedIn messaging #1f77b4
+:Conversation #ff7f0e
+:No response #8c564b
+:Recruiter screening #9467bd
+:Further interviews #17becf
+:Offer #edc434
+:No recruiter screening #7f7f7f
+:No further interviews #7f7f7f
+:No offer #7f7f7f
+
+// You can set a Node's color, like this:
+// :Budget #708090
+//            ...or a color for a single Flow:
+// Budget [160] Other Necessities #0F0
+
+// Use the controls below to customize
+// your diagram's appearance...
+
+// === Settings ===
+
+size w 650
+  h 600
+margin l 12
+  r 12
+  t 20
+  b 18
+bg color #ffffff
+  transparent Y
+node w 12
+  h 50
+  spacing 75
+  border 0
+  theme b
+  color #888888
+  opacity 1
+flow curvature 0.5
+  inheritfrom outside-in
+  color #999999
+  opacity 0.45
+layout order automatic
+  justifyorigins N
+  justifyends N
+  reversegraph N
+  attachincompletesto nearest
+labels color #000000
+  hide N
+  highlight 0.75
+  fontface sans-serif
+  linespacing 0.2
+  relativesize 110
+  magnify 100
+labelname appears Y
+  size 11
+  weight 400
+labelvalue appears Y
+  fullprecision Y
+  position below
+  weight 400
+labelposition autoalign 0
+  scheme auto
+  first before
+  breakpoint 6
+value format ',.'
+  prefix ''
+  suffix ''
+themeoffset a 7
+  b 7
+  c 0
+  d 0
+meta mentionsankeymatic Y
+  listimbalances Y
+
+// === Moved Nodes ===
+
+move Third-party recruiter -0.27401, -0.60712
+move LinkedIn messaging -0.0262, -0.7441
+move No recruiter screening 0.17172, 0.24738
+move No further interviews 0.09531, -0.5273
+move Further interviews 0.09418, -0.55203
+move Offer -0.00873, -0.53502
+move Conversation -0.12472, -0.79793
+move No response -0.12245, -0.62651
+move Recruiter screening 0.1675, -0.53935
+move No offer -0.00873, -0.5473
+move Existing connection -0.45674, -0.56685
+move Cold application -0.34934, 0.53123

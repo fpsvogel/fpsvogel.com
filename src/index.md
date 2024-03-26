@@ -21,7 +21,7 @@ This site is where I reflect on what I'm learning and how. Usually I write about
   2022/how-to-find-ruby-rails-job
 ] %>
 
-### About Ruby
+### Favorites about Ruby
 
 <ul>
   <% favorites_ruby.each do |post_year_and_slug| %>
@@ -34,7 +34,7 @@ This site is where I reflect on what I'm learning and how. Usually I write about
   <% end %>
 </ul>
 
-### About everything else
+### Favorites about everything else
 
 <ul>
   <% favorites_other.each do |post_year_and_slug| %>

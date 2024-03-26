@@ -555,9 +555,7 @@ At the very least, you'll have other job seekers around you that can commiserate
 
 If you're into Ruby, definitely join [the Ruby on Rails Link community](https://www.rubyonrails.link) on Slack.
 
-[The Agency of Learning](https://agencyoflearning.com) is another Ruby-centric community. It's great if you're willing to commit time to mentor and/or be mentored. They aren't always accepting applications, though, so you may have to check back later.
-
-Last but not least, find local developer groups on Meetup. Bonus points if there's a Ruby meetup in your area—and if there's not, then even more bonus points if you start one!
+Find local developer groups on Meetup. Bonus points if there's a Ruby meetup in your area—and if there's not, then even more bonus points if you start one!
 
 ### 9. Visit online meetups
 

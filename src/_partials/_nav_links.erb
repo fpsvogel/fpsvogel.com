@@ -1,6 +1,6 @@
 <% links.each do |name, url| %>
   <li>
-    <a href="<%= url %>"
+    <a href="<%= url %>" rel="me"
         <%= "class=highlighted" if (resource.relative_url.start_with?(url) && url != "/") ||
                                    (resource.relative_url == "/"           && url == "/") %>>
       <%= name %>

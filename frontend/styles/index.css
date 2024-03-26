@@ -256,6 +256,15 @@ del {
   background-color: unset;
 }
 
+div[id^="chart-"] {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+span.nobr {
+  white-space: nowrap;
+}
+
 post-footer {
   margin-top: 2.5rem;
   & a {

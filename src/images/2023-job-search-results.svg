@@ -1,0 +1,89 @@
+<svg height="500" width="650" xmlns="http://www.w3.org/2000/svg">
+<title>Your Diagram Title</title>
+<!-- Generated with SankeyMATIC: 2/29/2024, 4:05:10 PM -->
+<g transform="translate(177.94933,20)">
+<g id="sankey_flows">
+<path id="flow0" d="M12 86.01214C93.95625 86.01214 93.95625 112.65885 175.9125 112.65885" fill="none" stroke-width="94.33333" stroke="#2ca02c" opacity="0.45"><title>Existing connection → Recruiter screening: 6</title></path>
+<path id="flow3" d="M12 347.9934C44.71259 347.9934 44.71259 332.283 77.42519 332.283" fill="none" stroke-width="78.61111" stroke="#1f77b4" opacity="0.45"><title>LinkedIn messaging → Conversation: 5</title></path>
+<path id="flow8" d="M187.9125 104.79774C229.46336 104.79774 229.46336 68.30597 271.01423 68.30597" fill="none" stroke-width="78.61111" stroke="#9467bd" opacity="0.45"><title>Recruiter screening → Further interviews: 5</title></path>
+<path id="flow1" d="M12 164.62325C93.92832 164.62325 93.92832 288.71869 175.85663 288.71869" fill="none" stroke-width="62.88889" stroke="#2ca02c" opacity="0.45"><title>Existing connection → No recruiter screening: 4</title></path>
+<path id="flow5" d="M89.42519 340.14411C132.64091 340.14411 132.64091 351.60758 175.85663 351.60758" fill="none" stroke-width="62.88889" stroke="#ff7f0e" opacity="0.45"><title>Conversation → No recruiter screening: 4</title></path>
+<path id="flow9" d="M187.9125 167.68663C229.42239 167.68663 229.42239 212.25739 270.93229 212.25739" fill="none" stroke-width="47.16667" stroke="#9467bd" opacity="0.45"><title>Recruiter screening → No further interviews: 3</title></path>
+<path id="flow11" d="M283.01423 84.02819C327.73279 84.02819 327.73279 130.47061 372.45135 130.47061" fill="none" stroke-width="47.16667" stroke="#17becf" opacity="0.45"><title>Further interviews → No offer: 3</title></path>
+<path id="flow2" d="M12 403.02118C44.22841 403.02118 44.22841 419.76404 76.45681 419.76404" fill="none" stroke-width="31.44444" stroke="#1f77b4" opacity="0.45"><title>LinkedIn messaging → No response: 2</title></path>
+<path id="flow6" d="M88.45681 419.76404C132.15672 419.76404 132.15672 398.77425 175.85663 398.77425" fill="none" stroke-width="31.44444" stroke="#8c564b" opacity="0.45"><title>No response → No recruiter screening: 2</title></path>
+<path id="flow10" d="M283.01423 44.72264C327.73279 44.72264 327.73279 23.60188 372.45135 23.60188" fill="none" stroke-width="31.44444" stroke="#17becf" opacity="0.45"><title>Further interviews → Offer: 2</title></path>
+<path id="flow4" d="M89.42519 300.83855C132.66884 300.83855 132.66884 183.40885 175.9125 183.40885" fill="none" stroke-width="15.72222" stroke="#ff7f0e" opacity="0.45"><title>Conversation → Recruiter screening: 1</title></path>
+<path id="flow7" d="M12 251.84692C93.95625 251.84692 93.95625 167.68663 175.9125 167.68663" fill="none" stroke-width="15.72222" stroke="#d62728" opacity="0.45"><title>Third-party recruiter → Recruiter screening: 1</title></path>
+</g>
+<g id="sankey_nodes">
+<g class="node">
+<rect id="r0" class="for_r0" x="93.11284" y="51.05762" height="157.22222" width="12" fill="#2ca02c" fill-opacity="1" transform="translate(-93.11284,-12.21215)"><title>Existing connection:
+10</title></rect>
+</g>
+<g class="node">
+<rect id="r1" class="for_r1" x="186.22568" y="88.49418" height="125.77778" width="12" fill="#9467bd" fill-opacity="1" transform="translate(-10.31318,-23.002)"><title>Recruiter screening:
+8</title></rect>
+</g>
+<g class="node">
+<rect id="r2" class="for_r2" x="186.22568" y="284.02196" height="157.22222" width="12" fill="#7f7f7f" fill-opacity="1" transform="translate(-10.36905,-26.74772)"><title>No recruiter screening:
+10</title></rect>
+</g>
+<g class="node">
+<rect id="r3" class="for_r3" x="0" y="412.74806" height="110.05556" width="12" fill="#1f77b4" fill-opacity="1" transform="translate(0,-104.06021)"><title>LinkedIn messaging:
+7</title></rect>
+</g>
+<g class="node">
+<rect id="r4" class="for_r4" x="93.11284" y="363.50207" height="31.44444" width="12" fill="#8c564b" fill-opacity="1" transform="translate(-16.65602,40.53975)"><title>No response:
+2</title></rect>
+</g>
+<g class="node">
+<rect id="r5" class="for_r5" x="93.11284" y="464.69651" height="78.61111" width="12" fill="#ff7f0e" fill-opacity="1" transform="translate(-15.68765,-171.71907)"><title>Conversation:
+5</title></rect>
+</g>
+<g class="node">
+<rect id="r6" class="for_r6" x="93.11284" y="278.02984" height="15.72222" width="12" fill="#d62728" fill-opacity="1" transform="translate(-93.11284,-34.04403)"><title>Third-party recruiter:
+1</title></rect>
+</g>
+<g class="node">
+<rect id="r7" class="for_r7" x="279.33852" y="61.50348" height="78.61111" width="12" fill="#17becf" fill-opacity="1" transform="translate(-8.32429,-32.50307)"><title>Further interviews:
+5</title></rect>
+</g>
+<g class="node">
+<rect id="r8" class="for_r8" x="279.33852" y="209.86459" height="47.16667" width="12" fill="#7f7f7f" fill-opacity="1" transform="translate(-8.40623,-21.19054)"><title>No further interviews:
+3</title></rect>
+</g>
+<g class="node">
+<rect id="r9" class="for_r9" x="372.45135" y="18.69238" height="31.44444" width="12" fill="#edc434" fill-opacity="1" transform="translate(0,-10.81272)"><title>Offer:
+2</title></rect>
+</g>
+<g class="node">
+<rect id="r10" class="for_r10" x="372.45135" y="119.88682" height="47.16667" width="12" fill="#7f7f7f" fill-opacity="1" transform="translate(0,-12.99954)"><title>No offer:
+3</title></rect>
+</g>
+</g>
+<g id="sankey_labels" font-family="sans-serif" font-size="17px" fill="#000000">
+<rect id="label0_bg" class="for_r0" x="-70.60317" y="105.40166" width="161.39667" height="47.91417" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-93.11284,-12.21215)"></rect>
+<text id="label0" class="for_r0" text-anchor="end" x="84.99517" y="129.66873" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(-93.11284,-12.21215)">Existing connection<tspan x="84.99517" dy="20.5275" font-weight="400" font-size="18.7px">10</tspan></text>
+<rect id="label1_bg" class="for_r1" x="111.86901" y="127.116" width="160.71332" height="47.91417" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-10.31318,-23.002)"></rect>
+<text id="label1" class="for_r1" text-anchor="middle" x="192.22568" y="151.38307" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(-10.31318,-23.002)">Recruiter screening<tspan x="192.22568" dy="20.5275" font-weight="400" font-size="18.7px">8</tspan></text>
+<rect id="label2_bg" class="for_r2" x="200.545" y="338.36598" width="182.39667" height="47.91414" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-10.36905,-26.74772)"></rect>
+<text id="label2" class="for_r2" text-anchor="start" x="206.34334" y="362.63307" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(-10.36905,-26.74772)">No recruiter screening<tspan x="206.34334" dy="20.5275" font-weight="400" font-size="18.7px">10</tspan></text>
+<rect id="label3_bg" class="for_r3" x="-165.94933" y="443.50874" width="163.63001" height="47.91414" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(0,-104.06021)"></rect>
+<text id="label3" class="for_r3" text-anchor="end" x="-8.11767" y="467.77583" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(0,-104.06021)">LinkedIn messaging<tspan x="-8.11767" dy="20.5275" font-weight="400" font-size="18.7px">7</tspan></text>
+<rect id="label4_bg" class="for_r4" x="45.72284" y="354.95723" width="106.77999" height="47.91414" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-16.65602,40.53975)"></rect>
+<text id="label4" class="for_r4" text-anchor="middle" x="99.11284" y="379.22429" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(-16.65602,40.53975)">No response<tspan x="99.11284" dy="20.5275" font-weight="400" font-size="18.7px">2</tspan></text>
+<rect id="label5_bg" class="for_r5" x="42.73117" y="479.735" width="112.76333" height="47.91417" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-15.68765,-171.71907)"></rect>
+<text id="label5" class="for_r5" text-anchor="middle" x="99.11284" y="504.00207" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(-15.68765,-171.71907)">Conversation<tspan x="99.11284" dy="20.5275" font-weight="400" font-size="18.7px">5</tspan></text>
+<rect id="label6_bg" class="for_r6" x="-77.0365" y="261.62389" width="168.21334" height="47.91414" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-93.11284,-34.04403)"></rect>
+<text id="label6" class="for_r6" text-anchor="end" x="84.99517" y="285.89096" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(-93.11284,-34.04403)">Third-party recruiter<tspan x="84.99517" dy="20.5275" font-weight="400" font-size="18.7px">1</tspan></text>
+<rect id="label7_bg" class="for_r7" x="210.00686" y="76.54196" width="150.66333" height="47.91417" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-8.32429,-32.50307)"></rect>
+<text id="label7" class="for_r7" text-anchor="middle" x="285.33852" y="100.80904" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(-8.32429,-32.50307)">Further interviews<tspan x="285.33852" dy="20.5275" font-weight="400" font-size="18.7px">5</tspan></text>
+<rect id="label8_bg" class="for_r8" x="293.65784" y="209.18086" width="173.76335" height="47.91417" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-8.40623,-21.19054)"></rect>
+<text id="label8" class="for_r8" text-anchor="start" x="299.45618" y="233.44793" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(-8.40623,-21.19054)">No further interviews<tspan x="299.45618" dy="20.5275" font-weight="400" font-size="18.7px">3</tspan></text>
+<rect id="label9_bg" class="for_r9" x="386.7707" y="10.14753" width="50.28002" height="47.91417" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(0,-10.81272)"></rect>
+<text id="label9" class="for_r9" text-anchor="start" x="392.56902" y="34.4146" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(0,-10.81272)">Offer<tspan x="392.56902" dy="20.5275" font-weight="400" font-size="18.7px">2</tspan></text>
+<rect id="label10_bg" class="for_r10" x="386.7707" y="119.20308" width="73.28002" height="47.91417" rx="4.25" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(0,-12.99954)"></rect>
+<text id="label10" class="for_r10" text-anchor="start" x="392.56902" y="143.47016" font-weight="400" font-size="15.3px" dy="-4.06374" transform="translate(0,-12.99954)">No offer<tspan x="392.56902" dy="20.5275" font-weight="400" font-size="18.7px">3</tspan></text>
+</g>
+</g></svg>

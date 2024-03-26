@@ -67,7 +67,6 @@ I mention Ruby because that's where I focused my search, but if you work with a 
   - If you're into Ruby, [Ruby for Good](https://github.com/rubyforgood) is a convenient collection of open-source apps to contribute to.
 - **Join communities.** Here are some for Ruby:
   - [Ruby on Rails Link](https://www.rubyonrails.link/) community on Slack.
-  - [The Agency of Learning](https://agencyoflearning.com/) is great if you're willing to commit time to mentor and/or be mentored. They aren't always accepting applications, though, so you may have to check back later.
   - [Ruby meetups.](https://thoughtbot.com/blog/ruby-groups-around-the-world) In-person is ideal, but here are U.S. meetups that meet online:
     - [Atlanta Ruby Meetup Group](https://www.meetup.com/atlantaruby/)
     - [B'more on Rails](https://www.meetup.com/bmore-on-rails/)
