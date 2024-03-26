@@ -25,21 +25,25 @@ MacOS is not friendly to mouse users (except for Apple's Magic Mouse, but I shud
 To enable Windows-style keyboard shortcuts, I did the following:
 
 - Installed [AltTab](https://alt-tab-macos.netlify.app/).
-- Edited `~/Library/KeyBindings/DefaultKeyBinding.Dict` to consist of the snippet below. In case you're wondering, [here](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding) is a full list of possible commands, and [here](https://github.com/ttscoff/KeyBindings) are the defaults.
+- Edited `~/Library/KeyBindings/DefaultKeyBinding.Dict` to consist of the snippet below. In case you're wondering, [here's a full list](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding) of possible commands, [here's more documentation](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html), and [here are a bunch of examples](https://github.com/ttscoff/KeyBindings).
 ```
 {
-  "\UF729"  = moveToBeginningOfLine:; // home
-  "\UF72B"  = moveToEndOfLine:; // end
-  "$\UF729" = moveToBeginningOfLineAndModifySelection:; // shift home
-  "$\UF72B" = moveToEndOfLineAndModifySelection:; // shift end
-  "@\UF729" = moveToBeginningOfDocument:; // ctrl home
-  "@\UF72B" = moveToEndOfDocument:; // ctrl end
-  "@$\UF729" = moveToBeginningOfDocumentAndModifySelection:; // ctrl shift home
-  "@$\UF72B" = moveToEndOfDocumentAndModifySelection:; // ctrl shift end
-  "@\UF702" = moveWordLeft:; // ctrl left
-  "@\UF703" = moveWordRight:; // ctrl right
-  "@$\UF702" = moveWordLeftAndModifySelection:; // ctrl shift left
-  "@$\UF703" = moveWordRightAndModifySelection:; // ctrl shift right
+"\UF729"  = "moveToBeginningOfLine:"; // home
+"\UF72B"  = "moveToEndOfLine:"; // end
+"$\UF729" = "moveToBeginningOfLineAndModifySelection:"; // shift home
+"$\UF72B" = "moveToEndOfLineAndModifySelection:"; // shift end
+"@\UF729" = "moveToBeginningOfDocument:"; // cmd home
+"@\UF72B" = "moveToEndOfDocument:"; // cmd end
+"@$\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; // cmd shift home
+"@$\UF72B" = "moveToEndOfDocumentAndModifySelection:"; // cmd shift end
+
+"@\UF702" = "moveWordBackward:"; // cmd left
+"@\UF703" = "moveWordForward:"; // cmd right
+"@$\UF702" = "moveWordBackwardAndModifySelection:"; // cmd shift left
+"@$\UF703" = "moveWordForwardAndModifySelection:"; // cmd shift right
+
+"@\UF728" = "deleteWordBackward:"; // cmd backspace
+"@\177" = "deleteWordForward:"; // cmd delete
 }
 ```
 - Added [this script](https://stackoverflow.com/questions/5407916/zsh-zle-shift-selection/30899296#30899296) to Zsh config to enable familiar text-editing shortcuts in the terminal.
