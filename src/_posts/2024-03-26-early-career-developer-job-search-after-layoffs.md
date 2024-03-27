@@ -80,7 +80,7 @@ Meanwhile, my salary went up and up. Here's a chart showing my gross pay since t
   Date.new(2024,2,1) => 90000,
   Date.new(2024,3,1) => 90000,
   Date.new(2024,4,1) => 124000,
-}, curve: false, points: false, prefix: "$", thousands: ",", height: "480px", library: { scales: { x: { ticks: { maxTicksLimit: 7 } } } }) %>
+}, id: "salary-2020-2024", curve: false, points: false, prefix: "$", thousands: ",", height: "480px", library: { scales: { x: { ticks: { maxTicksLimit: 7 } } } }) %>
 
 Did you notice the gap near the end? That's the story of this post.
 

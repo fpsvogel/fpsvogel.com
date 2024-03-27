@@ -14,7 +14,7 @@ This page is updated automatically with the help of my [Reading](https://github.
 - [Rating distribution](#rating-distribution)
 - [Most re-reads](#most-re-reads)
 - [Longest items](#longest-items)
-- [Most annotated items](#most-annotated-items)
+- [Most annotated](#most-annotated)
 - [Fastest reads](#fastest-reads)
 
 ***Note:** The length of audio/visual items is converted to page counts according to my average reading speed of 35 pages per hour.*
@@ -25,46 +25,46 @@ This page is updated automatically with the help of my [Reading](https://github.
 
 Total pages read of 4- and 5-star items, by genre.
 
-<%= pie_chart(stats[:amount_by_genre_favorites], height: "480px") %>
+<%= pie_chart(stats[:amount_by_genre_favorites], id: "favorite-genres", height: "480px") %>
 
 ## Most-read genres
 
 Total pages read of each year's top 4 genres.
 
-<%= column_chart(stats[:top_genres_by_year], stacked: true, library: { plugins: { tooltip: { filter: ->() {} } } }) %>
+<%= column_chart(stats[:top_genres_by_year], id: "most-read-genres", stacked: true, library: { plugins: { tooltip: { filter: ->() {} } } }) %>
 
 ## What I feel about each genre
 
 Average rating by genre.
 
-<%= bar_chart(stats[:average_rating_by_genre], height: "700px", min: 1.0, max: 5.0) %>
+<%= bar_chart(stats[:average_rating_by_genre], id: "rating-by-genre", height: "700px", min: 1.0, max: 5.0) %>
 
 ## Rating distribution
 
 Item count by rating.
 
-<%= pie_chart(stats[:rating_counts]) %>
+<%= pie_chart(stats[:rating_counts], id: "rating-distribution") %>
 
 ## Most re-reads
 
 Highest numbers of completed readings/listenings/watches, including the first one.
 
-<%= bar_chart(stats[:top_experiences], library: { scales: { x: { ticks: { precision: 0 } } } }) %>
+<%= bar_chart(stats[:top_experiences], id: "most-rereads" , library: { scales: { x: { ticks: { precision: 0 } } } }) %>
 
 ## Longest items
 
 Page counts of *amounts*, meaning that a re-read adds to the total.
 
-<%= bar_chart(stats[:top_amounts]) %>
+<%= bar_chart(stats[:top_amounts], id: "longest-items" ) %>
 
-## Most annotated items
+## Most annotated
 
 Word counts of notes.
 
-<%= bar_chart(stats[:top_annotated]) %>
+<%= bar_chart(stats[:top_annotated], id: "most-annotated" ) %>
 
 ## Fastest reads
 
 Pages per day.
 
-<%= bar_chart(stats[:top_speeds]) %>
+<%= bar_chart(stats[:top_speeds], id: "fastest-reads" ) %>
