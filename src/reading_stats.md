@@ -53,9 +53,9 @@ Highest numbers of completed readings/listenings/watches, including the first on
 
 ## Longest items
 
-Page counts of *amounts*, meaning that a re-read adds to the total.
+For podcasts and other items of undefined length, I count the amount that I've consumed so far.
 
-<%= bar_chart(stats[:top_amounts], id: "longest-items" ) %>
+<%= bar_chart(stats[:top_lengths], id: "longest-items" ) %>
 
 ## Most annotated
 

@@ -128,8 +128,8 @@ class Builders::LoadReadingList < SiteBuilder
       .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
       .transform_keys { |title| title.split(':').first }
 
-    stats[:top_amounts] =
-      Reading.stats(input: "top 10 amounts", items:)
+    stats[:top_lengths] =
+      Reading.stats(input: "top 10 lengths", items:)
       .to_h
       .transform_values(&:to_i)
 
