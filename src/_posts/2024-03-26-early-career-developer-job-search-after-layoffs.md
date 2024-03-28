@@ -15,6 +15,8 @@ Recently I wrote [an upbeat how-to on job networking](/posts/2024/job-search-net
 
 Don't worry, it's not *all* depressing. I've waited for weeks to publish this post just so that I have some good news to share at the end.
 
+**Note:** This post's title specifies "early-career developer" only because I'm speaking from my own experience, not because *only* early-career developers are having a hard time. It's a tough job market for everyone in tech, even job seekers with decades of experience.
+
 ## Backstory: from teacher to developer
 
 For context, I used to be a schoolteacher. In 2019, after a sudden move back to the U.S. (Kentucky) from an overseas teaching position, I found myself earning a pitifully low salary of <span class="nobr">$32k/year</span> and inundated with medical bills from my wife's chronic illness.
