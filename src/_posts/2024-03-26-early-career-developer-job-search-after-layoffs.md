@@ -17,13 +17,13 @@ Don't worry, it's not *all* depressing. I've waited for weeks to publish this po
 
 ## Backstory: from teacher to developer
 
-For context, I used to be a schoolteacher. In 2019, after a sudden move back to the U.S. from an overseas teaching position, I found myself earning a pitifully low salary of <span class="nobr">$32k/year</span> and inundated with medical bills from my wife's chronic illness.
+For context, I used to be a schoolteacher. In 2019, after a sudden move back to the U.S. (Kentucky) from an overseas teaching position, I found myself earning a pitifully low salary of <span class="nobr">$32k/year</span> and inundated with medical bills from my wife's chronic illness.
 
 *I didn't even enjoy my new job.* The frequent late nights spent planning and grading, the emotional drain of managing classrooms full of teenagers all day, the nagging feeling that in spite of all the effort I wasn't actually helping these kids… it was too much.
 
 It was time for a career change.
 
-So I quit teaching at the end of the school year, got a customer support job in the COVID-fueled e-commerce industry, and taught myself coding in the evenings and on weekends. After a year and a half, in February 2022, I got a junior developer job, and the following year I was promoted to mid-level.
+So I quit teaching at the end of the school year, got a remote customer support job in the COVID-fueled e-commerce industry, and taught myself coding in the evenings and on weekends. After a year and a half, in February 2022, I got a junior developer job (also remote), and the following year I was promoted to mid-level.
 
 Meanwhile, my salary went up and up. Here's a chart showing my gross pay since the beginning of 2020, when I was still a teacher:
 
@@ -111,7 +111,9 @@ It was rough. Here are some low points:
 
 Backing up a little bit, **job networking** is what turned the tide and helped me start getting interviews. I described my process [in a previous post](/posts/2024/job-search-networking-for-engineers), and now I can share more on the results.
 
-I applied for 18 roles that I networked for, i.e. where I didn't submit a cold application. These were mostly in December and January, months 4 and 5 in the 6-month search. The networking that I did can be divided into three broad types (which you can see represented visually further down, if you want to skip the verbiage):
+I applied for 18 roles that I networked for, i.e. where I didn't submit a cold application. These were mostly in December and January, months 4 and 5 in the 6-month search. The networking that I did can be divided into the three broad types below (which you can see represented visually further down, if you want to skip the verbiage).
+
+Note that I applied only for remote positions, because there aren't a lot of in-person developer jobs in my area (central Kentucky), and in-person salaries here tend to be lower anyway. For anyone living in a tech hub, it's a good idea to do in-person networking too, such as attending local meetups.
 
 - **Existing connections:** I already had a connection in the company, first- or second-degree.
   - Of 10 attempts, I got 6 recruiter screenings, and in 3 of those I got more interviews.
