@@ -120,7 +120,7 @@ Note that I applied only for remote positions, because there aren't a lot of in-
 - **Existing connections:** I already had a connection in the company, first- or second-degree.
   - Of 10 attempts, I got 6 recruiter screenings, and in 3 of those I got more interviews.
 - **LinkedIn messaging:** I tried forming a new connection by messaging a stranger via InMail on LinkedIn.
-  - Of 7 attempts, only one led to a recruiter screening and then further interviews. But surprisingly, I only twice got no response; people were surprisingly willing to talk to a random stranger like me, and twice I got a referral.
+  - Of 7 attempts, only one led to a recruiter screening and then further interviews. But I only twice got no response, and twice I got a referral. In case you didn't know, most companies offer a referral bonus to employees after they refer a candidate who ends up being hired. So even if it feels awkward to message a complete stranger, it's worth a try because they're incentivized to refer you.
 - **Third-party recruiter:** I applied for one job through Brian at [Mirror Placement](https://www.mirrorplacement.com/), and it led to a recruiter screening and a further interview. Besides that one role, Brian said he didn't have anything for an early-career developer like me. But I enjoyed working with Brian, so I'll definitely talk to him again in the future when I have more years of experience.
 
 In total, of these 18 attempts, 8 got me a recruiter screening, and in 5 of those I went on to further interviews. Two of these led to job offers: the one I accepted early out of caution, and the one for my current role. Here's all of the above visualized in a diagram built with [SankeyMATIC](https://sankeymatic.com):

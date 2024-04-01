@@ -51,7 +51,9 @@ However…
 
 **When I talk to someone personally, when they hear my name from a colleague, when they see my name in their LinkedIn feed, suddenly I'm top of mind.**
 
-I could either ignore this fact, or embrace it.
+Reinforcing this psychological phenomenon is an incentive in the hiring process, in that **an employee gets a referral bonus after they refer a candidate who ends up being hired.** That explains why total strangers are often willing to give you a referral if you just get in contact with them.
+
+That's the secret of the hiring process: recruiting teams essentially ignore the advertised channel of just submitting an application. I could either ignore this fact, or embrace it.
 
 ## Embracing networking: preliminary work
 
@@ -107,7 +109,7 @@ From there, there are two things you can do with the search results.
 
 #### A. Find someone who can refer you
 
-If you have any connections at the company (1st- or 2nd-degree), ask them if they'd be willing to chat about what it's like to work there. Try to be genuinely curious about the company (you *do* want to know all you can about where you might be working, after all), but at some point you can steer the conversation toward the possibility of that person referring you when you apply. Sometimes you don't even have to try because *they're* the ones who suggest it.
+If you have any connections at the company (1st- or 2nd-degree), ask them if they'd be willing to chat about what it's like to work there. Try to be genuinely curious about the company (you *do* want to know all you can about where you might be working, after all), but at some point you can steer the conversation toward the possibility of that person referring you when you apply. Sometimes you don't even have to try because *they're* the ones who suggest it. Remember, they'll get a bonus if they refer you and you end up being hired.
 
 Of course, this is easiest when it's a 1st-degree connection, but here are a couple of ways to start that conversation with a 2nd-degree connection:
 
