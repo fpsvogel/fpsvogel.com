@@ -6,16 +6,14 @@ class Builders::LoadReadingList < SiteBuilder
   def build
     hook :site, :post_read do |site|
       generator do
-        remote_file = my_dropbox_file
-
         if File.exist?(config.reading.local_filepath)
           local_filepath = config.reading.local_filepath
         else
-          remote_file = "" # Default if remote and local are inaccessible.
+          local_filepath = config.reading.alt_local_filepath
         end
 
         items = Reading.parse(
-          lines: remote_file,
+          lines: my_dropbox_file,
           # If my_dropbox_file is nil, then the local file path is used instead.
           path: local_filepath,
           error_handler: ->(e) { puts "Skipped a row due to a parsing error: #{e}" },
