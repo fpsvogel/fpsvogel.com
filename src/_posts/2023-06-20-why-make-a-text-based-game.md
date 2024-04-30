@@ -75,11 +75,12 @@ Returning to the other half of the equation, **how can an authored story happen 
 
 If I were going to write traditional text-based games, there are [many commonly-used authoring tools I could choose from](https://emshort.blog/how-to-play/writing-if/). But I love Ruby, so I might have chosen one of these instead:
 
-- [**Gamefic**](https://github.com/castwide/gamefic) for parser-based interactive fiction. It can [build games for the Web](https://github.com/castwide/gamefic-sdk#making-games-for-the-web). Here's [an example story's code](https://github.com/castwide/gamefic-sdk/blob/master/examples/cloak_of_darkness/main.rb) and [its explanation](https://github.com/castwide/gamefic-sdk/blob/master/examples/cloak_of_darkness/Cloak_of_Darkness.md).
+- [**Gamefic**](https://github.com/castwide/gamefic) *(active!)* for parser-based interactive fiction. It can [build games for the Web](https://github.com/castwide/gamefic-sdk#making-games-for-the-web). Here's [an example story's code](https://github.com/castwide/gamefic-sdk/blob/master/examples/cloak_of_darkness/main.rb) and [its explanation](https://github.com/castwide/gamefic-sdk/blob/master/examples/cloak_of_darkness/Cloak_of_Darkness.md).
+- [**TAGF — Text Adventure Game Framework**](https://github.com/RoUS/rubygem-tagf) *(active!)* is a WIP project whose initial test case is to be able to reproduce Colossal Cave Adventure.
 - [**ScottKit**](https://github.com/MikeTaylor/scottkit) for '80s-style text adventures. It has a nice DSL (see [the tutorial](https://github.com/MikeTaylor/scottkit/blob/master/docs/tutorial.md)).
 - [**Tuvi**](https://github.com/jaywengrow/tuvi) is designed for kids but looks fun for adults too.
 - [**Ruby Mud**](https://github.com/RickCarlino/mud) for building MUDs.
-- [**AresMUSH**](https://www.aresmush.com) ([GitHub](https://github.com/AresMUSH/aresmush)) also for building MUDs, but in a more pre-built and opinionated way. Compare to [Evennia](https://www.evennia.com/) in Python.
+- [**AresMUSH**](https://www.aresmush.com) ([GitHub](https://github.com/AresMUSH/aresmush)) *(active!)* is also for building MUDS. Compare to [Evennia](https://www.evennia.com/) in Python.
 
 ## Appendix B: Answering my inner critic
 
