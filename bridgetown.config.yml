@@ -22,8 +22,9 @@ defaults:
       author: "Felipe Vogel"
 
 reading:
-  local_filepath: "/home/felipe/Dropbox/Apps/SimpleText/reading.csv"
-  alt_local_filepath: "/Users/felipe.vogel/Dropbox/Apps/SimpleText/reading.csv"
+  local_filepaths:
+    - /home/felipe/Dropbox/Apps/SimpleText/reading.csv
+    - /Users/felipe.vogel/Dropbox/Apps/SimpleText/reading.csv
   dropbox_filepath: "/Apps/SimpleText/reading.csv"
   show_sort: false
   maximum_rating: 5

@@ -6,38 +6,42 @@ class Builders::LoadReadingList < SiteBuilder
   def build
     hook :site, :post_read do |site|
       generator do
-        if File.exist?(config.reading.local_filepath)
-          local_filepath = config.reading.local_filepath
+        local_filepath = config.reading.local_filepaths.find { File.exist? _1 }
+
+        if local_filepath.nil? && !dropbox_access?
+          site.data.reading_stats = {}
+          site.data.reading_list = []
+          site.data.reading_genres = []
+          site.data.reading_ratings = []
+          config.reading.types = {}
         else
-          local_filepath = config.reading.alt_local_filepath
+          items = Reading.parse(
+            lines: my_dropbox_file,
+            # If my_dropbox_file is nil, then the local file path is used instead.
+            path: local_filepath,
+            error_handler: ->(e) { puts "Skipped a row due to a parsing error: #{e}" },
+          )
+
+          site.data.reading_stats = get_stats(items)
+
+          filtered_items = Reading.filter(
+            items:,
+            minimum_rating: 4,
+            excluded_genres: config.reading.excluded_genres || [],
+            status: [:done, :in_progress],
+          )
+
+          site.data.reading_list = filtered_items.map(&:view).reverse
+
+          site.data.reading_genres = uniq_of_attribute(:genres, site.data.reading_list, sort_by: :frequency)
+          site.data.reading_ratings = uniq_of_attribute(:rating, site.data.reading_list, sort_by: :value)
+
+          config_to_save = Reading
+            .config[:item][:view]
+            .slice(:types, :minimum_rating_for_star)
+
+          config.reading.merge!(config_to_save)
         end
-
-        items = Reading.parse(
-          lines: my_dropbox_file,
-          # If my_dropbox_file is nil, then the local file path is used instead.
-          path: local_filepath,
-          error_handler: ->(e) { puts "Skipped a row due to a parsing error: #{e}" },
-        )
-
-        get_stats(items)
-
-        filtered_items = Reading.filter(
-          items:,
-          minimum_rating: 4,
-          excluded_genres: config.reading.excluded_genres || [],
-          status: [:done, :in_progress],
-        )
-
-        site.data.reading_list = filtered_items.map(&:view).reverse
-
-        site.data.reading_genres = uniq_of_attribute(:genres, site.data.reading_list, sort_by: :frequency)
-        site.data.reading_ratings = uniq_of_attribute(:rating, site.data.reading_list, sort_by: :value)
-
-        config_to_save = Reading
-          .config[:item][:view]
-          .slice(:types, :minimum_rating_for_star)
-
-        config.reading.merge!(config_to_save)
       end
     end
   end
@@ -155,7 +159,7 @@ class Builders::LoadReadingList < SiteBuilder
       .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
       .transform_keys { |title| title.split(':').first }
 
-    site.data.reading_stats = stats
+    stats
   end
 
   # The unique values of an attribute across all items.
