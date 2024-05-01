@@ -1,8 +1,8 @@
 ---
 title: Building a text-based game
-subtitle: convincing myself it's not a dumb idea
-description: The text-based game is old. But could it have unique potential for interactive fiction set in an open-world sandbox RPG?
-updated: 2024-02-07
+subtitle: exploring an old genre for new purposes
+description: Could this classic (but still kicking!) genre embody interactive fiction set in an open-world sandbox RPG? A deep dive into the kinds of text-based games.
+updated: 2024-05-01
 ---
 
 - [What *are* text-based games?](#what-are-text-based-games)
