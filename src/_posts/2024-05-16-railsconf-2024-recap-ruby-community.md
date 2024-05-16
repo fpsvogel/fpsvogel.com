@@ -16,9 +16,9 @@ I'll join in the praise, but from a different angle. It's somewhat personal, so 
 
 My angle: *RailsConf was fruitful and inspiring for me even though I'm in a busy season of life as a new parent, with no time to be an entrepreneur or an open-source hero.*
 
-In other words, **RailsConf is for everyone**.* Yes, it's even for you, dear reader who is a busy adult who doesn't have time to hack on Ruby projects 24/7!
+In other words, **RailsConf is for everyone**. Yes, it's even for you, dear reader who is a busy adult who doesn't have time to hack on Ruby projects 24/7!
 
-<small>\* And the corollary, **RubyConf is for everyone** (and probably, *the regional Ruby conference near you is for everyone*), which is worth noting because after next year, [RailsConf will be no more](https://rubycentral.org/news/anewearforrubycentralevents).</small>
+(And because after next year [RailsConf will be no more](https://rubycentral.org/news/anewearforrubycentralevents), it's worth noting the corollary, *RubyConf is for everyone*, and probably, *the regional Ruby conference near you is for everyone*.)
 
 ## When I was excited to get a free ticket
 
