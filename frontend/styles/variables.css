@@ -2,7 +2,7 @@
 // and so that this can override any :root defaults set in imported stylesheets.
 html:root {
   --max-body-width: 44rem;// !important;
-  --font-size: 1.07rem;
+  --font-size: 1.1rem;
   --nav-font-size: 110%;
   --main-font-size: 100%;
   --main-line-height: 1.65;

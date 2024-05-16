@@ -252,6 +252,15 @@ main img {
   margin-right: auto;
 }
 
+main figure {
+  margin: 3rem 0;
+  & figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-size: 110%;
+  }
+}
+
 del {
   background-color: unset;
 }
