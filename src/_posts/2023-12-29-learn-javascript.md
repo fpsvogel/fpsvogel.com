@@ -48,7 +48,7 @@ I'm using the resources listed below. Almost all are free. Besides a comprehensi
 - **Guided practice** and projects, to turn *knowledge* into *skills*.
 - **Web APIs**, especially the DOM, forms, and web components.
 - **Deep dives** into how JS works, and the rationale (or at least reasons) behind its quirks.
-- **Functional JS**, because I'm interested in functional programming. I recently [started learning Haskell](/posts/2023/rubyist-learns-haskell-getting-started), but JS will be useful as an example of how to apply functional concepts in a not-really-functional language.
+- **Functional JS**, because I'm interested in functional programming. I recently [started learning Haskell](/posts/2023/rubyist-learns-haskell-1-getting-started), but JS will be useful as an example of how to apply functional concepts in a not-really-functional language.
 
 There's *a lot* in the bottom two-thirds of the list, only because I haven't gone through it yet and weeded out the less-than-awesome resources.
 
