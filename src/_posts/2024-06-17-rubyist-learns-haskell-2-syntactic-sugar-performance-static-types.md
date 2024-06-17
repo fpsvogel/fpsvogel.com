@@ -4,25 +4,24 @@ subtitle: expressiveness and correctness
 description: Adventures in Haskell's expressiveness, performance, and static typing philosophy, along with thoughts on Ruby's dynamic typing.
 ---
 
-- [Expressive power](#expressive-power)
+- [Expressing things in different ways](#expressing-things-in-different-ways)
   - [Example 1: reordering functions](#example-1-reordering-functions)
-  - [With great power…](#with-great-power)
   - [Example 2: reordering functions again](#example-2-reordering-functions-again)
   - [Example 3: `maxBy` and performance](#example-3-maxby-and-performance)
-- [The dream of total static typing](#the-dream-of-total-static-typing)
-  - [Conclusion: Matz on static typing and Ruby](#conclusion-matz-on-static-typing-and-ruby)
+- [Haskell's dream of total static typing](#haskells-dream-of-total-static-typing)
+  - [Matz on static typing and Ruby](#matz-on-static-typing-and-ruby)
 
 Last year [I started learning Haskell](/posts/2023/rubyist-learns-haskell-1-getting-started) and then shelved it not long after. I hear that's a popular thing to do. But I had a great excuse in [the toughest job search of my life so far](/posts/2024/early-career-developer-job-search-after-layoffs), and now I'm jumping back into Haskell.
 
-## Expressive power
+## Expressing things in different ways
 
 Haskell isn't always fun for a newcomer. Often it feels like I'm learning programming all over again. It's tiring and I sometimes feel stupid.
 
-What keeps me going, what keeps making me decide not to quit, is Haskell's *expressiveness* (expressivity?), by which I mean *how it can express the same operation in many different ways*, and consequently, **how it allows me to arrange code in a way that's close to how I think.**
+Whenever I feel like quitting, what keeps me going is how interesting it is to write code for the same operation in different and often succinct ways. I guess that's what people mean by *expressiveness* (expressivity?). Here are a few examples.
 
 ### Example 1: reordering functions
 
-Here's a solution to an exercise in the [Haskell MOOC](https://haskell.mooc.fi). (To see other learning resources that I have lined up, see [my new "Learn Functional Programming" repo](https://github.com/fpsvogel/learn-functional-programming).)
+Here's a solution to an exercise in the [Haskell MOOC](https://haskell.mooc.fi). (By the way, you can see other learning resources that I have lined up in [my new "Learn Functional Programming" repo](https://github.com/fpsvogel/learn-functional-programming).)
 
 ```haskell
 -- Ex 3.5: Implement a function capitalize that takes in a string
@@ -36,7 +35,7 @@ capitalize string = unwords (map capitalizeWord (words string))
   where capitalizeWord (first:rest) = toUpper first : rest
 ```
 
-Any Haskell beginner will tell you that all those parentheses are unsightly, so here's that first line rewritten using the `$` operator (function application) to make the parentheses unnecessary:
+Any Haskell beginner will tell you that all those parentheses are atrocious (no offense to you fans of Lisp), so here's that first line rewritten using the `$` operator (function application) to make the parentheses unnecessary:
 
 ```haskell
 capitalize string = unwords $ map capitalizeWord $ words string
@@ -76,9 +75,7 @@ capitalize = words .> map capitalizeWord .> unwords
   where capitalizeWord (first:rest) = toUpper first : rest
 ```
 
-### With great power…
-
-This flexibility of expression is fun for me as a learner and solo tinkerer, but I can see how it could be *too much freedom* in the context of a team or organization. Agreeing on and enforcing a code style would help keep the code readable for everyone.
+On a side note, this flexibility of expression is fun for me as a learner and solo tinkerer, but I can see how it could be *too much freedom* in the context of a team or organization. Agreeing on and enforcing a code style would help keep the code readable for everyone.
 
 ### Example 2: reordering functions again
 
@@ -146,7 +143,7 @@ This more flexible function could be used by the original `maxBy` like this:
 
 ```haskell
 maxBy :: (a -> Int) -> a -> a -> a
-maxBy measure a b = maxByFlexible measure [a, b]
+maxBy measure a b = flexibleMaxBy measure [a, b]
 ```
 
 Based on other tips that I got, I also learned two more ways of writing the original function:
@@ -169,7 +166,7 @@ maxBy measure a b = case comparing measure a b of
   _  -> a
 ```
 
-And a recursion-based way to extend all these `a`-and-`b` implementations to operate on a list:
+And a recursion-based way to extend these `a`-and-`b` implementations (including my original solutions using `if`-`else` or guards) to operate on a list:
 
 ```haskell
 flexibleMaxBy :: (a -> Int) -> [a] -> a
@@ -204,23 +201,25 @@ Longer explanations are in [this StackOverflow answer](https://stackoverflow.com
 
 (On the other hand, critics point out that Haskellers *need* to be aware of compilation details in order to write code "just so" in ways that the compiler ends up optimizing it. Even if this is the case, it might still be a good exercise for me to become more conscious of the performance implications of code as I write it.)
 
-## The dream of total static typing
+## Haskell's dream of total static typing
 
 Besides expressive flexibility, another intriguing aspect of Haskell is how increasingly extensive its static typing system is.
 
-*"Total static typing"* is a term that I made up just now to refer to the goal that I dimly sense in Haskell's evolution. Its type system has become more complex over time, and within a few years Haskell might get a dependent type system, which is best explained (along with an alternative path) in the article [Why Liquid Haskell Matters](https://www.tweag.io/blog/2022-01-19-why-liquid-haskell/).
+*"Total static typing"* is a term that I made up just now to refer to the goal that I sense in Haskell's evolution. Its type system has become more complex over time, and within a few years Haskell might get a dependent type system, which is best explained (along with an alternative path) in the article [Why Liquid Haskell Matters](https://www.tweag.io/blog/2022-01-19-why-liquid-haskell/).
 
-In a nutshell, these efforts aim to extend Haskell so that the compiler (or a compiler-integrated tool) can check not only for valid *types*, but also for valid *values*. The goal, in other words, is **to verify at compile time everything that I'm used to verifying separately (and often incompletely) with unit tests.** In a sense, the types (or in the case of Liquid Haskell, the predicate annotations) *are* the unit tests, except they are better integrated into the compiler and so they offer better guarantees.
+In a nutshell, these efforts aim to extend Haskell so that the compiler (or a compiler-integrated tool) can check not only for valid *types*, but also for valid *values*. The goal, in other words, is **to verify at compile time everything that I'm used to verifying separately (and often incompletely) in unit tests.** In a sense, the types (or in the case of Liquid Haskell, the predicate annotations) *are* the unit tests, except they are better integrated into the compiler and so they offer more real guarantees.
 
-Of course, fancy type systems won't obviate the need for integration tests in any program that interacts with external systems such as a database, a client, third-party services, etc. More generally, I'm doubtful whether types can replace anything higher-level than unit tests. And debate is ongoing whether more complex type systems are even worth the trouble. But the idea is intriguing to me as a newcomer hailing from the very dynamic world of Ruby.
+Of course, fancy type systems won't obviate the need for integration tests in any program that interacts with external systems such as a database, a client, third-party services, etc. So if types can't replace anything higher-level than unit tests, are complex type systems are even worth the trouble? I'm not the only wondering, because I've seen an ongoing debate over that question.
 
-### Conclusion: Matz on static typing and Ruby
+Doubts aside, the idea of a type system completely replacing unit tests is intriguing to me as a newcomer hailing from the very dynamic world of Ruby.
 
-Speaking of Ruby. An extended quote from Matz, Ruby's creator, might seem like an odd way to conclude a post about Haskell. But I'm including it here because I wanted to mention that **I'm not learning Haskell because I'm tired of Ruby's dynamic typing or its object-oriented foundations.**
+### Matz on static typing and Ruby
 
-I enjoy Ruby a lot, actually. And that's precisely *why* I feel I should make an effort to venture out to learn a different paradigm, a different way of thinking: because **it would be very easy for me to stay comfortably in the realm of Ruby.** But by making the effort to learn Haskell, I hope to become a better programmer, including a better *Ruby programmer*.
+Speaking of Ruby. An extended quote from Matz, Ruby's creator, might seem like an odd way to conclude a post about Haskell. But I'm including it here because I wanted to mention that **I'm not learning Haskell because I'm tired of Ruby's dynamic typing.**
 
-Sometimes I feel crazy for liking Ruby *because* it doesn't have types. (Actually, that was one of my motivations for learning some Haskell, to see whether I'm crazy or not 😅) So, recently I felt reassured when I read Matz's thoughts on static types in Chapter 17 of [Coderspeak](https://www.uclpress.co.uk/products/230881). That entire chapter is great *(and the book is free to download as a PDF, so what are you waiting for?)* but I'll quote just the bit about static typing:
+I enjoy Ruby a lot, actually. And that's precisely *why* I feel I should make an effort to venture out to learn a different paradigm: because **it would be very easy for me to stay comfortably in the realm of Ruby.** I'm hoping that learning Haskell will make me a better programmer, including a better *Ruby programmer*.
+
+In this day and age when types are all the rage, I feel like I'm crazy for liking Ruby *because* it doesn't have types. (Actually, that was one of my motivations for learning some Haskell, to see whether I'm crazy or not 😅) So, recently I felt reassured when I read Matz's thoughts on static types in Chapter 17 of [Coderspeak](https://www.uclpress.co.uk/products/230881). That entire chapter is great *(and the book is free to download as a PDF, so what are you waiting for?)* but I'll quote just the bit about static typing:
 
 > "But what about the recent changes about types? I know you don't like types, you've said it publicly before. You didn't create Ruby to be statically typed. How does that make you feel?"
 >
@@ -230,8 +229,12 @@ Sometimes I feel crazy for liking Ruby *because* it doesn't have types. (Actuall
 >
 > "Well, I've been writing C my whole life. I understand the benefits of static typing. For me, it's OK to talk about static typing in Ruby. I understand the desire to get the benefit from static typing for Ruby. But at the same time, adding type declarations like other languages, PHP and Python, could change the feel of the language, you know, the feeling of programming, so I refuse to add type declarations."
 >
-> "The first reason is that it would change the feeling of programming in Ruby. The second reason is more about the community. In other programming languages, we see the 'typing police'. We would start to see the typing police in the community: "OK, your gem does not have type declarations. You have to have type declarations as a gem." And that's kind of forceful, you know. It's kind of bad for the community, I think."
+> "The first reason is that it would change the feeling of programming in Ruby. The second reason is more about the community. In other programming languages, we see the 'typing police'. We would start to see the typing police in the community: 'OK, your gem does not have type declarations. You have to have type declarations as a gem.' And that's kind of forceful, you know. It's kind of bad for the community, I think."
 >
-> "The third reason is that, in the history of programming, programming evolves in decades. Maybe 10, 15 years ago, dynamic programming, such as PHP, Python, Ruby and Perl, was very popular. And then 20 years before that, the most popular programming was C, C++ and Pascal, you know, static type programming. Then even more years ago, SmallTalk was popular and had no static typing."
+> "The third reason is that, in the history of programming, programming evolves in decades. Maybe 10, 15 years ago, dynamic programming, such as PHP, Python, Ruby and Perl, was very popular. And then 20 years before that, the most popular programming was C, C++ and Pascal, you know, static type programming. Then even more years ago, Smalltalk was popular and had no static typing."
 >
 > Matz took a sip of coffee and went on. "The dynamic and static, it goes like this, like a pendulum. Thinking about the future, maybe in 10 or 20 years, we might have the languages without type declaration. The compilers are very smart and they guess the intention of the programmers and they have code completion; maybe they even have error detection without type declaration. If this kind of future comes, we would not be able to go into that camp because we already have type declarations," he explained. "We want to keep Ruby for that distant future, not for the, you know, the present time benefit. It's like a longer-term view based on what's happened in the past. And how it kind of fluctuates. Maybe 20 years later we will have better compilers without type declaration because the pendulum goes the opposite way. And I want to keep Ruby for that distant future."
+
+I don't know whether Matz is right in his predictions, or whether this quote will age poorly. I don't know whether Haskell's dream of total static typing is a fool's errand, or the way of the future. But in order to become a programmer *now*, I feel that I should learn different ways of approaching problems than I'm used to, and Haskell conveniently—often intriguingly, sometimes painfully—forces me to do that.
+
+See you next time in my Haskell adventure!
