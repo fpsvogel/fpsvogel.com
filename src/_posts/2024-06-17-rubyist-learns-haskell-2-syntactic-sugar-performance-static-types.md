@@ -41,7 +41,7 @@ Any Haskell beginner will tell you that all those parentheses are atrocious (no 
 capitalize string = unwords $ map capitalizeWord $ words string
 ```
 
-As I was writing this solution, the linter told me that because this is just a bunch of functions applied to the argument `string`, I could omit the argument and instead use `.` (function composition):
+As I was writing this solution, the linter told me that because this is just a bunch of functions applied to the parameter `string`, I could omit the parameter and instead use `.` (function composition):
 
 ```haskell
 capitalize = unwords . map capitalizeWord . words
@@ -73,6 +73,19 @@ And if you think `>>>` looks unwieldy, you can easily define your own version of
 capitalize :: String -> String
 capitalize = words .> map capitalizeWord .> unwords
   where capitalizeWord (first:rest) = toUpper first : rest
+```
+
+Or, you can use the [more sensible operators from the Flow package](https://github.com/tfausak/flow#cheat-sheet):
+
+```haskell
+-- <| instead of $ (function application)
+capitalize string = unwords <| map capitalizeWord <| words string
+-- <. instead of . (function composition)
+capitalize = unwords <. map capitalizeWord <. words
+-- |> instead of & (reverse function application)
+capitalize string = string |> words |> map capitalizeWord |> unwords
+-- .> instead of >>> (reverse function composition)
+capitalize = words .> map capitalizeWord .> unwords
 ```
 
 On a side note, this flexibility of expression is fun for me as a learner and solo tinkerer, but I can see how it could be *too much freedom* in the context of a team or organization. Agreeing on and enforcing a code style would help keep the code readable for everyone.
@@ -188,7 +201,7 @@ flexibleMaxBy f list = Just (go list)
 
 Along the way, I learned that **Haskellers can be very conscious of performance**. I was encouraged to think carefully about which `maxBy` implementation to use, and not to pick the one with `maximumBy` just because it looks neater in its concise flexibility. Constructing a list is more expensive than simply taking two arguments, after all, and we can't know for certain that the compiler will optimize out constructing the list.
 
-… but if we *do* want to know whether the compiler will perform that optimization, **we totally can!** The [Haskell Playground](https://play.haskell.org/saved/w9UU3xLx) has handy "Core" and "Asm" buttons that show the code in those two particular intermediate stages of compilation. I learned [from someone in the discord](https://discord.com/channels/280033776820813825/505367988166197268/1247975740696170586) that there are even more intermediate forms:
+… but if we *do* want to know whether the compiler will perform that optimization, **we totally can!** The [Haskell Playground](https://play.haskell.org/saved/w9UU3xLx) has handy "Core" and "Asm" buttons that show the code in those two particular intermediate stages of compilation. I learned [from someone in the Discord](https://discord.com/channels/280033776820813825/505367988166197268/1247975740696170586) that there are even more intermediate forms:
 
 > - **Core:** Haskell with all the sugar replaced. All types are explicit (no inference), but still very much the same semantics as Haskell.
 > - **STG:** Core code translated into a simple language that is no longer lazy, so all laziness (or rather: all places lazy thunks are forced) is now explicit.
