@@ -50,6 +50,9 @@ html:root {
 .language-js .highlight .na + .p { color: var(--code-cyan) } /* object literal key colon */
 .highlight .dl { color: var(--code-green) } /* string quotes */
 
+/* HASKELL */
+.language-haskell .highlight .cd { color: var(--code-gray) } /* alternate (?) comment */
+
 /* OTHER */
 .highlight .na { color: var(--code-gray) } /* XML version= */
 .highlight .nt { color: var(--code-green) } /* XML tag */

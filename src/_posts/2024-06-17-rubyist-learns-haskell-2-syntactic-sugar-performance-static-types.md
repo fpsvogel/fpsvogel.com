@@ -75,7 +75,7 @@ capitalize = words .> map capitalizeWord .> unwords
   where capitalizeWord (first:rest) = toUpper first : rest
 ```
 
-Or, you can use the [more sensible operators from the Flow package](https://github.com/tfausak/flow#cheat-sheet):
+`.>` is actually one of [the operators from the Flow package](https://github.com/tfausak/flow#cheat-sheet), which are nicer-looking than Haskell's defaults:
 
 ```haskell
 -- <| instead of $ (function application)
