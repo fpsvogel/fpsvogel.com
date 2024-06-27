@@ -26,6 +26,7 @@ To enable Windows-style keyboard shortcuts, I did the following:
 
 - Installed [AltTab](https://alt-tab-macos.netlify.app/).
 - Edited `~/Library/KeyBindings/DefaultKeyBinding.Dict` to consist of the snippet below. In case you're wondering, [here's a full list](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding) of possible commands, [here's more documentation](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html), and [here are a bunch of examples](https://github.com/ttscoff/KeyBindings).
+
 ```
 {
 "\UF729"  = "moveToBeginningOfLine:"; // home
@@ -46,6 +47,7 @@ To enable Windows-style keyboard shortcuts, I did the following:
 "@\UF728" = "deleteWordForward:"; // cmd delete
 }
 ```
+
 - Added [this script](https://stackoverflow.com/questions/5407916/zsh-zle-shift-selection/30899296#30899296) to Zsh config to enable familiar text-editing shortcuts in the terminal.
 - Followed [these steps](https://stackoverflow.com/a/24100077) to remove alt shortcuts for Unicode characters. This way I can use alt shortcuts for other things.
 - Installed [Keyboard Maestro](https://www.keyboardmaestro.com/main/) and set up additional keyboard shortcuts that I like. I'm also using Keyboard Maestro for text expansion. (On Windows I use [Beeftext](https://beeftext.org/).)
