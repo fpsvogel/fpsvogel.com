@@ -2,7 +2,7 @@
 title: Solo RPGs as creative writing practice
 subtitle: overcoming my inhibitions
 description: If you're clumsy at writing fiction or making up stories, solo role-playing games may be the inhibition-freeing creative practice you've been looking for.
-updated: 2024-02-08
+updated: 2024-06-27
 ---
 
 - [How I discovered solo TTRPGs](#how-i-discovered-solo-ttrpgs)
@@ -96,14 +96,14 @@ Like I said above, *ALONe* provides everything needed for solo play and that's w
 
 These are what help move the story along in solo play, in the absence of a GM (game master).
 
-- [*Mythic GME*](https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition) and [the mobile app](https://play.google.com/store/apps/details?id=com.dasher.mythicgme2e)
+- [*Mythic GME*](https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition)
 - [*CRGE/UNE/BOLD*](https://www.drivethrurpg.com/browse/pub/7251/Conjecture-Games)
 - [*Motif*](https://www.drivethrurpg.com/browse/pub/7970/Thought-Punks/subcategory/22614_38729/Motif-Framework)
 - [*Game Unfolding Machine*](https://jeansenvaars.itch.io/game-unfolding-machine) and [*Transient Predictions*](https://jeansenvaars.itch.io/transient-predictions)
-- [*Radiance Engine*](https://oddfishgames.com/products/the-solar-system-everything-digital-bundle-radiance-radiance-advanced-luminous-shine)
 
 These are more minimalist:
 
+- [watchout4snakes](http://watchout4snakes.com/Random/RandomPhrase) (random word generator)
 - [*One Page Solo Engine*](https://inflatablestudios.itch.io/one-page-solo-engine) and [the online version](https://inflatablestudios.itch.io/one-page-solo-engine-online) or [the mobile app](https://play.google.com/store/apps/details?id=dev.InflatableStudios.OnePageSoloEngine)
 - [*MUNE*](https://forums.giantitp.com/showthread.php?567342-MUNE-a-GM-emulator) and [the mobile app](https://play.google.com/store/apps/details?id=com.toppinc.dnd.muneengine)
 - [*Recluse*](https://gravenutterance.itch.io/recluse)
