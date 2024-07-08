@@ -2,7 +2,7 @@
 title: Solo RPGs as creative writing practice
 subtitle: overcoming my inhibitions
 description: If you're clumsy at writing fiction or making up stories, solo role-playing games may be the inhibition-freeing creative practice you've been looking for.
-updated: 2024-06-27
+updated: 2024-07-08
 ---
 
 - [How I discovered solo TTRPGs](#how-i-discovered-solo-ttrpgs)
@@ -66,7 +66,7 @@ Here are some other TTRPGs that I'm exploring:
 - *Dungeon Hero* ([Vol. 1](https://lonespelunker.itch.io/dungeon-hero), [Vol. 2](https://lonespelunker.itch.io/dungeon-hero-volume-2), [Vol. 3](https://lonespelunker.itch.io/dungeon-hero-volume-3-bump-in-the-night)) and its successor [*Welcome Aboard, Captain*](https://lonespelunker.itch.io/welcome-aboard-captain) are two other games designed for solo play, these even simpler than *ALONe* and more game-like.
 - [*The Storymaster's Tales*](https://www.storymasterstales.com) is a good option for introducing kids to TTRPGs.
 - [*Space Aces: Voyages in Infinite Space*](https://www.etsy.com/listing/1646603705/space-aces-voyages-in-infinite-space) (plus [supplements](https://p0rthos47.itch.io/)) is another good one for kids, and for the galaxy-exploring kid in me.
-- [*For Small Creatures Such As We*](https://www.kickstarter.com/projects/diamondblood/for-small-creatures-such-as-we) is an upcoming *journaling game*, which is closer to pure creative writing.
+- [*For Small Creatures Such As We*](https://www.blackwellwriter.com/en-us/products/for-small-creatures-such-as-we) for more light-hearted adventures in space.
 - [*Microscope*](https://www.lamemage.com/microscope) as a world-building tool. Solo resources for it:
   - [Lens](https://docs.google.com/document/d/1isWrSPL417PN6eSCYQmxKnFxPXQUn9IjZW4W2xfToDc)
   - [Videos by Clare C. Marshall](https://www.youtube.com/watch?v=q4h9Yg1UWjY)
@@ -74,8 +74,8 @@ Here are some other TTRPGs that I'm exploring:
   - Series of posts: [1](https://web.archive.org/web/20170107021652/http://www.risusmonkey.com/2011/03/solo-gaming-on-long-flight.html), [2](https://web.archive.org/web/20160330173740/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-2-first-pass.html), [3](https://web.archive.org/web/20160330172817/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-3-making.html), [4](https://web.archive.org/web/20160330173127/http://www.risusmonkey.com/2011/03/solo-gaming-in-flight-part-4-making.html)
 - Other world-building games:
   - [*Mappa Imperium*](https://nookrium.itch.io/mappa-imperium)
-  - [*Foundations*](https://biglizardgames.itch.io/foundations)
-  - [*Cartograph*](https://www.kickstarter.com/projects/ravensridge/cartograph-atlas-edition-a-solo-mapmaking-ttrpg)
+  - [*Foundations*](https://leyline-press.itch.io/foundations-digital-edition-bundle)
+  - [*Cartograph*](https://the-ravensridge-press.itch.io/cartograph-atlas-edition)
   - [*Artefact*](https://mouseholepress.itch.io/artefact) (try it alongside [*The Kleptogoblicon*](https://perchance.org/kleptogoblicon))
   - [*DELVE*](https://www.blackwellwriter.com/en-us/products/delve-a-solo-map-drawing-game) / [*UMBRA*](https://www.blackwellwriter.com/en-us/products/umbra-a-game-of-final-frontiers)
   - [*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) has a world-building element.
