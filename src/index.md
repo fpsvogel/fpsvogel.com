@@ -23,7 +23,7 @@ This site is where I reflect on my learning. Usually I write about Ruby programm
 
 <% favorite_posts = %w[
   2024/early-career-developer-job-search-after-layoffs
-  2023/solo-rpg-creative-writing-practice
+  2023/solo-rpgs-creative-practice
   2023/why-make-a-text-based-game
   2021/how-to-contribute-to-open-source-ruby-rails
   2021/build-a-blog-with-ruby-bridgetown
