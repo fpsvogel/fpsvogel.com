@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/fpsvogel/reading.git
-  revision: 7e77363870d643c40b9c7d5b705d655fdd5d5fc4
+  revision: 9b8af77e33368345a781d1199200af53878ffda5
   branch: main
   specs:
     reading (0.9.0)
