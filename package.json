@@ -22,7 +22,7 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo": "^7.1.0",
-    "chart.js": "^4.3.0",
+    "chart.js": "^4.4.3",
     "chartkick": "^5.0.1",
     "postcss-scss": "^4.0.3"
   }

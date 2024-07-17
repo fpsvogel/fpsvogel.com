@@ -1,6 +1,7 @@
 import "index.css"
 import { Application } from "@hotwired/stimulus"
 import * as Turbo from "@hotwired/turbo"
+import "chartkick/chart.js"
 
 // Uncomment the line below to add transition animations when Turbo navigates.
 // We recommend adding <meta name="turbo-cache-control" content="no-preview" />
@@ -27,5 +28,3 @@ Object.entries(controllers).forEach(([filename, controller]) => {
     Stimulus.register(identifier, controller.default)
   }
 })
-
-import "chartkick/chart.js"
