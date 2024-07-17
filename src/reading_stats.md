@@ -31,7 +31,7 @@ Total pages read of 4- and 5-star items, by genre.
 
 Total pages read of each year's top 4 genres.
 
-<%= column_chart(stats[:top_genres_by_year].map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }, id: "chart-most-read-genres", stacked: true, library: { plugins: { tooltip: { enabled: false } } }) %>
+<%= column_chart(stats[:top_genres_by_year].map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }, id: "chart-most-read-genres", stacked: true, library: { plugins: { tooltip: { mode: "point" } } }) %>
 
 ## What I feel about each genre
 
