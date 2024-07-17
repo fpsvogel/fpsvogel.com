@@ -9,8 +9,10 @@ permalink: /posts/
     <li>
       <a href="<%= post.relative_url %>">
         <posts-li-title><%= post.data.title %></posts-li-title>:
-        <posts-li-subtitle><%= post.data.subtitle %></posts-li-subtitle>
-        <posts-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></posts-li-date>
+        <div>
+          <posts-li-subtitle><%= post.data.subtitle %></posts-li-subtitle>
+          <posts-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></posts-li-date>
+        </div>
       </a>
     </li>
   <% end %>

@@ -4,12 +4,6 @@
 @import "reading-list.css";
 
 // CUSTOM ELEMENTS
-posts-li-date,
-posts-li-subtitle,
-posts-li-title {
-  display: inline-block;
-}
-
 post-footer {
   display: block;
 }
@@ -173,11 +167,21 @@ nav li > nav-social-link::after {
 .posts-ul a {
   display: block;
   color: var(--text-color);
+  padding-top: 0.3rem;
+  padding-bottom: 0.6rem;
+  line-height: 1.4rem;
+
+  & > * {
+    display: inline-block;
+  }
 
   & posts-li-title {
     text-decoration: underline;
     color: var(--link-color);
-    &:hover {
+  }
+
+  &:hover {
+    & posts-li-title, posts-li-subtitle, posts-li-date {
       color: var(--link-hover-color);
     }
   }
@@ -194,13 +198,13 @@ nav li > nav-social-link::after {
     font-size: 90%;
     border-radius: .5rem;
     border: .05rem solid var(--text-color-less-contrast);
-    margin-left: .3rem;
+    margin-left: .2rem;
     padding: 0 .4rem;
   }
 }
 
 .posts-ul li * {
-  margin-bottom: -0.2rem;
+  margin-bottom: -0.5rem;
 }
 
 .pagination-ul {
