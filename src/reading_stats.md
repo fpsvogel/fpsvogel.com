@@ -25,46 +25,46 @@ This page is updated automatically with the help of my [Reading](https://github.
 
 Total pages read of 4- and 5-star items, by genre.
 
-<%= pie_chart(stats[:amount_by_genre_favorites], id: "favorite-genres", height: "480px") %>
+<%= pie_chart(stats[:amount_by_genre_favorites], id: "chart-favorite-genres", height: "480px") %>
 
 ## Most-read genres
 
 Total pages read of each year's top 4 genres.
 
-<%= column_chart(stats[:top_genres_by_year], id: "most-read-genres", stacked: true, library: { plugins: { tooltip: { filter: ->() {} } } }) %>
+<%= column_chart(stats[:top_genres_by_year].map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }, id: "chart-most-read-genres", stacked: true, library: { plugins: { tooltip: { enabled: false } } }) %>
 
 ## What I feel about each genre
 
 Average rating by genre.
 
-<%= bar_chart(stats[:average_rating_by_genre], id: "rating-by-genre", height: "700px", min: 1.0, max: 5.0) %>
+<%= bar_chart(stats[:average_rating_by_genre], id: "chart-rating-by-genre", height: "700px", min: 1.0, max: 5.0) %>
 
 ## Rating distribution
 
 Item count by rating.
 
-<%= pie_chart(stats[:rating_counts], id: "rating-distribution") %>
+<%= pie_chart(stats[:rating_counts], id: "chart-rating-distribution") %>
 
 ## Most re-reads
 
 Highest numbers of completed readings/listenings/watches, including the first one.
 
-<%= bar_chart(stats[:top_experiences], id: "most-rereads" , library: { scales: { x: { ticks: { precision: 0 } } } }) %>
+<%= bar_chart(stats[:top_experiences], id: "chart-most-rereads" , library: { scales: { x: { ticks: { precision: 0 } } } }) %>
 
 ## Longest items
 
 For podcasts and other items of undefined length, I count the amount that I've consumed so far.
 
-<%= bar_chart(stats[:top_lengths], id: "longest-items" ) %>
+<%= bar_chart(stats[:top_lengths], id: "chart-longest-items" ) %>
 
 ## Most annotated
 
 Word counts of notes.
 
-<%= bar_chart(stats[:top_annotated], id: "most-annotated" ) %>
+<%= bar_chart(stats[:top_annotated], id: "chart-most-annotated" ) %>
 
 ## Fastest reads
 
 Pages per day.
 
-<%= bar_chart(stats[:top_speeds], id: "fastest-reads" ) %>
+<%= bar_chart(stats[:top_speeds], id: "chart-fastest-reads" ) %>

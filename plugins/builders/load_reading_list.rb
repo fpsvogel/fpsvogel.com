@@ -102,7 +102,6 @@ class Builders::LoadReadingList < SiteBuilder
       .flat_map { |year, genre_counts| genre_counts.map { |genre, count| [genre, [year, count]] } }
       .group_by(&:first)
       .transform_values { _1.map(&:last).to_h }
-      .map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }
 
     stats[:average_rating_by_genre] =
       Reading.stats(input: "average rating by genre", items:)
