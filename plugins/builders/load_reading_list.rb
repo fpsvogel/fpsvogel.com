@@ -2,7 +2,24 @@ require "reading"
 require "dropbox_api"
 require "debug"
 
+# Shortens the String to a given length.
+module StringTruncate
+  refine String do
+    # @param length [Integer]
+    # @return [String]
+    def truncate(length: 45)
+      if length < self.length - 1
+        "#{self[0...length]}#{"…"}"
+      else
+        self
+      end
+    end
+  end
+end
+
 class Builders::LoadReadingList < SiteBuilder
+  using StringTruncate
+
   def build
     hook :site, :post_read do |site|
       generator do
@@ -129,7 +146,7 @@ class Builders::LoadReadingList < SiteBuilder
       .max_by(10, &:last)
       .to_h
       .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
-      .transform_keys { |title| title.split(':').first }
+      .transform_keys(&:truncate)
 
     stats[:top_lengths] =
       Reading.stats(input: "top 10 lengths", items:)
@@ -140,7 +157,7 @@ class Builders::LoadReadingList < SiteBuilder
       Reading.stats(input: "top 10 speeds", items:)
       .to_h
       .transform_values { |speed| (speed[:amount] / speed[:days].to_f).to_i }
-      .transform_keys { |title| title.split(':').first }
+      .transform_keys(&:truncate)
 
     stats[:top_annotated] =
       items
@@ -156,7 +173,7 @@ class Builders::LoadReadingList < SiteBuilder
       .max_by(10, &:last)
       .to_h
       .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
-      .transform_keys { |title| title.split(':').first }
+      .transform_keys(&:truncate)
 
     stats
   end
