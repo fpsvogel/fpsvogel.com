@@ -25,12 +25,12 @@ layout: default
 <post-footer>
   <% if resource.previous_resource %>
     <a href="<%= resource.previous_resource.relative_url %>#bottom">
-      👉 <strong>Next:</strong> <%= resource.previous_resource.data.title %>
+      👉 <strong>Newer:</strong> <%= resource.previous_resource.data.title %>
     </a>
   <% end %>
   <% if resource.next_resource %>
     <a href="<%= resource.next_resource.relative_url %>#bottom">
-      👈 <strong>Previous:</strong> <%= resource.next_resource.data.title %>
+      👈 <strong>Older:</strong> <%= resource.next_resource.data.title %>
     </a>
   <% end %>
   <a href="#top">🚀 Back to top</a>
