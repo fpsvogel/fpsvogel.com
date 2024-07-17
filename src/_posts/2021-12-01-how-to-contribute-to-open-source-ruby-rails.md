@@ -10,7 +10,7 @@ description: How to make your first open-source contribution, including tips on 
 - [Find and fix an issue](#find-and-fix-an-issue)
 - [Conclusion](#conclusion)
 
-Here's how I recently got started contributing to open-source Ruby on Rails projects. I'm pretty new to Rails, so if I can do it then you can too! (For more tips for beginning Rubyists, see [my study plan](https://github.com/fpsvogel/learn-ruby-and-cs).)
+Here's how I recently got started contributing to open-source Ruby on Rails projects. I'm pretty new to Rails, so if I can do it then you can too! (For more tips for beginning Rubyists, see [my study plan](https://github.com/fpsvogel/learn-ruby).)
 
 ## Find a project
 

@@ -98,7 +98,7 @@ Fast forward a few months. I still don't like service objects, and I still like 
 
 After all, if so many people **feel the need** for service objects, and if OOP is evidently **so hard to get right**, aren't these signs that **something** is missing? ***Maybe*** that missing something is just better OOP, but in that case good OOP is hard to come by and we at least need a more accessible way to do it.
 
-So I've set out to explore the problem of organizing business logic from more angles than before, using the resources listed below. These lists are excerpted from [my "Learning Ruby" road map](https://github.com/fpsvogel/learn-ruby) which I often update, so you may want to find these lists there if this post is old at the time of your reading it. The sections corresponding to the lists below are, at the time of writing, ["Rails architecture"](https://github.com/fpsvogel/learn-ruby#rails-architecture) and ["Rails codebases"](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study).
+So I've set out to explore the problem of organizing business logic from more angles than before, using the resources listed below. These lists are excerpted from [my "Learning Ruby" road map](https://github.com/fpsvogel/learn-ruby) which I often update, so you may want to find these lists there if this post is old at the time of your reading it. The sections corresponding to the lists below are, at the time of writing, ["Rails architecture"](https://github.com/fpsvogel/learn-ruby#advanced-rails) and ["Rails codebases"](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study).
 
 ### Deductive study: books, talks, and gems
 

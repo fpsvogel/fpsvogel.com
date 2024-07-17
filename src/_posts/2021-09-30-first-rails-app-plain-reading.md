@@ -11,7 +11,7 @@ description: How I built my first Ruby on Rails app, from learning Rails basics,
 - [5. Next improvements](#5-next-improvements)
 - [Conclusion](#conclusion)
 
-After [a year of studying pure Ruby and basic frontend skills](https://github.com/fpsvogel/learn-ruby-and-cs), I've finally started learning Rails and built my first app: [Plain Reading](https://github.com/fpsvogel/plainreading).
+After [a year of studying pure Ruby and basic frontend skills](https://github.com/fpsvogel/learn-ruby), I've finally started learning Rails and built my first app: [Plain Reading](https://github.com/fpsvogel/plainreading).
 
 Rails is loved for its speed of development, and in that regard it did not disappoint. A month ago I had just finished watching my first Rails tutorial and my app was 0% done. Now, one month later, I've built a working, useful app *just by working on it a little bit each day*, in the time left over from life as an adult with a full-time job. Here's how I built it.
 
@@ -64,7 +64,7 @@ There are some other holes to fill too, partly because toward the end I became s
 
 As satisfying as it is to build my first app in a month, that is the easy part. The hard part will be learning how to build an app *well*, because let's be honest, right now my app's code looks like a steaming pile of dog poo to anyone who has real experience in Rails. Rails makes it easy for a newbie to slap together an app with only a vague notion of what I'm doing. It's a blessing and (increasingly as the app grows) a curse.
 
-That's why I'll buckle down and learn the hard lessons: maintainable architecture, Rails internals, better UX/UI, performance optimization, and codebases to dig into and learn by example. It's [all in my study plan](https://github.com/fpsvogel/learn-ruby-and-cs#rails)).
+That's why I'll buckle down and learn the hard lessons: maintainable architecture, Rails internals, better UX/UI, performance optimization, and codebases to dig into and learn by example. It's [all in my study plan](https://github.com/fpsvogel/learn-ruby).
 
 Meanwhile I have to start somewhere—no beginner can build a well-architected app on their first try, but we improve as we go. It's hugely encouraging to have built a functioning app in a few weeks, and now I'm more motivated than ever to learn those more serious lessons and use them to improve my little app.
 

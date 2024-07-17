@@ -55,7 +55,7 @@ So Ruby is fun and very productive, two key advantages for the self-taught devel
 
 There's a reason Rails is often used in startups, and it's the same reason that people either love Rails or hate it: Rails makes it so easy to slap together an app and throw new features into it nearly as fast as you can think of them. It's exhilarating in the moment, but we all know the sad result. The app grows haphazardly into a [big ball of mud](https://en.wikipedia.org/wiki/Big_ball_of_mud), its growth grinds to a halt, and its developers are left with a bad taste in their mouth, cringing at the mere mention of Rails for the rest of their life.
 
-But Rails can be productive *even in the long run*, if you use it carefully. ["Provide sharp knives"](https://rubyonrails.org/doctrine/#provide-sharp-knives) is a core value of Rails, and it's up to us whether we use those knives for good or ill. There are lots of resources out there for learning sustainable Rails development, some of which I've included in [my study plan](https://github.com/fpsvogel/learn-ruby-and-cs#rails).
+But Rails can be productive *even in the long run*, if you use it carefully. ["Provide sharp knives"](https://rubyonrails.org/doctrine/#provide-sharp-knives) is a core value of Rails, and it's up to us whether we use those knives for good or ill. There are lots of resources out there for learning sustainable Rails development, some of which I've included in [my study plan](https://github.com/fpsvogel/learn-ruby).
 
 ## Objection #2: Ruby is slow
 
@@ -79,6 +79,6 @@ Anyway, for a beginner it's much easier to learn a technology like Rails that is
 
 ## What about you?
 
-If you're a beginner wondering what programming language to learn first, give Ruby a chance! [Try it in your browser](https://try.ruby-lang.org/), then see [my study plan](https://github.com/fpsvogel/learn-ruby-and-cs#rails) to get some ideas on next steps.
+If you're a beginner wondering what programming language to learn first, give Ruby a chance! [Try it in your browser](https://try.ruby-lang.org/), then see [my study plan](https://github.com/fpsvogel/learn-ruby) to get some ideas on next steps.
 
 Or if you're a grizzled veteran who hates Ruby, then I hope I've gone a little way to soften your heart. The next time a beginner says to you that they're learning Ruby, try not to suggest something else right away. Instead, smile and ask them how it's going. It'll make a bigger difference than you might guess.

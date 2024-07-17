@@ -92,6 +92,6 @@ But in Linux I get to customize the OS in the same way that I do programming. (B
 
 ## Next steps
 
-Where to go from here? My plan is to keep using Linux and to get started on [my Linux/command-line reading list](https://github.com/fpsvogel/learn-ruby#linux--command-line) as well as [my Ruby scripting list](https://github.com/fpsvogel/learn-ruby#ruby-scripting). (A few hours of Bash scripting was enough to make me want to use a friendlier language for all but performance-intensive tasks.)
+Where to go from here? My plan is to keep using Linux and to get started on [my Linux/command-line reading list](https://github.com/fpsvogel/learn-ruby#linux--command-line).
 
 And now that I have a graphical Linux environment for development, the way is open for me to try out the [DragonRuby Game Toolkit](https://dragonruby.itch.io/)… *(cue ominous music).*

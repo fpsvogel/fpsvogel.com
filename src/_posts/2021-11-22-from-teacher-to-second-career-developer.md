@@ -25,7 +25,7 @@ So in summer 2020 I took the plunge and quit teaching. I got a job in tech suppo
 
 ## Coding from the heart
 
-Elsewhere I've written on the technical side of my career transition: see [my study plan](https://github.com/fpsvogel/learn-ruby-and-cs) and [a post on why I chose Ruby](/posts/2021/why-learn-ruby).
+Elsewhere I've written on the technical side of my career transition: see [my study plan](https://github.com/fpsvogel/learn-ruby) and [a post on why I chose Ruby](/posts/2021/why-learn-ruby).
 
 But here I want to touch on the bigger question that my story might raise: why am I, a former humanities teacher, getting into software development?
 

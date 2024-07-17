@@ -83,4 +83,4 @@ On the other extreme, the "vanilla Rails" approach to writing views [is clunky a
 
 So I started dreaming about what frontend tools could give a smooth user experience *without* so much extra complexity, and this "RVTWS" stack is the result. (Yeah, I need to work on that acronym.)
 
-On a final note, if you'd like to learn more about Hotwire and StimulusReflex, check out the resources that I've compiled for both of them [in my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby-and-cs#rails-hotwire).
+On a final note, if you'd like to learn more about Hotwire and StimulusReflex, check out the resources that I've compiled for both of them [in my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby#hotwire).
