@@ -1,6 +1,6 @@
 ---
-title: The Ruby community is for everyone
-subtitle: reflections on RailsConf 2024
+title: Reflections on RailsConf 2024
+subtitle: the Ruby community is for everyone
 description: RailsConf 2024 reminded me, as a busy new parent, that I don't have to be an entrepreneur or an open-source hero. Anyone can be part of the Ruby community!
 ---
 

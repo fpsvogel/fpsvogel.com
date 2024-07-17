@@ -6,10 +6,6 @@ url: "https://fpsvogel.com"
 permalink: /posts/:year/:slug.*
 template_engine: erb
 
-pagination:
-  enabled: true
-  per_page: 6
-
 timezone: America/New_York
 
 defaults:

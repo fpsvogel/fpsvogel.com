@@ -6,7 +6,10 @@
 // CUSTOM ELEMENTS
 posts-li-date,
 posts-li-subtitle,
-posts-li-title,
+posts-li-title {
+  display: inline-block;
+}
+
 post-footer {
   display: block;
 }
@@ -164,21 +167,35 @@ nav li > nav-social-link::after {
 
 .posts-ul a {
   display: block;
-  text-decoration: none;
+  color: var(--text-color);
+
   & posts-li-title {
     text-decoration: underline;
+    color: var(--link-color);
+    &:hover {
+      color: var(--link-hover-color);
+    }
+  }
+
+  &:not(posts-li-title) {
+    text-decoration: none;
+  }
+
+  & posts-li-subtitle {
+    font-size: 85%;
+  }
+
+  & posts-li-date {
+    font-size: 90%;
+    border-radius: .5rem;
+    border: .05rem solid var(--text-color-less-contrast);
+    margin-left: .3rem;
+    padding: 0 .4rem;
   }
 }
 
 .posts-ul li * {
   margin-bottom: -0.2rem;
-}
-
-posts-li-date {
-  color: var(--text-color-less-contrast) !important;
-}
-posts-li-subtitle {
-  color: var(--text-color) !important;
 }
 
 .pagination-ul {
