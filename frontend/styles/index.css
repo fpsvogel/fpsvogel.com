@@ -65,6 +65,11 @@ em kbd {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
+
+  & a {
+    text-decoration: none !important;
+    color: var(--text-color-more-contrast) !important;
+  }
 }
 
 nav ul, .pagination-ul, footer, label[for=toc] {
