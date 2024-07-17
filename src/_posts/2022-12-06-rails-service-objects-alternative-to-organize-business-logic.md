@@ -2,6 +2,7 @@
 title: OOP vs. services for organizing business logic
 subtitle: is there a third way?
 description: Explorations into OOP vs. service objects, and a list of resources for moving past the black-and-white debate into a deeper understanding.
+updated: 2024-07-14
 ---
 
 - [The good old days](#the-good-old-days)
@@ -9,8 +10,8 @@ description: Explorations into OOP vs. service objects, and a list of resources 
 - [Two philosophical camps?](#two-philosophical-camps)
 - [Service object skepticism](#service-object-skepticism)
 - [Second-guessing myself; more study needed](#second-guessing-myself-more-study-needed)
-  - [Deductive study: books, talks, and gems](#deductive-study-books-talks-and-gems)
-  - [Inductive study: open-source Rails codebases](#inductive-study-open-source-rails-codebases)
+  - [Books and gems](#books-and-gems)
+  - [Open-source Rails codebases](#open-source-rails-codebases)
 - [Conclusion: to be continued…](#conclusion-to-be-continued)
 
 *Disclaimer: In this blog post I raise many questions and give few answers. At the bottom I list resources which I'm exploring in search of an answer, so [skip down](#second-guessing-myself-more-study-needed) if that's all you care about.*
@@ -100,44 +101,33 @@ After all, if so many people **feel the need** for service objects, and if OOP i
 
 So I've set out to explore the problem of organizing business logic from more angles than before, using the resources listed below. These lists are excerpted from [my "Learning Ruby" road map](https://github.com/fpsvogel/learn-ruby) which I often update, so you may want to find these lists there if this post is old at the time of your reading it. The sections corresponding to the lists below are, at the time of writing, ["Rails architecture"](https://github.com/fpsvogel/learn-ruby#advanced-rails) and ["Rails codebases"](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study).
 
-### Deductive study: books, talks, and gems
+### Books and gems
 
 Here are some resources that I hope will shed light on the question of organizing business logic better, both in terms of solutions ***and*** in terms of **when (under what conditions) these alternative approaches are beneficial** as opposed to simple OOP with Rails defaults. This list is not exhaustive; in particular I've omitted gems that are just a service object implementation. Some of these resources are closely related to service objects, but that's intentional–I'm compensating for my bias against them.
 
-- **Domain-Driven Design**, which aims to augment OOP to prevent problems such as fat models. It's intended for large, complex domains. Resources: ["Getting modules right with Domain-driven Design"](https://www.youtube.com/watch?v=Q_0XW46IlHY) (talk), [*Learning Domain-Driven Design*](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/) (book).
-- **Other approaches** that are more lightweight and have some of the same goals:
-  - [*Data Oriented Web Development with Ruby*](https://solnic.podia.com/data-oriented-web-development-with-ruby) (upcoming book) by Peter Solnica, who is on the [Hanami](https://hanamirb.org/) core team. Learning Hanami wouldn't be a bad idea either.
-  - [*Maintainable Rails*](https://leanpub.com/maintain-rails) (book), which uses gems that are part of the Hanami ecosystem.
-  - ["Organizing business logic in Rails with contexts"](https://nts.strzibny.name/business-logic-in-rails-with-contexts/) (blog post).
-  - Learn more about the repository pattern: [article](https://engineering.solarisbank.com/the-repository-pattern-in-ruby-with-the-active-record-library-f0445fa282c), [talk](https://www.youtube.com/watch?v=36LB8bfEeVc).
-- **Relevant gems** that seem worth learning from:
+- **Books on Rails architecture:**
+  - [Volmer's Rails Guide](https://volmerius.com/rails/)
+  - [Layered Design for Ruby on Rails Applications](https://www.packtpub.com/product/layered-design-for-ruby-on-rails-applications/9781801813785)
+  - [Maintainable Rails](https://leanpub.com/maintain-rails) (book), which uses gems that are part of the Hanami ecosystem.
+  - [Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)
+- **Gems:**
+  - [ActiveInteraction](https://github.com/AaronLasseigne/active_interaction)
   - [dry-transaction](https://dry-rb.org/gems/dry-transaction)
+  - [Flow](https://github.com/Freshly/flow)
   - [Interactor](https://github.com/collectiveidea/interactor)
   - [Sequent](https://www.sequent.io/) – CQRS and event sourcing
+  - [solid-process](https://github.com/solid-process/solid-process)
   - [Rails Event Store](https://github.com/RailsEventStore/rails_event_store) – for an event-driven architecture
+  - [Rectify](https://github.com/andypike/rectify)
+  - [Surrounded](https://github.com/saturnflyer/surrounded) – for [DCI](https://dci.github.io/introduction); pair with the book [Clean Ruby](http://clean-ruby.com/)
   - [Ventable](https://github.com/kigster/ventable) – a variation of the Observer design pattern
   - [Wisper](https://github.com/krisleech/wisper) – the Publish-Subscribe design pattern
   - [Packwerk](https://github.com/Shopify/packwerk) – to enforce boundaries and modularize Rails applications
+  - [gems related to Packwerk](https://github.com/rubyatscale)
 
-### Inductive study: open-source Rails codebases
+### Open-source Rails codebases
 
-I rarely read a lot of code outside of work, but I plan to change that. Below are Rails projects that I've seen mentioned more than once as good examples to learn from, ***or*** they are sufficiently active and well-known as to be good candidates for study.
-
-- **Small codebases:** Less than 50k lines of Ruby code.
-  - [github.com/codetriage/codetriage](https://github.com/codetriage/codetriage) (6k lines): *Issue tracker for open-source projects.*
-  - [github.com/joemasilotti/railsdevs.com](https://github.com/joemasilotti/railsdevs.com) (12k lines): *The reverse job board for Ruby on Rails developers.*
-  - [github.com/lobsters/lobsters](https://github.com/lobsters/lobsters) (13k lines): *Hacker News clone.*
-  - [github.com/thoughtbot/upcase](https://github.com/thoughtbot/upcase) (14k lines): *Learning platform for developers.*
-  - [github.com/houndci/hound](https://github.com/houndci/hound) (14k lines): *Automated code review for GitHub PRs.*
-  - [github.com/rubygems/rubygems.org](https://github.com/rubygems/rubygems.org) (26k lines): *Where Ruby gems are hosted.*
-- **Larger codebases:** More than 50k lines of Ruby code.
-  - [github.com/solidusio/solidus](https://github.com/solidusio/solidus) (72k lines): *E-commerce platform.*
-  - [github.com/mastodon/mastodon](https://github.com/mastodon/mastodon) (75k lines): *Like Twitter but self-hosted and federated.*
-  - [github.com/forem/forem](https://github.com/forem/forem) (103k lines): *Powers the blogging site [dev.to](https://dev.to/).*
-  - [github.com/alphagov/whitehall](https://github.com/alphagov/whitehall) (117k lines): *Publishes government content on [gov.uk](https://www.gov.uk/).*
-  - [github.com/discourse/discourse](https://github.com/discourse/discourse) (322k lines): *Discussion forum platform.*
-  - [github.com/instructure/canvas-lms](https://github.com/instructure/canvas-lms) (745k lines): *A popular LMS (learning management system).*
-  - [gitlab.com/gitlab-org/gitlab](https://gitlab.com/gitlab-org/gitlab) (1.8 million lines): *Like GitHub but with CI/CD and DevOps features built in. Has great [docs on architecture](https://docs.gitlab.com/ee/development/architecture.html).*
+Another way to learn good Rails architecture is by inductive study of real-world code. I do that at work, of course, but I could learn more by studying open-source apps. I've listed a bunch in ["Rails codebases to study"](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study), part of my "Learn Ruby" list of resources.
 
 ## Conclusion: to be continued…
 
