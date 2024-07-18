@@ -8,7 +8,7 @@ description: I rewrote a Ruby on Rails app in Roda, using Turbo Streams for an S
 - [Dropping in Turbo Streams](#dropping-in-turbo-streams)
 - [Up next: improve performance](#up-next-improve-performance)
 
-Two years ago, amid throwaway projects furiously hammered out ahead of my first developer job hunt, I made a little Rails app that I **actually liked**, a mashup of StumbleUpon and Wikipedia called Wiki Stumble. [Here's my post from back then](/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon) on how I made the app.
+Two years ago, amid throwaway projects furiously hammered out ahead of my first developer job hunt, I made a little Rails app that I **actually liked**, a mashup of StumbleUpon and Wikipedia called Wiki Stumble. [Here's my post from back then on how I made the app.](/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon)
 
 Now, as I'm circling back to tie up some loose ends, I took the opportunity **to learn a Ruby app framework besides Rails**, and **to practice my Hotwire skills**.
 

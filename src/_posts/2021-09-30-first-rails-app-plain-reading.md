@@ -17,7 +17,7 @@ Rails is loved for its speed of development, and in that regard it did not disap
 
 ## 1. Learn the basics of Rails
 
-I did the free [Rails for Beginners](https://gorails.com/series/rails-for-beginners) course by GoRails. I made sure to build the example app as I went through the course.
+I did the free [*Rails for Beginners*](https://gorails.com/series/rails-for-beginners) course by GoRails. I made sure to build the example app as I went through the course.
 
 ## 2. Choose frontend libraries
 
@@ -26,7 +26,7 @@ I did the free [Rails for Beginners](https://gorails.com/series/rails-for-beginn
 But instead I chose [Pico.css](https://picocss.com/) and [Shoelace](https://shoelace.style/). Why?
 
 - Bootstrap doesn't have dark mode built in 🤦‍♂️ There are [a few hacks for it](https://github.com/vinorodrigues/bootstrap-dark-5), but I don't really want to go there.
-- Bootstrap involves somewhat messy HTML. For example, [here is a comparison](https://www.sessions.edu/notes-on-design/www-wednesday-shoelace-2-0/) of a Bootstrap modal vs. a Shoelace modal.
+- Bootstrap involves somewhat messy HTML. For example, [here is a comparison of a Bootstrap modal vs. a Shoelace modal](https://www.sessions.edu/notes-on-design/www-wednesday-shoelace-2-0/).
 - Bootstrap has fewer and less flexible components than Shoelace.
 
 But Shoelace's included themes don't include styling for standard HTML elements (only Shoelace elements), and that's why I'm also using Pico. Pico is only one of [many minimalist or classless CSS themes](https://github.com/dbohdan/classless-css), but it's my favorite because it looks so good. And unlike most of the others, it has [several example pages](https://picocss.com/#examples) that can be used for inspiration.
@@ -44,9 +44,9 @@ I ended up doing this in five stages:
 
 1. **Skeleton site.** Build a homepage and basic user management with register and login pages. The GoRails tutorial helped immensely here.
 2. **Dropbox connectivity.** This took longer than I thought it would, and involved monkey-patching the Dropbox API gem to incorporate (and tweak) [an open PR](https://github.com/Jesus/dropbox_api/pull/83).
-3. **Models design.** [This guide helped](https://www.startuprocket.com/articles/how-to-design-and-prep-a-ruby-on-rails-model-architecture). After that was done, finishing up the Settings page was straightforward.
+3. **Models design.** [This guide helped.](https://www.startuprocket.com/articles/how-to-design-and-prep-a-ruby-on-rails-model-architecture) After that was done, finishing up the Settings page was straightforward.
 4. **CSV reading list parser.** The main backend component. I made use of [a gem](https://rubygems.org/gems/reading-csv) that I previously created for a related project, but I added a lot of new features and heavily refactored it along the way, so this stage actually took the longest.
-5. **My List page.** Finally, the point of the whole thing! This is where items parsed from the CSV are displayed in a pretty way so that you can show your reading list to other people. I adapted the view from [my reading page](/reading/) on my blog. I will improve on that soon, but in the meantime it's pretty neat that I can copy over essentially the same ERB file and Stimulus controller from my blog, thanks to my blog being made with Bridgetown. ([Here's more](/posts/2021/build-a-blog-with-bridgetown#2-ruby-component-and-plugin) on how I built that.)
+5. **My List page.** Finally, the point of the whole thing! This is where items parsed from the CSV are displayed in a pretty way so that you can show your reading list to other people. I adapted the view from [my reading page](/reading/) on my blog. I will improve on that soon, but in the meantime it's pretty neat that I can copy over essentially the same ERB file and Stimulus controller from my blog, thanks to my blog being made with Bridgetown. ([Here's more on how I built that.](/posts/2021/build-a-blog-with-bridgetown#2-ruby-component-and-plugin))
 
 ## 4. Deploy it
 

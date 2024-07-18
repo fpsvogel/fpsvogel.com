@@ -21,7 +21,7 @@ Whenever I feel like quitting, what keeps me going is how interesting it is to w
 
 ### Example 1: reordering functions
 
-Here's a solution to an exercise in the [Haskell MOOC](https://haskell.mooc.fi). (By the way, you can see other learning resources that I have lined up in [my new "Learn Functional Programming" repo](https://github.com/fpsvogel/learn-functional-programming).)
+Here's a solution to an exercise in the [*Haskell MOOC*](https://haskell.mooc.fi). (By the way, you can see other learning resources that I have lined up in [my new "Learn Functional Programming" repo](https://github.com/fpsvogel/learn-functional-programming).)
 
 ```haskell
 -- Ex 3.5: Implement a function capitalize that takes in a string
@@ -218,7 +218,7 @@ Longer explanations are in [this StackOverflow answer](https://stackoverflow.com
 
 Besides expressive flexibility, another intriguing aspect of Haskell is how increasingly extensive its static typing system is.
 
-*"Total static typing"* is a term that I made up just now to refer to the goal that I sense in Haskell's evolution. Its type system has become more complex over time, and within a few years Haskell might get a dependent type system, which is best explained (along with an alternative path) in the article [Why Liquid Haskell Matters](https://www.tweag.io/blog/2022-01-19-why-liquid-haskell/).
+*"Total static typing"* is a term that I made up just now to refer to the goal that I sense in Haskell's evolution. Its type system has become more complex over time, and within a few years Haskell might get a dependent type system, which is best explained (along with an alternative path) in the article ["Why Liquid Haskell Matters"](https://www.tweag.io/blog/2022-01-19-why-liquid-haskell/).
 
 In a nutshell, these efforts aim to extend Haskell so that the compiler (or a compiler-integrated tool) can check not only for valid *types*, but also for valid *values*. I may be wrong about this, but it seems to me that the ultimate goal is **to verify at compile time everything that I'm used to verifying separately (and often incompletely) in unit tests.** In a sense, the types (or in the case of Liquid Haskell, the predicate annotations) ideally *are* (or, will be) the unit tests, except better integrated into the compiler and so offering more real guarantees.
 
@@ -232,7 +232,7 @@ Speaking of Ruby. An extended quote from Matz, Ruby's creator, might seem like a
 
 I enjoy Ruby a lot, actually. And that's precisely *why* I feel I should make an effort to venture out to learn a different paradigm: because **it would be very easy for me to stay comfortably in the realm of Ruby.** I'm hoping that learning Haskell will make me a better programmer, including a better *Ruby programmer*.
 
-In this day and age when types are all the rage, I feel like I'm crazy for liking Ruby *because* it doesn't have types. (Actually, that was one of my motivations for learning some Haskell, to see whether I'm crazy or not 😅) So, recently I felt reassured when I read Matz's thoughts on static types in Chapter 17 of [Coderspeak](https://www.uclpress.co.uk/products/230881). That entire chapter is great *(and the book is free to download as a PDF, so what are you waiting for?)* but I'll quote just the bit about static typing:
+In this day and age when types are all the rage, I feel like I'm crazy for liking Ruby *because* it doesn't have types. (Actually, that was one of my motivations for learning some Haskell, to see whether I'm crazy or not 😅) So, recently I felt reassured when I read Matz's thoughts on static types in Chapter 17 of [*Coderspeak*](https://www.uclpress.co.uk/products/230881). That entire chapter is great *(and the book is free to download as a PDF, so what are you waiting for?)* but I'll quote just the bit about static typing:
 
 > "But what about the recent changes about types? I know you don't like types, you've said it publicly before. You didn't create Ruby to be statically typed. How does that make you feel?"
 >

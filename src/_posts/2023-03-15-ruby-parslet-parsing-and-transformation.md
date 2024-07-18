@@ -34,7 +34,7 @@ The problem with my Reading parser, I now realize, is this: **it mixes up parsin
 
 ## Discovering Parslet
 
-In the book [Text Processing with Ruby](https://pragprog.com/titles/rmtpruby/text-processing-with-ruby/) I found the structured parsing tool that I was looking for: Parslet. Below is an example similar to the one in the book.
+In the book [*Text Processing with Ruby*](https://pragprog.com/titles/rmtpruby/text-processing-with-ruby/) I found the structured parsing tool that I was looking for: Parslet. Below is an example similar to the one in the book.
 
 A lot of the syntax is self-explanatory, and for the rest you can refer to Parslet's [Get Started](https://kschiess.github.io/parslet/get-started.html), [Parser](https://kschiess.github.io/parslet/parser.html), and [Transformation](https://kschiess.github.io/parslet/transform.html) guides.
 

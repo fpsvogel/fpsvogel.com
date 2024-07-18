@@ -43,50 +43,12 @@ So many reasons to learn JS!
 
 ## How?
 
-I'm using the resources listed below. Almost all are free. Besides a comprehensive look at JS syntax, I made sure to include a few other areas:
+I'm using the resources listed in [the "JS" section of my (ironically) "Learn Ruby" list](https://github.com/fpsvogel/learn-ruby#js). Almost all the resources are free. Besides a comprehensive look at JS syntax, I made sure to include a few other areas:
 
 - **Guided practice** and projects, to turn *knowledge* into *skills*.
 - **Web APIs**, especially the DOM, forms, and web components.
 - **Deep dives** into how JS works, and the rationale (or at least reasons) behind its quirks.
 - **Functional JS**, because I'm interested in functional programming. I recently [started learning Haskell](/posts/2023/rubyist-learns-haskell-1-getting-started), but JS will be useful as an example of how to apply functional concepts in a not-really-functional language.
-
-There's *a lot* in the bottom two-thirds of the list, only because I haven't gone through it yet and weeded out the less-than-awesome resources.
-
-Also, note that this list is copied straight from [the "JS" section of my learning road map](https://github.com/fpsvogel/learn-ruby#js), and the latest version may have evolved from what you see here.
-
-- **Basics:**
-  - [JavaScript for impatient programmers](https://exploringjs.com/impatient-js/)
-  - [Modern JavaScript Explained For Dinosaurs](https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html)
-  - [What the heck is the event loop anyway?](https://youtube.com/watch?v=8aGhZQkoFbQ)
-  - [MDN - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  - [lodash](https://lodash.com) and [You Might Not Need Lodash](https://youmightnotneed.com/lodash/)
-- **Practice:**
-  - [Exercism - JavaScript](https://exercism.org/tracks/javascript)
-  - [JavaScript30](https://javascript30.com/)
-- **DOM and forms:**
-  - [The Modern JavaScript Tutorial - Browser: Document, Events, Interfaces](https://javascript.info/ui)
-  - [MDN - Web forms](https://developer.mozilla.org/en-US/docs/Learn/Forms)
-  - [web.dev - Learn Forms](https://web.dev/learn/forms)
-- **Going deeper:**
-  - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
-  - [Deep JS](https://exploringjs.com/deep-js/toc.html)
-  - [JavaScript: Understanding the Weird Parts](https://www.udemy.com/course/understand-javascript/)
-  - [Just JavaScript](https://justjavascript.com/)
-- **Functional JS:**
-  - [Functional-Light JS](https://github.com/getify/Functional-Light-JS)
-  - [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://mostly-adequate.gitbook.io/mostly-adequate-guide/)
-  - [JavaScript Allongé](https://leanpub.com/javascriptallongesix/read)
-  - [Functional programming in JavaScript](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) videos
-  - [Mastering JavaScript Functional Programming](https://www.packtpub.com/product/mastering-javascript-functional-programming/9781839213069)
-- **Web components:**
-  - [Rob Eisenberg - "Hello Web Components"](https://eisenbergeffect.medium.com/hello-web-components-795ed1bd108e)
-  - [Dave Rupert - HTML with Superpowers: The Guidebook](https://daverupert.com/2023/01/html-with-superpowers-the-guidebook/) or [the course version](https://frontendmasters.com/courses/web-components/)
-  - [MDN - Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
-  - [The Modern JavaScript Tutorial - Web Components](https://javascript.info/web-components)
-  - [Web Components Today](https://webcomponents.today/)
-  - Build a UI following [Jared White - How Ruby and Web Components Can Work Together](https://www.fullstackruby.dev/fullstack-development/2022/01/04/how-ruby-web-components-work-together/)
-  - SSR web components in Ruby with the upcoming [Heartml](https://heartml-docs.onrender.com/) (see [this Spicy Web article](https://www.spicyweb.dev/web-components-ssr-node/) for context)
-  - Experiment using [Turbo](https://turbo.hotwired.dev/) to drive front-end behavior: *"Turbo 7.2.0 (currently in beta) allows you to define your own Stream actions which can be any JS code you want. By combining a custom Stream action or two with web components, you can essentially drive reactive frontend behavior from the backend stupidly easily. Loooove it! 😍 […] For a turnkey example, you could check out https://github.com/hopsoft/turbo_ready "* —Jared White on [The Spicy Web](https://discord.com/channels/811491992285741077/811493083068760104/1019024338042761297) Discord
 
 ## A word on JS frameworks
 

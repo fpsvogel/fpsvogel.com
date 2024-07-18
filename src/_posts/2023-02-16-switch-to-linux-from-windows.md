@@ -31,10 +31,10 @@ I chose [Linux Mint](https://linuxmint.com/) because it has a familiar Windows-l
 As I installed it on my Alienware m15 R4, I had to do only a few things out of the ordinary:
 
 - The Mint installer complained about Intel RST. To disable it, I opened up BIOS settings and switched from RAID to AHCI. I still wanted to use both my physical drives as one logical unit (i.e. RAID0), so I installed Mint using LVM, following [this guide](https://opensource.com/article/21/8/install-linux-mint-lvm).
-- After installation, I decided to go into BIOS settings and disable Secure Boot, because it's a pain to have to enter a password when I install certain drivers. See [here](https://askubuntu.com/a/843678) and [here](https://askubuntu.com/a/889717) on why for the average Linux desktop user, Secure Boot is more trouble than it's worth.
+- After installation, I decided to go into BIOS settings and disable Secure Boot, because it's a pain to have to enter a password when I install certain drivers. And for the average Linux desktop user, Secure Boot is more trouble than it's worth (sources: [1](https://askubuntu.com/a/843678), [2](https://askubuntu.com/a/889717)).
 - To prevent screen tearing on my external monitor, I had to open up NVIDIA settings via the tray icon and switch to "Performance Mode".
 - Bash was having issues wrapping lines, so I [installed Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) and that fixed the problem.
-- I fixed a few other annoyances with [my startup scripts](https://github.com/fpsvogel/linux-scripts/blob/1bd0d357507a4fa5153862a041d421f13d79d488/my_profile). (See all the rest of my Linux scripts [here](https://github.com/fpsvogel/linux-scripts).)
+- I fixed a few other annoyances with [my startup scripts](https://github.com/fpsvogel/linux-scripts/blob/1bd0d357507a4fa5153862a041d421f13d79d488/my_profile). ([Here are all the rest of my Linux scripts.](https://github.com/fpsvogel/linux-scripts))
 
 So the switch took some time, but I'm already seeing a payoff in two areas: **a lovely terminal**, and **more time spent on the keyboard**. Of course, neither of these is unique to Linux, and I'm bringing these lessons back to MacOS—but **somehow it was easier for me to make these discoveries in Linux.**
 

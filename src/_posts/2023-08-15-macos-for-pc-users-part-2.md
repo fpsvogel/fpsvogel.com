@@ -17,7 +17,7 @@ For all you incurable PC users out there, I hope this post gives you some hope i
 Before we get into Mac-specific tools: earlier this year I replaced Windows with Linux on my PC, and a lot of the lessons I learned there are equally applicable to MacOS:
 
 - [Customize Zsh to get a lovely terminal.](/posts/2023/switch-to-linux-from-windows#payoff-1-a-lovely-terminal)
-  - [Here is the shell script](https://github.com/fpsvogel/macos-scripts/blob/main/zshrc/shift_select) that enables Shift selection in the terminal.
+  - [Here is the shell script that enables Shift selection in the terminal.](https://github.com/fpsvogel/macos-scripts/blob/main/zshrc/shift_select)
 - [My tricks for staying on the keyboard](/posts/2023/switch-to-linux-from-windows#payoff-2-more-time-spent-on-the-keyboard-less-on-the-mouse) are mostly applicable.
 
 ## MacOS apps for more PC-ification

@@ -106,10 +106,10 @@ So I've set out to explore the problem of organizing business logic from more an
 Here are some resources that I hope will shed light on the question of organizing business logic better, both in terms of solutions ***and*** in terms of **when (under what conditions) these alternative approaches are beneficial** as opposed to simple OOP with Rails defaults. This list is not exhaustive; in particular I've omitted gems that are just a service object implementation. Some of these resources are closely related to service objects, but that's intentional–I'm compensating for my bias against them.
 
 - **Books on Rails architecture:**
-  - [Volmer's Rails Guide](https://volmerius.com/rails/)
-  - [Layered Design for Ruby on Rails Applications](https://www.packtpub.com/product/layered-design-for-ruby-on-rails-applications/9781801813785)
-  - [Maintainable Rails](https://leanpub.com/maintain-rails) (book), which uses gems that are part of the Hanami ecosystem.
-  - [Learning Domain-Driven Design](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)
+  - [*Volmer's Rails Guide*](https://volmerius.com/rails/)
+  - [*Layered Design for Ruby on Rails Applications*](https://www.packtpub.com/product/layered-design-for-ruby-on-rails-applications/9781801813785)
+  - [*Maintainable Rails*](https://leanpub.com/maintain-rails) (book), which uses gems that are part of the Hanami ecosystem.
+  - [*Learning Domain-Driven Design*](https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/)
 - **Gems:**
   - [ActiveInteraction](https://github.com/AaronLasseigne/active_interaction)
   - [dry-transaction](https://dry-rb.org/gems/dry-transaction)
@@ -119,7 +119,7 @@ Here are some resources that I hope will shed light on the question of organizin
   - [solid-process](https://github.com/solid-process/solid-process)
   - [Rails Event Store](https://github.com/RailsEventStore/rails_event_store) – for an event-driven architecture
   - [Rectify](https://github.com/andypike/rectify)
-  - [Surrounded](https://github.com/saturnflyer/surrounded) – for [DCI](https://dci.github.io/introduction); pair with the book [Clean Ruby](http://clean-ruby.com/)
+  - [Surrounded](https://github.com/saturnflyer/surrounded) – for [DCI](https://dci.github.io/introduction); pair with the book [*Clean Ruby*](http://clean-ruby.com/)
   - [Ventable](https://github.com/kigster/ventable) – a variation of the Observer design pattern
   - [Wisper](https://github.com/krisleech/wisper) – the Publish-Subscribe design pattern
   - [Packwerk](https://github.com/Shopify/packwerk) – to enforce boundaries and modularize Rails applications

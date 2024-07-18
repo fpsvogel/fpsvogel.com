@@ -15,16 +15,16 @@ The temptation is there: as a beginner I want to say it's a piece of cake just t
 
 But if I resist that temptation and candidly point out where I'm struggling as a beginner, a lot of good can come of it:
 
-- **It's good for other beginners:** I'll avoid perpetuating a crushing expectation that beginners must understand everything right away. Also, other beginners might benefit from the solutions that I'm jotting down along with the struggles. Documentation might also improve as a result: just the other day I asked [a very basic question](https://discord.com/channels/629472241427415060/891395933089189918/905518927080226837) about importmaps in the StimulusReflex Discord channel. (If you're not on there yet, (a) WHY, and (b) [here's an invite](https://discord.com/invite/stimulus-reflex).) Not only did I got a great answer to my question, but also it resulted in [a helpful addition](https://github.com/rails/importmap-rails/pull/63/files) to the `importmap-rails` readme.
+- **It's good for other beginners:** I'll avoid perpetuating a crushing expectation that beginners must understand everything right away. Also, other beginners might benefit from the solutions that I'm jotting down along with the struggles. Documentation might also improve as a result: just the other day I asked [a very basic question](https://discord.com/channels/629472241427415060/891395933089189918/905518927080226837) about importmaps in the StimulusReflex Discord channel. (If you're not on there yet, (a) WHY, and (b) [here's an invite to the StimulusReflex Discord](https://discord.com/invite/stimulus-reflex).) Not only did I got a great answer to my question, but also it resulted in [a helpful addition](https://github.com/rails/importmap-rails/pull/63/files) to the `importmap-rails` readme.
 - **It's good for my learning:** When I admit my ignorance of an entire domain (see "the database" below), I can then start to educate myself and fill the knowledge gap (or chasm) that underlies a lot of the issues and shortcomings of my Rails app.
 - **It's good for my future self:** As I progress further along [my study plan](https://github.com/fpsvogel/learn-ruby), I'll see how these things are done by the pros, and I'll be able to refer back to these notes to remind myself of what I thought was confusing at first. That way I'll more thoroughly clear up my confusion. Also, even when I'm more experienced I'll be able to remind myself of my early struggles, and maybe provide better help to beginners around me.
 
 So here are the hard parts of Rails, based on my three months of experience so far. During that time, besides building my first app and improving it a bit, I've also gone through these guides:
 
-- [Rails for Beginners](https://gorails.com/series/rails-for-beginners) on GoRails
-- the [Ruby on Rails Tutorial](https://www.railstutorial.org/) by Michael Hartl
-- the official [Rails Guides](https://guides.rubyonrails.org/)
-- and I've just started [Full Stack Ruby on Rails at The Odin Project](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
+- [*Rails for Beginners*](https://gorails.com/series/rails-for-beginners) on GoRails
+- [*Ruby on Rails Tutorial*](https://www.railstutorial.org/) by Michael Hartl
+- The official [Rails Guides](https://guides.rubyonrails.org/)
+- And I've just started [*Full Stack Ruby on Rails* at The Odin Project](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
 
 ## 1. Authentication
 
@@ -34,7 +34,7 @@ I'm not saying I disliked the *Ruby on Rails Tutorial*. To the contrary, it taug
 
 But does it have to be so soon? There are other areas where I'm just as ignorant as I was about the inner workings of authentication (see "the database" below), and in these areas there's not a gem that can automatically solve the problem for me—which is what I've ended up doing for authentication in my own project: even though I *could* build authentication from scratch, instead I'm using an authentication gem because the effect is exactly the same, but with less code in my app for me to maintain. (Rather than Devise, I've chosen the more lightweight alternative [Sorcery](https://github.com/Sorcery/sorcery). It's simple enough that I can still understand and control the authentication flow, while also providing enough conveniences that I don't have to write out implementation details from scratch.)
 
-*Update: Speaking of authentication from scratch, [here's a nice guide](https://github.com/stevepolitodesign/rails-authentication-from-scratch) that I'm saving here for later if/when I need to build custom authentication.*
+*Update: Speaking of authentication from scratch, [here's a nice guide to building custom authentication](https://github.com/stevepolitodesign/rails-authentication-from-scratch).*
 
 So I'm glad I know how authentication works, but I think there are other skills that are more important to learn early on. Which brings us to my next point…
 
@@ -53,8 +53,8 @@ In the end I'm surviving without my wished-for beginner's guide: by paying atten
 Here are a few other important facts that were unclear to me at first and took some hunting to figure out:
 
 - Q: How long does an object retrieved from the database persist in memory? A: In Rails, instances (such as Active Record objects) exist only within the current request. Classes, on the other hand, persist across requests. So if you need to cache data retrieved from the database, do it on the class level or (even better) follow [the Rails Guide to caching](https://guides.rubyonrails.org/caching_with_rails.html).
-- Q: What columns should I index? A: Any column that is used in a query to look up or sort records. [Here's a longer explanation.](https://semaphoreci.com/blog/2017/05/09/faster-rails-is-your-database-properly-indexed.html)
-- Q: There are lots of different ways set an object's attributes. What are their differences? A: [Here's a cheat sheet.](https://scottbartell.com/2020/01/30/set-attributes-in-active-record-rails-6/)
+- Q: What columns should I index? A: Any column that is used in a query to look up or sort records. [Here's a longer explanation of which columns to index.](https://semaphoreci.com/blog/2017/05/09/faster-rails-is-your-database-properly-indexed.html)
+- Q: There are lots of different ways set an object's attributes. What are their differences? A: [Here's a cheat sheet on how to set Active Record attributes.](https://scottbartell.com/2020/01/30/set-attributes-in-active-record-rails-6/)
 
 ## 3. JS bundling
 

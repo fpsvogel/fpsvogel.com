@@ -17,7 +17,7 @@ Some of these are for Windows only, but you can find MacOS and Linux alternative
 
 - **Clipboard manager:** [Ditto](https://ditto-cp.sourceforge.io/). I can't tell you how great it is to have a near-infinite clipboard.
 - **Text expander:** [Beeftext](https://beeftext.org/). Great for code snippets, often-used phrases for emails, and emojis. 👍
-- **Keyboard and mouse macros:** [AutoHotkey](https://www.autohotkey.com/). Like a Swiss army knife with a million thingamabobs. [Here's how I used](/posts/2020/autohotkey) it to make my keyboard and mouse significantly more useful, but [now I type on a Keyboardio Atreus](/posts/2021/keyboardio-atreus) and it is even better.
+- **Keyboard and mouse macros:** [AutoHotkey](https://www.autohotkey.com/). Like a Swiss army knife with a million thingamabobs. [Here's how I used AutoHotkey](/posts/2020/autohotkey) to make my keyboard and mouse significantly more useful, but [now I type on a Keyboardio Atreus](/posts/2021/keyboardio-atreus) and it is even better.
 
 ## Web browser
 

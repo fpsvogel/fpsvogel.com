@@ -69,7 +69,7 @@ module Grep
 end
 ```
 
-The module and method name give a general idea of what it's for, but to know anything beyond that requires wading into a quagmire of code. This solution is three times shorter than the runners-up; it is undoubtedly concise. But it is not elegant, nor is it maintanable or extensible. [Here](https://exercism.io/tracks/ruby/exercises/grep/solutions/9a28202cc3414e1faa8a36a6b2f1028e) is the solution that I picked as the best.
+The module and method name give a general idea of what it's for, but to know anything beyond that requires wading into a quagmire of code. This solution is three times shorter than the runners-up; it is undoubtedly concise. But it is not elegant, nor is it maintanable or extensible. [Here is the solution that I picked as the best.](https://exercism.io/tracks/ruby/exercises/grep/solutions/9a28202cc3414e1faa8a36a6b2f1028e)
 
 ## 4. More optimized isn't always better
 

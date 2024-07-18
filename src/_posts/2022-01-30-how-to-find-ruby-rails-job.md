@@ -56,7 +56,7 @@ To get an initial interview, having an impressive resume is key. To give you som
 Here are efforts that I didn't get comments on, but I'm sure they didn't hurt:
 
 - **Polish your GitHub portfolio.** Here's mine: [github.com/fpsvogel](https://github.com/fpsvogel). Make sure each of your pinned projects has a nice README including a summary of why it's on portfolio. If you want to spend even more time perfecting your READMEs, [here's an awesome README list](https://github.com/matiassingers/awesome-readme) to give you ideas, and here are a few that are built specifically as part of a learner's portfolio of Rails apps: [lortza/tarot](https://github.com/lortza/tarot), [lortza/sorrygirl](https://github.com/lortza/sorrygirl), [lortza/therapy_tracker](https://github.com/lortza/therapy_tracker).
-- **Make a web version of your resume.** Here's mine: [fpsvogel.com/about](https://web.archive.org/web/20220525141940/https://fpsvogel.com/about/). This is in addition to (not instead of) the PDF version that I submitted in applications. [Here's my resume in PDF](https://www.overleaf.com/read/mgxfqgqngjqf) as of January 2022. I made it with LaTeX, but a plain old word processor would work too. Remember, keep it under one page!
+- **Make a web version of your resume.** Here's mine: [fpsvogel.com/about](https://web.archive.org/web/20220525141940/https://fpsvogel.com/about/). This is in addition to (not instead of) the PDF version that I submitted in applications. [Here's my resume in PDF](https://www.overleaf.com/read/mgxfqgqngjqf) as of January 2022. I made it with LaTeX, but a plain old word processor would work too. Try to keep it under one page.
 
 ## What to ask in the initial interview
 
@@ -99,9 +99,9 @@ Here are the five technical exercises that I did, one for each company.
 Here are a few skills that I could tell the interviewers were looking for:
 
 - **Code readability,** which involves naming things well, using object-oriented design, and avoiding [code smells](https://refactoring.guru/refactoring/smells).
-- **Refactoring** and **[short feedback loops](https://www.codewithjason.com/program-feedback-loops/)** were important in both live coding exercises.
+- **Refactoring** and [**short feedback loops**](https://www.codewithjason.com/program-feedback-loops/) were important in both live coding exercises.
 - **Automated testing.** After the first two take-home exercises listed above, interviewers appreciated that I wrote tests even though it wasn't required, and in two of the other three exercises I had to interact with pre-written tests.
-- **Getting a lot done.** This is a catch-all for being fluent enough in Ruby and Rails to build something in a short amount of time. For take-home exercises where no time limit is given, the reality is that "getting a lot done" means spending a lot of time on the exercise. If possible, choose a weekend or a less-busy-than-average few days where you can dedicate large blocks of time to it. If you have time, write on your blog or in the GitHub README about how you did the project. [Here's my blog post](/posts/2022/doctor-lookup-health-provider-search-tool) about how I did the first take-home exercise listed above.
+- **Getting a lot done.** This is a catch-all for being fluent enough in Ruby and Rails to build something in a short amount of time. For take-home exercises where no time limit is given, the reality is that "getting a lot done" means spending a lot of time on the exercise. If possible, choose a weekend or a less-busy-than-average few days where you can dedicate large blocks of time to it. If you have time, write on your blog or in the GitHub README about how you did the project. [Here's my blog post about how I did the first take-home exercise listed above.](/posts/2022/doctor-lookup-health-provider-search-tool)
 
 If you're wondering how to build up these skills, take a look at [my Ruby study guide](https://github.com/fpsvogel/learn-ruby) which I've recently been working through.
 

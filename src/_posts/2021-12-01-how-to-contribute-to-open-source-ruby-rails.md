@@ -55,7 +55,7 @@ You can follow roughly these steps:
 4. Reproduce the issue on your local machine.
 5. Write a test that fails because of the issue. (Not all projects require this, but it's a good rule of thumb.)
 6. Fix the issue, and make sure your new test passes.
-7. Send back your fix by creating a PR (pull request). To learn how to make a PR, follow the steps in [First Contributions](https://github.com/firstcontributions/first-contributions). [Here is another guide](https://gist.github.com/Chaser324/ce0505fbed06b947d962) with a few extra steps that are good to keep in mind. Also, if you find that you've cloned a project's repo before forking it, [this guide](https://gist.github.com/jagregory/710671) explains how to get back on track by making your local copy point to your fork.
+7. Send back your fix by creating a PR (pull request). To learn how to make a PR, follow the steps in [First Contributions](https://github.com/firstcontributions/first-contributions). [Here is another guide](https://gist.github.com/Chaser324/ce0505fbed06b947d962) with a few extra steps that are good to keep in mind. Also, if you find that you've cloned a project's repo before forking it, [here's a guide that explains how to get back on track by making your local copy point to your fork](https://gist.github.com/jagregory/710671).
 8. Patiently wait for feedback from the project maintainers, and respond if they ask for more input from you.
 
 ## Conclusion
