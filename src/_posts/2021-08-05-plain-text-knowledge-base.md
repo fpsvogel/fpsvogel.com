@@ -8,7 +8,7 @@ description: Sometimes the best note-taking system is a simple one. Mine is a .t
 - [The rationale](#the-rationale)
 - [Other possibilities](#other-possibilities)
 
-The simplest and most enjoyable note-taking system I've found is to keep notes in a single text file, grouped under heirarchical tags so that I can jump to a tag by looking it up with `Ctrl+F`. Syntax highlighting is provided by my [Supertext VS Code extension](https://marketplace.visualstudio.com/items?itemName=fpsvogel.supertext).
+The simplest and most enjoyable note-taking system I've found is to keep notes in a single text file, grouped under hierarchical tags so that I can jump to a tag by looking it up with `Ctrl+F`. Syntax highlighting is provided by my [Supertext VS Code extension](https://marketplace.visualstudio.com/items?itemName=fpsvogel.supertext).
 
 ## An example
 
@@ -48,7 +48,7 @@ These two goals are in tension: the absolute quickest way to save a URL is to ad
 
 On the other hand, to maximize my chances of finding a note in the future, I could place it in a hierarchy of categories, mark its date, and add several tags to it. But for me, doing all of this every time for a simple URL is cumbersome.
 
-So I found a compromise where I don't lose much from either. I keep my notes in a single text file, each note under a heading of heirarchical categories. So the *organization* is heirarchical, but the *navigation* is that of a flat text file. And note metadata is optional—in the example above, I added a date to some of the notes on frontend notes because frontent tech changes more rapidly and so it's more useful to see how far back I added that kind of note.
+So I found a compromise where I don't lose much from either. I keep my notes in a single text file, each note under a heading of hierarchical categories. So the *organization* is hierarchical, but the *navigation* is that of a flat text file. And note metadata is optional—in the example above, I added a date to some of the notes on front-end notes because front-end tech changes more rapidly and so it's more useful to see how far back I added that kind of note.
 
 ## Other possibilities
 

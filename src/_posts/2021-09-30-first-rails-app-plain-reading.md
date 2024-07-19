@@ -1,17 +1,17 @@
 ---
 title: My first Rails app, Plain Reading
 subtitle: how I built it
-description: How I built my first Ruby on Rails app, from learning Rails basics, to choosing frontend libraries, to building and deploying the app.
+description: How I built my first Ruby on Rails app, from learning Rails basics, to choosing front-end libraries, to building and deploying the app.
 ---
 
 - [1. Learn the basics of Rails](#1-learn-the-basics-of-rails)
-- [2. Choose frontend libraries](#2-choose-frontend-libraries)
+- [2. Choose front-end libraries](#2-choose-front-end-libraries)
 - [3. Build the app](#3-build-the-app)
 - [4. Deploy it](#4-deploy-it)
 - [5. Next improvements](#5-next-improvements)
 - [Conclusion](#conclusion)
 
-After [a year of studying pure Ruby and basic frontend skills](https://github.com/fpsvogel/learn-ruby), I've finally started learning Rails and built my first app: [Plain Reading](https://github.com/fpsvogel/plainreading).
+After [a year of studying pure Ruby and basic front-end skills](https://github.com/fpsvogel/learn-ruby), I've finally started learning Rails and built my first app: [Plain Reading](https://github.com/fpsvogel/plainreading).
 
 Rails is loved for its speed of development, and in that regard it did not disappoint. A month ago I had just finished watching my first Rails tutorial and my app was 0% done. Now, one month later, I've built a working, useful app *just by working on it a little bit each day*, in the time left over from life as an adult with a full-time job. Here's how I built it.
 
@@ -19,7 +19,7 @@ Rails is loved for its speed of development, and in that regard it did not disap
 
 I did the free [*Rails for Beginners*](https://gorails.com/series/rails-for-beginners) course by GoRails. I made sure to build the example app as I went through the course.
 
-## 2. Choose frontend libraries
+## 2. Choose front-end libraries
 
 [Bootstrap](https://getbootstrap.com/) would have been an easy choice, especially because it's used in the Rails for Beginners example app.
 
@@ -45,7 +45,7 @@ I ended up doing this in five stages:
 1. **Skeleton site.** Build a homepage and basic user management with register and login pages. The GoRails tutorial helped immensely here.
 2. **Dropbox connectivity.** This took longer than I thought it would, and involved monkey-patching the Dropbox API gem to incorporate (and tweak) [an open PR](https://github.com/Jesus/dropbox_api/pull/83).
 3. **Models design.** [This guide helped.](https://www.startuprocket.com/articles/how-to-design-and-prep-a-ruby-on-rails-model-architecture) After that was done, finishing up the Settings page was straightforward.
-4. **CSV reading list parser.** The main backend component. I made use of [a gem](https://rubygems.org/gems/reading-csv) that I previously created for a related project, but I added a lot of new features and heavily refactored it along the way, so this stage actually took the longest.
+4. **CSV reading list parser.** The main back-end component. I made use of [a gem](https://rubygems.org/gems/reading-csv) that I previously created for a related project, but I added a lot of new features and heavily refactored it along the way, so this stage actually took the longest.
 5. **My List page.** Finally, the point of the whole thing! This is where items parsed from the CSV are displayed in a pretty way so that you can show your reading list to other people. I adapted the view from [my reading page](/reading/) on my blog. I will improve on that soon, but in the meantime it's pretty neat that I can copy over essentially the same ERB file and Stimulus controller from my blog, thanks to my blog being made with Bridgetown. ([Here's more on how I built that.](/posts/2021/build-a-blog-with-bridgetown#2-ruby-component-and-plugin))
 
 ## 4. Deploy it
@@ -57,7 +57,7 @@ I'm still ironing out some deployment issues: Dropbox is not connecting in produ
 There are some other holes to fill too, partly because toward the end I became slightly obsessed with deploying my first app within a month. So these are coming up next:
 
 - **Friends page.** For finding and adding friends, who by default can see more of your reading list.
-- **Improve the frontend.** I've already added Stimulus for the My List and Settings pages, so now I just need to polish up the UI and add a light mode.
+- **Improve the front end.** I've already added Stimulus for the My List and Settings pages, so now I just need to polish up the UI and add a light mode.
 - **Improve performance.** Beyond a few hundred items, My List takes a long time to load because it has to filter out items based on Visibility settings. My improvised attempts at caching didn't make any difference, so this will have to wait until I learn to do it properly.
 
 ## Conclusion

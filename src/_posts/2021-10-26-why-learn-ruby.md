@@ -25,7 +25,7 @@ Also, it should go without saying that if you're certain you're *not* interested
 
 As a self-taught developer, you can't rely on course deadlines and grades to motivate you. You have to motivate yourself, and that's a lot easier when the work you're doing is intrinsically enjoyable.
 
-I've gotten a fair amount of enjoyment from other programming languages: years ago some [Blitz BASIC](https://en.wikipedia.org/wiki/Blitz_BASIC), Java, and Lua, and these days a bit of frontend JS. But I enjoy Ruby most of all.
+I've gotten a fair amount of enjoyment from other programming languages: years ago some [Blitz BASIC](https://en.wikipedia.org/wiki/Blitz_BASIC), Java, and Lua, and these days a bit of front-end JS. But I enjoy Ruby most of all.
 
 Maybe it's because of Ruby's combination of concise syntax with a powerful object model, or maybe there's an undefinable "something" in Ruby that inspires odd creations like [a book-length guide to Ruby in cartoon format](https://poignant.guide/) (which I don't recommend as a beginner's guide, but it is impressive nonetheless). Whatever the reason, Ruby is fun in a way that can only be appreciated if you [try it yourself](https://try.ruby-lang.org/).
 
@@ -59,7 +59,7 @@ But Rails can be productive *even in the long run*, if you use it carefully. ["P
 
 ## Objection #2: Ruby is slow
 
-Ruby and Rails have a reputation for being slow. I think a lot of this comes from (a) performance benchmarks, and (b) stories of companies moving away from Rails for performance reasons. But just because Scala is faster than Ruby, and Twitter switched from Rails to Scala for their backend, doesn't mean that you should skip Ruby and build your first apps with Scala.
+Ruby and Rails have a reputation for being slow. I think a lot of this comes from (a) performance benchmarks, and (b) stories of companies moving away from Rails for performance reasons. But just because Scala is faster than Ruby, and Twitter switched from Rails to Scala for their back end, doesn't mean that you should skip Ruby and build your first apps with Scala.
 
 Every technology has its own tradeoffs. Ruby has lots of conveniences that make development faster and easier, but those conveniences come at the cost of performance. For me, that cost is completely worthwhile. But if you're still skeptical, here are some thoughts for you:
 

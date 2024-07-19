@@ -1,8 +1,8 @@
 ---
 title: OOP vs. services for organizing business logic
 subtitle: is there a third way?
-description: Explorations into OOP vs. service objects, and a list of resources for moving past the black-and-white debate into a deeper understanding.
-updated: 2024-07-14
+description: Explorations into OOP vs. service objects, and a list of resources for moving past the black-and-white debate into a deeper understanding of design patterns.
+updated: 2024-07-19
 ---
 
 - [The good old days](#the-good-old-days)
@@ -16,11 +16,11 @@ updated: 2024-07-14
 
 *Disclaimer: In this blog post I raise many questions and give few answers. At the bottom I list resources which I'm exploring in search of an answer, so [skip down](#second-guessing-myself-more-study-needed) if that's all you care about.*
 
-**Business logic.** Everyone has it, and no one seems to agree on where to put it in a Rails app. Some people stuff it all in Active Record models, others throw it out into service objects, and still others put it in POROs. (But then [where do you put the POROs](https://twitter.com/JacobDaddario/status/1578083937787707392)?)
+**Business logic.** Everyone has it, and no one seems to agree on where to put it in a Rails app. Some people stuff it all in Active Record models, others throw it out into service objects, and still others put it in POROs. (But then where do you put the POROs?)
 
-In all these debates, there's probably an element of different answers coming from different needs: people who work with **small apps** don't stray far from The Rails Way of MVC (models, views, and controllers), whereas those who work with **larger apps** might feel the need for a more sophisticated architecture.
+In all these debates, there's probably an element of different answers coming from different needs: people who work with **small apps** don't stray far from "The Rails Way" of MVC (models, views, and controllers), whereas those who work with **larger apps** might feel the need for a more sophisticated architecture.
 
-That being said, I sense that these disagreements also reflect a more fundamental question: ***How should the app interact with the database?*** Or in other words, should database tables be near the surface, ***or*** should we put in the effort to hide the data model that is reflected in database tables?
+That being said, I sense that these disagreements also reflect a more fundamental question: ***How should the app interact with the database?*** Or in other words, should database tables be near the surface (as in the [Active Record pattern](https://en.wikipedia.org/wiki/Active_record_pattern)), ***or*** should we put in the effort to hide the data model that is reflected in database tables (as in the repository pattern, for example [ROM](https://rom-rb.org/5.0/learn/repositories/quick-start/) in Ruby)?
 
 I may have lost you already, so before I wade too deep into philosophy, let tell the story of why I'm struggling with these questions.
 
@@ -32,15 +32,15 @@ But I knew I couldn't linger in those enchanted woods forever.
 
 ## Then along came Rails
 
-I learned Rails and got my first programming job working on a Rails app of over two hundred thousand lines of Ruby code, plus React views. **Suddenly things didn't make so much sense anymore.** I often didn't (and still don't) know where a piece of code belongs. Let's even set aside React views and the duplication of backend logic that I find hard to resist when writing a React view. Let's focus **only on backend Ruby code**: *even there* I find myself indecisive when trying to decide where to put a new piece of code.
+I learned Rails and got my first programming job working on a Rails app with 200k lines of Ruby code, plus React views. **Suddenly things didn't make so much sense anymore.** I often didn't (and still don't) know where a piece of code belongs. Let's even set aside React views and the duplication of back-end logic that I find hard to avoid when writing a React view. Let's focus **only on back-end Ruby code**: *even there* I find myself indecisive when trying to decide where to put a new piece of code.
 
-The most convenient place for that new bit of code is an existing Active Record model, but when I'm crawling through a huge model I'm reminded that maybe I should think hard about where to put this code. So I turn to alternative places, but then I'm faced with a jungle of service objects and variously-located POROs 😵‍💫
+The most convenient place for that new bit of code is an existing Active Record model, but when I'm crawling through a model over a thousand lines long, I'm reminded that maybe I should think hard about where to put this code. So I turn to alternative places, but then I'm faced with a jungle of service objects and variously-located POROs 😵‍💫
 
 I usually find a tolerable solution, but in the end I always wonder: where does business logic really belong? 🤔
 
 ## Two philosophical camps?
 
-As I looked through discussions of this question in the Ruby community, I noticed that most answers came from one of two "sides": **advocates** and **opponents** of service objects. In reality it's a bit more nuanced than that: advocates might propose a pattern that is a more sophisticated version of service objects, and many opponents admit that careful OOP design is important to augment Rails' MVC structure.
+As I looked through discussions of this question in the Ruby community, I noticed that most answers came from one of two groups: **advocates** and **opponents** of service objects. In reality it's a bit more nuanced than that: advocates typically use other design patterns in addition to service objects, and opponents often agree that MVC pattern built into Rails does not scale indefinitely.
 
 But the reason I lump them into two camps is that **each has a different approach** to the fundamental question I posed earlier: ***How should the app interact with the database?*** In the context of Rails, this question can be rephrased like this: ***What should an Active Record model represent?***
 
@@ -81,13 +81,13 @@ And:
 <!-- omit in toc -->
 #### 3. Conversely, domain models don't have to be Active Record models; they can be PORO models.
 
-Taking advantage of this can alleviate many of the "fat model" problems that service objects seek to solve.
+Taking advantage of PORO models can alleviate many of the "fat model" problems that service objects seek to solve.
 
 Martin Fowler [proposes refactoring a service object into a PORO](https://gist.github.com/blaix/5764401), and he's not alone: some in the Ruby community have written the same ([1](https://www.codewithjason.com/code-without-service-objects/), [2](https://www.fullstackruby.dev/object-orientation/rails/2018/03/06/why-service-objects-are-an-anti-pattern#concerns-and-poros-are-your-friends), [3](https://alexbarret.com/blog/2020/service-object-alternative)).
 
 There are lots of patterns that can be used in POROs around Active Record models. For example, if a record is created from complex form input, you could use [a form object](https://thoughtbot.com/blog/activemodel-form-objects) instead of a service object.
 
-Also, some versions of service objects ***are*** somewhat object-oriented when [they reject the notion that service objects should have only a `#call` method](https://youtu.be/CRboMkFdZfg?t=1576) and when [they share code within the same class](https://youtu.be/CRboMkFdZfg?t=1322). In these cases, a service object is a bit more like a purpose-built PORO.
+Also, some versions of service objects ***are*** somewhat object-oriented when [they reject the notion that service objects should have only a `#call` method](https://youtu.be/CRboMkFdZfg?t=1576) and when [they share code within the same class](https://youtu.be/CRboMkFdZfg?t=1322). In these cases, a service object *(which is already technically a PORO unless you're using a services library/framework)* becomes more like a purpose-built PORO.
 
 So why not just take the next step and put these services in the `app/models` folder, and refactor them from procedures into actual domain models? To take an example from the last link above: `SalesTeamNotifier.send_daily_notifications` could be changed to `Internal::Notification.new(receiver: 'sales').send`.
 
@@ -99,11 +99,11 @@ Fast forward a few months. I still don't like service objects, and I still like 
 
 After all, if so many people **feel the need** for service objects, and if OOP is evidently **so hard to get right**, aren't these signs that **something** is missing? ***Maybe*** that missing something is just better OOP, but in that case good OOP is hard to come by and we at least need a more accessible way to do it.
 
-So I've set out to explore the problem of organizing business logic from more angles than before, using the resources listed below. These lists are excerpted from [my "Learning Ruby" road map](https://github.com/fpsvogel/learn-ruby) which I often update, so you may want to find these lists there if this post is old at the time of your reading it. The sections corresponding to the lists below are, at the time of writing, ["Rails architecture"](https://github.com/fpsvogel/learn-ruby#advanced-rails) and ["Rails codebases"](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study).
+So I've set out to explore the problem of organizing business logic from more angles than before, using the resources listed below. Some of these resources are taken from [my "Learn Ruby" road map](https://github.com/fpsvogel/learn-ruby), in particular the sections ["Rails architecture"](https://github.com/fpsvogel/learn-ruby#advanced-rails) and ["Rails codebases to study"](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study)
 
 ### Books and gems
 
-Here are some resources that I hope will shed light on the question of organizing business logic better, both in terms of solutions ***and*** in terms of **when (under what conditions) these alternative approaches are beneficial** as opposed to simple OOP with Rails defaults. This list is not exhaustive; in particular I've omitted gems that are just a service object implementation. Some of these resources are closely related to service objects, but that's intentional–I'm compensating for my bias against them.
+Here are some resources that I hope will shed light on the question of organizing business logic better, both in terms of solutions ***and*** in terms of **when (under what conditions) these alternative approaches are beneficial** as opposed to plain OOP + Rails MVC. This list is not exhaustive; in particular I've omitted gems that are just a service object implementation. Some of these resources are closely related to service objects, but that's intentional–I'm compensating for my bias against them.
 
 - **Books on Rails architecture:**
   - [*Volmer's Rails Guide*](https://volmerius.com/rails/)

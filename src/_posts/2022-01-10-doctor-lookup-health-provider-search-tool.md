@@ -25,7 +25,7 @@ Before I get more into Doctor Lookup, here are my posts on last month's little a
 As I built Doctor Lookup, I followed the same basic process from last month's lightning apps. Here is that process, in a nutshell:
 
 - Test my code as I write it, not as an afterthought. I used RSpec and wrote model and system specs.
-- Use a minimalist CSS framework to speed up frontend development. This time I used [Pico](https://picocss.com/).
+- Use a minimalist CSS framework to speed up front-end development. This time I used [Pico](https://picocss.com/).
 - Avoid using the database if it's not necessary, just to keep things simple. In this case I did forgo the database, because the important features of a lookup tool don't require users or other persisted models. (The search results are shown dynamically with Turbo Streams, without the need to store them between requests.)
 
 ## New things I did in this app

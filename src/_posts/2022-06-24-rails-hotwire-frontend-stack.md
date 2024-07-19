@@ -16,17 +16,17 @@ When I started my career switch into software development two years ago, I decid
 However, this minimal vanilla stack becomes limiting when two factors come into play:
 
 1. The MVC architecture of Rails won't always be enough to keep your code organized. You'll notice it painfully if your app ever grows beyond a small project.
-2. For your app to feel modern, the frontend will need to act like an SPA (Single-Page Application). The "official" way to do this is now [Hotwire](https://hotwired.dev), but there are other tools worth keeping in the toolbelt. More on that below.
+2. For your app to feel modern, the front end will need to act like an SPA (Single-Page Application). The "official" way to do this is now [Hotwire](https://hotwired.dev), but there are other tools worth keeping in the toolbelt. More on that below.
 
 Making a new acronym for your favorite tech stack is a popular thing these days, so I'll coin a new acronym: **RVTWS**… pronounced "erv toes"? Yes, this is great. It will go viral in no time.
 
 Joking aside, I'm using this acronym here only as an outline for this blog post, rather than for any marketing value. The "V" (ViewComponent) addresses point #1 above, and "TWS" are concerned with #2.
 
 - **R**ails or Roda
-- **V**iewComponent: *for frontend architecture*
+- **V**iewComponent: *for front-end architecture*
 - **T**urbo: *for an SPA feel, using the server*
 - **W**eb Components: *for an SPA feel, using the client*
-- **S**timulusReflex: *for more complex frontend magic*
+- **S**timulusReflex: *for more complex front-end magic*
 
 ## Rails or Roda
 
@@ -51,7 +51,7 @@ Some readers may be wondering, *"Is that all? What about other architectural imp
 
 ## Turbo
 
-On to the frontend! [Turbo](https://turbo.hotwired.dev) is part of Hotwire, which now ships with Rails. Turbo makes it really easy to give server-rendered pages a snappy SPA feel, where parts of the page are updated instantly instead of a full page reload.
+On to the front end! [Turbo](https://turbo.hotwired.dev) is part of Hotwire, which now ships with Rails. Turbo makes it really easy to give server-rendered pages a snappy SPA feel, where parts of the page are updated instantly instead of a full page reload.
 
 At the heart of Turbo is "HTML over the wire" (for which *HOTWire* is an acronym), which means the server sending HTML fragments for partial page updates, which (here's the big win) eliminates the need for client-side state management. There are [lots](https://htmldriven.dev/html-over-the-wire) of [tools](https://github.com/guettli/frow--fragments-over-the-wire) taking this approach now.
 
@@ -67,7 +67,7 @@ Actually, Stimulus is pretty cool because you can [compose multiple pre-built be
 
 [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) are an architecturally simpler way to add client-side behaviors, and they also have the advantage that they're a web standard. [This blog post on Fullstack Ruby](https://www.fullstackruby.dev/fullstack-development/2022/01/04/how-ruby-web-components-work-together) shows the power of web components in the context of Ruby.
 
-Also, as illustrated in that post, you can use [Ruby2JS](https://www.ruby2js.com) to write web components in Ruby. (You can likewise [write Stimulus controllers in Ruby](https://www.ruby2js.com/examples/stimulus).) In other words, you get the best of both worlds: the power of JavaScript on the frontend, and all the conveniences of Ruby syntax 🤩
+Also, as illustrated in that post, you can use [Ruby2JS](https://www.ruby2js.com) to write web components in Ruby. (You can likewise [write Stimulus controllers in Ruby](https://www.ruby2js.com/examples/stimulus).) In other words, you get the best of both worlds: the power of JavaScript on the front end, and all the conveniences of Ruby syntax 🤩
 
 ## StimulusReflex
 
@@ -77,10 +77,10 @@ Also, [the StimulusReflex Discord server](https://discord.com/invite/stimulus-re
 
 ## Conclusion
 
-I've been thinking about this ideal Ruby stack because for the first time I'm working on a Rails app that has a React frontend, and it's been a painful adjustment. Sometimes it feels like I'm writing logic twice, once on the backend and again on the frontend. And what do I get for it? Smoother page transitions and buttons that do things without refreshing the page. That's nice, but do these simple enhancements have to involve so much extra work?
+I've been thinking about this ideal Ruby stack because for the first time I'm working on a Rails app that has a React front end, and it's been a painful adjustment. Sometimes it feels like I'm writing logic twice, once on the back end and again on the front end. And what do I get for it? Smoother page transitions and buttons that do things without refreshing the page. That's nice, but do these simple enhancements have to involve so much extra work?
 
-On the other extreme, the "vanilla Rails" approach to writing views [is clunky and outdated](https://www.fullstackruby.dev/fullstack-development/2022/06/03/what-would-it-take-for-roda-to-win#y-u-no-like-rails), and Hotwire doesn't fix all the omissions. It's no wonder that people go looking for outside frontend solutions such as React.
+On the other extreme, the "vanilla Rails" approach to writing views [is clunky and outdated](https://www.fullstackruby.dev/fullstack-development/2022/06/03/what-would-it-take-for-roda-to-win#y-u-no-like-rails), and Hotwire doesn't fix all the omissions. It's no wonder that people go looking for outside front-end solutions such as React.
 
-So I started dreaming about what frontend tools could give a smooth user experience *without* so much extra complexity, and this "RVTWS" stack is the result. (Yeah, I need to work on that acronym.)
+So I started dreaming about what front-end tools could give a smooth user experience *without* so much extra complexity, and this "RVTWS" stack is the result. (Yeah, I need to work on that acronym.)
 
-On a final note, if you'd like to learn more about Hotwire and StimulusReflex, check out the resources that I've compiled for both of them [in my "Learning Ruby" list](https://github.com/fpsvogel/learn-ruby#hotwire).
+On a final note, if you'd like to learn more about Hotwire and StimulusReflex, check out the resources that I've compiled for both of them [in my "Learn Ruby" list](https://github.com/fpsvogel/learn-ruby#hotwire).

@@ -137,6 +137,6 @@ Also, I didn't apply for just *any* junior position. I wanted to find a job wher
 
 - I stayed away from internships, contracts, and other temporary or low-pay arrangements.
 - I stayed away from tiny startups where I would be the only developer—that's not a junior role.
-- I stayed away from positions that involved other backend frameworks besides Rails. I'd like to stick to Ruby, at least on the backend, because that's what I most enjoy.
+- I stayed away from positions that involved other back-end frameworks besides Rails. I'd like to stick to Ruby, at least on the back end, because that's what I most enjoy.
 
 So yes, I looked for a junior position and I'm proud of it!
