@@ -9,11 +9,11 @@ description: Learning how to build a computer is not only fun, but also teaches 
 - [Optimizing runtime](#optimizing-runtime)
 - [Conclusion: fun and usefulness combined](#conclusion-fun-and-usefulness-combined)
 
-"Should I spend time on computer science?" The question inevitably comes up if (like me) you're learning programming on your own. I went with yes. To explain why, I'll talk about a course I've just finished, as an example of how computer science is fun *and* practical for the budding programmer.
+*"Should I spend time on computer science?"* The question inevitably comes up if (like me) you're learning programming on your own. I went with **yes**. To explain why, I'll talk about a course I've just finished, as an example of how computer science is fun *and* practical for the budding programmer.
 
 ## Nand to Tetris: an intro
 
-*Nand to Tetris* is a hands-on course that teaches how to build a simple computer, including its operating system and a programming language. The course is completely free: [part 1](https://www.coursera.org/learn/build-a-computer), [part 2](https://www.coursera.org/learn/nand2tetris2). The textbook [The Elements of Computing Systems](https://mitpress.mit.edu/books/elements-computing-systems-second-edition) can come in handy as a reference, but it is not required. The course videos have all the same information and more. For some other handy links, see [my notes on the course](/reading#B084V7R8PT).
+*Nand to Tetris* is a hands-on course that teaches how to build a simple computer, including its operating system and a programming language. The course is completely free: [part 1](https://www.coursera.org/learn/build-a-computer), [part 2](https://www.coursera.org/learn/nand2tetris2). The textbook [The Elements of Computing Systems](https://mitpress.mit.edu/books/elements-computing-systems-second-edition) can come in handy as a reference, but it is not required. The course videos have all the same information and more. For some other handy links, see <a href="/reading#B084V7R8PT" data-turbo="false">my notes on the course</a>.
 
 Although you could use *Nand to Tetris* as a primer or "CS101", I'm glad I had previously read [*Code: The Hidden Language of Computer Hardware and Software*](https://www.charlespetzold.com/code/), which introduces many of the same concepts in a more conversational way. For other CS books that I recommend, see the "Computer Science" subsection in [my study plan](https://github.com/fpsvogel/learn-ruby#expanding-my-horizons).
 
@@ -54,4 +54,4 @@ Lesson learned: what I *think* about my code's performance does not always match
 
 A lot of the fun of *Nand to Tetris* was precisely in this process of seeing where I could make my code more efficient. This is also obviously a useful skill to cultivate. It's true that there are lots of ways to practice optimization, not just in a CS course, but some CS courses offer an abundance of opportunities for sharpening these skills and (in my case) discovering tools for optimization that I will use for a long time to come.
 
-So if you've ever looked at your computer and thought (with a tiny bit of guilt), "Maybe I should know how this thing works," then try *Nand to Tetris*. You just might have a great time, and it won't be time wasted.
+So if you've ever looked at your computer and thought (with a tiny bit of guilt), *"Maybe I should know how this thing works,"* then try *Nand to Tetris*. You just might have a great time, and it won't be time wasted.

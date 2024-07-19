@@ -31,7 +31,7 @@ This site is where I reflect on my learning. Usually I write about Ruby programm
   2023/solo-rpgs-creative-practice
   2023/why-make-a-text-based-game
   2022/rails-service-objects-alternative-to-organize-business-logic
-  2021/how-to-contribute-to-open-source-ruby-rails
+  2021/nand-to-tetris
   2021/build-a-blog-with-ruby-bridgetown
 ] %>
 
