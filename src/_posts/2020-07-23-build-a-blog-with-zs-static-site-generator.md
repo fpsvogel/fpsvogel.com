@@ -9,7 +9,9 @@ description: How I built this blog with zs and Lua.
 
 *NOTE: You're reading this on a more recent iteration of my blog. This post refers to [the first version from 2020](https://fpsvogel-2020.netlify.app/).*
 
-Of all the grand plans that a fledgeling developer inevitably dreams up and expands to impossible proportions, the most urgent is (thankfully) the least impossible: to make a blog. The humble blog is the doorway into dreams, the launchpad into the infinity of all the earth-shaking projects soon to be realized. (That's how it goes in my imagination, at least.)
+Of all the grand plans that a fledgling developer inevitably dreams up and expands to impossible proportions, the most urgent is (thankfully) the least impossible: **to make a blog**.
+
+The humble blog is the doorway into dreams, the launchpad into the infinity of all the earth-shaking projects soon to be realized. (That's how it goes in my imagination, at least.)
 
 So I made this blog, and here's what I learned.
 
@@ -57,7 +59,7 @@ And now writing a new post is a breeze:
 - Create a Markdown file with the date in the filename (such as "2020-07-23-zs.md").
 - Set the title and subtitle in the YAML header.
 - Write the content.
-- Rebuild the site with zs (also run compile my Sass; I do both at once with a batch script).
+- Rebuild the site with zs (also compile my Sass; I do both at once with a batch script).
 - Push to Github, and my site on Netlify automatically updates.
 
-Oh, and I had fun [finding programming jokes](http://www.devtopics.com/best-programming-jokes/) for my mascot owl up above.
+Oh, and I had fun [finding programming jokes](http://www.devtopics.com/best-programming-jokes/) for my mascot owl in the site's header section.
