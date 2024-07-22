@@ -7,13 +7,15 @@ description: How to make Windows Terminal easier to reach via shortcuts.
 - [Add a Windows Terminal submenu to the Explorer context menu](#add-a-windows-terminal-submenu-to-the-explorer-context-menu)
 - [Create a global hotkey for Windows Terminal](#create-a-global-hotkey-for-windows-terminal)
 
-***UPDATE April 2021:** Disregard my rueful comments below, because development on Windows is a breeze now that I've started using WSL (Windows Subsystem for Linux). It's [so easy to set up](https://twitter.com/fpsvogel/status/1383017405551673349) that I regret not doing so as soon as I learned about it last year. Dilapidated Windows builds of development tools are now a thing of the past for me. Hallelujah!*
+***UPDATE, February 2023:** I've now switched to Linux on my PC, and [wrote a post about it](/posts/2023/switch-to-linux-from-windows). I wish I had made the switch sooner!*
+
+***UPDATE, April 2021:** Disregard my rueful comments below, because development on Windows is a breeze now that I've started using WSL (Windows Subsystem for Linux). It's [so easy to set up](https://twitter.com/fpsvogel/status/1383017405551673349) that I regret not doing so as soon as I learned about it last year. Dilapidated Windows builds of development tools are now a thing of the past for me. Hallelujah!*
 
 Today's productivity how-to: set up context menu shortcuts and a global hotkey for the new Windows Terminal.
 
 But first, the obvious confession: I use Windows. I don't love Windows; it's just that the effort of switching has never seemed justified, when I'd only be trading my Windows annoyances for a new set of problems that inevitably comes with any OS.
 
-So I've stuck with Windows—despite the mockery of Apple devotees, despite the scornful grimaces of Linux hackers. Despite the occasional pain of setting up development tools, when the installation instructions consist of a single sentence on how to install the latest version in Linux or MacOS, followed by that familiar line: "Windows users, **click here** for a Windows build that some bozo put together for your crappy OS. Oh, and it's from five years ago."
+So I've stuck with Windows—despite the mockery of Apple devotees, despite the scornful grimaces of Linux hackers, and despite the occasional pain of setting up development tools, when the installation instructions consist of a single sentence on how to install the latest version in Linux or MacOS, followed by that familiar line: *"Windows users, **click here** for a Windows build that some bozo put together for your crappy OS. Oh, and it's from five years ago."*
 
 There are some hopeful signs, though. Windows is finally getting [a native package manager](https://devblogs.microsoft.com/commandline/windows-package-manager-preview/), and the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) has been out for a while now.
 

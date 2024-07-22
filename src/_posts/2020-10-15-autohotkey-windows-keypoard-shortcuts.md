@@ -11,6 +11,8 @@ description: How to be more productive in Windows with keyboard and mouse shortc
 - [AutoHotkey: modifier functions](#autohotkey-modifier-functions)
 - [The upshot](#the-upshot)
 
+***UPDATE, 2021:** For more keyboard adventures, see my more recent posts [Learning Colemak](/posts/2021/learn-colemak-keyboard.html) and [The Keyboardio Atreus](/posts/2021/keyboardio-atreus).*
+
 Constantly switching between your keyboard and mouse can be frustrating, especially once you start paying attention to just how much you do it every day. (And now that I've made you start thinking about it, you won't be able to stop. It's the [pink elephant game](https://en.wikipedia.org/wiki/Ironic_process_theory) all over again. You're welcome.)
 
 So I've been on a quest to use my keyboard and mouse more efficiently, and here's what I have so far.
@@ -334,5 +336,3 @@ Is this yet another case of [spending more time than I save](https://xkcd.com/12
 ![Galadriel saying "All shall love me!"](/images/memes/galadriel.gif)
 
 Well… just don't let it get to your head, that's all.
-
-***UPDATE:** For more keyboard adventures, see my more recent posts [Learning Colemak](/posts/2021/learn-colemak-keyboard.html) and [The Keyboardio Atreus](/posts/2021/keyboardio-atreus).*
