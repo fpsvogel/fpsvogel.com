@@ -1,6 +1,5 @@
 require "reading"
 require "dropbox_api"
-require "debug"
 
 # Shortens the String to a given length.
 module StringTruncate
@@ -103,6 +102,7 @@ class Builders::LoadReadingList < SiteBuilder
       Reading.stats(input: "amount by genre rating>3", items:)
       .transform_values(&:to_i)
       .to_a
+      .filter { |_genre, amount| amount > 1000 }
       .sort_by { |_genre, amount| amount }
       .reverse
       .to_h

@@ -23,7 +23,7 @@ This page is updated automatically with the help of my [Reading](https://github.
 
 ## Favorite genres
 
-Total pages read of 4- and 5-star items, by genre.
+Total pages read of 4- and 5-star items, of genres with over 1000 pages.
 
 <%= pie_chart(stats[:amount_by_genre_favorites], id: "chart-favorite-genres", height: "480px") %>
 
