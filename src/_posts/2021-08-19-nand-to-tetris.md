@@ -15,7 +15,7 @@ description: Learning how to build a computer is not only fun, but also teaches 
 
 *Nand to Tetris* is a hands-on course that teaches how to build a simple computer, including its operating system and a programming language. The course is completely free: [part 1](https://www.coursera.org/learn/build-a-computer), [part 2](https://www.coursera.org/learn/nand2tetris2). The textbook [The Elements of Computing Systems](https://mitpress.mit.edu/books/elements-computing-systems-second-edition) can come in handy as a reference, but it is not required. The course videos have all the same information and more. For some other handy links, see <a href="/reading#B084V7R8PT" data-turbo="false">my notes on the course</a>.
 
-Although you could use *Nand to Tetris* as a primer or "CS101", I'm glad I had previously read [*Code: The Hidden Language of Computer Hardware and Software*](https://www.charlespetzold.com/code/), which introduces many of the same concepts in a more conversational way. For other CS books that I recommend, see the "Computer Science" subsection in [my study plan](https://github.com/fpsvogel/learn-ruby#expanding-my-horizons).
+Although you could use *Nand to Tetris* as a primer or "CS101", I'm glad I had previously read [*Code: The Hidden Language of Computer Hardware and Software*](https://www.charlespetzold.com/code/), which introduces many of the same concepts in a more conversational way. For other CS books that I recommend, see my list ["Learn C and Computer Science"](https://github.com/fpsvogel/learn-c-and-cs).
 
 Why do I bother with these books and courses? After all, I'm planning on getting into web development, not systems programming. The hardware and OS are way below the layers where I'll be working.
 
