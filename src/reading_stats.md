@@ -59,7 +59,7 @@ For podcasts and other items of undefined length, I count the amount that I've c
 
 ## Most annotated
 
-Word counts of notes.
+Word count of notes.
 
 <%= bar_chart(stats[:top_annotated], id: "chart-most-annotated" ) %>
 
