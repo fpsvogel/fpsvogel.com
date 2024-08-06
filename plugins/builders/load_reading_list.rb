@@ -1,6 +1,6 @@
 require "reading"
 require "dropbox_api"
-
+require "debug"
 # Shortens the String to a given length.
 module StringTruncate
   refine String do
@@ -107,13 +107,21 @@ class Builders::LoadReadingList < SiteBuilder
       .reverse
       .to_h
 
-    stats[:top_genres_by_year] =
+    stats[:genres_by_year] =
       Reading.stats(input: "amount by year, genre", items:)
       .transform_values { |genre_counts|
-        genre_counts
+        top_4 = genre_counts
           .transform_values(&:to_i)
           .max_by(4, &:last)
           .to_h
+
+        other_sum = genre_counts
+          .transform_values(&:to_i)
+          .except(*top_4.keys)
+          .values
+          .sum
+
+        top_4.merge("other" => other_sum)
       }
       .delete_if { |year, _genre_counts| year < 2017 }
       .flat_map { |year, genre_counts| genre_counts.map { |genre, count| [genre, [year, count]] } }

@@ -9,7 +9,7 @@ This page is updated automatically with the help of my [Reading](https://github.
 **Contents:**
 
 - [Favorite genres](#favorite-genres)
-- [Most-read genres](#most-read-genres)
+- [Genres by year](#genres-by-year)
 - [What I feel about each genre](#what-i-feel-about-each-genre)
 - [Rating distribution](#rating-distribution)
 - [Most re-reads](#most-re-reads)
@@ -27,11 +27,11 @@ Total pages read of 4- and 5-star items, of genres with over 1000 pages.
 
 <%= pie_chart(stats[:amount_by_genre_favorites], id: "chart-favorite-genres", height: "480px") %>
 
-## Most-read genres
+## Genres by year
 
-Total pages read of each year's top 4 genres.
+Total pages read of each year's top 4 and other genres.
 
-<%= column_chart(stats[:top_genres_by_year].map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }, id: "chart-most-read-genres", stacked: true, library: { plugins: { tooltip: { mode: "point" } } }) %>
+<%= column_chart(stats[:genres_by_year].map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }, id: "chart-most-read-genres", stacked: true, library: { plugins: { tooltip: { mode: "point" } } }, height: "600px") %>
 
 ## What I feel about each genre
 
