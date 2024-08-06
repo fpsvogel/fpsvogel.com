@@ -157,7 +157,7 @@ class Builders::LoadReadingList < SiteBuilder
       .transform_keys(&:truncate)
 
     stats[:top_lengths] =
-      Reading.stats(input: "top 10 lengths", items:)
+      Reading.stats(input: "top 10 lengths status=done done=100%", items:)
       .to_h
       .transform_values(&:to_i)
 
