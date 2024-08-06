@@ -129,7 +129,7 @@ class Builders::LoadReadingList < SiteBuilder
       .transform_values { _1.map(&:last).to_h }
 
     stats[:average_rating_by_genre] =
-      Reading.stats(input: "average rating by genre", items:)
+      Reading.stats(input: "average rating by eachgenre", items:)
       .reject { |_genre, rating| rating.nil? }
       .sort_by { |_genre, rating| rating }
       .reverse
