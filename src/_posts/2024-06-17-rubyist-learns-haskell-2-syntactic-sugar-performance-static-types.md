@@ -208,7 +208,7 @@ Along the way, I learned that **Haskellers can be very conscious of performance*
 > - **Cmm:** STG code translated into an simplified subset of C. Imperative, so making order of execution explicit.
 > - **Asm:** What the Cmm code compiles to. Platform (OS + hardware)-specific. What your CPU can actually execute.
 
-Longer explanations are in [this StackOverflow answer](https://stackoverflow.com/a/59338472) and [the doc on debugging the compiler](https://downloads.haskell.org/ghc/latest/docs/users_guide/debugging.html#dumping-out-compiler-intermediate-structures). Also relevant is [the doc on code optimization](https://downloads.haskell.org/ghc/latest/docs/users_guide/using-optimisation.html) and [godbolt](https://godbolt.org/), the online Haskell compiler explorer, which has more advanced features along these lines than the Haskell Playground.
+Longer explanations are in [this StackOverflow answer](https://stackoverflow.com/a/59338472) and [the doc on debugging the compiler](https://downloads.haskell.org/ghc/latest/docs/users_guide/debugging.html#dumping-out-compiler-intermediate-structures). Also relevant is [the doc on code optimization](https://downloads.haskell.org/ghc/latest/docs/users_guide/using-optimisation.html), the Haskell Wiki's ["Performance/GHC"](https://wiki.haskell.org/Performance/GHC) page, and [godbolt](https://godbolt.org/), the online Haskell compiler explorer, which has more advanced features along these lines than the Haskell Playground.
 
 **All this attention paid to performance (for a little `maxBy` function!) was new to me as a Ruby developer.** I knew that learning Haskell would help me think in new ways, but becoming more conscious about performance was not something I'd expected.
 
