@@ -216,6 +216,8 @@ Longer explanations are in [this StackOverflow answer](https://stackoverflow.com
 
 ## Haskell's dream of total static typing
 
+***UPDATE, August 2024:** I recommend the article ["Types"](https://www.destroyallsoftware.com/compendium/types?share_key=baf6b67369843fa2) by Destroy All Software. It's a great intro to the vocabulary of static and dynamic typing, and the debate surrounding them. If I'd found that article before writing this post, maybe my thoughts below would be more coherent! Oh well.*
+
 Besides expressive flexibility, another intriguing aspect of Haskell is how increasingly extensive its static typing system is.
 
 *"Total static typing"* is a term that I made up just now to refer to the goal that I sense in Haskell's evolution. Its type system has become more complex over time, and within a few years Haskell might get a dependent type system, which is best explained (along with an alternative path) in the article ["Why Liquid Haskell Matters"](https://www.tweag.io/blog/2022-01-19-why-liquid-haskell/).
