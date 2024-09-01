@@ -2,15 +2,16 @@
 title: Solo RPGs as a creative practice
 subtitle: overcoming my inhibition to storytelling
 description: If you're uncomfortable writing fiction or making up stories, solo role-playing games could be a way to overcome your inhibitions.
-updated: 2024-07-08
+updated: 2024-09-01
 ---
 
 - [How I discovered solo TTRPGs](#how-i-discovered-solo-ttrpgs)
 - [The TTRPG that I'm starting with](#the-ttrpg-that-im-starting-with)
 - [Honorable mentions](#honorable-mentions)
   - [For kids, and the kid in me](#for-kids-and-the-kid-in-me)
-  - [World-building games](#world-building-games)
+  - [Space-themed](#space-themed)
   - [Going medieval](#going-medieval)
+  - [World-building games](#world-building-games)
 - [Solo role-playing tools](#solo-role-playing-tools)
   - [Oracles](#oracles)
   - [Playing TTRPGs on the computer](#playing-ttrpgs-on-the-computer)
@@ -71,7 +72,28 @@ Here are some other TTRPGs that I'll be exploring.
 - *Dungeon Hero* ([Vol. 1](https://lonespelunker.itch.io/dungeon-hero), [Vol. 2](https://lonespelunker.itch.io/dungeon-hero-volume-2), [Vol. 3](https://lonespelunker.itch.io/dungeon-hero-volume-3-bump-in-the-night)) and its successor [*Welcome Aboard, Captain*](https://lonespelunker.itch.io/welcome-aboard-captain)
 - [*The Storymaster's Tales*](https://www.storymasterstales.com)
 - [*Space Aces: Voyages in Infinite Space*](https://www.etsy.com/listing/1646603705/space-aces-voyages-in-infinite-space) (plus [supplements](https://p0rthos47.itch.io/))
+
+### Space-themed
+
 - [*For Small Creatures Such As We*](https://www.blackwellwriter.com/en-us/products/for-small-creatures-such-as-we)
+- *Cepheus*
+  - [*Retro Sci-Fi Rules*](https://www.drivethrurpg.com/en/product/456143/retro-sci-fi-rules) is just an updated *Traveller*. It's a simple and minimalist starting point.
+  - [*Travelling Alone*](https://www.freelancetraveller.com/features/rules/alone.html)
+  - [*Cepheus Universal*](https://www.drivethrurpg.com/en/product/469431/cepheus-universal) for all the options.
+  - [*Solo*](https://www.drivethrurpg.com/en/product/207164/solo)
+  - [An explanation of the various versions](https://www.reddit.com/r/rpg/comments/1efz4fg/comment/lfopl95/)
+
+### Going medieval
+
+These are a lot more *crunchy* (as the more numbers-heavy games are described) than I would normally go for, but I just can't resist their medieval literary-historical settings.
+
+- [*Pendragon*](https://en.wikipedia.org/wiki/Pendragon_(role-playing_game))
+- [*Paladin*](https://www.chaosium.com/paladin/)
+- [*Aquelarre*](https://drivethrurpg.com/product/237059/Aquelarre)
+- [*Chronica Feudalis*](https://chronicafeudalis.com/)
+- [*Wolves of God*](https://drivethrurpg.com/product/308470/Wolves-of-God-Adventures-in-Dark-Ages-England)
+- [*1366*](https://drivethrurpg.com/product/111240/1366-Second-Edition)
+- [*Maelstrom*](https://drivethrurpg.com/publisher/
 
 ### World-building games
 
@@ -87,19 +109,7 @@ These could be useful for building out the setting of a game or story.
 - [*Cartograph*](https://the-ravensridge-press.itch.io/cartograph-atlas-edition)
 - [*Artefact*](https://mouseholepress.itch.io/artefact) (try it alongside [*The Kleptogoblicon*](https://perchance.org/kleptogoblicon))
 - [*DELVE*](https://www.blackwellwriter.com/en-us/products/delve-a-solo-map-drawing-game) / [*UMBRA*](https://www.blackwellwriter.com/en-us/products/umbra-a-game-of-final-frontiers)
-- [*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) has a world-building element.
-
-### Going medieval
-
-These are a lot more *crunchy* (as the more numbers-heavy games are described) than I would normally go for, but I just can't resist their medieval literary-historical settings.
-
-- [*Pendragon*](https://en.wikipedia.org/wiki/Pendragon_(role-playing_game))
-- [*Paladin*](https://www.chaosium.com/paladin/)
-- [*Aquelarre*](https://drivethrurpg.com/product/237059/Aquelarre)
-- [*Chronica Feudalis*](https://chronicafeudalis.com/)
-- [*Wolves of God*](https://drivethrurpg.com/product/308470/Wolves-of-God-Adventures-in-Dark-Ages-England)
-- [*1366*](https://drivethrurpg.com/product/111240/1366-Second-Edition)
-- [*Maelstrom*](https://drivethrurpg.com/publisher/667/arion-games/category/4422/maelstrom), especially *Domesday* and *Rome*
+- [*Stars without Number*](https://www.drivethrurpg.com/product/230009/Stars-Without-Number-Revised-Edition-Free-Version) has a world-building element.667/arion-games/category/4422/maelstrom), especially *Domesday* and *Rome*
 
 ## Solo role-playing tools
 
@@ -112,7 +122,7 @@ These are what help move the story along in solo play, in the absence of a GM (g
 - [*Mythic GME*](https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition)
 - [*CRGE/UNE/BOLD*](https://www.drivethrurpg.com/browse/pub/7251/Conjecture-Games)
 - [*Motif*](https://www.drivethrurpg.com/browse/pub/7970/Thought-Punks/subcategory/22614_38729/Motif-Framework)
-- [*Game Unfolding Machine*](https://jeansenvaars.itch.io/game-unfolding-machine) and [*Transient Predictions*](https://jeansenvaars.itch.io/transient-predictions)
+- [JeansenVaars](https://jeansenvaars.itch.io) *Unfolding Machine* tools
 
 These are more minimalist:
 
