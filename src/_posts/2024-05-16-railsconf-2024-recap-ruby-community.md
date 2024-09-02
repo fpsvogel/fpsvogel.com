@@ -55,7 +55,12 @@ In fact, low-key conversations with new friends were the highlight of the confer
 
 As part of my scholarship, I was paired up with the amazing [Michelle Yuen](https://www.linkedin.com/in/michelle-yuen-dev) as my guide to help me make the most of RailsConf. Michelle was once a scholar herself, and [her post-conference interview from back then](https://rubycentral.org/news/meet-railsconf-2023-scholar-michelle-yuen/) is a great read if you want another perspective on being a Ruby Central Scholar. Besides invaluable tips on "how to conference", Michelle also gave me feedback on my scholar project.
 
-I chose to give a lightning talk, "How to Be an Exercism Mentor and Contributor", drawing from my experience in the one open-source project that I've contributed to over the past six months or so. [You can see my presentation slides here.](https://speakerdeck.com/fpsvogel/how-to-be-an-exercism-mentor-and-contributor)
+I chose to give a lightning talk, "How to Be an Exercism Mentor and Contributor", drawing from my experience in the one open-source project that I've contributed to over the past six months or so. [You can see my presentation slides here.](https://speakerdeck.com/fpsvogel/how-to-be-an-exercism-mentor-and-contributor) Lightning talks weren't recorded at the conference, but fortunately my practice run at work was recorded:
+
+<video controls>
+  <source src="/images/exercism-lightning-talk.mp4" type="video/mp4">
+  Oops! Your browser does not support the video tag.
+</video>
 
 It was an uplifting experience to put together that talk and to get positive feedback about it. Like being at RailsConf, it made me realize that *I don't have to go to heroic lengths in order to be a valuable member of the community*. Just doing my little part, whenever I have time and energy for it between family and self-care, is enough.
 
