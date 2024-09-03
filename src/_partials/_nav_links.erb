@@ -1,9 +1,12 @@
 <% links.each do |name, url| %>
   <li>
-    <a href="<%= url %>" rel="me"
-        <%= "class=highlighted" if (resource.relative_url.start_with?(url) && url != "/") ||
-                                   (resource.relative_url == "/"           && url == "/") %>>
-      <%= name %>
-    </a>
+    <% if (resource.relative_url.start_with?(url) && url != "/") ||
+      (resource.relative_url == "/" && url == "/") %>
+      <span class="current-section"><%= name %></span>
+    <% else %>
+      <a href="<%= url %>" rel="me" class="section">
+        <%= name %>
+      </a>
+    <% end %>
   </li>
 <% end %>

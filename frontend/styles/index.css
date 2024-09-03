@@ -126,10 +126,13 @@ nav li {
   padding: 0 !important;
 }
 
-nav a {
+nav a, .section {
+  color: var(--link-color);
+}
+
+nav a, .section, .current-section {
   padding: .2rem .5rem;
   font-size: var(--nav-font-size);
-  color: var(--link-color);
   & svg { fill: var(--link-color) }
   &:active {
     color: var(--link-active-color);
@@ -138,6 +141,10 @@ nav a {
       background: linear-gradient(to right, transparent 10%, var(--link-active-color) 10%, var(--link-active-color) 95%, transparent 95%) 0 100% / 100% 2px no-repeat, transparent;
     }
   }
+}
+
+nav .current-section {
+  font-weight: 600;
 }
 
 nav svg {
