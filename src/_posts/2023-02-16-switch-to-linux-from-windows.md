@@ -34,7 +34,7 @@ As I installed it on my Alienware m15 R4, I had to do only a few things out of t
 - After installation, I decided to go into BIOS settings and disable Secure Boot, because it's a pain to have to enter a password when I install certain drivers. And for the average Linux desktop user, Secure Boot is more trouble than it's worth (sources: [1](https://askubuntu.com/a/843678), [2](https://askubuntu.com/a/889717)).
 - To prevent screen tearing on my external monitor, I had to open up NVIDIA settings via the tray icon and switch to "Performance Mode".
 - Bash was having issues wrapping lines, so I [installed Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) and that fixed the problem.
-- I fixed a few other annoyances with [my startup scripts](https://github.com/fpsvogel/linux-scripts/blob/1bd0d357507a4fa5153862a041d421f13d79d488/my_profile). ([Here are all the rest of my Linux scripts.](https://github.com/fpsvogel/linux-scripts))
+- I fixed a few other annoyances with [my dotfiles and startup scripts](https://github.com/fpsvogel/dotfiles-linux/blob/1bd0d357507a4fa5153862a041d421f13d79d488/my_profile). ([Here are all the rest of my Linux scripts.](https://github.com/fpsvogel/dotfiles-linux))
 
 So the switch took some time, but I'm already seeing a payoff in two areas: **a lovely terminal**, and **more time spent on the keyboard**. Of course, neither of these is unique to Linux, and I'm bringing these lessons back to MacOS—but **somehow it was easier for me to make these discoveries in Linux.**
 
@@ -55,7 +55,7 @@ Along with Zsh, I installed [Oh My Zsh](https://ohmyz.sh/#install) and a bunch o
 
 I also copied some aliases from the [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git) and [rails](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/rails) plugins.
 
-Next, I [cobbled together key bindings](https://github.com/fpsvogel/linux-scripts/blob/1bd0d357507a4fa5153862a041d421f13d79d488/zsh/big_key_bindings/zsh_shift_select) to enable Shift selection on the command line. Just this one improvement takes a lot of the pain out of the terminal for me, because now I can edit text on the command line much as I do everywhere else.
+Next, I [cobbled together key bindings](https://github.com/fpsvogel/dotfiles-linux/blob/1bd0d357507a4fa5153862a041d421f13d79d488/zsh/big_key_bindings/zsh_shift_select) to enable Shift selection on the command line. Just this one improvement takes a lot of the pain out of the terminal for me, because now I can edit text on the command line much as I do everywhere else.
 
 ## Payoff #2: more time spent on the keyboard, less on the mouse
 

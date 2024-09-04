@@ -17,7 +17,7 @@ For all you incurable PC users out there, I hope this post gives you some hope i
 Before we get into Mac-specific tools: earlier this year I replaced Windows with Linux on my PC, and a lot of the lessons I learned there are equally applicable to MacOS:
 
 - [Customize Zsh to get a lovely terminal.](/posts/2023/switch-to-linux-from-windows#payoff-1-a-lovely-terminal)
-  - [Here is the shell script that enables Shift selection in the terminal.](https://github.com/fpsvogel/macos-scripts/blob/main/zshrc/shift_select)
+  - [Here is the shell script that enables Shift selection in the terminal.](https://github.com/fpsvogel/dotfiles-macos/blob/main/zshrc/shift_select)
 - [My tricks for staying on the keyboard](/posts/2023/switch-to-linux-from-windows#payoff-2-more-time-spent-on-the-keyboard-less-on-the-mouse) are mostly applicable.
 
 ## MacOS apps for more PC-ification
@@ -38,7 +38,7 @@ This would be a fair point, ***if*** I were committed to using *only* a Mac for 
 
 In fact, I want to *avoid* getting locked into the Apple ecosystem, for a variety of practical and philosophical reasons. I'll pass over the usual suspects (*"I'm a cheapskate"*, *"It makes me feel superior"*, *"FREEEEDOM!!"* etc.) and talk about one motivation that's less obvious: **I learn more by using Linux**.
 
-In a draft of this post, I wrote about how in Linux I didn't have to spend so much time customizing the OS to my liking. Upon further reflection, I realize that's not true: in Linux, [I wrote plenty of shell scripts](https://github.com/fpsvogel/linux-scripts) to tweak various things. But that's the thing: **in Linux I write shell scripts**, whereas in MacOS I may need to buy a $20 app to make the same customization.
+In a draft of this post, I wrote about how in Linux I didn't have to spend so much time customizing the OS to my liking. Upon further reflection, I realize that's not true: in Linux, [I wrote plenty of shell scripts](https://github.com/fpsvogel/dotfiles-linux) to tweak various things. But that's the thing: **in Linux I write shell scripts**, whereas in MacOS I may need to buy a $20 app to make the same customization.
 
 I'll admit that in MacOS I got up and running faster, and the $120 that I've spent on convenience apps is certainly less than the dollar value of the time I've spent writing scripts in Linux, unless I were making a little above minimum wage. **But the hours I've spent tinkering in Linux have been valuable on a deeper level:** during that time I also *learned shell scripting*, and even a bit of *how the operating system works* (which is nice to know since web servers run on Linux). My customization of MacOS, either in built-in settings or a third-party app, has taught me fewer generalizable lessons.
 
