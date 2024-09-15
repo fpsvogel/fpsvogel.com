@@ -1,7 +1,9 @@
 <% links.each do |name, url| %>
   <li>
-    <% if (resource.relative_url.start_with?(url) && url != "/") ||
-      (resource.relative_url == "/" && url == "/") %>
+    <% if (resource.relative_url.start_with?(url.delete_suffix("/")) &&
+          url != "/" &&
+          resource.relative_url.split("/").reject(&:blank?).count == 1) ||
+        (resource.relative_url == "/" && url == "/") %>
       <span class="current-section"><%= name %></span>
     <% else %>
       <a href="<%= url %>" rel="me" class="section">
