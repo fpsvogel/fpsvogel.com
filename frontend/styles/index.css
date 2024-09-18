@@ -259,7 +259,6 @@ label[for=toc] {
 
 label[for=toc] + ul {
   margin-top: .25rem;
-  list-style-type: "› ";
 }
 
 label[for=toc] + ul li {
