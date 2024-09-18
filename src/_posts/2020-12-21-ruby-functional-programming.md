@@ -8,7 +8,7 @@ description: Functional programming can make your Ruby code easier to understand
 - [2. … through functions](#2--through-functions)
 - [Conclusion](#conclusion)
 
-***UPDATE:** I ended up not using this gem in my project, even though it was a byproduct of that project. In the end it seemed that the verbosity of plain Ruby was an acceptable price to pay for its complete clarity as to what methods are actually being called, which can be become unclear as a pipeline set up with this gem becomes more complex. Ah, well. It was good to learn how to make a gem and practice some metaprogramming, if nothing else.*
+*UPDATE: I ended up not using this gem in my project, even though it was a byproduct of that project. In the end it seemed that the verbosity of plain Ruby was an acceptable price to pay for its complete clarity as to what methods are actually being called, which can be become unclear as a pipeline set up with this gem becomes more complex. Ah, well. It was good to learn how to make a gem and practice some metaprogramming, if nothing else.*
 
 Until recently, I had a vague notion of functional programming as Ph.D.-level math embodied in code that is only useful for theoretical problems. On a clear day, I could almost catch a glimpse of it way up in the clouds, surrounded by a halo of theorems, undisturbed by the nitty-gritty, impure real world below. Then I watched these talks:
 

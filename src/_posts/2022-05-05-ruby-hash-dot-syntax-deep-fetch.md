@@ -58,7 +58,7 @@ First, here are benchmarks on standard syntax (mostly). For the benchmark code, 
 
 Here are a few approaches to dot notation for hashes or hash-like structures, benchmarked. Keep in mind that I measured only access (reading) performance, not initialization or writing.
 
-1. A Struct. *(Update: I also tried the new [Data](https://dev.to/baweaver/new-in-ruby-32-datadefine-2819) class in Ruby 3.2, but it provides the same speed of access as Struct, so I decided not to add it to the benchmarks.)*
+1. A Struct. *(UPDATE: I also tried the new [Data](https://dev.to/baweaver/new-in-ruby-32-datadefine-2819) class in Ruby 3.2, but it provides the same speed of access as Struct, so I decided not to add it to the benchmarks.)*
 2. Faux dot notation by flattening a hash and giving it composite keys, as in `config[:"item.template.variants"]`. I copied this approach [from here](https://snippets.aktagon.com/snippets/738-dot-notation-for-ruby-configuration-hash), with the main difference that I use symbols as keys because they're more performant than strings. Note that `:"string"` is similar to `"string".to_sym` but faster because a string is not created every time. Also, this approach uses brackets, but only because that hash's bracket accessor (`Hash#[]`) is overridden to use `fetch`.
 3. An OpenStruct.
 4. Augmenting a single hash with methods corresponding to its keys.
