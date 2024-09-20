@@ -171,6 +171,11 @@ nav li > nav-social-link::after {
   }
 }
 
+.posts-ul {
+  list-style-type: none;
+  padding-left: 0.5rem;
+}
+
 .posts-ul a {
   display: block;
   color: var(--text-color);
@@ -351,6 +356,7 @@ news-feed {
     }
   }
   .posts-ul {
+    padding-left: revert;
     list-style-type: circle;
     & li:hover {
       list-style-type: disc;
