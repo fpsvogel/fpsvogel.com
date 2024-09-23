@@ -32,7 +32,6 @@ class Builders::LoadReadingList < SiteBuilder
           config.reading.types = {}
         else
           items = Reading.parse(
-            config: { column_separator: "\t" },
             lines: my_dropbox_file,
             # If my_dropbox_file is nil, then the local file path is used instead.
             path: local_filepath,
