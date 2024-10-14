@@ -91,10 +91,11 @@ In my day-to-day I've spent most of my time on the points above, but when it com
 
 - **Get in touch with recruiters.** I've enjoyed working with Brian Mariani at [Mirror Placement](https://www.mirrorplacement.com). He specializes in Rails jobs. In case you didn't know, recruiters are paid by the companies who hire them to fill a role, not by you the job seeker, so there's no reason not to talk to a recruiter, or even a few if you can find other good ones.
 - **Keep an eye on Ruby job postings.** I've found these places most helpful:
-  - [Otta](https://otta.com)
+  - [Welcome to the Jungle](https://www.welcometothejungle.com/) (formerly Otta)
   - [GoRails job board](https://jobs.gorails.com/jobs)
   - [Ruby On Remote](https://rubyonremote.com)
   - [show-job](https://github.com/binarygit/show-job) would've been great if I were looking for a senior position.
+  - ***UPDATE, October 2024:** [UsingRails](https://usingrails.com/)*
 - **Identify companies that you want to work for.** This will become clear as you look at job postings, but you may also want to take a companies-first approach, such as browsing [Ruby On Remote's Companies page](https://rubyonremote.com/remote-companies).
 
 ### 2. Making a connection
