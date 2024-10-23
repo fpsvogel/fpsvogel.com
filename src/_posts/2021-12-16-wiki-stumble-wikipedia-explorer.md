@@ -1,7 +1,7 @@
 ---
 title: A StumbleUpon-style Wikipedia explorer
-subtitle: "lightning Rails app #2"
-description: How I built a Ruby on Rails throwaway app for learning purposes, a tool that suggests Wikipedia articles according to your likes and dislikes.
+subtitle: "Wiki Stumble, part 1 / lightning Rails app #2"
+description: How I built a Ruby on Rails throwaway app for learning, a tool that suggests Wikipedia articles according to your likes and dislikes, Ã  la StumbleUpon.
 ---
 
 - [New things I did in this app](#new-things-i-did-in-this-app)
@@ -19,14 +19,14 @@ Occasionally I get the urge to read Wikipedia. Not on a particular topic, justâ€
 
 What I really wanted, though, was a way to get personalized recommendations of articles, like [StumbleUpon](https://en.wikipedia.org/wiki/StumbleUpon) but for Wikipedia. That way I could avoid some of the hit-or-miss results of browsing random articles, and I wouldn't have to wade through topic lists either.
 
-So I've built [Wiki Stumble](https://github.com/fpsvogel/wikistumble), a little app that suggests Wikipedia articles based on user-selected categories and also based on the user's reaction (thumbs up or down) to previous recommendations.
+So I've built [Wiki Stumble](https://github.com/fpsvogel/wiki-stumble), a little app that suggests Wikipedia articles based on user-selected categories and also based on the user's reaction (thumbs up or down) to previous recommendations.
 
 This is my second "lightning app" this month, so named because I'm making them in the spare hours of a day or two each. In the end I'll choose one or two to continue expanding while I learn better Rails testing skills. These lightning apps are simple and intentionally leave out a lot of features, but I'm still trying to do something new in each one.
 
 ## New things I did in this app
 
 - Used the Wikipedia APIs.
-- Wrote more tests this time around, again using RSpec. (I've mostly used Minitest until recently.) I wrote most of my tests toward the end, because for this app I wasn't sure how I would implement the main feature and how it could be tested, until I actually tried building it (more on that below). Still, I have plently of tests now, and I did manage to [sneak in some TDD](https://github.com/fpsvogel/wikistumble/commit/4281145325268afc0d56d1c4c8cb95f6836643e4#diff-b86f796c2cf34f7b413473d8caa19b6b0701757729fe74008aa8d6ee97621bbb) for [improvements toward the end](https://github.com/fpsvogel/wikistumble/commit/b19fb40f31e2123e6939a2f2a4040e466328979c#diff-b86f796c2cf34f7b413473d8caa19b6b0701757729fe74008aa8d6ee97621bbb).
+- Wrote more tests this time around, again using RSpec. (I've mostly used Minitest until recently.) I wrote most of my tests toward the end, because for this app I wasn't sure how I would implement the main feature and how it could be tested, until I actually tried building it (more on that below). Still, I have plently of tests now, and I did manage to [sneak in some TDD](https://github.com/fpsvogel/wiki-stumble/commit/4281145325268afc0d56d1c4c8cb95f6836643e4#diff-b86f796c2cf34f7b413473d8caa19b6b0701757729fe74008aa8d6ee97621bbb) for [improvements toward the end](https://github.com/fpsvogel/wiki-stumble/commit/b19fb40f31e2123e6939a2f2a4040e466328979c#diff-b86f796c2cf34f7b413473d8caa19b6b0701757729fe74008aa8d6ee97621bbb).
 - Gave Bootstrap another chance. I've [avoided it in recent projects](https://github.com/vinorodrigues/bootstrap-dark-5#method-4), but I wanted to try it again; after all, I already know my around Bootstrap, so the learning curve would not be an issue. After I [installed a Bootstrap theme](https://bootswatch.com/help/) for a slightly less generic look, I tackled one of Bootstrap's big deficiencies: the lack of a dark mode. I [followed this guide](https://github.com/vinorodrigues/bootstrap-dark-5#method-4), but in the end I abandoned the effort because it was giving me too many problems. Someday when Bootstrap finally includes a built-in dark mode, I might use it in a personal project. For now, I chose [PaperCSS](https://www.getpapercss.com) again.
 
 ## The technical challenge
@@ -56,6 +56,6 @@ Also, this time I more clearly see what features need to be added on to this min
 - User accounts to save personalization data and liked articles.
 - A better way to choose starter categories, because writing them into a text field is a little clunky.
 - More fine-grained control over a user's category preferences, in case the user wants to manually edit them.
-- Faster tests. Currently my system tests make real API calls, which makes them slow. *UPDATE: I finished reading Jason Swett's [Complete Guide to Rails Testing](https://www.codewithjason.com/complete-guide-to-rails-testing/), which [taught me how to use WebMock and VCR](https://www.codewithjason.com/vcr-webmock-hello-world-tutorial/) to speed up my system tests. Now they take just one second instead of half a minute. [Here's the commit.](https://github.com/fpsvogel/wikistumble/commit/2609a345c034174cc54b708f5711034ebae1a0ea)*
+- Faster tests. Currently my system tests make real API calls, which makes them slow. *UPDATE: I finished reading Jason Swett's [Complete Guide to Rails Testing](https://www.codewithjason.com/complete-guide-to-rails-testing/), which [taught me how to use WebMock and VCR](https://www.codewithjason.com/vcr-webmock-hello-world-tutorial/) to speed up my system tests. Now they take just one second instead of half a minute. [Here's the commit.](https://github.com/fpsvogel/wiki-stumble/commit/2609a345c034174cc54b708f5711034ebae1a0ea)*
 
 But first, on to the third (and final) lightning app!

@@ -18,7 +18,7 @@ Also, I added a twist to the game: players can write alternative continuations t
 
 - Used Turbo Frames to dynamically show a "Continue the story" form on the same page, and to dynamically update a total score after the user presses a "Like" or "Dislike" button.
 - Wrote a lot more tests this time around because of the more numerous models and more complex UI.
-- Put testing front and center in my development process. This is different from the last point because I could have written a lot of tests, but only as an afterthought. However, this time I consciously avoided doing that. Last time I wasn't so successful in this because I had to work around [challenging APIs](/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon#the-technical-challenge) to implement one large feature, which made it hard to test that feature until near the end when I saw that my approach had a decent chance of working. In contrast, this app is made up of many different features, making it a better training ground for building up testing habits.
+- Put testing front and center in my development process. This is different from the last point because I could have written a lot of tests, but only as an afterthought. However, this time I consciously avoided doing that. Last time I wasn't so successful in this because I had to work around [challenging APIs](/posts/2021/wiki-stumble-wikipedia-explorer) to implement one large feature, which made it hard to test that feature until near the end when I saw that my approach had a decent chance of working. In contrast, this app is made up of many different features, making it a better training ground for building up testing habits.
 
 ## Building up testing habits
 
@@ -44,4 +44,4 @@ For each of these lightning apps, I've taken a moment at the end to decide wheth
 
 I'm honestly not sure about Story Toss. I doubt I'll use it regularly myself, which is my main motivator for continuing to develop a personal project. There are lots of new features I *could* add, such as a user profile page, a user scoreboard, and AI-generated continuations to bring stale unfinished stories back to life.
 
-In any case, I'm glad I built the app because it served as an excellent capstone project for my recent dive into Rails testing and RSpec. Now I can return to [Wiki Stumble](/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon), my favorite of the lightning app trio, and expand it following the habits I've strengthened here.
+In any case, I'm glad I built the app because it served as an excellent capstone project for my recent dive into Rails testing and RSpec. Now I can return to [Wiki Stumble](/posts/2021/wiki-stumble-wikipedia-explorer), my favorite of the lightning app trio, and expand it following the habits I've strengthened here.

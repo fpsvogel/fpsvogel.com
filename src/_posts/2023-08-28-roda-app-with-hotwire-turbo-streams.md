@@ -1,6 +1,6 @@
 ---
 title: Roda + Turbo Streams = ❤️
-subtitle: porting Wiki Stumble from Rails
+subtitle: Wiki Stumble, part 2
 description: I rewrote a Ruby on Rails app in Roda, using Turbo Streams for an SPA-like feel. And you can too!
 ---
 
@@ -8,11 +8,11 @@ description: I rewrote a Ruby on Rails app in Roda, using Turbo Streams for an S
 - [Dropping in Turbo Streams](#dropping-in-turbo-streams)
 - [Up next: improve performance](#up-next-improve-performance)
 
-Two years ago, amid throwaway projects furiously hammered out ahead of my first developer job hunt, I made a little Rails app that I **actually liked**, a mashup of StumbleUpon and Wikipedia called Wiki Stumble. [Here's my post from back then on how I made the app.](/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon)
+Two years ago, amid throwaway projects furiously hammered out ahead of my first developer job hunt, I made a little Rails app that I **actually liked**, a mashup of StumbleUpon and Wikipedia called Wiki Stumble. [Here's my post from back then on how I made the app.](/posts/2021/wiki-stumble-wikipedia-explorer)
 
 Now, as I'm circling back to tie up some loose ends, I took the opportunity **to learn a Ruby app framework besides Rails**, and **to practice my Hotwire skills**.
 
-Here's [the live site](https://wikistumble.com/) and [the GitHub repo](https://github.com/fpsvogel/wikistumble) of the new Wiki Stumble app.
+Here's [the live site](https://wikistumble.com/) and [the GitHub repo](https://github.com/fpsvogel/wiki-stumble) of the new Wiki Stumble app.
 
 ## Roda, the DIY framework
 

@@ -17,7 +17,7 @@ Last month I built three little apps to improve my Rails testing skills. As part
 Before I get more into Doctor Lookup, here are my posts on last month's little apps:
 
 - [A "Pass the Story" collaborative writing game](/posts/2021/pass-the-story-collaborative-writing-game)
-- [A StumbleUpon-style Wikipedia explorer](/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon)
+- [A StumbleUpon-style Wikipedia explorer](/posts/2021/wiki-stumble-wikipedia-explorer)
 - [An AI story writer](/posts/2021/gpt3-ai-story-writer)
 
 ## A test-centered approach, as usual

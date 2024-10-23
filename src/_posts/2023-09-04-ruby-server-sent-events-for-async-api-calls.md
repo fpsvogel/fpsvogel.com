@@ -1,6 +1,6 @@
 ---
-title: Server-sent events
-subtitle: for asynchronous API calls in a Roda app
+title: Server-sent events for asynchronous API calls in a Roda app
+subtitle: Wiki Stumble, part 3
 description: To speed up a slow page full of API calls or other expensive tasks, server-sent events let you do the work after the response and stream the results back.
 ---
 
@@ -14,7 +14,7 @@ description: To speed up a slow page full of API calls or other expensive tasks,
 
 In my last post, [I rewrote a little Rails app with Roda and Turbo Streams](/posts/2023/roda-app-with-hotwire-turbo-streams). In this post I'll show how I solved the app's last and biggest problem: **slow API calls**. *So slow* that the user had to wait *several seconds* between pressing the "Next article" button, and actually seeing a new article.
 
-The app is called Wiki Stumble. Here's [the live site](https://wikistumble.com/) and [the GitHub repo](https://github.com/fpsvogel/wikistumble). The app shows summaries of Wikipedia articles personalized to the user's likes and dislikes.
+The app is called Wiki Stumble. Here's [the live site](https://wikistumble.com/) and [the GitHub repo](https://github.com/fpsvogel/wiki-stumble). The app shows summaries of Wikipedia articles personalized to the user's likes and dislikes.
 
 Due to Wikipedia APIs not having that capability built in, the app has to make **multiple API calls for each article**, fetching new articles over and over until a suitable one is found.
 
@@ -40,9 +40,9 @@ All I had to do was add `<turbo-stream-source>` elements to the page, like this:
 <turbo-stream-source src="/next"></turbo-stream-source>
 ```
 
-Then I added the `GET /next` route, which you can [see here in its first iteration](https://github.com/fpsvogel/wikistumble/blob/62bd341c378a4f7040ad8177443b5110a6b5088d/app/router.rb#L91-L138). (Later I rewrote some of that code for performance reasons; see below on Rack hijacking.)
+Then I added the `GET /next` route, which you can [see here in its first iteration](https://github.com/fpsvogel/wiki-stumble/blob/62bd341c378a4f7040ad8177443b5110a6b5088d/app/router.rb#L91-L138). (Later I rewrote some of that code for performance reasons; see below on Rack hijacking.)
 
-One gotcha is that connections need to be manually closed on the client side, or else the GET endpoint will keep getting hit even after the `<turbo-stream-source>` is no longer on the page. So I wrote [a Stimulus controller](https://github.com/fpsvogel/wikistumble/blob/4d5d48332a8dc27c278af9cfdaae4232c0866324/public/app.js#L16-L36) that closes each connection when its `<turbo-stream-source>` element is disconnected.
+One gotcha is that connections need to be manually closed on the client side, or else the GET endpoint will keep getting hit even after the `<turbo-stream-source>` is no longer on the page. So I wrote [a Stimulus controller](https://github.com/fpsvogel/wiki-stumble/blob/4d5d48332a8dc27c278af9cfdaae4232c0866324/public/app.js#L16-L36) that closes each connection when its `<turbo-stream-source>` element is disconnected.
 
 If you're not familiar with Stimulus, see the handy demo on [the Stimulus home page](https://stimulus.hotwired.dev/).
 
@@ -90,7 +90,7 @@ Here's how I solved each of these in turn.
 
 **#2 and #3. Use the Rack hijacking API.** I followed [this guide](https://blog.chumakoff.com/en/posts/rails_sse_rack_hijacking_api) to use Rack hijacking to offload the long API calls from the server threads. This way, all the next articles are fetched simultaneously, and most of the buffer is filled up in the same time it takes to fetch one article, even if I set a maximum of one server thread! 😮
 
-[Here](https://github.com/fpsvogel/wikistumble/blob/4d5d48332a8dc27c278af9cfdaae4232c0866324/app/router.rb#L110-L135) and [here](https://github.com/fpsvogel/wikistumble/blob/4d5d48332a8dc27c278af9cfdaae4232c0866324/app/helpers/stream_helper.rb) is what my streaming code looks like now.
+[Here](https://github.com/fpsvogel/wiki-stumble/blob/4d5d48332a8dc27c278af9cfdaae4232c0866324/app/router.rb#L110-L135) and [here](https://github.com/fpsvogel/wiki-stumble/blob/4d5d48332a8dc27c278af9cfdaae4232c0866324/app/helpers/stream_helper.rb) is what my streaming code looks like now.
 
 **Side note:** Rack full hijacking feels pretty hacky, but I didn't have much luck with the cleaner approaches that I tried: partial hijacking, [returning a streaming body](https://github.com/rack/rack/pull/1745), and swapping out Puma for the highly concurrent [Falcon](https://socketry.github.io/falcon/) web server. Still, I want to try Falcon again sometime because it's part of the async Ruby ecosystem, which looks great. [Here's an introduction to async Ruby.](https://brunosutic.com/blog/async-ruby) But for now, I've contented myself with Puma and Rack full hijacking because Wiki Stumble performs well enough that way.
 
