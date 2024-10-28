@@ -12,6 +12,7 @@ description: Alpine.js is like Stimulus plus declarative templating, and can be 
   - [Example 2: filterable list](#example-2-filterable-list)
 - [But what if I need Turbo?](#but-what-if-i-need-turbo)
 - [Conclusion](#conclusion)
+- [Bonus: Alpine plugins](#bonus-alpine-plugins)
 
 Recently I discovered [Alpine.js](https://alpinejs.dev/) as an alternative to [Stimulus](https://stimulus.hotwired.dev/) for conveniently sprinkling JavaScript into a server-rendered website—and it may even be a *better* alternative.
 
@@ -127,3 +128,17 @@ I'll piggyback on Brian's post one more time and repeat its conclusion here:
 Alpine's bundle size has now grown slightly larger than that of Stimulus, but otherwise I wholeheartedly agree with that conclusion.
 
 And I'll add this: for anyone who is concerned about the maintainability of inline JS in HTML and prefers clean markup, a clear separation of concerns, TypeScript, etc. … **you can do all that with Alpine!** I think Alpine is the best of both worlds, between "all-in" JS frameworks that handle rendering (React et al.) and vanilla JS: declarative and template-friendly like React et al., but at the same time, simple and usable in any SSR web framework.
+
+## Bonus: Alpine plugins
+
+Another nice thing about Alpine is how many plugins you can find for it. I already mentioned [Alpine AJAX](https://alpine-ajax.js.org/); here are just a few others:
+
+- The "plugins" nav section in [the Alpine docs](https://alpinejs.dev/start-here)
+- [Form validation](https://github.com/markmead/alpinejs-form-validation) and [others by Mark Mead](https://github.com/markmead?tab=repositories&q=alpine)
+- [Requests](https://github.com/0wain/alpinejs-requests)
+- [Clipboard](https://github.com/ryangjchandler/alpine-clipboard) and [others by Ryan Chandler](https://github.com/ryangjchandler?tab=repositories&q=alpine)
+- [Autosize](https://github.com/marcreichel/alpine-autosize)
+- [Auto animate](https://github.com/marcreichel/alpine-auto-animate)
+- [`x-include` and `x-interpolate`](https://github.com/mvolkmann/alpine-plugins)
+
+You can find lots more in lists like [Alpine Extensions](https://www.alpinetoolbox.com/extensions) and [Awesome Alpine Plugins](https://github.com/alpine-collective/awesome#extensions--plugins).
