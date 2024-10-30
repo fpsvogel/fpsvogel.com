@@ -46,9 +46,9 @@ The previous paragraph begs the question, *Why not just build your features in L
 
 It's because I, along with the rest of my team, enjoy keeping Rails view templates server-side. Let's say I want to add real-time behavior to a view: if I have to move an ERB template into a Lit component and translate it into JS, it feels like I've left the realm of "JS sprinkles" and now it's more like "JS chunks".
 
-If that feels like a meaningless distinction to you, and if you find Lit components to be perfectly usable in day-to-day feature work, then go ahead and use Lit instead of Stimulus or Alpine. I honestly wish I didn't feel as much friction as I do when making Lit components, because Lit is probably the more durable option since it's closer to web standards than Alpine.
+If that feels like a meaningless distinction to you, and if you find Lit components to be perfectly usable in day-to-day feature work, then **go ahead and use Lit instead of Stimulus or Alpine!** I honestly wish I didn't feel as much friction as I do when making Lit components, because Lit is probably the more durable option since it's closer to web standards than Alpine.
 
-Who knows, maybe in a few months I'll write a post titled *"Web components as an Alpine.js alternative"* 😂 I've seen efforts underway to more easily server-render web components (and not just in Node), so it may someday be possible to declare a web component within a server-side template such as ERB, using regular HTML with special attributes for the dynamic bits. In fact, I was looking for such an approach to web components when I ran across a comment saying that's precisely what Alpine does, minus the web components part.
+Who knows, maybe in a few months I'll write a post titled *"Web components as an Alpine.js alternative"* 😂 I've seen efforts underway to more easily server-render web components (and not just in Node), so it may someday be possible to declare a web component within a server-side template such as ERB, using regular HTML with special attributes for the dynamic bits. In fact, I was looking for such an approach to web components when I ran across a comment saying *that's precisely what Alpine does*, minus the web components part.
 
 <!-- For the future "Web components as an Alpine.js alternative" post, review replies that I got on The Spicy Web about my feelings about web components: https://discord.com/channels/811491992285741077/811492754218942494/1301189020402843701 -->
 
@@ -177,7 +177,7 @@ And I'll add this: for anyone who is concerned about the maintainability of inli
 Another nice thing about Alpine is how many plugins there are out there. I already mentioned [Alpine AJAX](https://alpine-ajax.js.org/); here are just a few others:
 
 - The "plugins" nav section in [the Alpine docs](https://alpinejs.dev/start-here)
-- [Form validation](https://github.com/markmead/alpinejs-form-validation) and [others by Mark Mead](https://github.com/markmead?tab=repositories&q=alpine)
+- [Form validation](https://github.com/markmead/alpinejs-form-validation) and [others by Mark Mead](https://github.com/markmead?tab=repositories&q=alpine), especially the [HyperJS](https://js.hyperui.dev/) collection
 - [Requests](https://github.com/0wain/alpinejs-requests)
 - [Clipboard](https://github.com/ryangjchandler/alpine-clipboard) and [others by Ryan Chandler](https://github.com/ryangjchandler?tab=repositories&q=alpine)
 - [Autosize](https://github.com/marcreichel/alpine-autosize)
