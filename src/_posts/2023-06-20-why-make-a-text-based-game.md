@@ -2,7 +2,7 @@
 title: Building a text-based game
 subtitle: exploring an old genre for new purposes
 description: Could this classic (but still kicking!) genre embody interactive fiction set in an open-world sandbox RPG? A deep dive into the kinds of text-based games.
-updated: 2024-05-01
+updated: 2024-12-10
 ---
 
 - [What *are* text-based games?](#what-are-text-based-games)
@@ -41,7 +41,10 @@ Until recently, I'd only ever tried a few IF titles, so now I'm making a renewed
 
 **Hypertext and choice-based IF** have a simpler UI (just links) but are extremely varied thematically, covering the spectrum from popular fiction ([*A Tale of Crowns*](https://qeresi.itch.io/a-tale-of-crowns)) to avant-garde (many of [Porpentine's games](https://xrafstar.monster/games/)), from comical ([*You Will Select a Decision*](https://selectadecision.info/)) to touching [*Digital: A Love Story*](https://scoutshonour.com/digital/) to heartbreaking ([*Hana Feels*](http://hanafeels.com/)).
 
-**MUDs** are… hard to get into. They seem to have evolved less over the decades than the other sub-genres I'm exploring. Which is great if you got into MUDs in the 1980s, but to me (*a tired 30-something new parent in the 2020s*) it's too much of a time commitment to learn how to enjoy MUDs. So I'll leave it at that.
+You can even play choice-based IF in print. They're called *gamebooks* and range from as simple as *Choose Your Own Adventure* books (which [are still being published!](https://www.cyoa.com/)) to [more gamified variations](https://gamebooksguide.blogspot.com/2024/04/which-gamebook-to-choose-guide-for.html), to graphic novel gamebooks ([*Graphic Novel Adventures*](https://vanrydergames.com/collections/gna), [Ryan North](https://www.goodreads.com/book/show/17938417-to-be-or-not-to-be)), and even [*Lord of the Rings* gamebooks](https://www.reddit.com/r/tolkienbooks/comments/j90hj8/complete_tolkien_quest_books_finally_put_this) (*psst*… you can find them on Internet Archive).
+
+
+**MUDs** are… hard to get into. They seem to have evolved less over the decades than the other sub-genres I'm exploring. Which is great if you got into MUDs in the 1980s, but to me (*a tired 30-something new parent in the 2020s*) it feels like too big a time commitment to learn how to enjoy MUDs. But if I ever do get around to it, I'll try the ones that have a web client (i.e. in the browser, not a dedicated MUD client): [*Procedural Realms*](https://proceduralrealms.com), [*Written Realms*](https://writtenrealms.com), or [*MUME*](https://mume.org/play/browser) (*Multi Users in Middle Earth*).
 
 **Procedural text-based games** are easier fun, being more like graphical games than IF is, and (classic roguelikes aside) being simpler than MUDs. Common settings include medieval fantasy (most roguelikes, [*Warsim*](https://store.steampowered.com/app/659540/Warsim_The_Realm_of_Aslona/)) and space exploration ([*Seedship*](https://johnayliff.itch.io/seedship), [*Voyageur*](https://brunodias.itch.io/voyageur)).
 
