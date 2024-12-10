@@ -2,7 +2,7 @@
 layout: home
 ---
 
-I'm Felipe Vogel, full-stack developer, Rubyist, perpetual learner.
+I'm Felipe Vogel, full-stack developer, Rubyist, compulsive learner.
 
 ## Recent posts
 
@@ -12,10 +12,10 @@ I'm Felipe Vogel, full-stack developer, Rubyist, perpetual learner.
   <% collections.posts.resources.take(3).each do |post| %>
     <li>
       <a href="<%= post.relative_url %>">
-        <posts-li-title><%= post.data.title %></posts-li-title>:
+        <fancy-li-title><%= post.data.title %></fancy-li-title>:
         <div>
-          <posts-li-subtitle><%= post.data.subtitle %></posts-li-subtitle>
-          <posts-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></posts-li-date>
+          <fancy-li-subtitle><%= post.data.subtitle %></fancy-li-subtitle>
+          <fancy-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></fancy-li-date>
         </div>
       </a>
     </li>
@@ -35,10 +35,10 @@ I'm Felipe Vogel, full-stack developer, Rubyist, perpetual learner.
     <% post = collections.posts.resources.find { |post| post.relative_url == "/posts/#{post_year_and_slug}" } %>
     <li>
       <a href="<%= post.relative_url %>">
-        <posts-li-title><%= post.data.title %></posts-li-title>:
+        <fancy-li-title><%= post.data.title %></fancy-li-title>:
         <div>
-          <posts-li-subtitle><%= post.data.subtitle %></posts-li-subtitle>
-          <posts-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></posts-li-date>
+          <fancy-li-subtitle><%= post.data.subtitle %></fancy-li-subtitle>
+          <fancy-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></fancy-li-date>
         </div>
       </a>
     </li>
@@ -47,14 +47,31 @@ I'm Felipe Vogel, full-stack developer, Rubyist, perpetual learner.
 
 ## I seem to like making lists
 
-- [Learn Ruby](https://github.com/fpsvogel/learn-ruby) <small>(and other stuff like SQL, Rails, CSS, and JS)</small>
-- [Learn Computer Science and Low-Level Programming](https://github.com/fpsvogel/learn-cs)
-- [Learn Roc](https://github.com/fpsvogel/learn-roc) <small>(a functional programming language)</small>
-- [My favorite books](/reading) and [statistics on my reading](http://localhost:4000/reading-stats)
-- [Learn Latin and Greek](https://github.com/fpsvogel/learn-latin-and-greek)
-- [Solo TTRPGS](https://github.com/fpsvogel/solo-ttrpgs) <small>(Table-Top Role-Playing Games)</small>
+<% lists = [
+  ["Learn Ruby", "https://github.com/fpsvogel/learn-ruby", "and other stuff like SQL, Rails, CSS, and JS"],
+  ["Learn Computer Science and Low-Level Programming", "https://github.com/fpsvogel/learn-cs"],
+  ["Learn Roc", "https://github.com/fpsvogel/learn-roc", "a functional programming language"],
+  ["Books that I've enjoyed", "/reading"],
+  ["Learn Latin and Greek", "https://github.com/fpsvogel/learn-latin-and-greek"],
+  ["Solo TTRPGS", "https://github.com/fpsvogel/solo-ttrpgs", "Table-Top Role-Playing Games"],
+] %>
 
-<%# these are private, but maybe refine them and add here later:
+<ul class="posts-ul">
+  <% lists.each do |title, url, description| %>
+    <li>
+      <a href="<%= url %>">
+        <fancy-li-title><%= title %></fancy-li-title>
+        <% if description %>
+          <div>
+            (<fancy-li-subtitle><%= description %></fancy-li-subtitle>)
+          </div>
+        <% end %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<%# these are private repos, but maybe later I'll refine them and include them above:
 - https://github.com/fpsvogel/words
 - https://github.com/fpsvogel/coding-exercises
 - https://github.com/fpsvogel/faang-interview-prep

@@ -187,26 +187,26 @@ nav li > nav-social-link::after {
     display: inline-block;
   }
 
-  & posts-li-title {
+  & fancy-li-title {
     text-decoration: underline;
     color: var(--link-color);
   }
 
   &:hover {
-    & posts-li-title, posts-li-subtitle, posts-li-date {
+    & fancy-li-title, fancy-li-subtitle, fancy-li-date {
       color: var(--link-hover-color);
     }
   }
 
-  &:not(posts-li-title) {
+  &:not(fancy-li-title) {
     text-decoration: none;
   }
 
-  & posts-li-subtitle {
+  & fancy-li-subtitle {
     font-size: 85%;
   }
 
-  & posts-li-date {
+  & fancy-li-date {
     font-size: 90%;
     border-radius: .5rem;
     border: .05rem solid var(--text-color-less-contrast);

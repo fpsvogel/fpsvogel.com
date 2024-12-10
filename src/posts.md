@@ -8,10 +8,10 @@ permalink: /posts/
   <% collections.posts.resources.each do |post| %>
     <li>
       <a href="<%= post.relative_url %>">
-        <span><posts-li-title><%= post.data.title %></posts-li-title>:</span>
+        <span><fancy-li-title><%= post.data.title %></fancy-li-title>:</span>
         <div>
-          <posts-li-subtitle><%= post.data.subtitle %></posts-li-subtitle>
-          <posts-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></posts-li-date>
+          <fancy-li-subtitle><%= post.data.subtitle %></fancy-li-subtitle>
+          <fancy-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></fancy-li-date>
         </div>
       </a>
     </li>
