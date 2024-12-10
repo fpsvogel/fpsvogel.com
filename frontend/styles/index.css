@@ -291,6 +291,9 @@ main img {
 
 main figure {
   margin: 3rem 0;
+  &:first-of-type {
+    margin-top: 2rem;
+  }
   & figcaption {
     margin-top: 0.5rem;
     font-style: italic;

@@ -234,7 +234,7 @@ Speaking of Ruby. An extended quote from Matz, Ruby's creator, might seem like a
 
 I enjoy Ruby a lot, actually. And that's precisely *why* I feel I should make an effort to venture out to learn a different paradigm: because **it would be very easy for me to stay comfortably in the realm of Ruby.** I'm hoping that learning Haskell will make me a better programmer, including a better *Ruby programmer*.
 
-In this day and age when types are all the rage, I feel like I'm crazy for liking Ruby *because* it doesn't have types. (Actually, that was one of my motivations for learning some Haskell, to see whether I'm crazy or not 😅) So, recently I felt reassured when I read Matz's thoughts on static types in Chapter 17 of [*Coderspeak*](https://www.uclpress.co.uk/products/230881). That entire chapter is great *(and the book is free to download as a PDF, so what are you waiting for?)* but I'll quote just the bit about static typing:
+In this day and age when types are all the rage, I feel like I'm crazy for liking Ruby *because* it doesn't have types. (Actually, that was one of my motivations for learning some Haskell, to see whether I'm crazy or not 😅) So, recently I felt reassured when I read Matz's thoughts on static types in Chapter 17 of [*Coderspeak*](https://uclpress.co.uk/book/coderspeak/). That entire chapter is great *(and the book is free to download as a PDF, so what are you waiting for?)* but I'll quote just the bit about static typing:
 
 > "But what about the recent changes about types? I know you don't like types, you've said it publicly before. You didn't create Ruby to be statically typed. How does that make you feel?"
 >
