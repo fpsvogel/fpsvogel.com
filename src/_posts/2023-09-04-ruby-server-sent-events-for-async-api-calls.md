@@ -14,7 +14,7 @@ description: To speed up a slow page full of API calls or other expensive tasks,
 
 In my last post, [I rewrote a little Rails app with Roda and Turbo Streams](/posts/2023/roda-app-with-hotwire-turbo-streams). In this post I'll show how I solved the app's last and biggest problem: **slow API calls**. *So slow* that the user had to wait *several seconds* between pressing the "Next article" button, and actually seeing a new article.
 
-The app is called Wiki Stumble. Here's [the live site](https://wikistumble.com/) and [the GitHub repo](https://github.com/fpsvogel/wiki-stumble). The app shows summaries of Wikipedia articles personalized to the user's likes and dislikes.
+The app is called Wiki Stumble. Here's [the live site](https://wikistumble.onrender.com/) and [the GitHub repo](https://github.com/fpsvogel/wiki-stumble). The app shows summaries of Wikipedia articles personalized to the user's likes and dislikes.
 
 Due to Wikipedia APIs not having that capability built in, the app has to make **multiple API calls for each article**, fetching new articles over and over until a suitable one is found.
 
@@ -100,4 +100,4 @@ The "before and after" of Wiki Stumble's performance is like **night and day**. 
 
 But the real reason I'm happy with my work on Wiki Stumble is that in order to reach that performance improvement *without adding more layers to my stack*, **I had to think outside the box**, and I learned a lot as a result 💡
 
-I hope my little adventure has helped you learn something, too. Or if not, you could head over to [Wiki Stumble](https://wikistumble.com/) and see if a bit of Wikipedia-surfing will change that 🤓
+I hope my little adventure has helped you learn something, too. Or if not, you could head over to [Wiki Stumble](https://wikistumble.onrender.com/) and see if a bit of Wikipedia-surfing will change that 🤓
