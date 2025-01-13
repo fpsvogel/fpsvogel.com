@@ -75,4 +75,5 @@ Here's a peek into (probable) upcoming posts:
 
 - [Alpine.js](https://alpinejs.dev) compared to [Stimulus](https://stimulus.hotwired.dev)
 - A CLI tool for doing [Advent of Code](https://adventofcode.com/) puzzles in Ruby
-- Another rewrite of my little app [Wiki Stumble](https://github.com/fpsvogel/wiki-stumble), this time in… JavaScript 😱
+- ~~Another rewrite of my little app [Wiki Stumble](https://github.com/fpsvogel/wiki-stumble), this time in… JavaScript 😱~~ *UPDATE: I decided not to do this one because, while it totally makes sense and is what I "should" have done from the beginning, I'm just not excited about it.*
+- Finally continuing to build my [text-based game framework in Ruby](https://github.com/fpsvogel/worlds-terminal).
