@@ -19,8 +19,8 @@ defaults:
 
 reading:
   local_filepaths:
-    - /home/felipe/Dropbox/Apps/SimpleText/reading.csv
-    - /Users/felipe.vogel/Dropbox/Apps/SimpleText/reading.csv
-  dropbox_filepath: "/Apps/SimpleText/reading.csv"
+    - /home/felipe/Dropbox/Apps/SimpleText/reading.txt
+    - /Users/felipe.vogel/Dropbox/Apps/SimpleText/reading.txt
+  dropbox_filepath: "/Apps/SimpleText/reading.txt"
   show_sort: false
   maximum_rating: 5
