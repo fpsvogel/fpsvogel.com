@@ -12,7 +12,7 @@ html:root {
   --link-visited-color: #ffc645;// !important;
   --link-hover-color: #fff;// !important;
   --text-color: #d4d4d4;// !important;  // was dbdbdb
-  --text-color-less-contrast: #999;
+  --text-color-less-contrast: #bbb;
   --text-color-more-contrast: #e3e3e3;
   // --code-background-color: #292b2e;// !important;
   --code-text-color: #63b9ff;// !important;

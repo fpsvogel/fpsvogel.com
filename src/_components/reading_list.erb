@@ -24,6 +24,11 @@
     <rl-key-item>
       🤝 group read
     </rl-key-item>
+
+    |
+    <rl-key-item>
+      🔁 reread
+    </rl-key-item>
   </rl-key>
 
   <!-- Sort options (invisible if disabled in config) -->
@@ -97,7 +102,7 @@
   <rl-table data-reading-list-target="table">
     <% @list.each do |item| %>
       <% blurb_truncated = item.blurb.length > 150 if item.blurb %>
-      <% collapsible = !item.public_notes.empty? || !item.groups.empty? || blurb_truncated %>
+      <% collapsible = item.public_notes.any? || blurb_truncated %>
 
       <rl-item item-id="<%= item.isbn || item.url %>" <%= "class=collapsed" if collapsible %> data-action="click->reading-list#expandOrCollapse">
         <!-- First line of an item (row) -->
@@ -116,6 +121,12 @@
                 <%= item.name %>
               </a>
             </rl-name>
+
+            <% if item.experience_count > 1 %>
+              <rl-reread>
+                🔁
+              </rl-reread>
+            <% end %>
 
             <% if item.groups.any? %>
               <rl-group-read>
@@ -147,21 +158,11 @@
             </rl-blurb>
           <% end %>
 
-          <% if item.public_notes.any? || item.groups.any? %>
+          <% if item.public_notes.any? %>
             <rl-notes>
-              <% if item.experience_count > 1 %>
-                <p><strong>Reread? </strong> Yes</p>
-              <% end %>
-
-              <% if item.groups.any? %>
-                <p><strong>Groups: </strong><%= item.groups.join(", ") %></p>
-              <% end %>
-
-              <% if item.public_notes.any? %>
-                <h4>NOTES:</h4>
-                <% item.public_notes&.each do |note| %>
-                  <p><%=raw Rinku.auto_link(note) %></p>
-                <% end %>
+              <h4>NOTES:</h4>
+              <% item.public_notes&.each do |note| %>
+                <p><%=raw Rinku.auto_link(note) %></p>
               <% end %>
             </rl-notes>
           <% end %>
