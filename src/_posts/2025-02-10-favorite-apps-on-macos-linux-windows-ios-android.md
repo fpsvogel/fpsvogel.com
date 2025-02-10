@@ -79,7 +79,7 @@ For better readability and organization of notes, I use [my own markup language 
 [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer). My favorite extensions:
 
 - [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
-- [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff) with keys remapped, because I don't actually use Vim
+- [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff) with keys remapped, because I don't actually use Vim. [SurfingKeys](https://github.com/brookhong/Surfingkeys) is a more flexible alternative that I discovered recently, but Vimium meets my needs.
 - [Bulk URL Opener](https://addons.mozilla.org/en-GB/firefox/addon/bulkurlopener) for copying URLs from tabs, or opening tabs by pasting in URLs
 - [Library Extension](https://www.libraryextension.com) for finding a book across libraries
 
@@ -142,7 +142,7 @@ Also, for better text editing shortcuts, I edited `~/Library/KeyBindings/Default
 
 ### Cross-platform
 
-- Firefox, though on iOS it is sadly inferior, with no extensions, no swipe to switch between tabs, and no way to send multiple tabs to another device.
+- Firefox, though on iOS it is sadly inferior. I can look past the missing UI conveniences that I'm used to from Firefox on Android, but I will forever mourn the fact that I can't use uBlock Origin on any browser on iOS <nobr>༼;´༎ຶ ۝ ༎ຶ༽</nobr>
 - Gmail
 - Spotify for podcasts
 - Dropbox for plain-text notes
@@ -162,3 +162,4 @@ Also, for better text editing shortcuts, I edited `~/Library/KeyBindings/Default
 - [Moon+ Reader Pro](https://play.google.com/store/apps/details?id=com.flyersoft.moonreaderp) for ebooks
 - [Smart Audiobook Player](https://play.google.com/store/apps/details?id=ak.alizandro.smartaudiobookplayer)
 - [mMusic Mini Audio Player](https://play.google.com/store/apps/details?id=mindmine.music.mini) for my local music library
+- [Simple Text](https://play.google.com/store/apps/details?id=simple.text.dropbox) is better than Dropbox for text editing
