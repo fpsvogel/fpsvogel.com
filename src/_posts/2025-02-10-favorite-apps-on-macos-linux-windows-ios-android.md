@@ -1,7 +1,7 @@
 ---
 title: How I use MacOS, Linux, Windows, iOS, Android
 subtitle: my favorite apps and extensions
-description: My favorite apps across major operating systems, or how I use my computer and phone regardless of OS, including tools for keyboard shortcuts and navigability.
+description: My favorite apps across operating systems; or, how I use a MacBook, PC, iPhone, and Samsung Galaxy similarly, including keyboard shortcuts and navigability.
 ---
 
 - [Prelude: peripherals](#prelude-peripherals)
@@ -142,7 +142,7 @@ Also, for better text editing shortcuts, I edited `~/Library/KeyBindings/Default
 
 ### Cross-platform
 
-- Firefox, though sadly in iOS there are no extensions and no swipe to switch between tabs.
+- Firefox, though on iOS it is sadly inferior, with no extensions, no swipe to switch between tabs, and no way to send multiple tabs to another device.
 - Gmail
 - Spotify for podcasts
 - Dropbox for plain-text notes
