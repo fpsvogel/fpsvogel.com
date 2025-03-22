@@ -38,7 +38,7 @@ I mentioned that our app at work doesn't use Turbo. A Git log search ([`git log 
 
 Then, starting around the time Turbo was released in 2020, teams were rearranged and the customer-facing part of the app stopped being seriously worked on, until my team was formed earlier this year. During that interval, there wasn't much impetus to look for something better than just Stimulus.
 
-Also, we heavily use Lit web components from our in-house design system in a way that Turbo (with its server-centric mindset) would be an awkward fit. It's easier for us to use a JS library that plays nicely with web components by operating on the client side, as Stimulus does.
+Also, we heavily use Lit web components from our in-house design system in a way that Turbo (with its server-centric mindset) might be an awkward fit. It makes sense for us to use a JS library that plays nicely with web components by operating on the client side, as Stimulus does.
 
 ## Why not web components?
 
