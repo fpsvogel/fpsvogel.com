@@ -35,7 +35,7 @@ I'm Felipe Vogel, full-stack developer, Rubyist, compulsive learner.
     <% post = collections.posts.resources.find { |post| post.relative_url == "/posts/#{post_year_and_slug}" } %>
     <li>
       <a href="<%= post.relative_url %>">
-        <fancy-li-title><%= post.data.title %></fancy-li-title>:
+        <span><fancy-li-title><%= post.data.title %></fancy-li-title>:</span>
         <div>
           <fancy-li-subtitle><%= post.data.subtitle %></fancy-li-subtitle>
           <fancy-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></fancy-li-date>

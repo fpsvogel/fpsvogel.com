@@ -212,6 +212,7 @@ nav li > nav-social-link::after {
     border: .05rem solid var(--text-color-less-contrast);
     margin-left: .2rem;
     padding: 0 .4rem;
+    white-space: nowrap;
   }
 }
 
