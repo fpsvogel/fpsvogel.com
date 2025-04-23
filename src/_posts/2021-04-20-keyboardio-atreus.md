@@ -91,7 +91,7 @@ Besides getting this better keyboard, I'm also taking other steps to combat the 
 ```cpp
 /* -*- mode: c++ -*-
  * Atreus -- Chrysalis-enabled Sketch for the Keyboardio Atreus
- * Copyright (C) 2018, 2019  Keyboard.io, Inc
+ * Copyright (C) 2018-2022  Keyboard.io, Inc
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -109,35 +109,14 @@ Besides getting this better keyboard, I'm also taking other steps to combat the 
  */
 
 #ifndef BUILD_INFORMATION
-#define BUILD_INFORMATION "locally built"
+#define BUILD_INFORMATION "locally built on " __DATE__ " at " __TIME__
 #endif
 
 #include "Kaleidoscope.h"
-#include "Kaleidoscope-Macros.h"
-#include "Kaleidoscope-OneShot.h"
 #include "Kaleidoscope-Qukeys.h"
-#include "Kaleidoscope-HostOS.h"
-#include "Kaleidoscope-Unicode.h"
 
 #define SHIFT(n) ShiftToLayer(n)
 #define LOCK(n) LockLayer(n)
-
-// Macros
-enum {
-  MACRO_QWERTY,
-  MACRO_VERSION_INFO,
-  EM_DASH,
-  EN_DASH,
-  LEFT_SINGLE_QUOTE,
-  RIGHT_SINGLE_QUOTE,
-  LEFT_DOUBLE_QUOTE,
-  RIGHT_DOUBLE_QUOTE,
-  ELLIPSIS,
-  THINK,
-  THUMB,
-  HI_FIVE,
-  SWEAT
-};
 
 #define Key_Exclamation LSHIFT(Key_1)
 #define Key_At LSHIFT(Key_2)
@@ -150,11 +129,12 @@ enum {
 #define Key_Plus LSHIFT(Key_Equals)
 #define Key_Pipe LSHIFT(Key_Backslash)
 #define Key_Question LSHIFT(Key_Slash)
-#define Key_Colon LSHIFT(Key_P)  // P is ; in Colemak
+#define Key_Colon LSHIFT(Key_Semicolon)
 #define Key_Underscore LSHIFT(Key_Minus)
 #define Key_DoubleQuote LSHIFT(Key_Quote)
 #define Key_RightAngleBracket LSHIFT(Key_Period)
 #define Key_LeftAngleBracket LSHIFT(Key_Comma)
+#define Key_Tilde LSHIFT(Key_Backtick)
 
 // Layers
 enum {
@@ -164,136 +144,66 @@ enum {
   SUPER
 };
 
-/* *INDENT-OFF* */
+// clang-format off
 KEYMAPS(
   [QWERTY] = KEYMAP_STACKED
   (
-       Key_Q   ,Key_W        ,Key_E      ,Key_R         ,Key_T
-      ,Key_A   ,Key_S        ,Key_D      ,Key_F         ,Key_G
-      ,Key_Z   ,Key_X        ,Key_C      ,Key_V         ,Key_B         ,Key_Backslash
-      ,Key_Esc ,Key_CapsLock ,Key_Delete ,Key_Backspace ,Key_Backspace ,Key_Enter
+       Key_Q   ,Key_W  ,Key_F      ,Key_P         ,Key_B
+      ,Key_A   ,Key_R  ,Key_S      ,Key_T         ,Key_G
+      ,Key_Z   ,Key_X  ,Key_C      ,Key_V         ,Key_D         ,Key_Tab
+      ,Key_Esc ,Key_F4 ,Key_Delete ,Key_Backspace ,Key_Backspace ,Key_Enter
 
-                     ,Key_Y     ,Key_U  ,Key_I     ,Key_O      ,Key_Minus
-                     ,Key_H     ,Key_J  ,Key_K     ,Key_L      ,Key_Semicolon
-       ,Key_Backtick ,Key_N     ,Key_M  ,Key_Comma ,Key_Period ,Key_Quote
-       ,Key_Tab      ,Key_Space ,Key_F4 ,Key_Tab   ,Key_Enter  ,Key_LeftGui
+                    ,Key_J     ,Key_L  ,Key_U     ,Key_Y      ,Key_Minus
+                    ,Key_M     ,Key_N  ,Key_E     ,Key_I      ,Key_O
+      ,Key_Backtick ,Key_K     ,Key_H  ,Key_Comma ,Key_Period ,Key_Quote
+      ,Key_Tab      ,Key_Space ,Key_F7 ,Key_Enter ,___        ,Key_LeftGui
   ),
 
   [FUN] = KEYMAP_STACKED
-  (
-       Key_5      ,Key_6                ,Key_7                 ,Key_8         ,Key_9
-      ,Key_0      ,Key_1                ,Key_2                 ,Key_3         ,Key_4
-    //,Key_Delete ,M(LEFT_DOUBLE_QUOTE) ,M(RIGHT_DOUBLE_QUOTE) ,M(THUMB)      ,M(LEFT_SINGLE_QUOTE) ,M(RIGHT_SINGLE_QUOTE)
-    // Unicode macros are commented out because I use Windows and Unicode.type (below) is not working on Windows right now. See https://github.com/keyboardio/Kaleidoscope/issues/1031
-      ,Key_Delete ,___                  ,___                   ,___           ,___                  ,___
-      ,___        ,___                  ,Key_RightControl      ,Key_Backspace ,Key_Backspace        ,Key_Enter
-      // RightControl is remapped to Calculator in SharpKeys
+  ( // on MacOS, PrintScreen behaves as F13
+       Key_5        ,Key_6        ,Key_7           ,Key_8         ,Key_9
+      ,Key_0        ,Key_1        ,Key_2           ,Key_3         ,Key_4
+      ,Key_PageUp   ,Key_PageDown ,Key_PrintScreen ,Key_Delete    ,___           ,Key_Tab
+      ,___          ,___          ,___             ,Key_Backspace ,Key_Backspace ,Key_Enter
 
-              //,M(HI_FIVE) ,Key_PageUp        ,Key_UpArrow   ,Key_PageDown   ,Key_Minus
-                ,___        ,Key_PageUp        ,Key_UpArrow   ,Key_PageDown   ,Key_Minus
-                ,Key_Home   ,Key_LeftArrow     ,Key_DownArrow ,Key_RightArrow ,Key_End
-    //,M(SWEAT) ,M(THINK)   ,Key_PcApplication ,Key_Comma     ,Key_Period     ,Key_LeftArrow
-      ,___      ,___        ,Key_PcApplication ,Key_Comma     ,Key_Period     ,Key_LeftArrow  // corner arrow keys for skipping in video playback (easy to press w/ hand resting)
-      ,Key_Tab  ,Key_Space  ,___               ,Key_Tab       ,Key_Enter      ,Key_RightArrow
+                  ,Key_LeftGui ,Key_PageUp        ,Key_UpArrow   ,Key_PageDown   ,Key_Minus
+                  ,Key_Home    ,Key_LeftArrow     ,Key_DownArrow ,Key_RightArrow ,Key_End
+      ,___        ,___         ,Key_PcApplication ,Key_Comma     ,Key_Period     ,___
+      ,Key_Tab    ,Key_Space   ,___               ,Key_Enter     ,___            ,___
    ),
 
   [UPPER] = KEYMAP_STACKED
   (
-       M(EM_DASH)      ,M(EN_DASH)      ,Key_At            ,Key_Hash   ,Key_Percent
-      ,Key_Question    ,Key_Exclamation ,Key_Colon         ,Key_Equals ,Key_Slash
-      ,Key_Backspace   ,Key_Pipe        ,Key_And           ,Key_P      ,Key_Dollar    ,___  // P is ; in Colemak
-      ,Key_ScrollLock  ,Key_PrintScreen ,Key_KeypadNumLock ,___        ,Key_LeftShift ,Key_LeftControl
-      // ScrollLock, PrintScreen, and NumLock are remapped to Volume Up/Down and Mute in SharpKeys
-      // (Key_VolumeUp, Key_VolumeDown, and Key_Mute do not work for me)
+       Key_Tab      ,Key_Backspace   ,Key_At       ,Key_Hash      ,Key_Backslash
+      ,Key_Question ,Key_Exclamation ,Key_Colon    ,Key_Equals    ,Key_Slash
+      ,Key_Percent  ,Key_Pipe        ,Key_And      ,Key_Semicolon ,Key_Backspace ,Key_Tab
+      ,Key_Mute     ,Key_VolumeDown  ,Key_VolumeUp ,___           ,Key_LeftShift ,Key_LeftControl
 
-                   ,Key_Caret       ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,___                   ,Key_Underscore
-                 //,Key_Star        ,Key_LeftParen        ,Key_RightParen        ,Key_Plus              ,M(ELLIPSIS)
-                   ,Key_Star        ,Key_LeftParen        ,Key_RightParen        ,Key_Plus              ,___
-      ,___         ,Key_LeftBracket ,Key_RightBracket     ,Key_LeftAngleBracket  ,Key_RightAngleBracket ,Key_DoubleQuote
-      ,Key_LeftAlt ,Key_Space       ,Key_Enter            ,Key_Tab               ,Key_Enter             ,___
+                    ,Key_Caret       ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_Dollar            ,Key_Underscore
+                    ,Key_Plus        ,Key_LeftParen        ,Key_RightParen        ,Key_Star              ,Key_ScrollLock
+      ,Key_Tilde    ,Key_LeftBracket ,Key_RightBracket     ,Key_LeftAngleBracket  ,Key_RightAngleBracket ,Key_DoubleQuote
+      ,Key_LeftAlt  ,Key_Space       ,Key_F7               ,Key_Enter             ,___                   ,___
+      // ScrollLock can be used as the Compose Key
    ),
 
   [SUPER] = KEYMAP_STACKED
   (
-       Key_F13 ,Key_F14 ,Key_F15 ,Key_F16   ,Key_F11
-      ,Key_F17 ,Key_F18 ,Key_F19 ,Key_F20   ,Key_F5
-      ,Key_F21 ,Key_F22 ,Key_F23 ,Key_F24   ,Key_F2        ,Key_F3
-      ,Key_F12 ,___     ,___     ,___       ,Key_LeftShift ,Key_LeftControl
+       Key_F13 ,Key_F20 ,Key_F21 ,Key_F22 ,___
+      ,___     ,Key_F14 ,Key_F15 ,Key_F16 ,Key_F23
+      ,Key_F2  ,Key_F17 ,Key_F18 ,Key_F19 ,Key_F24       ,Key_F4
+      ,Key_F12 ,___     ,Key_F11 ,___     ,Key_LeftShift ,Key_LeftControl
 
-                   ,___ ,Key_F12   ,Key_F11 ,Key_F10 ,Key_F9
-                   ,___ ,Key_F8    ,Key_F7  ,Key_F6  ,Key_F5
-      ,Key_F4      ,___ ,Key_F4    ,Key_F3  ,Key_F2  ,Key_F1
-      ,Key_LeftAlt ,___ ,LOCK(FUN) ,___     ,___     ,___
+                   ,___ ,Key_F12 ,Key_F11 ,Key_F10 ,Key_F9
+                   ,___ ,Key_F8  ,Key_F7  ,Key_F6  ,Key_F5
+      ,Key_F4      ,___ ,Key_F4  ,Key_F3  ,Key_F2  ,Key_F1
+      ,Key_LeftAlt ,___ ,___     ,___     ,___     ,Key_CapsLock
    )
 )
-/* *INDENT-ON* */
+// clang-format on
 
 KALEIDOSCOPE_INIT_PLUGINS(
-  Qukeys,
-  OneShot,
-  Macros,
-  HostOS,
-  Unicode
+  Qukeys
 );
-
-static void unicode(uint32_t character, uint8_t keyState) {
-  if (keyToggledOn(keyState)) {
-    Unicode.type(character);
-  }
-}
-
-const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
-  switch (macroIndex) {
-  case MACRO_QWERTY:
-    // This macro is currently unused, but is kept around for compatibility
-    // reasons. We used to use it in place of `MoveToLayer(QWERTY)`, but no
-    // longer do. We keep it so that if someone still has the old layout with
-    // the macro in EEPROM, it will keep working after a firmware update.
-    Layer.move(QWERTY);
-    break;
-  case MACRO_VERSION_INFO:
-    if (keyToggledOn(keyState)) {
-      Macros.type(PSTR("Keyboardio Atreus - Kaleidoscope "));
-      Macros.type(PSTR(BUILD_INFORMATION));
-    }
-    break;
-  case EM_DASH:
-    unicode(0x2014, keyState);
-    break;
-  case EN_DASH:
-    unicode(0x2013, keyState);
-    break;
-  case LEFT_SINGLE_QUOTE:
-    unicode(0x2018, keyState);
-    break;
-  case RIGHT_SINGLE_QUOTE:
-    unicode(0x2019, keyState);
-    break;
-  case LEFT_DOUBLE_QUOTE:
-    unicode(0x201C, keyState);
-    break;
-  case RIGHT_DOUBLE_QUOTE:
-    unicode(0x201D, keyState);
-    break;
-  case ELLIPSIS:
-    unicode(0x2026, keyState);
-    break;
-  case THINK:
-    unicode(0x1F914, keyState);
-    break;
-  case THUMB:
-    unicode(0x1F44D, keyState);
-    break;
-  case HI_FIVE:
-    unicode(0x1F64C, keyState);
-    break;
-  case SWEAT:
-    unicode(0x1F605, keyState);
-    break;
-  }
-
-  return MACRO_NONE;
-}
 
 void setup() {
   QUKEYS(
@@ -308,7 +218,7 @@ void setup() {
     kaleidoscope::plugin::Qukey(0, KeyAddr(3, 6), Key_LeftAlt),       // Tab/Alt
     kaleidoscope::plugin::Qukey(1, KeyAddr(3, 6), Key_LeftAlt),       // Tab/Alt in FUN
     kaleidoscope::plugin::Qukey(0, KeyAddr(3, 8), SHIFT(FUN)),        // F4/FUN
-    kaleidoscope::plugin::Qukey(2, KeyAddr(3, 8), SHIFT(FUN)),        // Enter/FUN in UPPER
+    kaleidoscope::plugin::Qukey(2, KeyAddr(3, 8), SHIFT(FUN)),        // F4/FUN in UPPER
   )
   Qukeys.setHoldTimeout(250);  // a lower value than this causes modifier or primary key sometimes not to register when they should
   Qukeys.setOverlapThreshold(1);
