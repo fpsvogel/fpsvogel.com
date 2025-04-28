@@ -22,29 +22,6 @@ I'm Felipe Vogel, full-stack developer, Rubyist, compulsive learner.
   <% end %>
 </ul>
 
-## My favorite posts
-
-<% favorite_posts = %w[
-  2024/early-career-developer-job-search-after-layoffs
-  2023/solo-rpgs-creative-practice
-  2023/why-make-a-text-based-game
-] %>
-
-<ul class="posts-ul">
-  <% favorite_posts.each do |post_year_and_slug| %>
-    <% post = collections.posts.resources.find { |post| post.relative_url == "/posts/#{post_year_and_slug}" } %>
-    <li>
-      <a href="<%= post.relative_url %>">
-        <span><fancy-li-title><%= post.data.title %></fancy-li-title>:</span>
-        <div>
-          <fancy-li-subtitle><%= post.data.subtitle %></fancy-li-subtitle>
-          <fancy-li-date><small><%= post.date.strftime("%Y-%m-%d") %></small></fancy-li-date>
-        </div>
-      </a>
-    </li>
-  <% end %>
-</ul>
-
 ## I seem to like making lists
 
 <% lists = [
@@ -70,12 +47,6 @@ I'm Felipe Vogel, full-stack developer, Rubyist, compulsive learner.
     </li>
   <% end %>
 </ul>
-
-<%# these are private repos, but maybe later I'll refine them and include them above:
-- https://github.com/fpsvogel/words
-- https://github.com/fpsvogel/coding-exercises
-- https://github.com/fpsvogel/faang-interview-prep
-%>
 
 ## Fun facts about me
 
