@@ -1,0 +1,1079 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>[WIP] [Standup] Emoji reactions</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a9aa0913-2838-4700-9bff-ed6f15c31cc5" class="page sans"><header><h1 class="page-title">[WIP] [Standup] Emoji reactions</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-person"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Owner</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocLurtH0uJeOveSl1S-bhawzFQEN3DU1L4BGwqq81Ox7Syc=s100" class="icon user-icon"/>Felipe Vogel</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><td></td></tr><tr class="property-row property-row-relation"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesRelation"><path d="M13.1475 10.5869V3.72363C13.1475 3.25195 12.833 2.93066 12.3477 2.93066H5.48438C5.02637 2.93066 4.70508 3.27246 4.70508 3.67578C4.70508 4.07227 5.05371 4.40039 5.46387 4.40039H7.89746L10.8438 4.30469L9.59961 5.39844L3.08496 11.9199C2.92773 12.0771 2.8457 12.2686 2.8457 12.46C2.8457 12.8564 3.20801 13.2256 3.61816 13.2256C3.80957 13.2256 3.99414 13.1504 4.15137 12.9932L10.6729 6.47168L11.7803 5.22754L11.6641 8.05762V10.6074C11.6641 11.0176 11.9922 11.373 12.4023 11.373C12.8057 11.373 13.1475 11.0312 13.1475 10.5869Z"></path></svg></span>Parent</th><td><a href="https://www.notion.so/Design-Docs-1db123d6f8d64cea9d4998cb1ad90c92?pvs=21">Design Docs</a></td></tr></tbody></table></header><div class="page-body"><h1 id="cd2afec8-3be3-4dba-84b1-e0c71ecb9c83" class="">Summary</h1><p id="2a1712e4-f15c-44e6-be45-6f3a43022aac" class="">Issue: <a href="https://github.com/agency-of-learning/PairApp/issues/212">https://github.com/agency-of-learning/PairApp/issues/212</a></p><p id="c26cadb5-a8ae-4032-8c2f-3e0e642e8485" class="">Introduce emoji reactions for each standup post. This allows users to interact with updates more easily and expressively.</p><h1 id="7fdd9366-ac75-458b-83a7-622cc3c99d75" class="">Specs</h1><ul id="bac73eda-bc57-4fa9-81ae-7dcb0e17af35" class="bulleted-list"><li style="list-style-type:disc">Users should be able to click a button to react with a single emoji on a user’s standup update.</li></ul><ul id="862d958b-cf27-4437-acff-d4df5e7b063d" class="bulleted-list"><li style="list-style-type:disc">Users can select from these options: 👍 🤔 🎉 🤷 👎 👀</li></ul><ul id="5559b24f-b92c-41a1-8dce-49d20a5c3838" class="bulleted-list"><li style="list-style-type:disc">Any user can react to a standup post, even if the user is not a participant in the standup group.</li></ul><h1 id="772dd1c0-e65b-469b-b1a6-68dfe871b8f9" class="">Proposals</h1><h2 id="6c50d659-9084-49b9-84c9-0acad0fc0441" class="">A. Associating a reaction to its target</h2><h3 id="4adaed55-8d6c-492c-9056-e487fc8a8c8e" class="">Proposal A1: one <code>action_text_rich_text</code> to many <code>reactions</code></h3><p id="439a28e6-75fb-4b61-8b91-54ae9e77d852" class="">The most active proposal for standup comments (as of Nov. 16) is not yet written in <a href="https://www.notion.so/Standup-Comments-08f6ec7daa604dd793d1441260e44d95?pvs=21">that design doc</a>, but in essence it’s shown in <a href="https://github.com/agency-of-learning/PairApp/pull/433/files">this POC</a>. In that approach, the <code>StandupMeeting</code> data modelling remains unchanged (still containing the 3 rich text records), and a <code>StandupMeetingComment</code> is associated with a rich text record:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="86dd2410-0db3-485b-a130-9aba26b8bd2a" class="code"><code class="language-Ruby">class StandupMeetingComment &lt; ApplicationRecord
+  belongs_to :rich_text,
+    class_name: &#x27;ActionText::RichText&#x27;,
+    foreign_key: :action_text_rich_text_id
+
+  # This is not in the POC, but I&#x27;m guessing we&#x27;d need it.
+  has_rich_text :text
+end</code></pre><p id="c886d204-39db-45d0-9bff-392937576a8e" class="">Then 3 queries are added to <code>StandupMeeting</code>, one for each description:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ab4ee6b2-3f63-4d2a-b892-cd9fed871682" class="code"><code class="language-Ruby">class StandupMeeting &lt; ApplicationRecord
+  # ...
+
+  def yesterday_comments
+    StandupMeetingComment
+      .joins(:rich_text)
+      .where(
+        action_text_rich_texts: {
+          record_id: id,
+          record_type: &#x27;StandupMeeting&#x27;,
+          name: &#x27;yesterday_work_description&#x27;
+        }
+      )
+  end
+
+  # ... likewise with tomorrow_comments and blockers_comments ...
+end</code></pre><p id="f7fae979-50c6-4bd3-ab5a-3a5c9a803230" class="">
+</p><p id="8a66e8c2-36f4-4ddf-bd3e-54f1a3ed8d56" class="">This approach becomes a bit unwieldy if we add in reactions, while ensuring that standup descriptions and comments can both have reactions. (Think of how in GitHub PRs and issues, both the description at the top and subsequent comments can have reactions.)</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2970b204-0347-47b9-9077-5b5cc3cb0a56" class="code"><code class="language-Ruby">class StandupMeetingReaction &lt; ApplicationRecord
+  belongs_to :rich_text,
+    class_name: &#x27;ActionText::RichText&#x27;,
+    foreign_key: :action_text_rich_text_id
+  # ...
+end</code></pre><p id="f6241d90-b9de-4150-96c5-20287bfafdf8" class="">As with comments, we’d need to add a query for each of the 3 descriptions in <code>StandupMeeting</code>:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7b1963a6-0ee7-456c-b406-6cdfd7a6f800" class="code"><code class="language-Ruby">class StandupMeeting &lt; ApplicationRecord
+  # ...
+
+  def yesterday_reactions
+    StandupMeetingReaction
+      .joins(:rich_text)
+      .where(
+        action_text_rich_texts: {
+          record_id: id,
+          record_type: &#x27;StandupMeeting&#x27;,
+          name: &#x27;yesterday_work_description&#x27;
+        }
+      )
+  end
+
+  # ... likewise with tomorrow_reactions and blockers_reactions ...
+end</code></pre><p id="33117603-1b36-4523-a653-8a997cce5107" class="">We’d also need to add a query to <code>StandupMeetingComment</code>:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f4214de8-13d7-40ea-8ed5-64d00749da1d" class="code"><code class="language-Ruby">class StandupMeetingComment &lt; ApplicationRecord
+  # ...
+
+  def reactions
+    StandupMeetingReaction
+      .joins(:rich_text)
+      .where(action_text_rich_texts: {
+				record_id: id
+				record_type: &quot;StandupMeetingComment&quot;,
+				name: &quot;text&quot; # StandupMeetingComment calls `has_rich_text :text` up top on this design page
+			})
+  end
+end</code></pre><p id="811ac2f9-0ece-4afd-aff2-301fe68ff9af" class="">The downside of this approach is that it somewhat obscures the shared behavior (the ability to have reactions) between standup descriptions and comments.</p><h3 id="5c16142e-3782-4cfe-ae9a-56ab35df49a5" class="">Proposal A2: one (re-defined) <code>standup_meeting_comment</code> to many <code>reactions</code></h3><p id="9a598ea4-0849-441b-b165-cd713e84c9a6" class="">The shared behavior between standup descriptions and comments could be made more obvious if we expanded the concept of a standup meeting comment to encompass standup descriptions as well. With this approach, the 3 descriptions become conceptually more similar to the description at the top of a GitHub PR or issue: the description is really just a comment at the top.</p><p id="5d42f4c3-3a4c-4cbf-9645-7e9924c5ac71" class="">The difference, of course, is that our standups would contain <em>three</em> top-level comments instead of one. To account for this, we could identify a comment’s type with an enum.</p><p id="99b1e5b1-abc1-4683-b9eb-979d1ab11c71" class="">Here’s what this would look like:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e156fab2-27d3-4b7d-9d16-806ebbe25c12" class="code"><code class="language-Ruby">class StandupMeeting &lt; ApplicationRecord
+  # ...
+
+  # Previously:
+  # has_rich_text :yesterday_work_description
+  # has_rich_text :today_work_description
+  # has_rich_text :blockers_description
+  has_many :comments,
+    class_name: &#x27;StandupMeetingComment&#x27;,
+    dependent: :destroy
+
+  # ... validations to ensure only 3 descriptions are added ...
+
+  def yesterday_work_description = comments.yesterday.first
+  def today_work_description = comments.today.first
+  def blockers_description = comments.blockers.first
+
+  def yesterday_comments = comments.yesterday.offset(1)
+  def today_comments = comments.today.offset(1)
+  def blockers_comments = comments.blockers.offset(1)
+
+  # A setter shortcut which would be used instead of #update
+  # in StandupMeetings::CompletionsController#create
+  def update_descriptions(
+      yesterday_work_description:,
+      today_work_description:,
+      blockers_description:)
+    # ...
+  end
+
+  # ...
+end</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a559863c-1058-41e7-84d8-d31191e81a4f" class="code"><code class="language-Ruby">class StandupMeetingComment &lt; ApplicationRecord
+  belongs_to :standup_meeting
+  has_many :reactions,
+    class_name: &#x27;StandupMeetingReaction&#x27;,
+    dependent: :destroy
+
+  has_rich_text :text
+
+  enum type: { yesterday: 0, today: 1, blockers: 2 }
+end</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e9331dbd-80d2-450b-a00b-c1400511705f" class="code"><code class="language-Ruby">class StandupMeetingReaction &lt; ApplicationRecord
+  belongs_to :comment, class_name: &#x27;StandupMeetingComment&#x27;
+  # ...
+end</code></pre><p id="3c41b831-e336-4d64-9230-55215e33b52d" class="">The downside of this approach is that <code>StandupMeeting</code> is more complex since it isn’t directly associated with its rich text descriptions.</p><p id="16143450-ff92-4f0b-8db9-dce6527f33d8" class="">But elsewhere this approach has few advantages over Proposal A1:</p><ul id="3a090941-a784-4afc-901d-b5f6f947e396" class="bulleted-list"><li style="list-style-type:disc">It clarifies the shared behavior of standup descriptions and comments (since here they are all really comments).</li></ul><ul id="caed8061-4e7c-465c-aec2-f0fc31880d03" class="bulleted-list"><li style="list-style-type:disc">It allows for simpler queries for finding associated comments and reactions.</li></ul><ul id="7e380a6e-0881-4027-921b-c1f0826f0903" class="bulleted-list"><li style="list-style-type:disc">It may be easier to reason about.</li></ul><h2 id="7970bbdb-2d94-4db6-941f-a64c1b007431" class="">B. Using a supertype table to represent “reactionable” subtype tables</h2><p id="58d7636e-1305-4eaa-9d88-f83e32ca04a4" class="">This solution is an alternative to using the rails polymorphic association. There is a clear downside of losing some convention-over-configuration. However, it allows enforcing referential integrity between the <code>reactions</code> table and the <code>reactionables</code> table with the use of foreign keys, and does away with having to store metadata such as polymorphic table names and regular data in the same table.</p><figure id="107d8e91-5089-4918-a926-a0be0a176200"><div class="source"><a href="%5BWIP%5D%20%5BStandup%5D%20Emoji%20reactions%20a9aa0913283847009bffed6f15c31cc5/supertype_design_(dragged).pdf">https://prod-files-secure.s3.us-west-2.amazonaws.com/c59a975c-8874-4edd-b891-9c339cb0973e/fecac12f-f35b-47f9-a84d-39bc065b9e24/supertype_design_(dragged).pdf</a></div></figure><h3 id="7532050d-20dc-459f-b0ae-a7a22945f23b" class="">Tables</h3><p id="13a2e1b0-ad77-432d-827f-4e4cc8f86088" class="">Here is a sample set of migrations needed to create the tables with the shared <code>reactionable_id</code>. As of now, the design assumes application code is responsible for creating a <code>comment</code> or <code>standup_update</code> with a valid <code>reactionable_id</code> , but maintaining subtype exclusivity in which a single <code>reactionable</code> record relates to one and only one subtype record is done at a database level as shown in the migrations below.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fd420cd7-32f8-45a4-a45f-a55afd055601" class="code"><code class="language-Ruby">class CreateReactionables &lt; ActiveRecord::Migration[7.0]
+  def change
+    create_table :reactionables, primary_key: :reactionable_id do |t|
+      t.string :reactionable_type
+			t.index [:reactionable_id, :reactionable_type],
+				name: :index_reactionables_on_id_and_type
+			t.index [:reactionable_type, :reactionable_id],
+				name: :index_reactionables_on_type_and_id
+
+      t.timestamps
+    end
+  end
+end
+
+class CreateReactions &lt; ActiveRecord::Migration[7.0]
+  def change
+    create_table :reactions do |t|
+      t.references :reactionable, null: false
+			t.column :content, :string
+      
+      t.timestamps
+    end
+
+    add_foreign_key :reactions, :reactionables, column: &quot;reactionable_id&quot;, primary_key: &quot;reactionable_id&quot;
+  end
+end
+
+class CreateStandupUpdates &lt; ActiveRecord::Migration[7.0]
+  def change
+    create_table :standup_updates, id: false do |t|
+      t.column :reactionable_id, :primary_key
+      t.string :content
+
+      t.timestamps
+    end
+
+    add_foreign_key :standup_updates,
+      :reactionables,
+      column: &quot;reactionable_id&quot;,
+      primary_key: &quot;reactionable_id&quot;
+	end
+end
+
+class CreateComments &lt; ActiveRecord::Migration[7.0]
+  def change
+    create_table :comments, id: false do |t|
+      t.column :reactionable_id, :primary_key
+      t.string :content
+
+      t.timestamps
+    end
+
+    add_foreign_key :comments,
+      :reactionables,
+      column: :reactionable_id,
+      primary_key: :reactionable_id
+  end
+end
+
+# Maintain subtype exclusivity by enforcing a check constraint on each subtype
+# table.
+# Create a user-defined function that
+# 1. Allows a reactionable subtype record to be inserted if there is a record in
+#    the reactionables table with the target_id and target_type.
+# 2. Does not allow a reactionable subtype record to be inserted if there isn&#x27;t a
+#    record in the reactionables table with the target_id and target_type.
+class AddCheckConstraintFunction &lt; ActiveRecord::Migration[7.0]
+  def up
+    add_check_reactionable_exists_function = &lt;&lt;-SQL
+      CREATE OR REPLACE FUNCTION check_reactionable_exists(target_id bigint, target_type CHAR(1))
+        RETURNS int
+      AS &#x27;
+        SELECT COALESCE(
+          (SELECT 1 FROM reactionables
+             WHERE reactionables.reactionable_id   = target_id
+             AND   reactionables.reactionable_type = target_type),
+          0
+        );
+      &#x27;
+      LANGUAGE SQL;
+    SQL
+
+    execute add_check_reactionable_exists_function
+  end
+
+  def down
+    remove_check_reactionable_exists_function = &lt;&lt;-SQL
+      DROP FUNCTION check_reactionable_exists(bigint, character);
+    SQL
+
+    execute remove_check_reactionable_exists_function
+  end
+end
+
+# For each subtype decide on the subtype indicator (e.g. &#x27;S&#x27; for standup_updates),
+# then add a check constraint which calls the function defined above to
+# implement a custom referential integrity between the reactionables table and
+# the subtype tables.
+class AddCheckConstraintToStandupUpdates &lt; ActiveRecord::Migration[7.0]
+  def up
+    add_check_reactionable_exists_constraint = &lt;&lt;-SQL
+      ALTER TABLE standup_updates ADD CONSTRAINT supertype_check
+        CHECK(check_reactionable_exists(standup_updates.reactionable_id, &#x27;S&#x27;) = 1);
+    SQL
+
+    execute add_check_reactionable_exists_constraint
+  end
+
+  def down
+    remove_check_reactionable_exists_constraint = &lt;&lt;-SQL
+      ALTER TABLE standup_updates DROP CONSTRAINT supertype_check;
+    SQL
+
+    execute remove_check_reactionable_exists_constraint
+  end
+end
+
+# This migration is shown to demonstrate adding a new &quot;reactionable&quot; table.
+class AddCheckConstraintToComments &lt; ActiveRecord::Migration[7.0]
+  def up
+    add_check_reactionable_exists_constraint = &lt;&lt;-SQL
+      ALTER TABLE comments ADD CONSTRAINT supertype_check
+        CHECK(check_reactionable_exists(comments.reactionable_id, &#x27;C&#x27;) = 1);
+    SQL
+
+    execute add_check_reactionable_exists_constraint
+  end
+
+  def down
+    remove_check_reactionable_exists_constraint = &lt;&lt;-SQL
+      ALTER TABLE comments DROP CONSTRAINT supertype_check;
+    SQL
+
+    execute remove_check_reactionable_exists_constraint
+  end
+end</code></pre><h3 id="b1b683f5-457b-46f2-9738-4a28e539cba2" class="">Models</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e241eb28-f32a-4aeb-ae9f-0baba23ebf4f" class="code"><code class="language-Ruby">class StandupMeeting &lt; ApplicationRecord
+	has_one :yesterday_update,
+		-&gt; {  },
+		class_name: StandupUpdate,
+		dependent: :destroy
+	has_one :today_update,
+		-&gt; {  },
+		class_name: StandupUpdate,
+		dependent: :destroy
+	has_one :blockers,
+		-&gt; {  },
+		class_name: StandupUpdate,
+		dependent: :destroy
+	...
+end
+
+class StandupUpdate &lt; ApplicationRecord
+	belongs_to :reactionable
+	belongs_to :standup_meeting
+
+	has_many :comments
+
+	has_rich_text :content
+	...
+
+	# This is a convenience method that would exist if a +standup_update+ and a
+	# +reaction+ had a direction association as in the case of a polymorphic
+	# association.
+	def reactions
+		# With the rails polymorphic associations, we could simply do
+		# +standup_reaction.reactions+ since there is no intermediary table.
+		# In my opinion, this is a tradeoff in favor of the pro over the con where we
+		# don&#x27;t have the convenience method built for us, but the query won&#x27;t have to
+		# check the +reactionable_type+ every time and +reactionable_id+ is an actual
+		# foreign key that enforces referential integrity.
+		Reaction.where(reactionable_id:)
+	end
+end
+
+class Comment &lt; ApplicationRecord
+	belongs_to :reactionable
+	belongs_to :standup_update
+
+	has_rich_text :content
+	...
+end
+
+class Reactionable &lt; ApplicationRecord
+	has_many :reactions
+end
+
+class Reaction &lt; ApplicationRecord
+	belongs_to :reactionable
+end</code></pre><h3 id="15a5cb47-302e-402c-bd4c-c7f25e852a0a" class="">Dealing with orphan <code>reaction</code> records</h3><p id="5e4d0673-4949-4b03-93db-ee82f0550d95" class="">This design still doesn’t inherently solve the problem of orphan <code>reactions</code> .<br/>e.g. A <br/><code>standup_update</code> record can be destroyed without destroying the supertype <code>reactionable</code> record.<br/><br/>One approach could involve possibly adding a constraint to all <br/><code>reactionable</code> subtypes record destructions where the subtype record cannot be destroyed if a related supertype <code>reactionable</code> record still exists. <br/><br/>A <br/><code>BEFORE DELETE</code> trigger is an example implementation of this at the database level.<br/><br/></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6590d590-b569-4ea9-a023-29623d5ceab9" class="code"><code class="language-SQL">-- Create a trigger function that attempts to destroy the supertype reactionable 
+-- record as well.
+CREATE FUNCTION cascade_delete_reactionable() RETURNS trigger AS $$
+BEGIN
+	DELETE FROM reactionables
+		WHERE reactionables.reactionable_id=OLD.reactionable_id;
+	RETURN OLD;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Allow the trigger to destroy the reactionable first. If the reactionable record
+-- has associated reactions, then the transaction will fail and the reactionable
+-- subtype will not be destroyed.
+CREATE TRIGGER cascade_delete_standup_updates
+	BEFORE DELETE ON standup_updates FOR EACH ROW
+		EXECUTE PROCEDURE cascade_delete_reactionable();</code></pre><h2 id="f959b77e-6521-4ba3-aca3-e7a2f1b1f873" class="">Comparison with Rails polymorphic association</h2><p id="cdc6d392-5b53-4f06-b792-57d2e6adb651" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>A. Orphan </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><code><strong>reaction</strong></code><strong> records can exist in both the supertype design and the Rails polymorphic association design.</strong></p><p id="6f32c689-4596-492c-8613-5fd2cf6265f4" class="">By design, neither the Rails polymorphic association nor the supertype design inherently protect against orphaned records since associated polymorphic/subtype records can be deleted.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a7fbf10e-a087-4d50-aaec-f71f88be013c" class="code"><code class="language-SQL"># Rails polymorphic association example
+
+# reactions
+id | reactionable_id | reactionable_type | ...
+----------------------------------------------
+1  | 1               | &quot;standup_update&quot;  | ...
+
+# standup_updates with record with id of 1 deleted
+id | content | ...
+------------------
+2  | &quot;foo&quot;   | ...</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="327f5d31-6a71-4599-9023-6c0b3ee2a888" class="code"><code class="language-SQL"># Supertype example
+
+# reactionables
+id | reactionable_id | ...
+----------------------------------------------
+1  | 1               | ...
+
+# reactionables
+reactionable_id | reactionable_type | ...
+-----------------------------------------
+1               | &quot;S&quot;               | ...
+
+# standup_updates with record with reactionable_id of 1 deleted
+reactionable_id | content | ...
+-------------------------------
+2               | &quot;foo&quot;   | ...</code></pre><p id="d79992f3-77df-48bf-8269-51e3ee48aaf3" class="">If we want to promote database integrity, then both designs require some mechanism to prevent the deletion of a <code>standup_update</code> record in a case where there is at least one associated <code>reaction</code> record.</p><p id="b9dd21cd-cb42-418d-952d-529479d780e9" class="">A mechanism could be put in place to check that no associated records exist when deleting a <code>standup_updates</code> table record. One straightforward approach would be simply checking for the existence of those associated records. The following examples to explain this approach is based on the trigger function mechanism described above in the section “<strong>Dealing with orphan</strong> <code>reaction</code> <strong>records”</strong>.</p><p id="9cc78ef2-56ec-43a3-be50-d85aed2ce67e" class="">
+</p><p id="69fae60e-7a23-4db1-8520-9de791b2e386" class=""><strong>A1. Rails polymorphic association example</strong></p><p id="4d25df34-b069-446d-b268-ca3e94c67521" class="">When a DELETE is executed on the <code>standup_updates</code> table, we can trigger a query to check the <code>reactions</code> table for at least one record that has the matching <code>reactionable_id</code> and <code>reactionable_type</code>. The query would look something like:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="23a2acc9-1c6d-4872-b5dd-4d8dd0af4160" class="code"><code class="language-SQL">SELECT reactions.* FROM reactions
+  WHERE reactions.reactionable_id = OLD.id
+		AND reactions.reactionable_type = &quot;standup_update&quot;</code></pre><p id="9194c66b-125c-4aa8-8483-def6ed470704" class="">The same check for other polymorphic reactionable tables would look something like:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b53842b7-ccb4-4f70-b151-3bec48b6d7af" class="code"><code class="language-SQL">SELECT reactions.* FROM reactions
+  WHERE reactions.reactionable_id = OLD.id
+		AND reactions.reactionable_type = &quot;comment&quot;
+
+SELECT reactions.* FROM reactions
+  WHERE reactions.reactionable_id = OLD.id
+		AND reactions.reactionable_type = &quot;post&quot;</code></pre><p id="4f04bb18-e0b9-412f-b4fd-e3c33f753a2f" class="">These checks require keeping the <code>reactionable_type</code> names consistent between the database code and the application code one way or another.</p><p id="e59db146-30f9-4995-9d24-90aae95cd801" class="">
+</p><p id="3ba66364-84eb-4f52-a2bc-7d367cd78012" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>A2. Supertyping example</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><p id="9ad24820-bdd2-45a9-93db-9fe06d2c2284" class="">When a <code>DELETE</code> is executed on the <code>standup_updates</code> table, check the <code>reactionables</code> table for the record that has the matching <code>reactionable_id</code>. The query would look something like:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1f2ff9c9-eb1c-4b66-85aa-70920ce2720a" class="code"><code class="language-SQL">SELECT reactionables.* FROM reactionables
+	WHERE reactionables.reactionable_id = OLD.reactionable_id</code></pre><p id="707bfc02-756b-4d73-aff0-723966ff4a19" class="">The query would not differ from one subtype table to another since there is no need to check <code>reactionable_type</code>, so there is relatively less query overhead. This reduced query overhead comes at the cost of having to maintain the intermediary <code>reactionables</code> table.</p><p id="5b577885-dbd8-41f7-8a05-362a482a4aa4" class="">
+</p><p id="d14fba78-e3db-4526-a535-91cfdd60f3ac" class=""><strong>B. </strong><strong><code>reactions</code></strong><strong> table is not well suited for scaling in either design</strong></p><p id="38471b3b-1a1c-4ca2-8ef3-bb6a39be8642" class="">The <code>reactions</code> table in both designs grow at the same proportional rate with the number of polymorphic-reactionable or reactionable-subtype tables ( <code>standup_updates</code>, <code>comments</code>, <code>posts</code>, etc.).</p><p id="69d52ad1-76f5-4b21-ba94-f099afa1558c" class="">Here are example scenarios of how either design allow the <code>reactions</code> table to grow. Assume there is a <code>reactions</code> table, a <code>standup_updates</code> table, and a <code>comments</code> table.</p><p id="3b417054-0f84-4192-94ce-94bdab5a0e3a" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>B1. Rails polymorphic association example scenario</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b20d29d9-43d6-4a60-9a51-d5fed26ccbca" class="code"><code class="language-SQL">-- standup_updates       comments
+id | content             id | content
+------------             ------------
+1  | &quot;foo&quot;               1  | &quot;moo&quot;    
+2  | &quot;bar&quot;    
+
+-- reactions
+id | reactionable_id | reactionable_type
+----------------------------------------
+1  | 1               | &quot;standup_update&quot;
+2  | 1               | &quot;standup_update&quot;
+3  | 2               | &quot;standup_update&quot;
+4  | 2               | &quot;standup_update&quot;
+5  | 1               | &quot;comment&quot;
+6  | 1               | &quot;comment&quot;</code></pre><p id="17d5c31c-603b-4b17-b10a-f8c9824f4e01" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>B2. Supertyping example scenario</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a4c151ae-8bf5-461a-b1eb-76173620649e" class="code"><code class="language-SQL">-- standup_updates                comments
+reactionable_id | content         reactionable_id | content
+-------------------------         -------------------------
+1               | &quot;foo&quot;           3               | &quot;moo&quot;
+2               | &quot;bar&quot;
+
+-- reactionables
+reactionable_id | reactionable_type
+-----------------------------------
+1               | &quot;S&quot;
+2               | &quot;S&quot;
+3               | &quot;C&quot;
+
+-- reactions
+id | reactionable_id
+--------------------
+1  | 1
+2  | 1
+3  | 1</code></pre><p id="89280302-693c-4671-b224-c95a9dde7042" class="">While supertyping removes the need to duplicate <code>reactionable_id</code> and <code>reactionable_type</code> pairs, it limits the column value for the primary key of all <code>reactionable</code> subtype tables.</p><p id="8eca24ca-68b4-4559-ba49-22077a7e08ef" class="">
+</p><p id="7aed10fa-5530-428f-82c8-fdfc24c70534" class=""><strong>In summary,</strong></p><ul id="fe3fea26-53e1-4f47-823c-f80d87bf5b81" class="bulleted-list"><li style="list-style-type:disc">Supertyping perhaps allows focusing on performance more by implementing the design more at the database level, but it loses the ability to be database type agnostic (e.g. PostgreSQL vs MySQL). It also reduces the usage of <code>ActiveRecord</code> which could introduce common pitfalls of working directly with the database and its query language.</li></ul><ul id="8a7a30d3-180e-4f34-92c9-9439a66af09c" class="bulleted-list"><li style="list-style-type:disc">Rails polymorphic association is perhaps more database type agnostic depending on the support for the different types that’s baked into Rails, but it comes at the cost of writing more application code that must be more actively maintained.</li></ul><h2 id="321c6b89-57f4-49b3-8604-6c5bd138c237" class="">C. Direct association between text and reaction</h2><p id="3aae707d-24cb-4f7a-a53a-6c8dcec8b3c7" class="">
+</p><h3 id="823314ba-4748-4211-b197-a9e2fbe4e116" class="">One <code>action_text_rich_text</code> has many <code>text_reactions</code></h3><figure id="d1baad14-aacc-40ff-b68c-dc5286eee19a" class="image"><a href="%5BWIP%5D%20%5BStandup%5D%20Emoji%20reactions%20a9aa0913283847009bffed6f15c31cc5/reactions_design_proposal_c_1.png"><img style="width:616px" src="%5BWIP%5D%20%5BStandup%5D%20Emoji%20reactions%20a9aa0913283847009bffed6f15c31cc5/reactions_design_proposal_c_1.png"/></a></figure><p id="8e48c35a-efd2-40df-a4a4-b74d411653e0" class="">Since, <code>ActionText::RichText</code> is the class being reused to represent things such as standup updates and standup comments, we can form a direct association to the class without having to store any metadata in the <code>rich_text_reactions</code> table. This way wrapper classes such as <code>StandupMeetingUpdate</code> and <code>StandupMeetingComment</code> that want to form associations with <code>ActionText::RichText</code> via <code>has_rich_text</code> can be easily added.</p><h3 id="6a8b9c31-b90c-459d-a901-d9535b50482d" class="">Association</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7768233b-1ca9-47d3-8dcf-b8f125b673b6" class="code"><code class="language-Ruby">class RichTextReaction
+	belongs_to :rich_text, class_name: &quot;ActionText::RichText&quot;
+end</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a8ea15f8-4b08-4b82-b32b-b3eaf92be521" class="code"><code class="language-Ruby">class CreateRichTextReactions &lt; ActiveRecord::Migration[7.0]
+  def change
+    create_table :rich_text_reactions do |t|
+      t.references :rich_text,
+        null: false,
+        foreign_key: { to_table: :action_text_rich_texts }
+
+      t.timestamps
+    end
+  end
+end</code></pre><h3 id="59449f9b-ab5b-41a5-8c4c-c0cf614052d4" class=""><strong><strong><strong><strong><strong>Get all reactions to update for yesterday’s work</strong></strong></strong></strong></strong></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="033a973b-60a4-4f1f-9386-0376b7a727e8" class="code"><code class="language-Ruby">class StandupMeeting
+	has_rich_text :yesterday_work_description
+	
+	...
+
+	def yesterday_reactions
+		RichTextReaction.where(rich_text_id: self.yesterday_work_description.id })
+	end
+end</code></pre><h3 id="fb980540-f73e-4068-9c9e-297953bf017a" class="">Pros</h3><ol type="1" id="384033e6-4aa6-4383-9e97-2212b0b5abc4" class="numbered-list" start="1"><li>Referential integrity between <code>RichTextReaction</code> and <code>ActionText::RichText</code></li></ol><ol type="1" id="71ea76ee-371c-43d8-8b48-1966672bcc95" class="numbered-list" start="2"><li>Easy to add a new wrapper class for <code>ActionText::RichText</code> without worrying about the class’s relationship with <code>RichTextReaction</code></li></ol><ol type="1" id="50b30390-4738-4abe-b15e-117fe09fb263" class="numbered-list" start="3"><li>No metadata storage required in <code>RichTextReaction</code> table (e.g. <code>name</code> that describes which type of standup update a reaction belongs to)</li></ol><h3 id="2cf82286-52bf-4751-a027-cebebb38595d" class="">Cons</h3><ol type="1" id="b65d1664-c97b-4105-bcce-1d8c6d9e8bc7" class="numbered-list" start="1"><li><code>RichTextReaction</code> is coupled to <code>ActionText::RichText</code> class which could entail obvious consequences such as difficulty when needing changes in <code>ActionText::RichText</code> itself, or needing another reaction model such as <code>ImageReaction</code> when <code>ActionText::RichText</code> is not needed.</li></ol><p id="c5578d93-1199-4558-8bd6-34e3449a3b79" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"><hr/><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Inline comments</summary><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">Proposals</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 25, 2023, 6:22 PM</time></span></span></div><div style="padding:0.2em"><span class="user">@Felipe Vogel</span> can you make a proposal which is like standup_meeting has_many standup_meeting_reactions and we will just ignore adding this to the comments for now. (this will need to be handled similarly to the comments in which you need a <code>name</code> to help associate it to the correct section.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background"> one <code>action_text_rich_text</code> to many <code>reactions</code></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 16, 2023, 11:19 PM</time></span></span></div><div style="padding:0.2em">so the main question I have with this, is how do we get access to the <code>action_rich_text_text</code> model. I am wondering if we could maybe inherit from it via a new model, and then utilize that model to help us add any additional associations (like <code>has_many :reactions</code>) to it. Truthfully not sure how easy this is, but it <em>should</em> be possible.</div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">G</span></span><span><b>Gustavo Valenzuela</b> <time style="font-size:0.8em">Nov 17, 2023, 1:21 AM</time></span></span></div><div style="padding:0.2em">Yes, I was thinking along the same lines of inheriting rich_text into a new model. Or maybe somehow namespaceing a model for each one of the standup_meeting questios. I’ll have some time to do some research tomorrow</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">Proposal A1</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/AATXAJxAknCuwslBVL2cm1XU7WmKCyZ2Hq_12hXxPF5S=s100" class="icon user-icon"/><span><b>Josh Smith</b> <time style="font-size:0.8em">Nov 17, 2023, 12:21 AM</time></span></span></div><div style="padding:0.2em">I probably like this more than the other one, but I also feel like there’s maybe room for another proposal that conceptualizes the current <code>yesterday_description</code>, <code>today_description</code>, and <code>blockers</code> as some new model. Say something like <code>StandupEntry</code>(not immediately sure on this name).<br/><br/>But a StandupMeeting could have 3 entries (for yesterday, today, and blockers). And these entries could have their rich text content, <br/><code>has_many :comments</code>, and <code>has_many :reactions</code> (probably <code>as: :reactionable</code>)<br/><br/>This way would still have to migrate data around, but I think the data model would be less fuzzy to me than A2. And you wouldn’t have to get into doing weird stuff with ActionText records like with A1.<br/></div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">G</span></span><span><b>Gustavo Valenzuela</b> <time style="font-size:0.8em">Nov 17, 2023, 1:23 AM</time></span></span></div><div style="padding:0.2em">Yes, this is what I think would be the ideal solution. We’d have to buy the bullet up front, but i think i would pay off in the mid to long term</div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">G</span></span><span><b>Gustavo Valenzuela</b> <time style="font-size:0.8em">Nov 17, 2023, 1:25 AM</time></span></span></div><div style="padding:0.2em">Also, I really like the idea of being able to change the types of entry/questions asked on the standup_meetings. this will be even more important as we think about allowing other orgs to use the app</div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/ACg8ocLurtH0uJeOveSl1S-bhawzFQEN3DU1L4BGwqq81Ox7Syc=s100" class="icon user-icon"/><span><b>Felipe Vogel</b> <time style="font-size:0.8em">Nov 21, 2023, 2:45 PM</time></span></span></div><div style="padding:0.2em"><span class="user">@Gustavo Valenzuela</span> That’s a good point, I agree that it would be nice for our solution to be flexible like that.<br/><br/><br/><span class="user">@Josh Smith</span> Agreed, I also feel something is missing in A1.<br/><br/>In both of these proposals I tried to avoid adding a polymorphic association because I think we should only do that if we really need to.<br/><br/>I see that I missed the mark with A2 because it’s not flexible enough for blog posts, etc. which also may need comments and reactions.<br/><br/>But Won and I were talking and he showed me a pretty simple way to get the best of both worlds, all the flexibility without having to add a polymorphic association.<br/><br/>So we’ll add that to a third proposal here.<br/></div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">  # This is not in the POC, but I&#x27;m guessing we&#x27;d need it.<br/>  has_rich_text :text<br/></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 16, 2023, 11:07 PM</time></span></span></div><div style="padding:0.2em">yes</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">This approach becomes a bit unwieldy if we add in reactions, while ensuring that standup descriptions and comments can both have reactions</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 16, 2023, 11:24 PM</time></span></span></div><div style="padding:0.2em">So, if we want to allow both standup descriptions and comments to have reactions, we most likely need some polymorphic table (we can scope this only to standup_meetings, or it can just be super generic). Essentially, many different components can be <code>reactionable</code> i.e blogs, standup_meeting descriptions,  the comments on those descriptions.<br/><br/>Now do we want to make this polymorphic table that is generally open to everything, idk and that is what we are here to kinda figure out.<br/></div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">G</span></span><span><b>Gustavo Valenzuela</b> <time style="font-size:0.8em">Nov 17, 2023, 1:36 AM</time></span></span></div><div style="padding:0.2em">I like the idea of a reactionable table. I think a more generic approach make more sense since there isn’t much to a reaction other than foreign_keys and maybe a an enum for reactions</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">StandupMeetingReaction<br/>      .joins(:rich_text)<br/>      .where(action_text_rich_texts: { record_id: id })<br/></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/ACg8ocI2bKVgUDifDNtTU-exmjRskR3tJF2dPk23J2qhx1TV=s100" class="icon user-icon"/><span><b>Won Rhim</b> <time style="font-size:0.8em">Nov 21, 2023, 4:17 PM</time></span></span></div><div style="padding:0.2em">Shouldn’t the <code>record_type</code> and <code>name</code> of the polymorphic <code>ActionText::RichText</code> be included in this query?<br/>I wrote the suggestion in comment.<br/></div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/ACg8ocLurtH0uJeOveSl1S-bhawzFQEN3DU1L4BGwqq81Ox7Syc=s100" class="icon user-icon"/><span><b>Felipe Vogel</b> <time style="font-size:0.8em">Nov 26, 2023, 8:22 AM</time></span></span></div><div style="padding:0.2em">Correct, thanks!</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">The shared behavior between standup descriptions and comments could be made more obvious if we expanded the concept of a standup meeting comment to encompass standup descriptions as well</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 16, 2023, 11:11 PM</time></span></span></div><div style="padding:0.2em">Combining things to consolidate like this is generally not a good path forward. This might solve the immediate problem, but a <code>StandupMeetingComment</code> at this point is a comment with a side effect. Now continue down this line and you end up with objects that literally do everything.</div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/ACg8ocLurtH0uJeOveSl1S-bhawzFQEN3DU1L4BGwqq81Ox7Syc=s100" class="icon user-icon"/><span><b>Felipe Vogel</b> <time style="font-size:0.8em">Nov 21, 2023, 2:43 PM</time></span></span></div><div style="padding:0.2em">Good point, I wasn’t thinking blog posts and other things that might need comments and reactions in the future.</div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/ACg8ocLurtH0uJeOveSl1S-bhawzFQEN3DU1L4BGwqq81Ox7Syc=s100" class="icon user-icon"/><span><b>Felipe Vogel</b> <time style="font-size:0.8em">Nov 21, 2023, 2:46 PM</time></span></span></div><div style="padding:0.2em">Won and I will add a third proposal that addresses this, as I mentioned in my comment in <a href="https://www.notion.so/WIP-Standup-Emoji-reactions-a9aa0913283847009bffed6f15c31cc5?pvs=21">this thread above</a>.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">With this approach, the 3 descriptions become conceptually more similar to the description at the top of a GitHub PR or issue: the description is really just a comment at the top</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 16, 2023, 11:13 PM</time></span></span></div><div style="padding:0.2em">I’ve not seen githubs code, but they are most likely not all just comments. For these cases they most likely have a polymorphic (maybe a few idk) tables. The comments can be polymorphic and associated to multiple different tables (just like how action text works!).</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">The difference, of course, is that our standups would contain <em>three</em> top-level comments instead of one</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 16, 2023, 11:14 PM</time></span></span></div><div style="padding:0.2em">These types of assumptions (as mentioned above) also tend to lead to confusion. Why is the first comment really what someone submitted (i.e: the parent).</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">class StandupMeetingComment &lt; ApplicationRecord<br/>  belongs_to :standup_meeting<br/>  has_many :reactions,<br/>    class_name: &#x27;StandupMeetingReaction&#x27;,<br/>    dependent: :destroy<br/><br/>  has_rich_text :text<br/><br/>  enum type: { yesterday: 0, today: 1, blockers: 2 }<br/>end<br/></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 16, 2023, 11:17 PM</time></span></span></div><div style="padding:0.2em">What this essentially has done is just combined 2 concepts together. This might offer marginally better queries, but to get to this state would require quite a bit of work (we need to migrate all our existing code to follow this format, we have to update all the front-end logic to understand this) and overall is not worth the effort for what little it is giving (nor does this even get us in a better position if we wanted to move towards more customization, which would require another large migration).</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">Using a supertype table to represent “reactionable” subtype tables</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 28, 2023, 7:41 PM</time></span></span></div><div style="padding:0.2em">So reading over this, it is an interesting solution, but it really feels over-engineered and exactly the purpose polymorphic tables were created. This more closely follows STI (single table inheritance, which from personal use causes other issues so I tend to almost never use them).<br/><br/>In addition this adds complications (like you mentioned) to orphaned records and needing to maintain them. I don’t see much of a benefit here honestly.<br/><br/>The one big downside to polymorphics is the amount of records it can end up holding (i.e: comments, posts, blogs, etc..) which could make it scale pretty poorly. The smaller downside is making sure your polymorphic table doesn’t deviate from it’s original purpose because then you get tons of nullables which sucks.<br/><br/>All in all, what you are doing below is veeeeery similar to a polymorphic table and doesn’t actually solve the main downside imo.<br/></div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/ACg8ocI2bKVgUDifDNtTU-exmjRskR3tJF2dPk23J2qhx1TV=s100" class="icon user-icon"/><span><b>Won Rhim</b> <time style="font-size:0.8em">Nov 29, 2023, 9:03 AM</time></span></span></div><div style="padding:0.2em">Gotcha.<br/>I do want to thoroughly understand the importance of the concerns you mention. I’ll write up a section to see how the two designs (supertyping vs polymorphic) look when attempting to address the concerns.<br/></div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">def reactions</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/ACg8ocI2bKVgUDifDNtTU-exmjRskR3tJF2dPk23J2qhx1TV=s100" class="icon user-icon"/><span><b>Won Rhim</b> <time style="font-size:0.8em">Nov 28, 2023, 3:40 PM</time></span></span></div><div style="padding:0.2em"><span class="user">@Felipe Vogel</span> </div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">ef yesterday_reactions<br/>		TextReaction.joins(:rich_text)<br/>			.where(action_text_rich_texts: { name: &quot;yesterday_work_description&quot; })<br/>	end<br/></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">G</span></span><span><b>Gustavo Valenzuela</b> <time style="font-size:0.8em">Dec 4, 2023, 3:13 PM</time></span></span></div><div style="padding:0.2em"><span class="user">@Won Rhim</span> Or it can be added to this query?  something like this:<br/>.where(action_text_rich_texts: { <br/>name: &quot;yesterday_work_description&quot;,<br/>record_type: &quot;StandupMeeting&quot;,<br/>record_id: <br/><a href="http://self.id/">self.id</a><br/><br/></div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">G</span></span><span><b>Gustavo Valenzuela</b> <time style="font-size:0.8em">Dec 4, 2023, 3:25 PM</time></span></span></div><div style="padding:0.2em">Although, if it was upto me, I would modify the TextReaction model to reference standup meeting</div><div style="padding:0.3em"></div></li><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/ACg8ocI2bKVgUDifDNtTU-exmjRskR3tJF2dPk23J2qhx1TV=s100" class="icon user-icon"/><span><b>Won Rhim</b> <time style="font-size:0.8em">Dec 4, 2023, 5:24 PM</time></span></span></div><div style="padding:0.2em">I simplified the query after realizing we don’t even need a joins.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Resolved inline comments</summary><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">n that approach, the <code>StandupMeeting</code> data modelling remains unchanged (still containing the 3 rich text records), and a <code>StandupMeetingComment</code> is associated with a rich text record:</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://s3-us-west-2.amazonaws.com/public.notion-static.com/7b271090-100f-4449-bac9-f80ecfa4d7f6/zero_two.png" class="icon user-icon"/><span><b>Daniel Rassiner</b> <time style="font-size:0.8em">Nov 16, 2023, 11:20 PM</time></span></span></div><div style="padding:0.2em">The big thing I like is the data modeling isn’t changing which saves time/headaches having to migrate overall.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">class TextReaction<br/>	belongs_to :rich_text, class_name: &quot;ActionText::RichText&quot;<br/>end<br/></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">G</span></span><span><b>Gustavo Valenzuela</b> <time style="font-size:0.8em">Dec 4, 2023, 3:06 PM</time></span></span></div><div style="padding:0.2em"><span class="user">@Won Rhim</span> Shouldn’t this reference StandupMeeting?</div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details></span></body></html>
