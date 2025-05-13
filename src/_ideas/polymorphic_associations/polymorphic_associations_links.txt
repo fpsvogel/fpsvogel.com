@@ -1,5 +1,0 @@
-https://toyhammered.notion.site/WIP-Standup-Emoji-reactions-a9aa0913283847009bffed6f15c31cc5?v=025726c38ded4107b071e5a825aa2afe
-
-https://duhallowgreygeek.com/polymorphic-association-bad-sql-smell
-
-https://stackoverflow.com/questions/922184/why-can-you-not-have-a-foreign-key-in-a-polymorphic-association
