@@ -8,7 +8,7 @@ module StringTruncate
     # @return [String]
     def truncate(length: 45)
       if length < self.length - 1
-        "#{self[0...length]}#{"…"}"
+        "#{self[0...length]}…"
       else
         self
       end
@@ -35,7 +35,7 @@ class Builders::LoadReadingList < SiteBuilder
             lines: my_dropbox_file,
             # If my_dropbox_file is nil, then the local file path is used instead.
             path: local_filepath,
-            error_handler: ->(e) { puts "Skipped a row due to a parsing error: #{e}" },
+            error_handler: ->(e) { puts "Skipped a row due to a parsing error: #{e}" }
           )
 
           site.data.reading_stats = get_stats(items)
@@ -44,7 +44,7 @@ class Builders::LoadReadingList < SiteBuilder
             items:,
             minimum_rating: 4,
             excluded_genres: config.reading.excluded_genres || [],
-            status: [:done, :in_progress],
+            status: [:done, :in_progress]
           )
 
           site.data.reading_list = filtered_items.map(&:view).reverse
@@ -100,88 +100,80 @@ class Builders::LoadReadingList < SiteBuilder
 
     stats[:amount_by_genre_favorites] =
       Reading.stats(input: "amount by genre rating>3", items:)
-      .transform_values(&:to_i)
-      .to_a
-      .filter { |_genre, amount| amount > 1000 }
-      .sort_by { |_genre, amount| amount }
-      .reverse
-      .to_h
+        .transform_values(&:to_i)
+        .to_a
+        .filter { |_genre, amount| amount > 1000 }
+        .sort_by { |_genre, amount| amount }
+        .reverse
+        .to_h
 
     stats[:genres_by_year] =
       Reading.stats(input: "amount by year, genre", items:)
-      .transform_values { |genre_counts|
-        top_4 = genre_counts
-          .transform_values(&:to_i)
-          .max_by(4, &:last)
-          .to_h
+        .transform_values { |genre_counts|
+          top_4 = genre_counts
+            .transform_values(&:to_i)
+            .max_by(4, &:last)
+            .to_h
 
-        other_sum = genre_counts
-          .transform_values(&:to_i)
-          .except(*top_4.keys)
-          .values
-          .sum
+          other_sum = genre_counts
+            .transform_values(&:to_i)
+            .except(*top_4.keys)
+            .values
+            .sum
 
-        top_4.merge("other" => other_sum)
-      }
-      .delete_if { |year, _genre_counts| year < 2017 }
-      .flat_map { |year, genre_counts| genre_counts.map { |genre, count| [genre, [year, count]] } }
-      .group_by(&:first)
-      .transform_values { _1.map(&:last).to_h }
-
-    stats[:average_rating_by_genre] =
-      Reading.stats(input: "average rating by eachgenre", items:)
-      .reject { |_genre, rating| rating.nil? }
-      .sort_by { |_genre, rating| rating }
-      .reverse
-      .to_h
+          top_4.merge("other" => other_sum)
+        }
+        .delete_if { |year, _genre_counts| year < 2017 }
+        .flat_map { |year, genre_counts| genre_counts.map { |genre, count| [genre, [year, count]] } }
+        .group_by(&:first)
+        .transform_values { _1.map(&:last).to_h }
 
     stats[:rating_counts] =
       Reading.stats(input: "total items by rating", items:)
 
     stats[:top_experiences] =
       items
-      .select(&:rating)
-      .map { |item|
-        experience_count = item
-          .experiences
-          .select { |experience|
-            experience.spans.all? { _1.progress == 1.0 }
-          }
-          .count
+        .select(&:rating)
+        .map { |item|
+          experience_count = item
+            .experiences
+            .count { |experience|
+              experience.spans.all? { _1.progress.to_d == "1.0".to_d }
+            }
 
-        [item, [experience_count, item.rating]]
-      }
-      .max_by(10, &:last)
-      .to_h
-      .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
-      .transform_keys(&:truncate)
+          [item, [experience_count, item.rating]]
+        }
+        .max_by(10, &:last)
+        .to_h
+        .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
+        .transform_keys(&:truncate)
 
     stats[:top_lengths] =
       Reading.stats(input: "top 10 lengths status=done progress=100%", items:)
-      .to_h
-      .transform_values(&:to_i)
-
-    stats[:top_speeds] =
-      Reading.stats(input: "top 10 speeds", items:)
-      .to_h
-      .transform_values { |speed| (speed[:amount] / speed[:days].to_f).to_i }
-      .transform_keys(&:truncate)
+        .to_h
+        .transform_values(&:to_i)
 
     stats[:top_annotated] =
       items
-      .map { |item|
-        notes_word_count = item
-          .notes
-          .sum { |note|
-            note.content.scan(/[\w-]+/).size
-          }
+        .map { |item|
+          notes_word_count = item
+            .notes
+            .sum { |note|
+              note.content.scan(/[\w-]+/).size
+            }
 
-        [item, notes_word_count]
-      }
-      .max_by(10, &:last)
-      .to_h
-      .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
-      .transform_keys(&:truncate)
+          [item, notes_word_count]
+        }
+        .max_by(10, &:last)
+        .to_h
+        .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
+        .transform_keys(&:truncate)
+
+    stats[:top_speeds] =
+      Reading.stats(input: "top 10 speeds", items:)
+        .to_h
+        .transform_values { |speed| (speed[:amount] / speed[:days].to_f).to_i }
+        .transform_keys(&:truncate)
 
     stats
   end
@@ -194,16 +186,17 @@ class Builders::LoadReadingList < SiteBuilder
       item.send(attribute).presence
     }.compact
 
-    if sort_by == :frequency
-      all = all
-        .group_by(&:itself)
-        .sort_by { |value, duplicates| duplicates.count }
-        .reverse
-        .to_h
-        .keys
-    else
-      all = all.uniq
-    end
+    all =
+      if sort_by == :frequency
+        all
+          .group_by(&:itself)
+          .sort_by { |value, duplicates| duplicates.count }
+          .reverse
+          .to_h
+          .keys
+      else
+        all.uniq
+      end
 
     if sort_by == :value
       all = all.sort

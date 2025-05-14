@@ -12,7 +12,6 @@ This page is updated automatically with the help of my [Reading](https://github.
 
 - [Favorite genres](#favorite-genres)
 - [Genres by year](#genres-by-year)
-- [What I feel about each genre](#what-i-feel-about-each-genre)
 - [Rating distribution](#rating-distribution)
 - [Most re-reads](#most-re-reads)
 - [Longest items](#longest-items)
@@ -34,12 +33,6 @@ Total pages read of 4- and 5-star items, of genres with over 1000 pages.
 Total pages read of each year's top 4 and other genres.
 
 <%= column_chart(stats[:genres_by_year].map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }, id: "chart-most-read-genres", stacked: true, library: { plugins: { tooltip: { mode: "point" } } }, height: "600px") %>
-
-## What I feel about each genre
-
-Average rating by genre.
-
-<%= bar_chart(stats[:average_rating_by_genre], id: "chart-rating-by-genre", height: "700px", min: 1.0, max: 5.0) %>
 
 ## Rating distribution
 
