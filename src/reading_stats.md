@@ -56,7 +56,7 @@ For podcasts and other items of undefined length, I count the amount that I've c
 
 Word count of notes.
 
-<%= bar_chart(stats[:top_annotated], id: "chart-most-annotated" ) %>
+<%= bar_chart(stats[:top_notes], id: "chart-most-annotated" ) %>
 
 ## Fastest reads
 

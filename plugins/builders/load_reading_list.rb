@@ -1,24 +1,8 @@
 require "reading"
 require "dropbox_api"
 require "debug"
-# Shortens the String to a given length.
-module StringTruncate
-  refine String do
-    # @param length [Integer]
-    # @return [String]
-    def truncate(length: 45)
-      if length < self.length - 1
-        "#{self[0...length]}…"
-      else
-        self
-      end
-    end
-  end
-end
 
 class Builders::LoadReadingList < SiteBuilder
-  using StringTruncate
-
   def build
     hook :site, :post_read do |site|
       generator do
@@ -132,48 +116,20 @@ class Builders::LoadReadingList < SiteBuilder
       Reading.stats(input: "total items by rating", items:)
 
     stats[:top_experiences] =
-      items
-        .select(&:rating)
-        .map { |item|
-          experience_count = item
-            .experiences
-            .count { |experience|
-              experience.spans.all? { _1.progress.to_d == "1.0".to_d }
-            }
-
-          [item, [experience_count, item.rating]]
-        }
-        .max_by(10, &:last)
-        .to_h
-        .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
-        .transform_keys(&:truncate)
+      Reading.stats(input: "top 10 experiences", items:)
 
     stats[:top_lengths] =
       Reading.stats(input: "top 10 lengths status=done progress=100%", items:)
         .to_h
         .transform_values(&:to_i)
 
-    stats[:top_annotated] =
-      items
-        .map { |item|
-          notes_word_count = item
-            .notes
-            .sum { |note|
-              note.content.scan(/[\w-]+/).size
-            }
-
-          [item, notes_word_count]
-        }
-        .max_by(10, &:last)
-        .to_h
-        .transform_keys { |item| "#{item.author + " – " if item.author}#{item.title}" }
-        .transform_keys(&:truncate)
+    stats[:top_notes] =
+      Reading.stats(input: "top 10 notes", items:)
 
     stats[:top_speeds] =
       Reading.stats(input: "top 10 speeds", items:)
         .to_h
         .transform_values { |speed| (speed[:amount] / speed[:days].to_f).to_i }
-        .transform_keys(&:truncate)
 
     stats
   end

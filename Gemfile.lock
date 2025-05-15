@@ -1,10 +1,10 @@
 GIT
   remote: https://github.com/fpsvogel/reading.git
-  revision: 52ada827c7f99d4eafb5f60f3155298179bae2f2
+  revision: 49dd6566702e06f6ac3af726b9747f0e64861e46
   branch: main
   specs:
-    reading (0.9.1)
-      amazing_print (~> 1.4)
+    reading (1.0.0)
+      amazing_print (~> 1.0)
       pastel (~> 0.8)
 
 GEM
