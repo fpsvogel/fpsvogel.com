@@ -21,7 +21,7 @@ Here's how I recently got started contributing to open-source Ruby projects. I'm
 If you want to widen your search, see:
 
 - [A list of open-source Rails codebases](https://github.com/fpsvogel/learn-ruby#rails-codebases-to-study) that I've compiled.
-- [CodeTriage - Ruby](https://www.codetriage.com/?language=Ruby)
+- [CodeTriage – Ruby](https://www.codetriage.com/?language=Ruby)
 - [Awesome Ruby and Rails Open Source applications](https://github.com/asyraffff/Open-Source-Ruby-and-Rails-Apps)
 - [First Timers Only](https://www.firsttimersonly.com/)
 

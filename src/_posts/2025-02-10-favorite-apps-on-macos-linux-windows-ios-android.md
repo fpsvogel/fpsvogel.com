@@ -152,7 +152,7 @@ Also, for better text editing shortcuts, I edited `~/Library/KeyBindings/Default
 
 ### iOS
 
-- [Yomu](https://www.yomu-reader.com) for ebooks
+- [Yomu](https://www.yomu-reader.com) and [PDF Viewer](https://pdfviewer.io/) for ebooks
 - [BookPlayer](https://apps.apple.com/us/app/bookplayer/id1138219998) for audiobooks
 - [foobar2000](https://apps.apple.com/us/app/foobar2000/id1072807669) for my local music library. I last used foobar2000 about 20 years ago in Windows, so it's funny to run across it again in iOS.
 
