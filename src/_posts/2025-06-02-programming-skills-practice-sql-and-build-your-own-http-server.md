@@ -25,6 +25,8 @@ That's what I've done over the past two or three years. I spent most of my outsi
 
 What to work on next? I'm not sure. I'm **stumped**. Even to the point that I wondered what it would be like to learn one of the "boring" languages. I listed out learning resources [for C#](https://github.com/fpsvogel/learn-csharp) and [for Java](https://github.com/fpsvogel/learn-java). I'm not sure I'll go ahead with either of those.
 
+<small><em>Disclaimer to prevent angry emails from C# and Java developers: there are some very intriguing things about both languages, like concurrency. The other day I went down a rabbit hole comparing C#'s stackless coroutines (async/await) to Java's stackful coroutines (Virtual Threads). C# [might even evolve](https://www.reddit.com/r/csharp/comments/1krsr78/async2_runtimeasync_and_implicit_asyncawait/) to the point of its stackless coroutines not needing async/await written out 😲 And of course, either is great for high performance while being memory-safe and garbage-collected, without having to write Go. \*Ducks away from Go afficionados.\*</em></small>
+
 There is one language I definitely do want to spend time on: [Roc](https://www.roc-lang.org), a functional language without [the baggage of Haskell](https://fpsvogel.com/posts/2024/rubyist-learns-haskell-3-quitting-haskell-discovering-roc). But Roc is at pre-0.1 (only nightly builds) and I'm waiting until it stabilizes somewhat.
 
 Why look to another language? There's a ton of fun stuff I could do in Ruby:
