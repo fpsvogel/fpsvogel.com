@@ -12,6 +12,14 @@ nav-social-link {
   display: inline;
 }
 
+a tooltip {
+  display: none;
+}
+
+a:hover tooltip {
+  display: inline;
+}
+
 body {
   font-size: var(--font-size);
 }

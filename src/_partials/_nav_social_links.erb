@@ -1,9 +1,16 @@
 <li class="nav-social-links" >
-  <% links.each.with_index do |(name, url), i| %>
+  <% links.each do |name, url| %>
     <nav-social-link>
-      <a href="<%= url %>" rel="me" title="<%= name %>">
-        <%= svg "/images/theme/#{name.downcase.gsub(" ", "-")}.svg" %>
-      </a>
+      <% if name.downcase == "email" %>
+        <a title="<%= name %>">
+          <%= svg "/images/theme/#{name.downcase.gsub(" ", "-")}.svg" %>
+          <tooltip><%= url %></tooltip>
+        </a>
+      <% else %>
+        <a href="<%= url %>" rel="me" title="<%= name %>">
+          <%= svg "/images/theme/#{name.downcase.gsub(" ", "-")}.svg" %>
+        </a>
+      <% end %>
     </nav-social-link>
   <% end %>
 </li>
