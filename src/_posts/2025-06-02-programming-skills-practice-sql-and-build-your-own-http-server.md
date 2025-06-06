@@ -38,8 +38,6 @@ Why look to another language? There's a ton of fun stuff I could do in Ruby:
 - 📃 Continue making [a text-based game](https://fpsvogel.com/posts/2023/ruby-text-based-game-real-time-input) that I started a while back.
 - 🎵 Make music with [Sonic Pi](https://sonic-pi.net/).
 - 🎄 Do Advent of Code from previous years. I made [a gem](https://github.com/fpsvogel/advent_of_ruby) for that, after all.
-- ⛳ [Code golf.](https://github.com/fpsvogel/learn-ruby/tree/61c82a919e995e4f1e24a9b91926cf29a4fdb8a5#user-content-code-golf)
-- 🏋️ Do [coding exercises](https://github.com/fpsvogel/learn-ruby/tree/61c82a919e995e4f1e24a9b91926cf29a4fdb8a5#user-content-coding-exercises), mainly from competitive programming.
 
 But, I don't know… right now I'm craving more structure and a sense of progression.
 
