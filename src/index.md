@@ -37,7 +37,6 @@ I'm Felipe Vogel, full-stack developer, Rubyist, compulsive learner.
 - https://github.com/fpsvogel/learn-java
 - https://github.com/fpsvogel/learn-roc
 - https://github.com/fpsvogel/words
-- https://github.com/fpsvogel/coding-exercises
 %>
 
 <ul class="posts-ul">
