@@ -6,7 +6,7 @@ class Builders::LoadReadingList < SiteBuilder
   def build
     hook :site, :post_read do |site|
       generator do
-        local_filepath = config.reading.local_filepaths.find { File.exist? _1 }
+        local_filepath = config.reading.local_filepaths.find { File.exist? it }
 
         if local_filepath.nil? && !dropbox_access?
           site.data.reading_stats = {}
@@ -110,7 +110,7 @@ class Builders::LoadReadingList < SiteBuilder
         .delete_if { |year, _genre_counts| year < 2017 }
         .flat_map { |year, genre_counts| genre_counts.map { |genre, count| [genre, [year, count]] } }
         .group_by(&:first)
-        .transform_values { _1.map(&:last).to_h }
+        .transform_values { it.map(&:last).to_h }
 
     stats[:rating_counts] =
       Reading.stats(input: "total items by rating", items:)

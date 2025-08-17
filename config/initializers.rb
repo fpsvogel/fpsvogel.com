@@ -5,5 +5,5 @@ Bridgetown.configure do |config|
   init :"bridgetown-feed"
   init :"bridgetown-svg-inliner"
   init :"bridgetown-sitemap"
-  init :"rinku"
+  init :rinku
 end
