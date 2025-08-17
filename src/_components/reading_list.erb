@@ -154,7 +154,7 @@
         <rl-info-line>
           <% if item.blurb %>
             <rl-blurb <%= "class=truncated" if blurb_truncated %>>
-              <%=raw Rinku.auto_link(item.blurb) %>
+              <%= raw autolinked_note(item.blurb) %>
             </rl-blurb>
           <% end %>
 
@@ -162,7 +162,7 @@
             <rl-notes>
               <h4>NOTES:</h4>
               <% item.public_notes&.each do |note| %>
-                <p><%=raw Rinku.auto_link(note) %></p>
+                <p><%= raw autolinked_note(note) %></p>
               <% end %>
             </rl-notes>
           <% end %>

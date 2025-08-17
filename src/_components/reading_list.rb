@@ -6,4 +6,12 @@ class ReadingList < Bridgetown::Component
     @ratings = @site.data.reading_ratings
     @config = @site.config.reading
   end
+
+  def autolinked_note(note)
+    Sanitize.fragment(
+      Rinku.auto_link(ERB::Util.html_escape(note)),
+      elements: ["a"],
+      attributes: {"a" => ["href"]}
+    )
+  end
 end
