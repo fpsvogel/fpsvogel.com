@@ -2,18 +2,21 @@
 title: How I use MacOS, Linux, Windows, iOS, Android
 subtitle: my favorite apps and extensions
 description: My favorite apps across operating systems; or, how I use a MacBook, PC, iPhone, and Samsung Galaxy similarly, including keyboard shortcuts and navigability.
+updated: 2025-09-02
 ---
 
 - [Prelude: peripherals](#prelude-peripherals)
+- [Mouse customization](#mouse-customization)
+- [Keyboard shortcuts](#keyboard-shortcuts)
 - [Shell](#shell)
+- [Window switcher](#window-switcher)
+- [Clipboard manager](#clipboard-manager)
+- [Text expander](#text-expander)
 - [Code and text editor](#code-and-text-editor)
 - [Notes](#notes)
 - [Web browser](#web-browser)
 - [Password manager](#password-manager)
-- [Window switcher](#window-switcher)
-- [Clipboard manager](#clipboard-manager)
-- [Text expander](#text-expander)
-- [Keyboard shortcuts](#keyboard-shortcuts)
+- [Screen capture](#screen-capture)
 - [Mobile apps](#mobile-apps)
   - [Cross-platform](#cross-platform)
   - [iOS](#ios)
@@ -48,15 +51,82 @@ Before we get to the software, here are my most important peripherals:
 - I also use a standing desk, actually just a riser that sits on top of a normal desk. Mainly because I have restless leg syndrome, but it actually does alleviate strain on my wrists as well.
 - I use a 24-inch monitor—only one, because I prefer quickly switching between windows (see [window switcher](#window-switcher) below) instead of managing multiple monitors or even the two sides of a larger/ultra-wide monitor.
 
+## Mouse customization
+
+I like to speed up pointer and scroll speeds beyond what system preferences typically allow, using these tools:
+
+**MacOS:** [SteerMouse](https://plentycom.jp/en/steermouse/)
+
+**Linux:** dotfile scripts ([1](https://github.com/fpsvogel/dotfiles-linux/blob/a7411323920928b2e62a9ecef0743a3de6bb6dc5/profile/increase_pointer_speed), [2](https://github.com/fpsvogel/dotfiles-linux/blob/a7411323920928b2e62a9ecef0743a3de6bb6dc5/profile/increase_scroll_speed))
+
+**Windows:** none, because system preferences actually allowed fast enough speeds.
+
+## Keyboard shortcuts
+
+**MacOS:**
+
+[BetterTouchTool](https://folivora.ai/) is the easiest way I've found to remove the plethora of otherwise uneditable MacOS keyboard shortcuts that I don't care about, and replace them with more useful shortcuts.
+
+[Shortcat](https://shortcat.app/) allows keyboard-only UI navigation, like Vimium does in the browser ([see below](#web-browser)).
+
+Also, for better text editing shortcuts, I edited `~/Library/KeyBindings/DefaultKeyBinding.Dict` to consist of the snippet below. In case you're wondering, [here's a full list](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding) of possible commands, [here's more documentation](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html), and [here are a bunch of examples](https://github.com/ttscoff/KeyBindings).
+
+```
+{
+"\UF729"  = "moveToBeginningOfLine:"; // home
+"\UF72B"  = "moveToEndOfLine:"; // end
+"$\UF729" = "moveToBeginningOfLineAndModifySelection:"; // shift home
+"$\UF72B" = "moveToEndOfLineAndModifySelection:"; // shift end
+"@\UF729" = "moveToBeginningOfDocument:"; // cmd home
+"@\UF72B" = "moveToEndOfDocument:"; // cmd end
+"@$\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; // cmd shift home
+"@$\UF72B" = "moveToEndOfDocumentAndModifySelection:"; // cmd shift end
+
+"@\UF702" = "moveWordBackward:"; // cmd left
+"@\UF703" = "moveWordForward:"; // cmd right
+"@$\UF702" = "moveWordBackwardAndModifySelection:"; // cmd shift left
+"@$\UF703" = "moveWordForwardAndModifySelection:"; // cmd shift right
+
+"@\177" = "deleteWordBackward:"; // cmd backspace
+"@\UF728" = "deleteWordForward:"; // cmd delete
+}
+```
+
+**Linux:**
+
+I didn't feel the need for an extra tool, thanks to the extensive keyboard settings in system preferences.
+
+**Windows:**
+
+[AutoHotkey](https://www.autohotkey.com/) for keyboard shortcuts to launch apps, and pretty much anything else you can think of. AutoHotkey is the one thing from Windows that I miss in MacOS and Linux.
+
 ## Shell
 
-[Fish](https://fishshell.com) with [lots of aliases](https://github.com/fpsvogel/fish-config/blob/main/alias), mostly for Git
+[Fish](https://fishshell.com) with [lots of aliases](https://github.com/fpsvogel/fish-config/blob/main/alias), mostly for Git.
 
 Also:
 
 *Windows:* [WSL (Windows Subsystem for Linux)](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 *MacOS:* [iTerm2](https://iterm2.com)
+
+## Window switcher
+
+*MacOS:* [AltTab](https://alt-tab-macos.netlify.app)
+
+*Linux/Windows:* built in
+
+## Clipboard manager
+
+*MacOS:* [PasteBot](https://tapbots.com/pastebot)
+
+*Linux:* [Parcellite](https://github.com/rickyrockrat/parcellite)
+
+*Windows:* [Ditto](https://ditto-cp.sourceforge.io)
+
+## Text expander
+
+[Espanso](https://espanso.org). I use it for links, code snippets, emojis, and shell command "templates" that I often edit or fill in before entering.
 
 ## Code and text editor
 
@@ -85,58 +155,13 @@ For better readability and organization of notes, I use [my own markup language 
 
 ## Password manager
 
-[Bitwarden](https://bitwarden.com) browser extension and mobile app
+[Bitwarden](https://bitwarden.com) browser extension and mobile app.
 
-## Window switcher
+## Screen capture
 
-*MacOS:* [AltTab](https://alt-tab-macos.netlify.app)
+**MacOS:** [Zappy](https://zapier.com/zappy) for screenshots and recordings. It produces large video files, so I use [Handbrake](https://handbrake.fr/) to compress them.
 
-*Linux/Windows:* built in
-
-## Clipboard manager
-
-*MacOS:* [PasteBot](https://tapbots.com/pastebot)
-
-*Linux:* [Parcellite](https://github.com/rickyrockrat/parcellite)
-
-*Windows:* [Ditto](https://ditto-cp.sourceforge.io)
-
-## Text expander
-
-[Espanso](https://espanso.org). I use it for links, code snippets, emojis, and shell command "templates" that I often edit or fill in before entering.
-
-## Keyboard shortcuts
-
-**MacOS:**
-
-[BetterTouchTool](https://folivora.ai/) is the easiest way I've found to remove the plethora of otherwise uneditable MacOS keyboard shortcuts that I don't care about, and replace them with more useful shortcuts.
-
-Also, for better text editing shortcuts, I edited `~/Library/KeyBindings/DefaultKeyBinding.Dict` to consist of the snippet below. In case you're wondering, [here's a full list](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding) of possible commands, [here's more documentation](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html), and [here are a bunch of examples](https://github.com/ttscoff/KeyBindings).
-
-```
-{
-"\UF729"  = "moveToBeginningOfLine:"; // home
-"\UF72B"  = "moveToEndOfLine:"; // end
-"$\UF729" = "moveToBeginningOfLineAndModifySelection:"; // shift home
-"$\UF72B" = "moveToEndOfLineAndModifySelection:"; // shift end
-"@\UF729" = "moveToBeginningOfDocument:"; // cmd home
-"@\UF72B" = "moveToEndOfDocument:"; // cmd end
-"@$\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; // cmd shift home
-"@$\UF72B" = "moveToEndOfDocumentAndModifySelection:"; // cmd shift end
-
-"@\UF702" = "moveWordBackward:"; // cmd left
-"@\UF703" = "moveWordForward:"; // cmd right
-"@$\UF702" = "moveWordBackwardAndModifySelection:"; // cmd shift left
-"@$\UF703" = "moveWordForwardAndModifySelection:"; // cmd shift right
-
-"@\177" = "deleteWordBackward:"; // cmd backspace
-"@\UF728" = "deleteWordForward:"; // cmd delete
-}
-```
-
-**Linux:** I didn't feel the need for an extra tool, thanks to the extensive keyboard settings in system preferences.
-
-**Windows:** [AutoHotkey](https://www.autohotkey.com/) for keyboard shortcuts to launch apps, and pretty much anything else you can think of. AutoHotkey is the one thing from Windows that I miss in MacOS and Linux.
+**Linux and Windows:** I don't recall finding a tool that I like as much as Zappy.
 
 ## Mobile apps
 
