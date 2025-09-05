@@ -5,6 +5,7 @@
 [build.environment]
   NODE_ENV = "development"
   BRIDGETOWN_ENV = "production"
+  NODE_VERSION = "22.19.0"
 
 [build.processing]
   skip_processing = false
