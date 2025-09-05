@@ -27,6 +27,7 @@ I'm Felipe Vogel, full-stack developer, Rubyist, compulsive learner.
 <% lists = [
   ["Learn Ruby", "https://github.com/fpsvogel/learn-ruby", "and other stuff like SQL, Rails, CSS, and JS"],
   ["Books that I've enjoyed", "/reading"],
+  ["MacOS/Linux/Windows apps and customizations that I use", "/posts/2025/favorite-apps-on-macos-linux-windows-ios-android"],
   ["Learn Computer Science and Low-Level Programming", "https://github.com/fpsvogel/learn-cs"],
   ["Learn Latin and Greek", "https://github.com/fpsvogel/learn-latin-and-greek"],
   ["Solo TTRPGs", "https://github.com/fpsvogel/solo-ttrpgs", "Table-Top Role-Playing Games"],

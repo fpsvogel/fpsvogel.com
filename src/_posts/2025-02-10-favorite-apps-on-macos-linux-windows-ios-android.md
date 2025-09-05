@@ -69,28 +69,7 @@ I like to speed up pointer and scroll speeds beyond what system preferences typi
 
 [Shortcat](https://shortcat.app/) allows keyboard-only UI navigation, like Vimium does in the browser ([see below](#web-browser)).
 
-Also, for better text editing shortcuts, I edited `~/Library/KeyBindings/DefaultKeyBinding.Dict` to consist of the snippet below. In case you're wondering, [here's a full list](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding) of possible commands, [here's more documentation](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html), and [here are a bunch of examples](https://github.com/ttscoff/KeyBindings).
-
-```
-{
-"\UF729"  = "moveToBeginningOfLine:"; // home
-"\UF72B"  = "moveToEndOfLine:"; // end
-"$\UF729" = "moveToBeginningOfLineAndModifySelection:"; // shift home
-"$\UF72B" = "moveToEndOfLineAndModifySelection:"; // shift end
-"@\UF729" = "moveToBeginningOfDocument:"; // cmd home
-"@\UF72B" = "moveToEndOfDocument:"; // cmd end
-"@$\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; // cmd shift home
-"@$\UF72B" = "moveToEndOfDocumentAndModifySelection:"; // cmd shift end
-
-"@\UF702" = "moveWordBackward:"; // cmd left
-"@\UF703" = "moveWordForward:"; // cmd right
-"@$\UF702" = "moveWordBackwardAndModifySelection:"; // cmd shift left
-"@$\UF703" = "moveWordForwardAndModifySelection:"; // cmd shift right
-
-"@\177" = "deleteWordBackward:"; // cmd backspace
-"@\UF728" = "deleteWordForward:"; // cmd delete
-}
-```
+For more PC-like text editing shortcuts, I edited `~/Library/KeyBindings/DefaultKeyBinding.Dict` with the contents of [this gist](https://gist.github.com/fpsvogel/2d8e6695db065e84915451030ec1cbf2).
 
 **Linux:**
 
