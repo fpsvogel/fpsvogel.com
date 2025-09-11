@@ -3,7 +3,7 @@
 @import "monokai-fpsvogel-edits.css";
 @import "reading-list.css";
 
-// CUSTOM ELEMENTS
+/* CUSTOM ELEMENTS */
 post-footer {
   display: block;
 }
@@ -82,7 +82,7 @@ nav ul, .pagination-ul, footer, label[for=toc] {
   user-select: none; /* Standard */
 }
 
-// "recents" lists on homepage
+/* "recents" lists on homepage */
 h3[id^="what-ive-been"] {
   margin-bottom: 0;
   & + p {
@@ -118,14 +118,14 @@ a:not([href]):not(.dynamic) {
 }
 
 .highlighted {
-  // partial border, see https://stackoverflow.com/a/48103289/4158773
+  /* partial border, see https://stackoverflow.com/a/48103289/4158773 */
   background: linear-gradient(to right, transparent 10%, var(--link-color) 10%, var(--link-color) 95%, transparent 95%) 0 100% / 100% 2px no-repeat, transparent;
 }
 
 nav ul {
   display: flex;
   flex-wrap: wrap;
-  // margin-top to items only when they're wrapped, see https://stackoverflow.com/a/30891910/4158773
+  /* margin-top to items only when they're wrapped, see https://stackoverflow.com/a/30891910/4158773 */
   margin-top: -.5rem !important;
   padding-top: .5rem !important;
 }
