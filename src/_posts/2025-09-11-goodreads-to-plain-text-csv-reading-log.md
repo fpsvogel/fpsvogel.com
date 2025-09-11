@@ -1,6 +1,6 @@
 ---
 title: Making myself a reading log
-subtitle: a retrospective
+subtitle: plain text supercharged
 description: How I quit Goodreads, tracked my reading in a plain text file, made a Ruby gem to parse and query it, and learned how to be a better reader along the way.
 ---
 
@@ -29,7 +29,7 @@ So I quit Goodreads and switched to an offline reading log. Just a plain text fi
 4|🔊The Jedi Doth Return -- William Shakespeare's Star Wars, #6|2020/2/1|2020/2/10
 ```
 
-Or, viewed with the [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) extension for VS Code:
+I could edit it on my phone (synced to Dropbox) but it looked best in VS Code with the [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) extension:
 
 ![a simple reading log viewed with the Rainbow CSV extension for VS Code](/images/reading-log-simple.png)
 
