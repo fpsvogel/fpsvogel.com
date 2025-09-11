@@ -162,8 +162,6 @@ For better readability and organization of notes, I use [my own markup language 
 
 ### Android
 
-- [Nova Launcher](https://novalauncher.com) for a better home screen
 - [Moon+ Reader Pro](https://play.google.com/store/apps/details?id=com.flyersoft.moonreaderp) for ebooks
 - [Smart Audiobook Player](https://play.google.com/store/apps/details?id=ak.alizandro.smartaudiobookplayer)
 - [mMusic Mini Audio Player](https://play.google.com/store/apps/details?id=mindmine.music.mini) for my local music library
-- [Simple Text](https://play.google.com/store/apps/details?id=simple.text.dropbox) is better than Dropbox for text editing

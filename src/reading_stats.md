@@ -6,7 +6,7 @@ permalink: /reading-stats/
 
 [List](/reading) \| **Statistics**
 
-This page is updated automatically with the help of my [Reading](https://github.com/fpsvogel/reading) gem, which parses my `reading.csv` file and queries it for statistics.
+This page is updated automatically with the help of my [Reading](https://github.com/fpsvogel/reading) gem, which parses my plain-text reading log and queries it for statistics.
 
 **Contents:**
 
