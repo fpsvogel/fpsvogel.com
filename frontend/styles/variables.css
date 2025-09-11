@@ -1,7 +1,7 @@
-// html: so that !important is not needed to override variables set by holiday.css,
-// and so that this can override any :root defaults set in imported stylesheets.
+/* html: so that !important is not needed to override variables set by holiday.css,
+   and so that this can override any :root defaults set in imported stylesheets. */
 html:root {
-  --max-body-width: 40rem;// !important;
+  --max-body-width: 40rem;
   --font-size: 0.98rem;
   --nav-font-size: 107%;
   --nav-svg-size: 1.5rem;
@@ -10,28 +10,37 @@ html:root {
   --posts-ul-li-margin-bottom: -0.75rem;
   --main-and-nav-font: "Open Sans";
   --mono-font: "Inconsolata";
-  --link-color: #ffc645;// !important; // was #ffc033
-  --link-visited-color: #ffc645;// !important;
-  --link-hover-color: #fff;// !important;
-  --text-color: #d4d4d4;// !important;  // was dbdbdb
+  --link-color: #ffc645;
+  --link-visited-color: #ffc645;
+  --link-hover-color: #fff;
+  --text-color: #d4d4d4;
   --text-color-less-contrast: #bbb;
   --text-color-more-contrast: #e3e3e3;
-  // --code-background-color: #292b2e;// !important;
-  --code-text-color: #63b9ff;// !important;
+  --code-text-color: #63b9ff;
   --bg-dark-color: #17171a;
+}
+
+@media screen and (max-width: 600px) {
+  html:root {
+    --font-size: 1.1rem;
+    --nav-font-size: 110%;
+    --nav-svg-size: 1.75rem;
+    --main-line-height: 1.65;
+    --posts-ul-li-margin-bottom: -0.5rem;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   html:root {
     --background-color: #f3f0e9;
-    --link-color: #c94f4f;// !important;
-    --link-visited-color: #c94f4f;// !important;
-    --link-hover-color: #212121;// !important;
-    --text-color: #363636;// !important;
+    --link-color: #c94f4f;
+    --link-visited-color: #c94f4f;
+    --link-hover-color: #212121;
+    --text-color: #363636;
     --text-color-less-contrast: #595959;
     --text-color-more-contrast: #363636;
-    --code-text-color: #29a0ff;// !important;
-    --code-background-color: var(--highlighted-background-color); // !important;
+    --code-text-color: #29a0ff;
+    --code-background-color: var(--highlighted-background-color);
     --bg-dark-color: #e6e6e6;
   }
 }

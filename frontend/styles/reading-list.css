@@ -88,7 +88,7 @@ label[for^="toggle-all-filter-"] {
   color: #c94040;
 }
 
-// fix checkbox alignment with label.
+/* fix checkbox alignment with label. */
 [type="checkbox"] + label, [type="radio"] + label {
   vertical-align: baseline !important;
 }
@@ -100,7 +100,7 @@ rl-key, rl-filters, rl-name-and-tags {
   user-select: none; /* Standard */
 }
 
-// restore to selectable for an item's name (author and title).
+/* restore to selectable for an item's name (author and title). */
 rl-name {
   -webkit-user-select: text; /* Safari */
   -moz-user-select: text; /* Firefox */
@@ -164,7 +164,7 @@ rl-table {
     padding-left: var(--name-padding-left);
   }
   & rl-name {
-    // font-weight: bold;
+    /* font-weight: bold; */
     margin-right: .3vw;
   }
   & rl-date {
