@@ -1,11 +1,13 @@
 // html: so that !important is not needed to override variables set by holiday.css,
 // and so that this can override any :root defaults set in imported stylesheets.
 html:root {
-  --max-body-width: 44rem;// !important;
-  --font-size: 1.1rem;
-  --nav-font-size: 110%;
+  --max-body-width: 40rem;// !important;
+  --font-size: 0.98rem;
+  --nav-font-size: 107%;
+  --nav-svg-size: 1.5rem;
   --main-font-size: 100%;
-  --main-line-height: 1.65;
+  --main-line-height: 1.6;
+  --posts-ul-li-margin-bottom: -0.75rem;
   --main-and-nav-font: "Open Sans";
   --mono-font: "Inconsolata";
   --link-color: #ffc645;// !important; // was #ffc033
