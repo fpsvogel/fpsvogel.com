@@ -98,13 +98,6 @@ h3[id^="what-ive-been"] {
   color: var(--text-color-more-contrast);
 }
 
-a:not([href]):not(.dynamic) {
-  color: var(--text-color);
-  &:hover {
-    color: var(--text-color);
-  }
-}
-
 .dynamic {
   cursor: pointer;
 }
@@ -199,12 +192,6 @@ nav li > nav-social-link::after {
   & fancy-li-title {
     text-decoration: underline;
     color: var(--link-color);
-  }
-
-  &:hover {
-    & fancy-li-title, fancy-li-subtitle, fancy-li-date {
-      color: var(--link-hover-color);
-    }
   }
 
   &:not(fancy-li-title) {
@@ -371,6 +358,13 @@ news-feed {
   .posts-ul {
     padding-left: revert;
     list-style-type: circle;
+    & a {
+      &:hover {
+        & fancy-li-title, fancy-li-subtitle, fancy-li-date {
+          color: var(--link-hover-color);
+        }
+      }
+    }
     & li:hover {
       list-style-type: disc;
     }
