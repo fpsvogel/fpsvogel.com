@@ -158,8 +158,8 @@ nav .current-section {
 
 nav svg {
   vertical-align: middle;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: var(--nav-svg-size);
+  height: var(--nav-svg-size);
 }
 
 .nav-social-links {
@@ -226,7 +226,7 @@ nav li > nav-social-link::after {
 }
 
 .posts-ul li * {
-  margin-bottom: -0.5rem;
+  margin-bottom: var(--posts-ul-li-margin-bottom);
 }
 
 .pagination-ul {
