@@ -22,9 +22,11 @@ description: An exploration of the many kinds of coding challenges, from LeetCod
 
 To many developers, "coding challenge" evokes technical interview trauma.
 
-But there are many kinds of coding challenges, not all of them dehumanizing. I've been making a list of of them over the past few years as I ran into new ones by happenstance, and I thought it would be fun to categorize them.
+But there are many kinds of coding challenges, not all of them dehumanizing. I've been making a list of of them over the past few years, which I thought would be worth sharing.
 
 Language-specific examples are mostly for Ruby, JavaScript, and TypeScript, since those are what I'm most familiar with.
+
+[Skip below](#are-coding-challenges-worthwhile) if you want to see my take on whether coding challenges are a worthy time investment.
 
 ## Some types of coding challenges
 
@@ -54,13 +56,13 @@ For LeetCode in particular, there are [many guides and problem sets](https://git
 
 For example:
 
-- **Ruby:**
+- Ruby:
   - [Ruby Koans](https://koans.idogawa.com/)
   - [Ruby coding challenges](https://github.com/Arrowsome/ruby-coding-challenges)
-- **TypeScript:**
+- TypeScript:
   - [Type Challenges](https://tsch.js.org/)
   - [TypeHero](https://typehero.dev/)
-  - Type | Treat ([2020](https://dev.to/typescript/type-treat-challenge-1-829), [2021](https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/))
+  - Type \| Treat ([2020](https://dev.to/typescript/type-treat-challenge-1-829), [2021](https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/))
 
 ### Engineering-oriented challenges
 
@@ -69,12 +71,12 @@ For example:
 
 ### "Build your own X"
 
-- **Online:**
+- Online:
   - [Coding Challenges](https://codingchallenges.fyi)
   - [Build your own X](https://github.com/codecrafters-io/build-your-own-x)
   - [Projectbook](https://projectbook.code.brettchalupa.com)
   - [Project-based learning](https://github.com/practical-tutorials/project-based-learning#ruby)
-- **Books:**
+- Books:
   - [Build Your Own X From Scratch](https://build-your-own.org/) series
   - [Build a Database Server](https://technicaldeft.com/build-a-database-server)
   - [Rebuilding HTTP](https://noahgibbs.gumroad.com/l/rebuilding_http)
@@ -82,7 +84,7 @@ For example:
 
 ### Competitive programming
 
-Some good beginner guides are on Reddit: [1](https://www.reddit.com/r/csMajors/comments/z4qjzx/a_guide_to_competitive_programming/), [2](https://www.reddit.com/r/Btechtards/comments/1dv6ttx/competitive_programming_resources_that_i_found/)
+Some good beginner guides on Reddit: [1](https://www.reddit.com/r/csMajors/comments/z4qjzx/a_guide_to_competitive_programming/), [2](https://www.reddit.com/r/Btechtards/comments/1dv6ttx/competitive_programming_resources_that_i_found/)
 
 ### Code golf
 
@@ -92,7 +94,7 @@ Some good beginner guides are on Reddit: [1](https://www.reddit.com/r/csMajors/c
 
 ### Kata
 
-Code kata are not as popular as they once were, but they still may be worth checking out.
+Not as popular as they once were, but still may be worth checking out.
 
 - [Awesome Katas](https://github.com/gamontal/awesome-katas)
 - [Emily Bache's repos](https://github.com/emilybache/)
@@ -104,22 +106,22 @@ Code kata are not as popular as they once were, but they still may be worth chec
 
 ### Programming games
 
-- **Language-agnostic:**
+- Language-agnostic:
   - [Battlesnake](https://play.battlesnake.com/)
   - [SpaceTraders](https://spacetraders.io/)
   - [Artifacts](https://artifactsmmo.com/)
   - [CodinGame](https://www.codingame.com)
-- **Ruby-specific:**
+- Ruby:
   - [Ruby Warrior](https://palkan.github.io/ruby-warrior/)
   - [SC2AI](https://sc2ai.pages.dev/)
-- **JS-specific:**
+- JS:
   - [Screeps](https://screeps.com/)
   - [Untrusted](https://untrustedgame.com/)
   - [BitBurner](https://bitburner-official.github.io/)
   - [Elevator Saga](https://play.elevatorsaga.com/)
-- **Own language:**
+- Own language:
   - [Swarm](https://swarm-game.github.io/)
-- **CSS games:** there are a ton of these for some reason
+- CSS games: there are a ton of these for some reason
   - [CSS Diner](https://flukeout.github.io/)
   - [CSSBattle](https://cssbattle.dev/)
   - [Flex Box Adventure](https://codingfantasy.com/games/flexboxadventure)
@@ -135,26 +137,31 @@ Code kata are not as popular as they once were, but they still may be worth chec
 In the lists above, I've intentionally omitted a few categories:
 
 - Challenges and competitions in adjacent fields like security, data, and math.
-- Game programming (e.g. [several frameworks in Ruby](https://github.com/fpsvogel/learn-ruby#beyond-web-development)) and audio/visual creative coding (e.g. [Sonic Pi](https://sonic-pi.net/) in Ruby) because they are more open-ended than anything above.
+- Game programming (e.g. [several frameworks in Ruby](https://github.com/fpsvogel/learn-ruby/tree/4523be6ebcfb9c8d57a4918baf1bf234abd91778#beyond-web-development)) and audio/visual creative coding (e.g. [Sonic Pi](https://sonic-pi.net/) in Ruby) because they are more open-ended than anything above.
 
 ## Are coding challenges worthwhile?
 
 *Not necessarily.*
 
-I have a strange fascination with coding challenges. I've spent significant time in several of the categories I outlined above, and I even created [a CLI tool for doing Advent of Code in Ruby](https://github.com/fpsvogel/advent_of_ruby).
+I have a strange fascination with coding challenges. I've spent significant time in several of the categories above, and I even created [a CLI tool for doing Advent of Code in Ruby](https://github.com/fpsvogel/advent_of_ruby).
 
-My conclusion is that coding challenges are a great way to have fun while writing code, and they're handy for practicing a new language. But if you're looking to improve yourself as a developer in a broad sense, then coding challeges probably aren't the best choice.
+My conclusion is that coding challenges are a great way to have fun while writing code, and they make sense as a supplement to more structured forms of learning.
+
+But coding challenges aren't the best choice if one or more of the following is true for you:
+
+- **Time constraints.** You have precious few hours in the week to improve yourself as a developer.
+- **Marketability concerns.** You're feeling nervous that the developer job market is extremely competitive and job security is only imagined. You want to feel like you're doing something about it.
+- **Leveling up in other ways.** You want to improve in skills that wouldn't be exercised by coding challenges. For example, I want to learn more about the internals of front-end SPA frameworks by building my own from scratch.
 
 ## If not coding challenges, then what?
 
-**Marketability** is pretty important these days, when the developer job market is extremely competitive and job security is only imagined.
+**Publicly sharing** your work as a developer is one framework you can use to approach these concerns, and it can be just as enjoyable as coding challenges. For example:
 
-To that end, **publicly sharing** your work as a developer makes you more visible and can open up job opportunities. This means:
-
-- Write blog posts (like this one!) and sharing them on social media.
-- Share shorter content: TILs, or your favorite gems/hacks/resources.
+- Write blog posts (like this one!) and share them on social media.
+- Share shorter content too: TILs, or your favorite gems/hacks/resources.
 - Contribute to open-source projects that you use.
-- Participate in [Hacktoberfest](https://hacktoberfest.com/) or [24 Pull Requests](https://24pullrequests.com/).
 - And do anything else that shows off your abilities while making a genuine contribution.
 
-Essentially, this approach combines **learning with networking**. I'll expand on this in a future post, but I'll leave you with the tidbit that **networking doesn't have to be soul-sucking** and in fact, **it can be just as enjoyable as coding challenges.**
+This way you can learn *and* network *and* do it in bite-sized chunks. Who knew networking doesn't have to mean stalking strangers on LinkedIn?
+
+More on this other in a future post, but here I mainly wanted to share my list of coding challenges for those of you who do have a spot for them in your routine.
