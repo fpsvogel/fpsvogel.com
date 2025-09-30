@@ -1,6 +1,6 @@
 ---
 title: A catalog of coding challenges
-subtitle: and what to do instead
+subtitle: and, are they even worth doing anyway?
 description: An exploration of the many kinds of coding challenges, from LeetCode to code golf, and suggestions of more valuable ways to improve yourself as a developer.
 ---
 
@@ -145,7 +145,7 @@ In the lists above, I've intentionally omitted a few categories:
 
 I have a strange fascination with coding challenges. I've spent significant time in several of the categories above, and I even created [a CLI tool for doing Advent of Code in Ruby](https://github.com/fpsvogel/advent_of_ruby).
 
-My conclusion is that coding challenges are a great way to have fun while writing code, and they make sense as a supplement to more structured forms of learning.
+My conclusion is that coding challenges are a great way to have fun while writing code, and they make sense as a supplement to more structured forms of learning. (Or in the case of LeetCode et al., they're necessary for FAANG interview prep.)
 
 But coding challenges aren't the best choice if one or more of the following is true for you:
 
