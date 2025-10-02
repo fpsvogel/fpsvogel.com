@@ -91,6 +91,7 @@ class Builders::LoadReadingList < SiteBuilder
         .reverse
         .to_h
 
+    start_year = 2017
     stats[:genres_by_year] =
       Reading.stats(input: "amount by year, genre", items:)
         .transform_values { |genre_counts|
@@ -107,10 +108,11 @@ class Builders::LoadReadingList < SiteBuilder
 
           top_4.merge("other" => other_sum)
         }
-        .delete_if { |year, _genre_counts| year < 2017 }
+        .delete_if { |year, _genre_counts| year < start_year }
         .flat_map { |year, genre_counts| genre_counts.map { |genre, count| [genre, [year, count]] } }
         .group_by(&:first)
         .transform_values { it.map(&:last).to_h }
+        .transform_values { |year_counts| (start_year..Date.today.year).map { |year| [year, year_counts[year] || 0] }.to_h }
 
     stats[:rating_counts] =
       Reading.stats(input: "total items by rating", items:)
