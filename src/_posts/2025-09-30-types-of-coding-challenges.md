@@ -112,7 +112,7 @@ Not as popular as they once were, but still may be worth checking out.
   - [Artifacts](https://artifactsmmo.com/)
   - [CodinGame](https://www.codingame.com)
 - Ruby:
-  - [Ruby Warrior](https://palkan.github.io/ruby-warrior/)
+  - [Ruby Warrior](https://github.com/ryanb/ruby-warrior) (there's also [a browser version](https://palkan.github.io/ruby-warrior/), though debugging is harder there)
   - [SC2AI](https://sc2ai.pages.dev/)
 - JS:
   - [Screeps](https://screeps.com/)
