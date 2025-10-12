@@ -57,7 +57,7 @@ At the heart of Turbo is "HTML over the wire" (for which *HOTWire* is an acronym
 
 [Unpoly](https://unpoly.com) and [HTMX](https://htmx.org) are two of the most intriguing alternatives to Turbo because they are more framework-agnostic and have a flexible, concise syntax. Turbo, on the other hand, seems easier to get started with if you're in Rubyland.
 
-Sidenote: If you're wondering why all these "HTML over the wire" tools came about and what they're pushing back against, take a look at these two comparisons of web app architecture from 2005 vs. ten years later: one from Unpoly ([2005](http://triskweline.de/unpoly-rugb/#/5)) vs. [2015](http://triskweline.de/unpoly-rugb/#/11)), and another from the developer of Turbo's predecessor Turbolinks ([2005](https://youtu.be/SWEts0rlezA?t=273) vs. [2016](https://www.youtube.com/watch?v=SWEts0rlezA&t=397s)).
+Sidenote: If you're wondering why all these "HTML over the wire" tools came about and what they're pushing back against, take a look at these two comparisons of web app architecture from 2005 vs. ten years later: one from Unpoly ([2005](http://triskweline.de/unpoly-rugb/#/5) vs. [2015](http://triskweline.de/unpoly-rugb/#/11)), and another from the developer of Turbo's predecessor Turbolinks ([2005](https://youtu.be/SWEts0rlezA?t=273) vs. [2016](https://www.youtube.com/watch?v=SWEts0rlezA&t=397s)).
 
 Besides Turbo, the other part of Hotwire is [Stimulus](https://stimulus.hotwired.dev), which typically is used for adding client-side reactivity in situations where you want to sprinkle in some JS. After all, you wouldn't want *every* user interaction to involve a round trip to the server. So why am I including only Turbo here and not Stimulus?
 

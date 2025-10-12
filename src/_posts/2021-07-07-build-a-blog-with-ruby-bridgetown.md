@@ -1,81 +1,100 @@
 ---
 title: Build a blog with Bridgetown
 subtitle: templates, components, and plugins all in Ruby
-description: How I built my blog with Bridgetown, a site generator based on Ruby, and how I made it auto-update with new data from an API, via GitHub Actions.
+description: How to build a blog with Bridgetown, a progressive site generator and full-stack framework powered by Ruby.
+updated: 2025-10-12
 ---
 
 - [1. Setup](#1-setup)
-- [2. Ruby component and plugin](#2-ruby-component-and-plugin)
-- [3. Deployment and beyond](#3-deployment-and-beyond)
-- [UPDATE: It's alive!](#update-its-alive)
+- [2. Deployment](#2-deployment)
+- [3. Ruby component and plugin for showing external data](#3-ruby-component-and-plugin-for-showing-external-data)
+- [4. Scheduled deploys to automatically sync to the external data source](#4-scheduled-deploys-to-automatically-sync-to-the-external-data-source)
 - [Conclusion](#conclusion)
 
-***UPDATE, January 2022:** Bridgetown 1.0 beta has been released! 🎉 I've updated the setup instructions below.*
+Do you ever feel like building a website with Ruby, but Rails seems like overkill?
 
-Once upon a time, in ye olden days of 2008, the world saw the release of Jekyll, the first popular static site generator. Fast forward 2+ decades, and its popularity has been eclipsed by newer JavaScript counterparts like Gatsby and Eleventy. And why not? Jekyll runs on Ruby *(boo!)* so it is unsexy and [obviously super slow](https://css-tricks.com/comparing-static-site-generator-build-times/#jekyll-the-odd-child). (Hint: in that article, read down to where the author notes, "Also surprising is that Jekyll performed faster than Eleventy for every run.")
+Enter [Bridgetown](https://www.bridgetownrb.com/). It started out as a fork of Jekyll, the granddaddy of static site generators from way back in 2008. Today, Bridgetown is much more than a static site generator, with features like [server-rendered routes](https://www.bridgetownrb.com/docs/routes), [islands architecture](https://www.bridgetownrb.com/docs/islands), and [server-rendered Lit web components](https://www.bridgetownrb.com/docs/components/lit).
 
-Sarcasm aside, Jekyll seems to be built on a solid enough foundation, but unfortunately it has not received a lot of updates in recent years. Is this another arena where, as they say, Ruby is dead?
+In this tutorial, we'll keep it simple by building a blog. It's the quintessential static site, but with a twist: this blog will have some auto-updating content. ✨
 
-Enter [Bridgetown](https://edge.bridgetownrb.com/), a fork of Jekyll which aims to compete toe-to-toe with its modern JS cousins, providing even more Ruby tools for building static sites. Very exciting.
+This tutorial has been updated for Bridgetown 2.0.1.
 
-Many of Bridgetown's Ruby upgrades are already released, so I (happy for any chance to write Ruby) rebuilt and extended this blog with Bridgetown. Here's how I did it. Note that these instructions apply to [Bridgetown 1.0](https://edge.bridgetownrb.com/release/beta-1-is-feature-complete/), the latest version at the time of writing. Also note that a knowledge of Ruby is assumed here, but not necessarily any prior experience in building a static site.
-
-You can see the final result of this process in [my site's GitHub repo](https://github.com/fpsvogel/blog-2021).
+The final result is the site that you're looking at. See also [the GitHub repo](https://github.com/fpsvogel/fpsvogel.com).
 
 ## 1. Setup
 
-1. Follow the steps on Bridgetown's [Getting Started](https://edge.bridgetownrb.com/docs) page.
-  - To create the site, I ran `bridgetown new blog -t erb`. The added option is to use ERB tempates, rather than the default of Liquid.
-  - See also [all the command line options](https://edge.bridgetownrb.com/docs/command-line-usage).
-  - If you already know of some bundled configurations that you need (see below), you can include them in the `new` command. In my case: `bridgetown new blog -t erb -c turbo,stimulus,bt-postcss`
-2. Add [bundled configurations](https://edge.bridgetownrb.com/docs/bundled-configurations) that you need. In my case:
-  - [Turbo](https://edge.bridgetownrb.com/docs/bundled-configurations#turbo) for faster page transitions.
-  - [Stimulus](https://edge.bridgetownrb.com/docs/bundled-configurations#stimulus) for adding JavaScript sprinkles (more on that below). Alternatively you could use LitElement, as explained in [the Components doc](https://edge.bridgetownrb.com/docs/components) and in [this guide to web components on Fullstack Ruby](https://www.fullstackruby.dev/fullstack-development/2022/01/04/how-ruby-web-components-work-together/).
-  - [Recommended PostCSS plugins](https://edge.bridgetownrb.com/docs/bundled-configurations#bridgetown-recommended-postcss-plugins). I also installed [this extra PostCSS plugin](https://github.com/postcss/postcss-scss#2-inline-comments-for-postcss) that adds support for inline comments in CSS files.
-3. Install [plugins](https://edge.bridgetownrb.com/docs/plugins) that you need. In my case:
-  - [SEO tags](https://github.com/bridgetownrb/bridgetown-seo-tag)
-  - [Sitemap generator](https://github.com/ayushn21/bridgetown-sitemap)
-  - [Atom feed](https://github.com/bridgetownrb/bridgetown-feed)
-  - [SVG inliner](https://github.com/ayushn21/bridgetown-svg-inliner)
-4. Set your preferred [permalink style](https://edge.bridgetownrb.com/docs/content/permalinks).
-5. Set up [pagination](https://edge.bridgetownrb.com/docs/content/pagination).
-6. Set your site's info in `src/_data/site_metadata.yml`.
-7. Kickstart your site's design with a CSS theme. I chose [holiday.css](https://holidaycss.js.org/), a classless stylesheet for semantic HTML. Or you could use an actual Bridgetown theme, such as [Bulmatown](https://github.com/whitefusionhq/bulmatown). (That's the only Bridgetown theme as of January 2022, but I expect more will come soon from the community.)
-8. Add a Pygments CSS theme for code syntax highlighting.
-  - Either [download one of the handily premade CSS files](https://jwarby.github.io/jekyll-pygments-themes/languages/ruby.html), or [pick from the full list](https://pygments.org/demo/#try) then [install Pygments and make it generate a CSS file](https://stackoverflow.com/a/14989819/4158773). (I picked one of the premade stylesheets and then created a second one to override some of the colors.)
+1. Make sure you have at least Ruby 3.1 installed.
+  - If you've never installed Ruby before, [rbenv](https://github.com/rbenv/rbenv) is a fairly simple way to do it.
+  - If you're on Windows, I recommend using the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) rather than installing Ruby directly in Windows.
+2. Follow the steps on Bridgetown's [Getting Started](https://www.bridgetownrb.com/docs) page to create an empty site.
+3. Add [bundled configurations](https://www.bridgetownrb.com/docs/bundled-configurations) and [plugins](https://www.bridgetownrb.com/plugins/). Here are a few that are useful for a blog.
+  - [Feed](https://www.bridgetownrb.com/docs/bundled-configurations#feed) generates an Atom (RSS-like) feed.
+  - [SEO](https://www.bridgetownrb.com/docs/bundled-configurations#seo) adds SEO tags to make your site more discoverable on search engines and more sharable on social media. (Be sure to add site-wide metadata to [src/_data/site_metadata.yml](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_data/site_metadata.yml).)
+  - [Sitemap generator](https://github.com/ayushn21/bridgetown-sitemap) to further improve SEO.
+  - [Turbo](https://www.bridgetownrb.com/docs/bundled-configurations#turbo) makes page transitions smoother.
+  - [SVG inliner](https://github.com/ayushn21/bridgetown-svg-inliner) if you want to display SVG images on your site.
+4. Set your preferred [permalink style](https://www.bridgetownrb.com/docs/content/permalinks).
+5. Set up [pagination](https://www.bridgetownrb.com/docs/content/pagination) if you want it. Originally my Posts page had pagination, but I've come to prefer [one long Posts page](https://fpsvogel.com/posts/). ([Here's the diff of that adjustment](https://github.com/fpsvogel/fpsvogel.com/commit/c9ec250de94cebd9a891761261fc1bf27e81a106), if you're curious.)
+6. Kickstart your site's design with a CSS theme. For my blog I chose [holiday.css](https://holidaycss.js.org/), one of many [classless stylesheets](https://github.com/dbohdan/classless-css) for semantic HTML.
+7.  Add a Pygments CSS theme for code syntax highlighting.
+  - Either [download one of the handily premade CSS files](https://jwarby.github.io/jekyll-pygments-themes/languages/ruby.html), or [pick from the full list](https://pygments.org/demo/#try) then [install Pygments and make it generate a CSS file](https://stackoverflow.com/a/14989819/4158773). (I picked one of the premade stylesheets and then [created a second one](https://github.com/fpsvogel/fpsvogel.com/blob/main/frontend/styles/monokai-fpsvogel-edits.css) to override some of the colors.)
   - Place the CSS file in `frontend/styles`.
   - Import it into `frontend/styles/index.css`: for example, for Monokai place `@import "monokai.css";` near the top of `index.css`.
 
-## 2. Ruby component and plugin
+## 2. Deployment
 
-Next I designed and built my site, a process which was mostly unremarkable, except for one thing: I built a Ruby component and plugin for a complex, data-heavy part of a page. For simpler parts of a page I just used partials, such as `_navbar.erb`. But for any significant manipulation of data prior to rendering, building a Ruby component makes more sense. In my case, I wanted a "Reading" page that lists titles from my `reading.csv` file (my homegrown alternative to Goodreads), including only books that I rated at least a 4 out of 5.
+Now that you have the skeleton of your site, let's deploy it!
 
-Following [the doc on Ruby components](https://edge.bridgetownrb.com/docs/components/ruby), I created a `ReadingList` component in `_components/reading_list.rb`, and its template `_components/reading_list.erb`.
+There are many ways to deploy a Bridgetown site. I recommend using a service that automatically deploys your site after you push up changes. Bridgetown provides bundled configurations for a few of these services:
 
-After writing the HTML + ERB + CSS for the reading list element, I used Stimulus to add JavaScript sprinkles to expand/collapse rows with reading notes or long blurbs, to filter rows by rating or genre, and to sort rows (though sorting is disabled on my site, since I went with the minimal "favorite or not" way of showing ratings).
+- [Render](https://www.bridgetownrb.com/docs/bundled-configurations#render-yaml-configuration)
+- [Netlify](https://www.bridgetownrb.com/docs/bundled-configurations#netlify-toml-configuration)
+- [GitHub Pages](https://www.bridgetownrb.com/docs/bundled-configurations#github-pages-configuration)
 
-Then I fleshed out `reading_list.rb` to load my reading list and provide data for the template `reading_list.erb`. The CSV-parsing code is pretty complex, so I separated it out [into a gem](https://github.com/fpsvogel/reading-csv).
+I use Netlify, only because I've had trouble with assets not being cached with Render.
 
-Thanks to a tip (one of many) from the Bridgetown creators on [the Discord server](https://discord.gg/Cugms94QFM), I realized my Ruby component had way too much logic in it which should be separated out into a plugin. So I dove into [the docs on plugins](https://edge.bridgetownrb.com/docs/plugins) and moved nearly all of my component's code into a plugin.
+I followed the steps in [Netlify's deployment tutorial](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/), and in their [doc on custom domains](https://docs.netlify.com/manage/domains/configure-domains/bring-a-domain-to-netlify/). I bought a custom domain on [Porkbun](https://porkbun.com/).
 
-So now the plugin parses my CSV file (using my parsing gem) and saves it into the site's data. Then my component's `.rb` file pulls that data into instance variables. Finally, the ERB template uses the instance variables as it displays the reading list.
+## 3. Ruby component and plugin for showing external data
 
-If you create a plugin and want to make it more easily available to other Bridgetown site creators, you should [make it into a gem](https://edge.bridgetownrb.com/docs/plugins#creating-a-gem) and possibly create an [automation](https://edge.bridgetownrb.com/docs/automations) for it. I didn't for my reading list plugin, because the intersection of people who track their reading in a CSV file and people who will make a Bridgetown site is… very few people, I'm sure.
+Back to building your site 👷
 
-## 3. Deployment and beyond
+All that's left now is to create the various pages of your site (home, posts, "about", etc.), and eventually to start writing posts. Along the way you'll make dozens of tweaks to styling.
 
-Publishing my site was as simple as [choosing the GitHub repo on Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) and [configuring the custom domain](https://docs.netlify.com/domains-https/custom-domains/).
+All of that remaining work is generally unremarkable, or at least it varies so much from my site to yours that I'll just leave you to it.
 
-One possible improvement remains. Currently, to update the reading list I must delete it (`_data/reading.yml`) and rebuild the site locally (so that my `reading.csv` can be re-parsed) before pushing it to be built and deployed on Netlify. I could avoid these manual steps by taking advantage of the fact that my `reading.csv` is automatically synced to Dropbox: I could change my plugin to connect to Dropbox and update the list from there instead of from the copy on my local machine.
+I do want to show you with one more thing, though, which will take up the rest of this post: **how to build a Ruby component and plugin for a page that shows data from an external source**. If this doesn't sound like it applies to your site, then farewell, good luck on your blog-making endeavors, and be sure to stop by [the Bridgetown Discord server](https://discord.gg/Cugms94QFM) if you get stuck. But if this extra bit does sound useful, then here we go! 🚀
 
-## UPDATE: It's alive!
+More concretely, I wanted to build a ["Reading" page](https://fpsvogel.com/reading) that displays data parsed and filtered from my reading log (a plain text file). How should I build that giant list in the view template?
 
-Now in October, three months later, I've made the improvement proposed above. My Bridgetown plugin now connects to my Dropbox account, reads my `reading.csv` file from there, parses newly added items, and adds them to my site's data. I'm storing my Dropbox keys in Netlify environment variables, which are passed into Bridgetown in `ENV`. Now my reading list can be updated in a Netlify build, without me having to first build it locally and push it.
+A template partial (such as [src/_partials/_navbar.erb](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_partials/_navbar.erb)) didn't seem right, because I needed to build the data before rendering it, and naturally I wanted to avoid writing a bunch of Ruby in an ERB file. I needed something more spacious: **a Ruby component**.
 
-This paved the way for an even cooler improvement: I followed [this guide](https://www.stefanjudis.com/snippets/how-to-schedule-jamstack-deploys-with-netlify-and-github/) to setting up automatic Netlify redeploys via GitHub Actions, and now my site rebuilds itself every week. This means that my site's Reading page is synced weekly to my `reading.csv`, and it's completely automatic! Now I'm starting to see how static sites, in spite of their simplicity, can feel quite dynamic if they are automatically rebuilt often, using content added via APIs.
+Following [the doc on Ruby components](https://www.bridgetownrb.com/docs/components/ruby), I created a `ReadingList` component in [src/_components/reading_list.rb](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_components/reading_list.rb), and its template [src/_components/reading_list.erb](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_components/reading_list.erb). It's the same basic idea as [ViewComponent](https://viewcomponent.org/), if you're familiar.
+
+You may have noticed that my component's `.rb` file doesn't do much at all. Where's all the data-building logic I mentioned a moment ago? The logic was extensive enough that I ended up moving it into a [plugin](https://www.bridgetownrb.com/docs/plugins) in [plugins/builders/load_reading_list.rb](https://github.com/fpsvogel/fpsvogel.com/blob/main/plugins/builders/load_reading_list.rb), and then later I separated much of it even further [into a gem](https://github.com/fpsvogel/reading).
+
+I then wrote some JS to add client-side behaviors to my component, such as expanding/collapsing rows that have reading notes, and filtering rows by rating or genre. I wrote the JS [as a Stimulus controller](https://github.com/fpsvogel/fpsvogel.com/blob/main/frontend/javascript/controllers/reading_list_controller.js). That was a few years ago; today I would probably use vanilla JS or [Lit](https://www.bridgetownrb.com/docs/components/lit).
+
+To recap:
+
+1. [The plugin](https://github.com/fpsvogel/fpsvogel.com/blob/main/plugins/builders/load_reading_list.rb) parses my reading log file (using my gem) and saves it into the site's data.
+2. [The Ruby component's `rb` file](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_components/reading_list.rb) pulls that data into instance variables accessible in the ERB template, and provides a helper method for the ERB template.
+3. [The Ruby component's ERB template](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_components/reading_list.erb) displays the reading list.
+
+## 4. Scheduled deploys to automatically sync to the external data source
+
+At this point, it was a manual process to update my site's reading list: I had to rebuild the site locally (so that my reading log can be re-parsed) before pushing it up to be built and deployed on Netlify.
+
+I wondered: *could I avoid having to rebuild locally?* After all, my reading log is automatically synced to Dropbox. If I adjusted my plugin to connect to Dropbox instead of using my local copy of my reading log, then my site's Reading page could be updated from within a Netlify build, without me having to first build it locally and push up the changes.
+
+And that's exactly what I did next. I store my Dropbox keys in Netlify environment variables, which are passed into Bridgetown in `ENV`, and from there my custom plugin [uses the keys to connect to Dropbox](https://github.com/fpsvogel/fpsvogel.com/blob/main/plugins/builders/load_reading_list.rb#L52-L78).
+
+This paved the way for an even cooler improvement: I followed [this guide to setting up automatic Netlify redeploys via GitHub Actions](https://www.stefanjudis.com/snippets/how-to-schedule-jamstack-deploys-with-netlify-and-github/), and now my site rebuilds itself every week. This means that my site's Reading page is synced weekly to my reading log file, and it's completely automatic.
+
+You can use a similar approach of automatically rebuilding your site based on content from APIs, whenever you need a site that is updated frequently but not in real time.
 
 ## Conclusion
 
-Besides Bridgetown itself, I learned a number of new things in this project, such as how to use Stimulus to make a page dynamic with a bit of JavaScript.
+For me, Bridgetown was a wonderful way to ease into web development with Ruby. Not only that, but to this day I enjoy tweaking my site because of how refreshingly simple it is compared to a Rails app.
 
-But what I really loved was using what I *already* knew (Ruby) in a completely new way. Bridgetown is doing a wonderful job of bringing the joy of Ruby into the world of modern static site generators.
+Don't get the wrong idea, though: **Bridgetown is not only for static sites** like the blog we've built here! There's *so much* that we haven't covered in this tutorial, so if you're wondering whether Bridgetown is right for a project you have in mind, check out [the Bridgetown docs](https://www.bridgetownrb.com/docs) and stop by Bridgetown's friendly [Discord server](https://discord.gg/Cugms94QFM).
