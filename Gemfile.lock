@@ -231,7 +231,6 @@ DEPENDENCIES
   debug
   dropbox_api
   faraday (~> 2.7)
-  liquid (= 5.4)
   puma
   reading!
   rinku
