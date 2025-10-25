@@ -1,20 +1,21 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem "bridgetown", "~>2", git: "https://github.com/bridgetownrb/bridgetown"
-
-# Puma is a Rack-compatible server used by Bridgetown
-# (you can optionally limit this to the "development" group)
-gem "puma"
-
-gem "faraday", "~>2.7" # fixes https://github.com/travis-ci/dpl/issues/1247
-gem "bridgetown-seo-tag"
-gem "bridgetown-feed"
+source "https://gems.bridgetownrb.com" do
+  gem "bridgetown", "~>2"
+  gem "bridgetown-feed"
+  gem "bridgetown-seo-tag"
+end
 gem "bridgetown-svg-inliner"
 gem "bridgetown-sitemap"
-gem "reading", git: "https://github.com/fpsvogel/reading.git"
+
+gem "reading", github: "fpsvogel/reading"
 gem "chartkick"
 gem "rinku" # There's also the more maintained https://github.com/tenderlove/rails_autolink but Rinku is faster.
 gem "sanitize"
 gem "dropbox_api"
-gem "debug"
+
+group :development do
+  gem "puma"
+  gem "debug"
+end

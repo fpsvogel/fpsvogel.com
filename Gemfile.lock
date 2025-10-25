@@ -1,14 +1,4 @@
 GIT
-  remote: https://github.com/bridgetownrb/bridgetown
-  revision: 2568daf68439197dd35a0bd919bf0b333380c61c
-  specs:
-    bridgetown (2.0.1)
-      bridgetown-builder (= 2.0.1)
-      bridgetown-core (= 2.0.1)
-      bridgetown-foundation (= 2.0.1)
-      bridgetown-paginate (= 2.0.1)
-
-GIT
   remote: https://github.com/fpsvogel/reading.git
   revision: 78790b2d1b4a9c98982848b11d6ae5f6ef20218e
   specs:
@@ -18,33 +8,20 @@ GIT
       pastel (~> 0.8)
 
 GEM
-  remote: https://rubygems.org/
+  remote: https://gems.bridgetownrb.com/
   specs:
-    activesupport (7.2.2.2)
-      base64
-      benchmark (>= 0.3)
-      bigdecimal
-      concurrent-ruby (~> 1.0, >= 1.3.1)
-      connection_pool (>= 2.2.5)
-      drb
-      i18n (>= 1.6, < 2)
-      logger (>= 1.4.2)
-      minitest (>= 5.1)
-      securerandom (>= 0.3)
-      tzinfo (~> 2.0, >= 2.0.5)
-    addressable (2.8.7)
-      public_suffix (>= 2.0.2, < 7.0)
-    amazing_print (1.8.1)
-    base64 (0.3.0)
-    benchmark (0.4.1)
-    bigdecimal (3.3.1)
-    bridgetown-builder (2.0.1)
-      bridgetown-core (= 2.0.1)
-    bridgetown-core (2.0.1)
+    bridgetown (2.0.3)
+      bridgetown-builder (= 2.0.3)
+      bridgetown-core (= 2.0.3)
+      bridgetown-foundation (= 2.0.3)
+      bridgetown-paginate (= 2.0.3)
+    bridgetown-builder (2.0.3)
+      bridgetown-core (= 2.0.3)
+    bridgetown-core (2.0.3)
       activesupport (>= 6.0, < 8.0)
       addressable (~> 2.4)
       amazing_print (~> 1.2)
-      bridgetown-foundation (= 2.0.1)
+      bridgetown-foundation (= 2.0.3)
       csv (~> 3.2)
       dry-inflector (>= 1.0)
       erubi (~> 1.9)
@@ -69,27 +46,49 @@ GEM
       zeitwerk (~> 2.5)
     bridgetown-feed (4.0.0)
       bridgetown (>= 1.2.0)
-    bridgetown-foundation (2.0.1)
+    bridgetown-foundation (2.0.3)
       hash_with_dot_access (~> 2.0)
       inclusive (~> 1.0)
       zeitwerk (~> 2.5)
-    bridgetown-paginate (2.0.1)
-      bridgetown-core (= 2.0.1)
+    bridgetown-paginate (2.0.3)
+      bridgetown-core (= 2.0.3)
     bridgetown-seo-tag (7.0.0)
       bridgetown (>= 1.3)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (7.2.2.2)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    amazing_print (1.8.1)
+    base64 (0.3.0)
+    benchmark (0.5.0)
+    bigdecimal (3.3.1)
     bridgetown-sitemap (3.0.0)
       bridgetown (>= 1.3.0, < 3.0)
     bridgetown-svg-inliner (2.1.1)
       bridgetown (>= 1.2.0, < 3.0)
       csv
       nokogiri
-    chartkick (5.1.5)
+    chartkick (5.2.1)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.4)
     crass (1.0.6)
     csv (3.3.5)
     date (3.4.1)
-    debug (1.10.0)
+    debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
     drb (2.2.3)
@@ -124,8 +123,8 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.15.1)
-    jwt (2.10.1)
+    json (2.15.2)
+    jwt (2.10.2)
       base64
     kramdown (2.5.1)
       rexml (>= 3.3.9)
@@ -137,27 +136,27 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     minitest (5.26.0)
-    multi_json (1.15.0)
+    multi_json (1.17.0)
     multi_xml (0.7.2)
       bigdecimal (~> 3.1)
     net-http (0.6.0)
       uri
     nio4r (2.7.4)
-    nokogiri (1.18.8-aarch64-linux-gnu)
+    nokogiri (1.18.10-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.8-aarch64-linux-musl)
+    nokogiri (1.18.10-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.8-arm-linux-gnu)
+    nokogiri (1.18.10-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.8-arm-linux-musl)
+    nokogiri (1.18.10-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.8-arm64-darwin)
+    nokogiri (1.18.10-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.8-x86_64-darwin)
+    nokogiri (1.18.10-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.8-x86_64-linux-gnu)
+    nokogiri (1.18.10-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.8-x86_64-linux-musl)
+    nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
     oauth2 (1.4.11)
       faraday (>= 0.17.3, < 3.0)
@@ -174,7 +173,7 @@ GEM
       date
       stringio
     public_suffix (6.0.2)
-    puma (6.6.0)
+    puma (7.1.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.3)
@@ -229,14 +228,13 @@ PLATFORMS
 
 DEPENDENCIES
   bridgetown (~> 2)!
-  bridgetown-feed
-  bridgetown-seo-tag
+  bridgetown-feed!
+  bridgetown-seo-tag!
   bridgetown-sitemap
   bridgetown-svg-inliner
   chartkick
   debug
   dropbox_api
-  faraday (~> 2.7)
   puma
   reading!
   rinku
