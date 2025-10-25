@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/bridgetownrb/bridgetown.git
+  revision: 2de89b08739ee1a37998887b7fe607847768a071
+  specs:
+    bridgetown (2.0.3)
+      bridgetown-builder (= 2.0.3)
+      bridgetown-core (= 2.0.3)
+      bridgetown-foundation (= 2.0.3)
+      bridgetown-paginate (= 2.0.3)
+
+GIT
   remote: https://github.com/fpsvogel/reading.git
   revision: 78790b2d1b4a9c98982848b11d6ae5f6ef20218e
   specs:
@@ -10,11 +20,6 @@ GIT
 GEM
   remote: https://gems.bridgetownrb.com/
   specs:
-    bridgetown (2.0.3)
-      bridgetown-builder (= 2.0.3)
-      bridgetown-core (= 2.0.3)
-      bridgetown-foundation (= 2.0.3)
-      bridgetown-paginate (= 2.0.3)
     bridgetown-builder (2.0.3)
       bridgetown-core (= 2.0.3)
     bridgetown-core (2.0.3)
