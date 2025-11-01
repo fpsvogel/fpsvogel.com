@@ -1,6 +1,5 @@
 require "reading"
 require "dropbox_api"
-require "debug"
 
 class Builders::LoadReadingList < SiteBuilder
   def build

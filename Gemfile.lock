@@ -93,9 +93,6 @@ GEM
     crass (1.0.6)
     csv (3.3.5)
     date (3.4.1)
-    debug (1.11.0)
-      irb (~> 1.10)
-      reline (>= 0.3.8)
     drb (2.2.3)
     dropbox_api (0.1.21)
       faraday (< 3.0)
@@ -238,7 +235,6 @@ DEPENDENCIES
   bridgetown-sitemap
   bridgetown-svg-inliner
   chartkick
-  debug
   dropbox_api
   puma
   reading!

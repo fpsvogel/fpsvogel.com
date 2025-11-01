@@ -17,5 +17,4 @@ gem "dropbox_api"
 
 group :development do
   gem "puma"
-  gem "debug"
 end
