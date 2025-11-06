@@ -155,7 +155,7 @@ But coding challenges aren't the best choice if one or more of the following is 
 
 ## If not coding challenges, then what?
 
-**Publicly sharing** your work as a developer is one framework you can use to approach these concerns, and it can be just as enjoyable as coding challenges. For example:
+**Publicly sharing** your work as a developer is one approach to the above-listed problems, and it can be just as enjoyable as coding challenges. For example:
 
 - Write blog posts (like this one!) and share them on social media.
 - Share shorter content too: TILs, or your favorite gems/hacks/resources.

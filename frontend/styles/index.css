@@ -321,6 +321,21 @@ span.nobr {
   white-space: nowrap;
 }
 
+details details {
+  margin-top: 1rem;
+  padding-bottom: 0;
+}
+details details[open] {
+  padding-bottom: .5rem;
+}
+
+[open] summary {
+  margin-bottom: 0;
+}
+[open] > summary {
+  margin-bottom: .5rem;
+}
+
 post-footer {
   margin-top: 2.5rem;
   & a {
