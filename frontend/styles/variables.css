@@ -13,6 +13,7 @@ html:root {
   --link-color: #ffc645;
   --link-visited-color: #ffc645;
   --link-hover-color: #fff;
+  --highlighted-text-bg-color: #695825;
   --text-color: #d4d4d4;
   --text-color-less-contrast: #bbb;
   --text-color-more-contrast: #e3e3e3;
@@ -32,10 +33,11 @@ html:root {
 
 @media (prefers-color-scheme: light) {
   html:root {
-    --background-color: #f3f0e9;
+    --background-color: #fbf9f4;
     --link-color: #c94f4f;
     --link-visited-color: #c94f4f;
     --link-hover-color: #212121;
+    --highlighted-text-bg-color: #ffd1d1;
     --text-color: #363636;
     --text-color-less-contrast: #595959;
     --text-color-more-contrast: #363636;
