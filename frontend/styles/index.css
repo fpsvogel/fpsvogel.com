@@ -66,12 +66,6 @@ em kbd {
   font-style: normal;
 }
 
-@keyframes highlight-fade {
-  0% { background-color: var(--highlighted-text-bg-color); }
-  50% { background-color: var(--highlighted-text-bg-color); }
-  100% { background-color: transparent; }
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
 
@@ -79,10 +73,16 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none !important;
     color: var(--text-color-more-contrast) !important;
   }
+}
 
-  &:target {
-    animation: highlight-fade 3s forwards;
-  }
+@keyframes highlight-fade {
+  0% { background-color: var(--highlighted-text-bg-color); }
+  50% { background-color: var(--highlighted-text-bg-color); }
+  100% { background-color: transparent; }
+}
+
+*:target {
+  animation: highlight-fade 3s forwards;
 }
 
 nav ul, .pagination-ul, footer, label[for=toc] {

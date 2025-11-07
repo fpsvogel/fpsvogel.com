@@ -1,13 +1,13 @@
 ---
 title: My first Hacktoberfest
 subtitle: starting a habit of open source
-description: How Hacktoberfest 2025 helped me grow my network, learn valuable lessons, and become a Core Team member of the open-source project Bridgetown.
+description: How Hacktoberfest 2025 helped me start a habit of open-source contributing, become a Core Team member of Bridgetown, and appreciate baby poop like never before.
 ---
 
 - [How to start a habit with Hacktoberfest](#how-to-start-a-habit-with-hacktoberfest)
 - [Becoming a Bridgetown Core Team member](#becoming-a-bridgetown-core-team-member)
 - [Conclusion: open source vs. other forms of practice](#conclusion-open-source-vs-other-forms-of-practice)
-- [A sappy postscript about poop on my new shirt](#a-sappy-postscript-about-poop-on-my-new-shirt)
+- [Poop on my new shirt: or, how do I have time for all this anyway?](#poop-on-my-new-shirt-or-how-do-i-have-time-for-all-this-anyway)
 
 Until last month, I was a Hacktoberfest skeptic. Then, I did Hacktoberfest for the first time.
 
@@ -49,18 +49,20 @@ To answer that, I'll mention some other ways I could have been spending time imp
 - **Coding challenges**, which [I recently wrote about](/posts/2025/types-of-coding-challenges).
 - **Learning a new language and/or framework**, either mind-expanding ([Roc](https://www.roc-lang.org/)) or job-opportunity-expanding (Python/Java/C#).
 - **Computer science and low-level programming**, which [I've made a list about](https://github.com/fpsvogel/learn-cs).
-- **Building a text-based world simulator**, providing lots of opportunities for complex system design that I've [only begun](http://localhost:4000/posts/2023/ruby-text-based-game-real-time-input) to explore.
+- **Building a text-based world simulator**, providing fun opportunities for complex system design that I've [only begun](http://localhost:4000/posts/2023/ruby-text-based-game-real-time-input) to explore.
 
-I'd like to do all of the above sometime or another. But right now, in the current cutthroat job market, open source has a few advantages. With open source, I am:
+I'd like to do all of the above sometime or another. But for now, the difficult job market is nudging me to make my work more visible in ways that could make a job search easier. (Two years ago I was laid off unprepared, and having been scarred forever by the ensuing job search, I will now not let my guard down until… I don't know, someone gives me a medal for job-search-preparedness or something. Should I talk to my therapist about that? Definitely.)
+
+With open source, unlike with the above-listed options, I am:
 
 - expanding my network
-- adding more lines to my resume (yeah, sue me)
+- adding more lines to my resume
 - showing the quality of my day-to-day work very concretely
 - solving problems alongside much more experienced developers, which is a kind of mentorship that I don't often get at work these days
 
 Sure, there are other employability-boosting pastimes. If I build a thing that becomes very popular and I become Internet famous, that's the best thing of all for my resume. If I ever figure out how to do *that* in a month, I'll write a blog post about it.
 
-## A sappy postscript about poop on my new shirt
+## Poop on my new shirt: or, how do I have time for all this anyway?
 
 ![my new Hacktoberfest T-shirt with a baby poop stain](/images/hacktoberfest-shirt-with-poop-stain.jpg)
 
@@ -72,9 +74,9 @@ This picture is so emblematic of my life right now as a parent.
 
 One reason I've had so much time for open source is that every night, I'm holding the baby for an hour or two, bouncing him on the yoga ball, while mom carries out the much more onerous task of putting our night-owl toddler to bed.
 
-The baby is sleeping on my arm for most of that time, so with my other hand I've been able to code and write up PRs. On some nights that's what I *had* to do in order to stay awake,[¹](#footnotes) because anything less active would've made me succumb to my sleep deprivation.
+The baby is sleeping on my arm for most of that time, so with my other hand I've been able to code and write up PRs. <span id="footnote-1-ref">On some nights that's what I *had* to do in order to stay awake,<a href="#footnote-1">¹</a></span> because anything less active would've made me succumb to my sleep deprivation.
 
-This baby is an early bird, so on some nights I'm up a few hours later, before sunrise, doing the same thing. And on other nights, like tonight, I'm also awake sometime in between. It's [currently 2 a.m.](https://github.com/fpsvogel/fpsvogel.com/commits/main/?since=2025-11-06&until=2025-11-06) when I'm writing this (one-handed). Hence the sleep deprivation.
+This baby is an early bird, so on some nights I'm up a few hours later, before sunrise, doing the same thing. And on other nights, like tonight, I'm also awake sometime in between. It's currently 2 a.m. when I'm writing this (one-handed). Hence the sleep deprivation.
 
 But you know what? **I love that poop stain.** I smiled when I first noticed it. Being a parent does weird things to you like that.
 
@@ -86,7 +88,7 @@ But you know what? **I love that poop stain.** I smiled when I first noticed it.
 ## Footnotes
 
 <details>
-<summary>1. Occasionally, there's <em>nothing</em> I can do to stay awake.</summary>
+<summary id="footnote-1"><a href="#footnote-1-ref">1.</a> Occasionally, there's <em>nothing</em> I can do to stay awake.</summary>
 So I make futile attempts to set the baby down to sleep on his own, so that I can sleep nearby. This invariably fails, and I'm soon back on the yoga ball soothing the baby back to sleep.
 
 <details>
