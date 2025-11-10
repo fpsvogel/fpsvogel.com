@@ -88,7 +88,7 @@ But you know what? **I love that poop stain.** I smiled when I first noticed it.
 ## Footnotes
 
 <details>
-<summary id="footnote-1"><a href="#footnote-1-ref">1.</a> Occasionally, there's <em>nothing</em> I can do to stay awake.</summary>
+<summary id="footnote-1">1. Occasionally, there's <em>nothing</em> I can do to stay awake. <a href="#footnote-1-ref">⏎</a></summary>
 So I make futile attempts to set the baby down to sleep on his own, so that I can sleep nearby. This invariably fails, and I'm soon back on the yoga ball soothing the baby back to sleep.
 
 <details>
@@ -97,7 +97,7 @@ these doomed bids for sleep go on for hours in a loop, almost like a compressed 
 
 <details>
 <summary>These nested <code>details</code> (detailses?) are rad.</summary>
-They remind me of <a href="https://riki.house">a previous version of the blog riki's house</a>, or the browser game/toy <a href="https://orteil.dashnet.org/nested">Nested</a>.
+They remind me of <a href="https://riki.house">a previous version of the blog "riki's house"</a>, or the browser game/toy <a href="https://orteil.dashnet.org/nested">Nested</a>.
 </details>
 
 <details>
