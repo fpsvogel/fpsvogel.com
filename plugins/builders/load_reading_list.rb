@@ -140,7 +140,7 @@ class Builders::LoadReadingList < SiteBuilder
   # @return [Array]
   def uniq_of_attribute(attribute, items, sort_by:)
     all = items.flat_map { |item|
-      item.send(attribute).presence
+      item.send(attribute)
     }.compact
 
     all =
