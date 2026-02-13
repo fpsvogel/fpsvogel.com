@@ -2,7 +2,7 @@
 title: How I use MacOS, Linux, Windows, iOS, Android
 subtitle: my favorite apps and extensions
 description: My favorite apps across operating systems; or, how I use a MacBook, PC, iPhone, and Samsung Galaxy similarly, including keyboard shortcuts and navigability.
-updated: 2025-09-02
+updated: 2026-02-13
 ---
 
 - [Prelude: peripherals](#prelude-peripherals)
@@ -60,6 +60,8 @@ I like to speed up pointer and scroll speeds beyond what system preferences typi
 **Linux:** dotfile scripts ([1](https://github.com/fpsvogel/dotfiles-linux/blob/a7411323920928b2e62a9ecef0743a3de6bb6dc5/profile/increase_pointer_speed), [2](https://github.com/fpsvogel/dotfiles-linux/blob/a7411323920928b2e62a9ecef0743a3de6bb6dc5/profile/increase_scroll_speed))
 
 **Windows:** none, because system preferences actually allowed fast enough speeds.
+
+Also, [Easy Move+Resize](https://github.com/dmarcotte/easy-move-resize) on MacOS to get around the annoyingly small window drag/resize click regions.
 
 ## Keyboard shortcuts
 
