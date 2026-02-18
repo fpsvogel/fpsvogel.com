@@ -33,13 +33,6 @@ I'm Felipe Vogel, full-stack developer, Rubyist, compulsive learner.
   ["Solo TTRPGs", "https://github.com/fpsvogel/solo-ttrpgs", "Table-Top Role-Playing Games"],
 ] %>
 
-<%# these are private/archived repos, but maybe later I'll refine them and include them above:
-- https://github.com/fpsvogel/learn-csharp
-- https://github.com/fpsvogel/learn-java
-- https://github.com/fpsvogel/learn-roc
-- https://github.com/fpsvogel/words
-%>
-
 <ul class="posts-ul">
   <% lists.each do |title, url, description| %>
     <li>
