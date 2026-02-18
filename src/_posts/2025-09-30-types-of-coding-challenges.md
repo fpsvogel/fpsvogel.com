@@ -2,6 +2,7 @@
 title: A catalog of coding challenges
 subtitle: and, are they even worth doing anyway?
 description: An exploration of the many kinds of coding challenges, from LeetCode to code golf, and suggestions of more valuable ways to improve yourself as a developer.
+updated: 2026-02-17
 ---
 
 - [Some types of coding challenges](#some-types-of-coding-challenges)
@@ -45,6 +46,7 @@ For LeetCode in particular, there are [many guides and problem sets](https://git
 
 ### Miscellaneous challenges outside the holiday season
 
+- [rendezvous with cassidoo](https://buttondown.com/cassidoo/archive) newsletter weekly interview question
 - [Codewars](https://www.codewars.com/)
 - [hackattic](https://hackattic.com/challenges)
 
