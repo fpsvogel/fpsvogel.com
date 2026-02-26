@@ -38,6 +38,8 @@ And for phones:
 - *2025 – present:* iOS (iPhone). I prefer Android, but it was worth switching to have phone notifications and mirroring on my MacBook. Or in other words, `my computer > Android > iOS`.
   - It looks like a similar phone-computer integration can be achieved with Linux + Android via [scrcpy](https://github.com/Genymobile/scrcpy) and [Android 2 Linux Notifications](https://play.google.com/store/apps/details?id=dev.patri9ck.a2ln). Someday I'll give it a try, if I ever work somewhere that doesn't mandate MacBooks.
 
+***UPDATE, 2026:** I now wish I hadn't switched to iPhone, to be honest. My next phone will be Linux ([FuriPhone](https://furilabs.com/)? [GrapheneOS](https://grapheneos.org/)?) and/or [small](https://www.reddit.com/r/smallphones/).*
+
 ## Prelude: peripherals
 
 The peripherals I use with my computer are important to me because a few years ago I suffered from RSI in my wrists. The pain went away after I got a better keyboard and pointing devices.

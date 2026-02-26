@@ -112,6 +112,6 @@ I don't do these things with my read.csv, but you might want to:
 
 - If you want to include your Kindle notes and highlights in your read.csv, you can [export them as plain text](https://medium.com/@michelle_z./how-to-export-kindle-highlights-notes-for-free-63181bca6df8), replace line breaks with some other separator (see caveat #3 above), and then paste them into your notes column in read.csv. But if you have a lot of notes and highlights, prepare for a lot of clutter.
 - If you want to bring in an element of social sharing, you can store your read.csv on Dropbox and [use the Dropbox JavaScript API](https://www.google.com/search?q=dropbox+javascript+api+read+text+file) to display all or some lines from the file in a webpage. I store mine in Dropbox, but mainly so that I can edit it on the go with the [Simple Text](https://play.google.com/store/apps/details?id=simple.text.dropbox) app. I'm not making my read.csv publicly viewable because my reading notes are for my own reflection, not for the world to see, but at some point I'll think of a better way to share my reading journey using read.csv.
-  - *UPDATE, July 2021: I'm now sharing my favorite reads on [the new "Reading" page](/reading) of my website, which is powered by a Ruby gem that parses my CSV reading list.*
+  - ***UPDATE, July 2021:** I'm now sharing my favorite reads on [the new "Reading" page](/reading) of my website, which is powered by a Ruby gem that parses my CSV reading list.*
 
 I'm sure you could add on to this list. With plain text, the possibilities are endless.
