@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 source "https://gems.bridgetownrb.com" do
-  gem "bridgetown", "~> 2.1.0.beta1"
+  gem "bridgetown", "~> 2"
   gem "bridgetown-feed"
   gem "bridgetown-seo-tag"
 end

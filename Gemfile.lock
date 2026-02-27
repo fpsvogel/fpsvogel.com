@@ -10,19 +10,19 @@ GIT
 GEM
   remote: https://gems.bridgetownrb.com/
   specs:
-    bridgetown (2.1.0.beta1)
-      bridgetown-builder (= 2.1.0.beta1)
-      bridgetown-core (= 2.1.0.beta1)
-      bridgetown-foundation (= 2.1.0.beta1)
-      bridgetown-paginate (= 2.1.0.beta1)
-    bridgetown-builder (2.1.0.beta1)
-      bridgetown-core (= 2.1.0.beta1)
-    bridgetown-core (2.1.0.beta1)
+    bridgetown (2.1.1)
+      bridgetown-builder (= 2.1.1)
+      bridgetown-core (= 2.1.1)
+      bridgetown-foundation (= 2.1.1)
+      bridgetown-paginate (= 2.1.1)
+    bridgetown-builder (2.1.1)
+      bridgetown-core (= 2.1.1)
+    bridgetown-core (2.1.1)
       addressable (~> 2.4)
       amazing_print (~> 1.2)
       base64 (>= 0.3)
       bigdecimal (>= 3.2)
-      bridgetown-foundation (= 2.1.0.beta1)
+      bridgetown-foundation (= 2.1.1)
       csv (~> 3.2)
       erubi (~> 1.9)
       faraday (~> 2.0)
@@ -48,13 +48,13 @@ GEM
       zeitwerk (>= 2.7.3)
     bridgetown-feed (4.0.0)
       bridgetown (>= 1.2.0)
-    bridgetown-foundation (2.1.0.beta1)
+    bridgetown-foundation (2.1.1)
       dry-inflector (>= 1.0)
       hash_with_dot_access (~> 2.0)
       inclusive (~> 1.0)
       zeitwerk (~> 2.5)
-    bridgetown-paginate (2.1.0.beta1)
-      bridgetown-core (= 2.1.0.beta1)
+    bridgetown-paginate (2.1.1)
+      bridgetown-core (= 2.1.1)
     bridgetown-seo-tag (7.0.1)
       bridgetown (>= 1.3)
 
@@ -226,7 +226,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  bridgetown (~> 2.1.0.beta1)!
+  bridgetown (~> 2)!
   bridgetown-feed!
   bridgetown-seo-tag!
   bridgetown-sitemap
