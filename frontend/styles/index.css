@@ -1,15 +1,8 @@
 @import "variables.css";
+@import "fonts.css";
 @import "monokai.css";
 @import "monokai-fpsvogel-edits.css";
 @import "reading-list.css";
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 100 400 800;
-  font-display: swap;
-  src: url('/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2');
-}
 
 /* CUSTOM ELEMENTS */
 post-footer {
