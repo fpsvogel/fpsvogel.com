@@ -18,6 +18,16 @@ a tooltip {
   font-size: 70%;
 }
 
+a[href^="#footnote"] {
+  &:before {
+    content: "\00a0";
+  }
+
+  &:after {
+    content: "\00a0";
+  }
+}
+
 a:hover tooltip {
   display: inline;
 }

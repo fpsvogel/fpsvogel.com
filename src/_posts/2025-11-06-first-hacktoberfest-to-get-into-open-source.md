@@ -74,7 +74,7 @@ This picture is so emblematic of my life right now as a parent.
 
 One reason I've had so much time for open source is that every night, I'm holding the baby for an hour or two, bouncing him on the yoga ball, while mom carries out the much more onerous task of putting our night-owl toddler to bed.
 
-The baby is sleeping on my arm for most of that time, so with my other hand I've been able to code and write up PRs. <span id="footnote-1-ref">On some nights that's what I *had* to do in order to stay awake,<a href="#footnote-1">¹</a></span> because anything less active would've made me succumb to my sleep deprivation.
+The baby is sleeping on my arm for most of that time, so with my other hand I've been able to code and write up PRs. <span id="ref-footnote-1">On some nights that's what I *had* to do in order to stay awake,<a href="#footnote-1">¹</a></span> because anything less active would've made me succumb to my sleep deprivation.
 
 This baby is an early bird, so on some nights I'm up a few hours later, before sunrise, doing the same thing. And on other nights, like tonight, I'm also awake sometime in between. It's currently 2 a.m. when I'm writing this (one-handed). Hence the sleep deprivation.
 
@@ -88,7 +88,7 @@ But you know what? **I love that poop stain.** I smiled when I first noticed it.
 ## Footnotes
 
 <details>
-<summary id="footnote-1">1. Occasionally, there's <em>nothing</em> I can do to stay awake. <a href="#footnote-1-ref">⏎</a></summary>
+<summary id="footnote-1">1. Occasionally, there's <em>nothing</em> I can do to stay awake. <a href="#ref-footnote-1">⏎</a></summary>
 So I make futile attempts to set the baby down to sleep on his own, so that I can sleep nearby. This invariably fails, and I'm soon back on the yoga ball soothing the baby back to sleep.
 
 <details>
