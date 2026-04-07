@@ -12,9 +12,11 @@ description: Did you know Latin is still spoken today? Not as a native language,
   - [Old books as conversation partners](#old-books-as-conversation-partners)
 - [How can you learn Latin?](#how-can-you-learn-latin)
 
-<span id="ref-footnote-1">This post is an entry for the Spring 2026 [Lobsters blog carnival](https://lobste.rs/s/lz7hxw/lobsters_blog_carnival_announcement), where participants are provoked to defend the superiority of our favorite language.<a href="#footnote-1">¹</a></span>
+Normally this is a programming blog, but here's something different.
 
-I accept the challenge, and I step forward to defend the honor of…
+My justification is [April Cools' Club](https://www.aprilcools.club/), which henceforth will allow me once a year to write about something completely random (something [I've done before](https://fpsvogel.com/posts/2023/solo-rpgs-creative-practice) without knowing it was excusable).
+
+My inspiration was the Spring 2026 [Lobsters blog carnival](https://lobste.rs/s/lz7hxw/lobsters_blog_carnival_announcement), where participants are provoked to defend the superiority of our favorite language. I accept the challenge, and I step forward to defend the honor of…
 
 Latin.
 
@@ -42,7 +44,7 @@ On a whim, I took Ancient Greek for my language electives. I loved Greek. I coul
 
 It was decided: I would teach myself Latin and find some Latin-speaking enclave where I'd spend the rest of my days.
 
-You think I'm joking, but I did, in fact, find a Latin-speaking enclave, the [*Institutum Studiis Latinis Provehendis*](https://mcl.as.uky.edu/ma-cla-latin-institute) at the University of Kentucky, of all places. For three magical years I took courses in Latin, hung out in the TA office chatting in Latin, and even lived in the *domus Latina*, "Latin house", with a few classmates, where we spoke only Latin except on the (obviously rare) occasion that we had guests. I probably would've stayed forever, except that grad school unfortunately isn't a permanent occupation.
+You think I'm joking, but I did, in fact, find a Latin-speaking enclave, a sort of Latin immersion program, the [*Institutum Studiis Latinis Provehendis*](https://mcl.as.uky.edu/ma-cla-latin-institute) at the University of Kentucky, of all places. For three magical years I took courses in Latin, hung out in the TA office chatting in Latin, and even lived in the *domus Latina*, "Latin house", with a few classmates, where we spoke only Latin except on the (obviously rare) occasion that we had guests. I probably would've stayed forever, except that grad school unfortunately isn't a permanent occupation.
 
 Then, after a few years of teaching, I came to the realization that herding teenagers in a classroom was giving me little enjoyment and far too little pay. Plus, the "classical education" movement, to which Latin owes its renewed popularity among U.S. schools, turned out not to be my cup of tea. That's when I quit teaching and got into tech.
 
@@ -76,7 +78,7 @@ Many of the points I've brought up so far are not exclusive to Latin; if you're 
 
 But here's something that's [*not* true of modern languages](https://www.deadlanguagesociety.com/p/how-far-back-in-time-understand-english): being able to read millennia-old books in the same language that you speak, and consequently feeling that the ancient (or medieval, or early modern) text in front of you is just another conversation partner. It's a delightful effect.
 
-<span id="ref-footnote-2">Of course, classical Latin is not as easy to parse as typical spoken Latin. But spoken Latin *is* closely based on its classical counterpart in a way that is very rare among spoken languages.<a href="#footnote-2">²</a></span>
+<span id="ref-footnote-1">Of course, classical Latin is not as easy to parse as typical spoken Latin. But spoken Latin *is* closely based on its classical counterpart in a way that is very rare among spoken languages.<a href="#footnote-1">²</a></span>
 
 So not only does speaking Latin improve my reading ability, but it actually *motivates me* to read more, in order to find words and turns of phrase that I can use in speech. *Latinitas*, "Latin-ness" of writing and speech, becomes an end unto itself. In this and many other ways, Latin has helped me appreciate and enjoy language like nothing else has.
 
@@ -89,6 +91,4 @@ Have fun!
 <!-- omit in toc -->
 ## Footnotes
 
-<span id="footnote-1">1. This post is also inspired by an April 1 tradition where tech blogs cover a non-tech subject. (I use the term "tradition" loosely because I saw this done on one tech blog which I now can't find anymore.) Anyway, I'm excited to yap about a random topic once a year because it's something [I've done before](/posts/2023/solo-rpgs-creative-practice) without the excuse of following such a venerable tradition as I've clearly established does actually exist (I promise that blog was real!). <a href="#ref-footnote-1">⏎</a></span>
-
-<span id="footnote-2">2. [Modern Standard Arabic](https://en.wikipedia.org/wiki/Modern_Standard_Arabic) is the closest I can think of. There is a whole category of languages like this that were at one point "frozen in time" and became a literary *lingua franca* while regional dialects continued to evolve (in the case of Latin, into the modern Romance languages). For more on this phenomenon, see [diglossia](https://en.wikipedia.org/wiki/Diglossia). How this happened for Latin is explained in the book *Latin: Story of a World Language* by Jürgen Leonhardt (see also [this lecture](https://www.youtube.com/watch?v=oERbD19kyRY) by the author). <a href="#ref-footnote-2">⏎</a></span>
+<span id="footnote-1">2. [Modern Standard Arabic](https://en.wikipedia.org/wiki/Modern_Standard_Arabic) is the closest I can think of. There is a whole category of languages like this that were at one point "frozen in time" and became a literary *lingua franca* while regional dialects continued to evolve (in the case of Latin, into the modern Romance languages). For more on this phenomenon, see [diglossia](https://en.wikipedia.org/wiki/Diglossia). How this happened for Latin is explained in the book *Latin: Story of a World Language* by Jürgen Leonhardt (see also [this lecture](https://www.youtube.com/watch?v=oERbD19kyRY) by the author). <a href="#ref-footnote-1">⏎</a></span>
