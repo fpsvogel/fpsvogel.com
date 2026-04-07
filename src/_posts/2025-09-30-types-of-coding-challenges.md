@@ -43,6 +43,7 @@ For LeetCode in particular, there are [many guides and problem sets](https://git
 - [Everybody Codes](https://everybody.codes)
 - [Advent of JS](https://www.adventofjs.com)
 - [Advent of SQL](https://adventofsql.com)
+- [easters.dev](https://easters.dev/)
 
 ### Miscellaneous challenges outside the holiday season
 
