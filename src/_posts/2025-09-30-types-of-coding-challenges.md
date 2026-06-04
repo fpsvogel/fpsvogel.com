@@ -2,7 +2,7 @@
 title: A catalog of coding challenges
 subtitle: and, are they even worth doing anyway?
 description: An exploration of the many kinds of coding challenges, from LeetCode to code golf, and suggestions of more valuable ways to improve yourself as a developer.
-updated: 2026-02-17
+updated: 2026-06-04
 ---
 
 - [Some types of coding challenges](#some-types-of-coding-challenges)
@@ -81,6 +81,7 @@ For example:
   - [Project-based learning](https://github.com/practical-tutorials/project-based-learning#ruby)
 - Books:
   - [Build Your Own X From Scratch](https://build-your-own.org/) series
+  - [500 Lines or Less](https://aosabook.org/en/#500lines)
   - [Build a Database Server](https://technicaldeft.com/build-a-database-server)
   - [Rebuilding HTTP](https://noahgibbs.gumroad.com/l/rebuilding_http)
   - [Building Git](https://shop.jcoglan.com/building-git/)
