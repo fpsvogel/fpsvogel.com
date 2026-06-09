@@ -2,7 +2,7 @@
 title: How I use MacOS, Linux, Windows, iOS, Android
 subtitle: my favorite apps and extensions
 description: My favorite apps across operating systems; or, how I use a MacBook, PC, iPhone, and Samsung Galaxy similarly, including keyboard shortcuts and navigability.
-updated: 2026-02-13
+updated: 2026-06-09
 ---
 
 - [Prelude: peripherals](#prelude-peripherals)
@@ -70,6 +70,8 @@ Also, [Easy Move+Resize](https://github.com/dmarcotte/easy-move-resize) on MacOS
 **MacOS:**
 
 [BetterTouchTool](https://folivora.ai/) is the easiest way I've found to remove the plethora of otherwise uneditable MacOS keyboard shortcuts that I don't care about, and replace them with more useful shortcuts.
+
+[Music Decoy](https://lowtechguys.com/musicdecoy/) prevents the Music app from launching when Play is pressed.
 
 [Shortcat](https://shortcat.app/) allows keyboard-only UI navigation, like Vimium does in the browser ([see below](#web-browser)).
 
