@@ -17,6 +17,7 @@ updated: 2026-06-09
 - [Web browser](#web-browser)
 - [Password manager](#password-manager)
 - [Screen capture](#screen-capture)
+- [Internet uptime monitoring](#internet-uptime-monitoring)
 - [Mobile apps](#mobile-apps)
   - [Cross-platform](#cross-platform)
   - [iOS](#ios)
@@ -147,6 +148,12 @@ For better readability and organization of notes, I use [my own markup language 
 **MacOS:** [Zappy](https://zapier.com/zappy) for screenshots and recordings. It produces large video files, so I use [Handbrake](https://handbrake.fr/) to compress them.
 
 **Linux and Windows:** I don't recall finding a tool that I like as much as Zappy.
+
+## Internet uptime monitoring
+
+**MacOS:** [UptimeLog](https://uptimelog.app/)
+
+**Linux:** [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 
 ## Mobile apps
 
