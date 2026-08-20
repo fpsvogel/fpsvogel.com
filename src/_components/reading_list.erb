@@ -170,4 +170,18 @@
       </rl-item>
     <% end %>
   </rl-table>
+  <br>
+  <details>
+    <summary>Bonus! My "demoted list" of things that used to be listed above but fell from grace:</summary>
+
+    <ul>
+      <% @demoted_list.each do |demoted_item| %>
+        <li>
+          <a href="<%= demoted_item.url %>">
+            <%= demoted_item.name %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </details>
 </rl-container>

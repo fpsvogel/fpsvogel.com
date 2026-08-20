@@ -299,6 +299,9 @@ main {
   & rl-name a {
     text-decoration: none;
   }
+  & rl-container details a {
+    text-decoration: none;
+  }
 }
 
 main img {

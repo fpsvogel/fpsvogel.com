@@ -29,8 +29,15 @@ class Builders::LoadReadingList < SiteBuilder
             excluded_genres: config.reading.excluded_genres || [],
             status: [:done, :in_progress]
           )
-
           site.data.reading_list = filtered_items.map(&:view).reverse
+
+          demoted_filtered_items = Reading.filter(
+            items:,
+            minimum_previous_rating: 4,
+            excluded_genres: config.reading.excluded_genres || [],
+            status: [:done, :in_progress]
+          )
+          site.data.demoted_reading_list = demoted_filtered_items.map(&:view).reverse
 
           site.data.reading_genres = uniq_of_attribute(:genres, site.data.reading_list, sort_by: :frequency)
           site.data.reading_ratings = uniq_of_attribute(:rating, site.data.reading_list, sort_by: :value)
