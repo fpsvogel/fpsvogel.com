@@ -133,10 +133,10 @@ export default class extends Controller {
     let itemGenres = Array.from(item.querySelectorAll("rl-genre")).map(genre => genre.textContent)
     let intersection = itemGenres.filter(g => selectedGenres.includes(g.trim()))
 
-    if (intersection.length === 0) {
-      return false
+    if (intersection.length === selectedGenres.length) {
+      return true
     }
-    return true
+    return false
   }
 
   // Sorts items (rows) by date or rating.
