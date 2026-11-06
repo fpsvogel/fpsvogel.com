@@ -16,14 +16,17 @@ export default class extends Controller {
       firstSort.checked = true
     }
 
-    let filters = this.filtersTarget.querySelectorAll("input")
-    for (const filter of filters) {
-      filter.checked = true
+    let allFilters = this.filtersTarget.querySelectorAll("input")
+    for (const filter of allFilters) {
+      filter.checked = false
     }
 
     let starRatingFilter = this.filtersTarget.querySelector("#filter-rating-star")
-    if (starRatingFilter) {
-      starRatingFilter.checked = false
+    if (!starRatingFilter) { // number rating mode
+      let ratings = this.filtersTarget.querySelectorAll('[id^="filter-rating-"]')
+      for (const rating of ratings) {
+        rating.checked = true
+      }
     }
   }
 
@@ -37,28 +40,6 @@ export default class extends Controller {
       anchorItem.classList.remove("collapsed")
       anchorItem.scrollIntoView()
     }
-  }
-
-  // Checks/unchecks all according to the "toggle all" checkbox (event.currentTarget).
-  toggleRatingCheckboxes(event) {
-    let newState = event.currentTarget.checked
-    let ratings = this.filtersTarget.querySelectorAll('[id^="filter-rating-"]')
-
-    for (const rating of ratings) {
-      rating.checked = newState
-    }
-
-    this.filter()
-  }
-
-  // Checks/unchecks all according to the "toggle all" checkbox (event.currentTarget).
-  toggleGenreCheckboxes(event) {
-    let newState = event.currentTarget.checked
-    let genres = this.filtersTarget.querySelectorAll('[id^="filter-genre-"]')
-    for (const genre of genres) {
-      genre.checked = newState
-    }
-    this.filter()
   }
 
   // Expands the rl-filters element to show all filters, when "show all" is clicked (event.target).
@@ -123,7 +104,7 @@ export default class extends Controller {
         }
         return false
       }
-    } else { // number rating mode (ratingFilter is a menu)
+    } else { // number rating mode
       return selectedRatings.includes(itemRating)
     }
   }
