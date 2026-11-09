@@ -78,7 +78,7 @@ Many of the points I've brought up so far are not exclusive to Latin; if you're 
 
 But here's something that's [*not* true of modern languages](https://www.deadlanguagesociety.com/p/how-far-back-in-time-understand-english): being able to read millennia-old books in the same language that you speak, and consequently feeling that the ancient (or medieval, or early modern) text in front of you is just another conversation partner. It's a delightful effect.
 
-<span id="ref-footnote-1">Of course, classical Latin is not as easy to parse as typical spoken Latin. But spoken Latin *is* closely based on its classical counterpart in a way that is very rare among spoken languages.<a href="#footnote-1">²</a></span>
+<span id="ref-footnote-1">Of course, classical Latin is not as easy to parse as typical spoken Latin. But spoken Latin *is* closely based on its classical counterpart in a way that is very rare among spoken languages.<a href="#footnote-1">¹</a></span>
 
 So not only does speaking Latin improve my reading ability, but it actually *motivates me* to read more, in order to find words and turns of phrase that I can use in speech. *Latinitas*, "Latin-ness" of writing and speech, becomes an end unto itself. In this and many other ways, Latin has helped me appreciate and enjoy language like nothing else has.
 
