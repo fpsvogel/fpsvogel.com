@@ -89,7 +89,7 @@ class Builders::LoadReadingList < SiteBuilder
     stats = {}
 
     stats[:amount_by_genre_favorites] =
-      Reading.stats(input: "amount by genre rating>3", items:)
+      Reading.stats("amount by genre rating>3", items:)
         .transform_values(&:to_i)
         .to_a
         .filter { |_genre, amount| amount > 1000 }
@@ -99,7 +99,7 @@ class Builders::LoadReadingList < SiteBuilder
 
     start_year = 2017
     stats[:genres_by_year] =
-      Reading.stats(input: "amount by year, genre", items:)
+      Reading.stats("amount by year, genre", items:)
         .transform_values { |genre_counts|
           top_4 = genre_counts
             .transform_values(&:to_i)
@@ -121,21 +121,21 @@ class Builders::LoadReadingList < SiteBuilder
         .transform_values { |year_counts| (start_year..Date.today.year).map { |year| [year, year_counts[year] || 0] }.to_h }
 
     stats[:rating_counts] =
-      Reading.stats(input: "total items by rating", items:)
+      Reading.stats("total items by rating", items:)
 
     stats[:top_experiences] =
-      Reading.stats(input: "top 10 experiences", items:)
+      Reading.stats("top 10 experiences", items:)
 
     stats[:top_lengths] =
-      Reading.stats(input: "top 10 lengths status=done progress=100%", items:)
+      Reading.stats("top 10 lengths status=done progress=100%", items:)
         .to_h
         .transform_values(&:to_i)
 
     stats[:top_notes] =
-      Reading.stats(input: "top 10 notes", items:)
+      Reading.stats("top 10 notes", items:)
 
     stats[:top_speeds] =
-      Reading.stats(input: "top 10 speeds", items:)
+      Reading.stats("top 10 speeds", items:)
         .to_h
         .transform_values { |speed| (speed[:amount] / speed[:days].to_f).to_i }
 
