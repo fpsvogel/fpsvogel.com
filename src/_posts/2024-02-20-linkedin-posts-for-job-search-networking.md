@@ -226,7 +226,7 @@ You can see what it does on [my site's Reading List page](/reading).
 
 Also, on [my site's Reading Stats page](/reading-stats).
 
-And [here's the GitHub repo](https://github.com/fpsvogel/reading).
+And [here's the Codeberg repo](https://codeberg.org/fpsvogel/reading).
 
 **But why put effort into such an obscure project?**
 
@@ -252,9 +252,9 @@ Plus, I often forgot exactly how my code behaved, and I had to read through the 
 
 So it wasn't long before I embraced testing, and to this day I avoid making any change in code without making sure it's tested.
 
-[Here's an example of testing in a personal project of mine](https://github.com/fpsvogel/reading/blob/bd4a37aa8ac3c0be37a45936e9bdce207c85c6c1/test/parse_test.rb#L80-L120). That's in my Reading gem, which parses my plain-text (CSV) reading list. For any non-trivial CSV column, I've written out dozens of possible inputs, which are tested against [expected parsed data](https://github.com/fpsvogel/reading/blob/bd4a37aa8ac3c0be37a45936e9bdce207c85c6c1/test/parse_test.rb#L628-L695).
+[Here's an example of testing in a personal project of mine](https://codeberg.org/fpsvogel/reading/src/commit/bd4a37aa8ac3c0be37a45936e9bdce207c85c6c1/test/parse_test.rb#L80-L120). That's in my Reading gem, which parses my plain-text (CSV) reading list. For any non-trivial CSV column, I've written out dozens of possible inputs, which are tested against [expected parsed data](https://codeberg.org/fpsvogel/reading/src/commit/bd4a37aa8ac3c0be37a45936e9bdce207c85c6c1/test/parse_test.rb#L628-L695).
 
-[Here's a more conventional set of tests](https://github.com/fpsvogel/reading/tree/bd4a37aa8ac3c0be37a45936e9bdce207c85c6c1/test/filter_test.rb), in the same project.
+[Here's a more conventional set of tests](https://codeberg.org/fpsvogel/reading/src/commit/bd4a37aa8ac3c0be37a45936e9bdce207c85c6c1/test/filter_test.rb), in the same project.
 
 In my "Learn Ruby" resource list, the biggest sub-section under "Rails basics" is about testing because I think it's best to learn it early, and learn it thoroughly.
 

@@ -18,7 +18,7 @@ tl;dr I've been spending time on [foundational skills](https://github.com/fpsvog
 That's what I've done over the past two or three years. I spent most of my outside-of-work-programming time (much reduced now that I have children) on "practical" projects such as:
 
 - [A CLI framework for doing Advent of Code in Ruby](https://github.com/fpsvogel/advent_of_ruby)
-- [A Ruby gem for parsing a reading log](https://github.com/fpsvogel/reading)
+- [A Ruby gem for parsing a reading log](https://codeberg.org/fpsvogel/reading)
 - [Learning some Haskell](https://fpsvogel.com/posts/2023/rubyist-learns-haskell-1-getting-started)
 
 (That last one is debatable in its practicality 😅)

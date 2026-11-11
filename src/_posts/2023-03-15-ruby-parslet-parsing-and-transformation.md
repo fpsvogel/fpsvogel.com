@@ -18,7 +18,7 @@ But I had another reason to make this odd gem: **I wanted to explore a more stru
 
 ## Regular expressions: not the problem
 
-Here's the backstory. I'm building another gem called [Reading](https://github.com/fpsvogel/reading) that parses my CSV reading log. It has a custom-built parser that is quite messy, for reasons that I couldn't articulate until just now when I tried Parslet.
+Here's the backstory. I'm building another gem called [Reading](https://codeberg.org/fpsvogel/reading) that parses my CSV reading log. It has a custom-built parser that is quite messy, for reasons that I couldn't articulate until just now when I tried Parslet.
 
 At first I thought the messiness came from the numerous regular expressions in my homespun parser. The well-known saying comes to mind:
 

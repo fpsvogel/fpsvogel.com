@@ -12,7 +12,7 @@ description: How I quit Goodreads, moved to a CSV reading log, and built a parse
   - [Building something new](#building-something-new)
   - [Moving on](#moving-on)
 
-I've added a new page to this site, [Reading Statistics](/reading-stats/), thanks to a new version of my [Reading](https://github.com/fpsvogel/reading) Ruby gem, which has been the force behind my [Reading List](/reading/) page.
+I've added a new page to this site, [Reading Statistics](/reading-stats/), thanks to a new version of my [Reading](https://codeberg.org/fpsvogel/reading) Ruby gem, which has been the force behind my [Reading List](/reading/) page.
 
 This post is mostly a recap of how the Reading gem came to be, as a way to celebrate it now being feature-complete. But first, here's a glimpse into the new feature.
 
@@ -45,7 +45,7 @@ items
 
 After each of these queries, in order to get the data ready to pass into the charts, a few lines of data manipulation are needed (which you can see [here in the code for my site's reading list builder](https://github.com/fpsvogel/blog-2021/blob/main/plugins/builders/load_reading_list.rb#L72)). But the real work of parsing and analyzing the reading log has already been done by the Reading gem.
 
-So that's the new feature. It's more thoroughly documented [in the gem's README](https://github.com/fpsvogel/reading#get-statistics-on-your-reading).
+So that's the new feature. It's more thoroughly documented [in the gem's README](https://codeberg.org/fpsvogel/reading#get-statistics-on-your-reading).
 
 This is the last feature that I'd planned, and it's done! 🎉 To celebrate the gem being feature-complete, here's the story of how it came to be.
 
@@ -63,7 +63,7 @@ I soon realized I needed a single place to store my notes, or else I'd lose them
 
 So I decided to ditch Goodreads. I exported my Goodreads data and converted it into **a plain-text reading log in a CSV file**, which [I wrote about in a blog post](/posts/2020/readcsv).
 
-I found that using a plain-text reading log was actually delightful, thanks to [the Rainbow CSV extension](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) for VS Code. It's also nice to have a keyboard shortcut that adds a row template, to reduce boilerplate typing. I made that with [an AutoHotkey script](https://github.com/fpsvogel/reading/blob/main/doc/autohotkey-reading-row-shortcut.ahk) and later with [a Ruby script](https://github.com/fpsvogel/reading/blob/main/doc/ruby_reading_csv_row_shortcut.rb).
+I found that using a plain-text reading log was actually delightful, thanks to [the Rainbow CSV extension](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) for VS Code. It's also nice to have a keyboard shortcut that adds a row template, to reduce boilerplate typing. I made that with [an AutoHotkey script](https://codeberg.org/fpsvogel/reading/src/main/doc/autohotkey-reading-row-shortcut.ahk) and later with [a Ruby script](https://codeberg.org/fpsvogel/reading/src/main/doc/ruby_reading_csv_row_shortcut.rb).
 
 The one problem with my new approach was that **I didn't have a way to see a list of my top-rated books and share it with friends** (the single benefit I got from Goodreads). Manually keeping a separate list of my favorites would take too much time and would be error-prone, and so my next thought was, to quote [an xkcd comic](https://xkcd.com/1319/), *"I should write a program automating this!"*
 

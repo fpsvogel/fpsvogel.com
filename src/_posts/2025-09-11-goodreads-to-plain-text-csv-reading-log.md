@@ -13,7 +13,7 @@ Have you ever wanted to track your reading in an excruciatingly-detailed plain t
 
 I did, and you can see the result on my site's [Reading](/reading) and [Reading Stats](/reading-stats) pages.
 
-This isn't a new project: it's been two years since I seriously worked on it. Nor is it popular, judging by its single-digit [GitHub stars](https://github.com/fpsvogel/reading).
+This isn't a new project: it's been two years since I seriously worked on it. Nor is it popular, judging by its single-digit [GitHub stars](https://codeberg.org/fpsvogel/reading).
 
 But I want to reflect on it as a tool that I shaped for myself, and which ended up reshaping how I read.
 
@@ -54,7 +54,7 @@ And so it was that my humble text file grew to encompass a lot more than just ti
 
 All of this, by the way, on a single line per entry. And then there were *new* kinds of entries, like single-line lists of to-be-read titles in a particular genre.
 
-I knew I had to call it done and stop adding features when I started consulting [my format guide](https://github.com/fpsvogel/reading/blob/main/doc/csv-format.md) to remind myself of the syntax 😅
+I knew I had to call it done and stop adding features when I started consulting [my format guide](https://codeberg.org/fpsvogel/reading/src/main/doc/csv-format.md) to remind myself of the syntax 😅
 
 And yet, my reading log is still fairly readable (to me) thanks to Rainbow CSV:
 
@@ -104,7 +104,7 @@ This is close to the entry's final form after the shorter line above is parsed, 
 
 And I know this is subjective, but I'm glad I don't have to wade through hundreds of lines of so many braces and quotes. Call me crazy, but I find CSV (or at least PSV, i.e. with pipes) a more pleasant format for hand-editing.
 
-Other horrifying non-issues include long regular expressions (the one for the reading history column is [94 lines long](https://github.com/fpsvogel/reading/blob/65956e74a777b8e8e4d24406e78b6440e32503e7/lib/reading/parsing/rows/regular_columns/history.rb#L36-L139)), and over 500 lines of [convoluted data transformation logic](https://github.com/fpsvogel/reading/blob/65956e74a777b8e8e4d24406e78b6440e32503e7/lib/reading/parsing/attributes/experiences/history_transformer.rb#L3-L4) for that same column. Thankfully, I'm done working through the bugs by now (I think…).
+Other horrifying non-issues include long regular expressions (the one for the reading history column is [94 lines long](https://codeberg.org/fpsvogel/reading/src/tag/v1.1.0/lib/reading/parsing/rows/regular_columns/history.rb#L36-L139)), and over 500 lines of [convoluted data transformation logic](https://codeberg.org/fpsvogel/reading/src/tag/v1.1.0/lib/reading/parsing/attributes/experiences/history_transformer.rb#L3-L4) for that same column. Thankfully, I'm done working through the bugs by now (I think…).
 
 The one real bummer is not being on a reading platform where I can connect with other people. I hope that someday one of the platforms will offer an API complete enough that I can (after hacking up some additional Ruby) mostly-automatically update my account based the edits that I'm already making in my reading log. [Hardcover](https://hardcover.app/) looks promising.
 
