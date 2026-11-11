@@ -33,7 +33,7 @@ html:root {
 
 @media (prefers-color-scheme: light) {
   html:root {
-    --background-color: #fafaf9;
+    --background-color: #faf9f9;
     --link-color: #c94f4f;
     --link-visited-color: #c94f4f;
     --link-hover-color: #212121;
