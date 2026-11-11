@@ -1,7 +1,7 @@
 ---
 title: Advent of Ruby
 subtitle: a CLI app for doing Advent of Code in Ruby
-description: A Ruby gem with conveniences for leisurely solving Advent of Code puzzles, including viewing other people's solutions from Reddit GitHub.
+description: A Ruby gem with conveniences for leisurely solving Advent of Code puzzles, including viewing other people's solutions from Reddit and GitHub.
 ---
 
 - [Building on an existing gem](#building-on-an-existing-gem)

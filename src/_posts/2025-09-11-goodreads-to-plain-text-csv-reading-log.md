@@ -13,7 +13,7 @@ Have you ever wanted to track your reading in an excruciatingly-detailed plain t
 
 I did, and you can see the result on my site's [Reading](/reading) and [Reading Stats](/reading-stats) pages.
 
-This isn't a new project: it's been two years since I seriously worked on it. Nor is it popular, judging by its single-digit [GitHub stars](https://codeberg.org/fpsvogel/reading).
+This isn't a new project: it's been two years since I seriously worked on it. Nor is it popular, judging by its single-digit GitHub stars. ***UPDATE, one year later:** Now it's back to zero stars because I [moved to Codeberg](https://codeberg.org/fpsvogel/reading). But it got up to 11 stars on GitHub. Double digits, baby!*
 
 But I want to reflect on it as a tool that I shaped for myself, and which ended up reshaping how I read.
 

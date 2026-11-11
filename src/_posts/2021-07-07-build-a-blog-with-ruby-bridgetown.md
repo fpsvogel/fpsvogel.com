@@ -19,7 +19,7 @@ In this tutorial, we'll keep it simple by building a blog. It's the quintessenti
 
 This tutorial has been updated for Bridgetown 2.0.1.
 
-The final result is the site that you're looking at. See also [the GitHub repo](https://github.com/fpsvogel/fpsvogel.com).
+The final result is the site that you're looking at. See also [the Codeberg repo](https://codeberg.org/fpsvogel/fpsvogel.com).
 
 ## 1. Setup
 
@@ -29,15 +29,15 @@ The final result is the site that you're looking at. See also [the GitHub repo](
 2. Follow the steps on Bridgetown's [Getting Started](https://www.bridgetownrb.com/docs) page to create an empty site.
 3. Add [bundled configurations](https://www.bridgetownrb.com/docs/bundled-configurations) and [plugins](https://www.bridgetownrb.com/plugins/). Here are a few that are useful for a blog.
   - [Feed](https://www.bridgetownrb.com/docs/bundled-configurations#feed) generates an Atom (RSS-like) feed.
-  - [SEO](https://www.bridgetownrb.com/docs/bundled-configurations#seo) adds SEO tags to make your site more discoverable on search engines and more sharable on social media. (Be sure to add site-wide metadata to [src/_data/site_metadata.yml](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_data/site_metadata.yml).)
+  - [SEO](https://www.bridgetownrb.com/docs/bundled-configurations#seo) adds SEO tags to make your site more discoverable on search engines and more sharable on social media. (Be sure to add site-wide metadata to [src/_data/site_metadata.yml](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/src/_data/site_metadata.yml).)
   - [Sitemap generator](https://github.com/ayushn21/bridgetown-sitemap) to further improve SEO.
   - [Turbo](https://www.bridgetownrb.com/docs/bundled-configurations#turbo) makes page transitions smoother.
   - [SVG inliner](https://github.com/ayushn21/bridgetown-svg-inliner) if you want to display SVG images on your site.
 4. Set your preferred [permalink style](https://www.bridgetownrb.com/docs/content/permalinks).
-5. Set up [pagination](https://www.bridgetownrb.com/docs/content/pagination) if you want it. Originally my Posts page had pagination, but I've come to prefer [one long Posts page](https://fpsvogel.com/posts/). ([Here's the diff of that adjustment](https://github.com/fpsvogel/fpsvogel.com/commit/c9ec250de94cebd9a891761261fc1bf27e81a106), if you're curious.)
+5. Set up [pagination](https://www.bridgetownrb.com/docs/content/pagination) if you want it. Originally my Posts page had pagination, but I've come to prefer [one long Posts page](https://fpsvogel.com/posts/). ([Here's the diff of that adjustment](https://codeberg.org/fpsvogel/fpsvogel.com/src/commit/c9ec250de94cebd9a891761261fc1bf27e81a106), if you're curious.)
 6. Kickstart your site's design with a CSS theme. For my blog I chose [holiday.css](https://holidaycss.js.org/), one of many [classless stylesheets](https://github.com/dbohdan/classless-css) for semantic HTML.
 7.  Add a Pygments CSS theme for code syntax highlighting.
-  - Either [download one of the handily premade CSS files](https://jwarby.github.io/jekyll-pygments-themes/languages/ruby.html), or [pick from the full list](https://pygments.org/demo/#try) then [install Pygments and make it generate a CSS file](https://stackoverflow.com/a/14989819/4158773). (I picked one of the premade stylesheets and then [created a second one](https://github.com/fpsvogel/fpsvogel.com/blob/main/frontend/styles/monokai-fpsvogel-edits.css) to override some of the colors.)
+  - Either [download one of the handily premade CSS files](https://jwarby.github.io/jekyll-pygments-themes/languages/ruby.html), or [pick from the full list](https://pygments.org/demo/#try) then [install Pygments and make it generate a CSS file](https://stackoverflow.com/a/14989819/4158773). (I picked one of the premade stylesheets and then [created a second one](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/frontend/styles/monokai-fpsvogel-edits.css) to override some of the colors.)
   - Place the CSS file in `frontend/styles`.
   - Import it into `frontend/styles/index.css`: for example, for Monokai place `@import "monokai.css";` near the top of `index.css`.
 
@@ -67,19 +67,19 @@ I do want to show you with one more thing, though, which will take up the rest o
 
 More concretely, I wanted to build a ["Reading" page](https://fpsvogel.com/reading) that displays data parsed and filtered from my reading log (a plain text file). How should I build that giant list in the view template?
 
-A template partial (such as [src/_partials/_navbar.erb](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_partials/_navbar.erb)) didn't seem right, because I needed to build the data before rendering it, and naturally I wanted to avoid writing a bunch of Ruby in an ERB file. I needed something more spacious: **a Ruby component**.
+A template partial (such as [src/_partials/_navbar.erb](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/src/_partials/_navbar.erb)) didn't seem right, because I needed to build the data before rendering it, and naturally I wanted to avoid writing a bunch of Ruby in an ERB file. I needed something more spacious: **a Ruby component**.
 
-Following [the doc on Ruby components](https://www.bridgetownrb.com/docs/components/ruby), I created a `ReadingList` component in [src/_components/reading_list.rb](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_components/reading_list.rb), and its template [src/_components/reading_list.erb](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_components/reading_list.erb). It's the same basic idea as [ViewComponent](https://viewcomponent.org/), if you're familiar.
+Following [the doc on Ruby components](https://www.bridgetownrb.com/docs/components/ruby), I created a `ReadingList` component in [src/_components/reading_list.rb](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/src/_components/reading_list.rb), and its template [src/_components/reading_list.erb](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/src/_components/reading_list.erb). It's the same basic idea as [ViewComponent](https://viewcomponent.org/), if you're familiar.
 
-You may have noticed that my component's `.rb` file doesn't do much at all. Where's all the data-building logic I mentioned a moment ago? The logic was extensive enough that I ended up moving it into a [plugin](https://www.bridgetownrb.com/docs/plugins) in [plugins/builders/load_reading_list.rb](https://github.com/fpsvogel/fpsvogel.com/blob/main/plugins/builders/load_reading_list.rb), and then later I separated much of it even further [into a gem](https://codeberg.org/fpsvogel/reading).
+You may have noticed that my component's `.rb` file doesn't do much at all. Where's all the data-building logic I mentioned a moment ago? The logic was extensive enough that I ended up moving it into a [plugin](https://www.bridgetownrb.com/docs/plugins) in [plugins/builders/load_reading_list.rb](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/plugins/builders/load_reading_list.rb), and then later I separated much of it even further [into a gem](https://codeberg.org/fpsvogel/reading).
 
-I then wrote some JS to add client-side behaviors to my component, such as expanding/collapsing rows that have reading notes, and filtering rows by rating or genre. I wrote the JS [as a Stimulus controller](https://github.com/fpsvogel/fpsvogel.com/blob/main/frontend/javascript/controllers/reading_list_controller.js). That was a few years ago; today I would probably use vanilla JS or [Lit](https://www.bridgetownrb.com/docs/components/lit).
+I then wrote some JS to add client-side behaviors to my component, such as expanding/collapsing rows that have reading notes, and filtering rows by rating or genre. I wrote the JS [as a Stimulus controller](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/frontend/javascript/controllers/reading_list_controller.js). That was a few years ago; today I would probably use vanilla JS or [Lit](https://www.bridgetownrb.com/docs/components/lit).
 
 To recap:
 
-1. [The plugin](https://github.com/fpsvogel/fpsvogel.com/blob/main/plugins/builders/load_reading_list.rb) parses my reading log file (using my gem) and saves it into the site's data.
-2. [The Ruby component's `rb` file](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_components/reading_list.rb) pulls that data into instance variables accessible in the ERB template, and provides a helper method for the ERB template.
-3. [The Ruby component's ERB template](https://github.com/fpsvogel/fpsvogel.com/blob/main/src/_components/reading_list.erb) displays the reading list.
+1. [The plugin](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/plugins/builders/load_reading_list.rb) parses my reading log file (using my gem) and saves it into the site's data.
+2. [The Ruby component's `rb` file](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/src/_components/reading_list.rb) pulls that data into instance variables accessible in the ERB template, and provides a helper method for the ERB template.
+3. [The Ruby component's ERB template](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/src/_components/reading_list.erb) displays the reading list.
 
 ## 4. Scheduled deploys to automatically sync to the external data source
 
@@ -87,7 +87,7 @@ At this point, it was a manual process to update my site's reading list: I had t
 
 I wondered: *could I avoid having to rebuild locally?* After all, my reading log is automatically synced to Dropbox. If I adjusted my plugin to connect to Dropbox instead of using my local copy of my reading log, then my site's Reading page could be updated from within a Netlify build, without me having to first build it locally and push up the changes.
 
-And that's exactly what I did next. I store my Dropbox keys in Netlify environment variables, which are passed into Bridgetown in `ENV`, and from there my custom plugin [uses the keys to connect to Dropbox](https://github.com/fpsvogel/fpsvogel.com/blob/main/plugins/builders/load_reading_list.rb#L52-L78).
+And that's exactly what I did next. I store my Dropbox keys in Netlify environment variables, which are passed into Bridgetown in `ENV`, and from there my custom plugin [uses the keys to connect to Dropbox](https://codeberg.org/fpsvogel/fpsvogel.com/src/branch/main/plugins/builders/load_reading_list.rb#L52-L78).
 
 This paved the way for an even cooler improvement: I followed [this guide to setting up automatic Netlify redeploys via GitHub Actions](https://www.stefanjudis.com/snippets/how-to-schedule-jamstack-deploys-with-netlify-and-github/), and now my site rebuilds itself every week. This means that my site's Reading page is synced weekly to my reading log file, and it's completely automatic.
 
