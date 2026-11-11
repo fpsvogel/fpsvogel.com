@@ -6,12 +6,13 @@ permalink: /reading-stats/
 
 [List](/reading) \| **Statistics**
 
-This page is updated automatically with the help of my [Reading](https://github.com/fpsvogel/reading) gem, which parses my plain-text reading log and queries it for statistics.
+This page is updated automatically with the help of my [Reading](https://codeberg.org/fpsvogel/reading) gem, which parses my plain-text reading log and queries it for statistics.
 
 **Contents:**
 
 - [Favorite genres](#favorite-genres)
 - [Genres by year](#genres-by-year)
+- [DNF ("Did Not Finish") stats](#dnf-did-not-finish-stats)
 - [Rating distribution](#rating-distribution)
 - [Most re-reads](#most-re-reads)
 - [Longest items](#longest-items)
@@ -34,6 +35,12 @@ Total pages read of each year's top 4 and other genres.
 
 <%= column_chart(stats[:genres_by_year].map { |genre, year_counts| { name: genre, data: year_counts, dataset: { skipNull: true } } }, id: "chart-most-read-genres", stacked: true, library: { plugins: { tooltip: { mode: "point" } } }, height: "600px") %>
 
+## DNF ("Did Not Finish") stats
+
+DNF rate: <strong><%= (stats[:dnf_rate] * 100).round(1) %>%</strong>
+
+Average DNF progress: <strong><%= (stats[:dnf_average_progress] * 100).round(1) %>%</strong>
+
 ## Rating distribution
 
 Item count by rating.
@@ -50,16 +57,17 @@ Highest numbers of completed readings/listenings/watches, including the first on
 
 For podcasts and other items of undefined length, I count the amount that I've consumed so far.
 
-<%= bar_chart(stats[:top_lengths], id: "chart-longest-items" ) %>
+<%= bar_chart(stats[:top_lengths], id: "chart-longest-items") %>
 
 ## Most annotated
 
 Word count of notes.
 
-<%= bar_chart(stats[:top_notes], id: "chart-most-annotated" ) %>
+<%= bar_chart(stats[:top_notes], id: "chart-most-annotated") %>
 
 ## Fastest reads
 
 Pages per day.
 
-<%= bar_chart(stats[:top_speeds], id: "chart-fastest-reads" ) %>
+<%= bar_chart(stats[:top_speeds], id: "chart-fastest-reads") %>
+

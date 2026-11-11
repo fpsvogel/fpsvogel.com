@@ -120,6 +120,11 @@ class Builders::LoadReadingList < SiteBuilder
         .transform_values { it.map(&:last).to_h }
         .transform_values { |year_counts| (start_year..Date.today.year).map { |year| [year, year_counts[year] || 0] }.to_h }
 
+    dnf_count = Reading.stats("count status=done progress<100%", items:)
+    finished_count = Reading.stats("count status=done progress>=100%", items:)
+    stats[:dnf_rate] = dnf_count.to_f / (dnf_count + finished_count)
+    stats[:dnf_average_progress] = Reading.stats("average progress status=done progress<100%", items:)
+
     stats[:rating_counts] =
       Reading.stats("total items by rating", items:)
 
