@@ -72,11 +72,16 @@ export default class extends Controller {
       })
       .filter(rating => rating)
 
+    let groupReadSelected = this.filtersTarget.querySelector('[id="filter-group-read').checked
+    let rereadSelected = this.filtersTarget.querySelector('[id="filter-reread').checked
+
     this.tableTarget.querySelectorAll("rl-item").forEach(item => {
       let byRating = this.showByRating(item, selectedRatings)
       let byGenre = this.showByGenre(item, selectedGenres)
+      let byGroupRead = !groupReadSelected || item.querySelector("rl-group-read")
+      let byReread = !rereadSelected || item.querySelector("rl-reread")
 
-      if (byRating && byGenre) {
+      if (byRating && byGenre && byGroupRead && byReread) {
         if (item.parentElement.tagName === "HIDDEN-ITEM-WRAPPER") {
           // Show the item.
           item.style.display = "block"

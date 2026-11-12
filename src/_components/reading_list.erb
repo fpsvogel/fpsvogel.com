@@ -58,7 +58,7 @@
     <% if @config.minimum_rating_for_star # star rating mode %>
       <rl-filter>
         <input type="checkbox" id="filter-rating-star" value="<%= @config.minimum_rating_for_star %>" data-action="change->reading-list#filter">
-        <label for="filter-rating">⭑</label>
+        <label for="filter-rating-star">⭑</label>
       </rl-filter>
     <% else # number rating mode %>
       <% @ratings.each do |rating| %>
@@ -70,6 +70,18 @@
         </rl-filter>
       <% end %>
     <% end %>
+
+    <!-- Filter by group read -->
+    <rl-filter>
+      <input type="checkbox" id="filter-group-read" data-action="change->reading-list#filter">
+      <label for="filter-group-read">⛬</label>
+    </rl-filter>
+
+    <!-- Filter by reread -->
+    <rl-filter>
+      <input type="checkbox" id="filter-reread" data-action="change->reading-list#filter">
+      <label for="filter-reread">➥</label>
+    </rl-filter>
 
     <!-- Filter by genre -->
     <% if @genres %>
