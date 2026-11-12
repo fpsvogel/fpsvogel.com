@@ -154,7 +154,7 @@ nav a, .section {
 }
 
 nav a, .section, .current-section {
-  padding: .2rem .5rem;
+  padding: .2rem .7rem .2rem .5rem;
   font-size: var(--nav-font-size);
   & svg { fill: var(--link-color) }
   &:active {
