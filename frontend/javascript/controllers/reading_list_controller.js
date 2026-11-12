@@ -99,7 +99,7 @@ export default class extends Controller {
       if (!starRatingFilter.checked) {
         return true
       } else {
-        if (itemRating === "⭐") {
+        if (itemRating === "⭑") {
           return true
         }
         return false

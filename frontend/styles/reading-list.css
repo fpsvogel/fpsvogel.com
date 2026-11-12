@@ -122,7 +122,7 @@ rl-table {
     width: 100%;
     &.collapsed {
       & rl-expand::after {
-        content: "👇 expand";
+        content: "▼ expand";
       }
       & rl-blurb.truncated {
         overflow: hidden;
@@ -135,7 +135,7 @@ rl-table {
     }
     &.expanded {
       & rl-expand::after {
-        content: "☝️ collapse";
+        content: "▲ collapse";
         font-size: 94%;
       }
       & rl-blurb.truncated {

@@ -12,7 +12,7 @@
 
     <% if @config.minimum_rating_for_star %>
       <rl-key-item>
-        ⭐ favorite
+        ⭑ favorite
       </rl-key-item>
     <% else %>
       <rl-key-item>
@@ -22,12 +22,12 @@
 
     |
     <rl-key-item>
-      🤝 group read
+      ⛬ group read
     </rl-key-item>
 
     |
     <rl-key-item>
-      🔁 reread
+      ➥ reread
     </rl-key-item>
   </rl-key>
 
@@ -58,7 +58,7 @@
     <% if @config.minimum_rating_for_star # star rating mode %>
       <rl-filter>
         <input type="checkbox" id="filter-rating-star" value="<%= @config.minimum_rating_for_star %>" data-action="change->reading-list#filter">
-        <label for="filter-rating">⭐</label>
+        <label for="filter-rating">⭑</label>
       </rl-filter>
     <% else # number rating mode %>
       <% @ratings.each do |rating| %>
@@ -94,7 +94,7 @@
         <!-- First line of an item (row) -->
         <rl-head-line>
           <rl-rating>
-            <%= item.rating %>
+            <%= item.rating == "⭐" ? "⭑" : item.rating %>
           </rl-rating>
 
           <rl-type>
@@ -110,13 +110,13 @@
 
             <% if item.experience_count > 1 %>
               <rl-reread>
-                🔁
+                ➥
               </rl-reread>
             <% end %>
 
             <% if item.groups.any? %>
               <rl-group-read>
-                🤝🏼
+                ⛬
               </rl-group-read>
             <% end %>
 
