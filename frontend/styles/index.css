@@ -63,14 +63,8 @@ code,
 kbd,
 samp,
 pre {
-	font-family:
-    var(--mono-font),
-		ui-monospace,
-		SFMono-Regular,
-		Consolas,
-		'Liberation Mono',
-		Menlo,
-		monospace !important;
+  font-size: 97%;
+	font-family: monospace !important;
 }
 
 em kbd {
