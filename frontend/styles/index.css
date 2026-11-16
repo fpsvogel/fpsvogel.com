@@ -376,12 +376,24 @@ hover-images {
   &:hover .img-hover {display: inline;}
 }
 
+footer {
+  font-size: 85%;
+  & > div {
+    margin-bottom: .5rem;
+  }
+}
+
 news-feed {
   display: inline-block;
   margin-left: .8rem;
   & svg {
     fill: var(--text-color-more-contrast);
   }
+}
+
+webring-links {
+  display: inline-block;
+  margin-left: .25rem;
 }
 
 @media only screen and (hover: hover) {
