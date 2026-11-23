@@ -2,7 +2,7 @@
 title: A catalog of coding challenges
 subtitle: and, are they even worth doing anyway?
 description: An exploration of the many kinds of coding challenges, from LeetCode to code golf, and suggestions of more valuable ways to improve yourself as a developer.
-updated: 2026-06-04
+updated: 2026-11-23
 ---
 
 - [Some types of coding challenges](#some-types-of-coding-challenges)
@@ -35,7 +35,7 @@ Language-specific examples are mostly for Ruby, JavaScript, and TypeScript, sinc
 
 [LeetCode](https://leetcode.com/), [HackerRank](https://www.hackerrank.com/), and many more that are easy to find by looking up "DSA practice" or similar.
 
-For LeetCode in particular, there are [many guides and problem sets](https://github.com/fpsvogel/learn-cs/tree/9759c4531cffadada0b9658f6ee958196879f3b6#leetcode) to help you learn different types of problems.
+For LeetCode in particular, there are [many guides and problem sets](https://github.com/fpsvogel/learn-cs/tree/494afa1a48cbef6da34b74f2975f6cf1eea06100#leetcode) to help you learn different types of problems.
 
 ### Holiday competitions
 
@@ -50,6 +50,7 @@ For LeetCode in particular, there are [many guides and problem sets](https://git
 - [rendezvous with cassidoo](https://buttondown.com/cassidoo/archive) newsletter weekly interview question
 - [Codewars](https://www.codewars.com/)
 - [hackattic](https://hackattic.com/challenges)
+- [Systems Check](https://systemscheck.dev)
 
 ### Learning-oriented
 
@@ -88,7 +89,9 @@ For example:
 
 ### Competitive programming
 
-Some good beginner guides on Reddit: [1](https://www.reddit.com/r/csMajors/comments/z4qjzx/a_guide_to_competitive_programming/), [2](https://www.reddit.com/r/Btechtards/comments/1dv6ttx/competitive_programming_resources_that_i_found/)
+Some good beginner guides on Reddit: [1](https://www.reddit.com/r/csMajors/comments/z4qjzx/a_guide_to_competitive_programming/), [2](https://www.reddit.com/r/Btechtards/comments/1dv6ttx/competitive_programming_resources_that_i_found/), [2.1](https://www.reddit.com/r/Btechtards/comments/1dwnioy/competitive_programming_resources_and_advice_part/)
+
+See also: [learning resources on data structures and algorithms](https://github.com/fpsvogel/learn-cs/tree/494afa1a48cbef6da34b74f2975f6cf1eea06100#data-structures-and-algorithms).
 
 ### Code golf
 
